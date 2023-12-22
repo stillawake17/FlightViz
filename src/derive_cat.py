@@ -66,3 +66,5 @@ fig.update_layout(showlegend=False)
 plot_div = pio.to_html(fig, full_html=False)
 with open("templates/plot_div.html", "w", encoding='utf-8') as f:
     f.write(plot_div)
+
+print

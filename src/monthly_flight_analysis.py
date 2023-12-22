@@ -4,7 +4,9 @@ from datetime import datetime
 
 # Define the relative path for the JSON file in the data directory
 # json_file_path = '../data/bristol_airport_data.json'
-json_file_path = 'data\\bristol_airport_2023-12-21_data.json'
+#json_file_path = 'data\\bristol_airport_2023-12-21_data.json'
+json_file_path = 'data\\combined_flights_data.json'
+
 
 # Load the flight data from JSON file
 with open(json_file_path, 'r') as file:

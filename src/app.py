@@ -37,8 +37,8 @@ else:
     all_data = []
 
 # Define the overall start and end dates for your data retrieval
-overall_start_date = datetime(2023, 1, 1)  # Modify as needed
-overall_end_date = datetime(2023, 12, 31)  # Modify as needed
+overall_start_date = datetime(2023, 12, 20)  # Modify as needed
+overall_end_date = datetime(2023, 12, 22)  # Modify as needed
 
 current_start_date = overall_start_date
 

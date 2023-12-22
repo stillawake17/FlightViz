@@ -23,10 +23,6 @@ function aggregateDataByMonth(flightData, year) {
 
 //TO TEST
 // Example usage with mock data
-// let mockFlightData = [
-//     { arrival: { actualTime: "2023-01-01T18:57:00.000" } },
-//     { departure: { actualTime: "2023-02-15T11:30:00.000" } },
-//     // ... more flight data
-// ];
+ let FlightData = 'data\\combined_flights_data.json'
 
-// console.log(aggregateDataByMonth(mockFlightData, 2023));
+ console.log(aggregateDataByMonth(FlightData, 2023));

@@ -37,8 +37,9 @@ df_2023 = df[df['Year'] == 2023]
 
 # 2024 data:
 df_2024 = df[df['Year'] == 2024]
+# Analysis for 2024 data can be done using df_2024
 
 # 2025 data:
 df_2025 = df[df['Year'] == 2025]
 
-# Analysis for 2024 data can be done using df_2024
+

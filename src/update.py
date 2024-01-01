@@ -1,5 +1,6 @@
 import requests
-from config import API_KEY
+import os
+api_key = os.getenv('api_key')
 
 def get_flights(api_key, airport_iata):
     base_url = "https://aviation-edge.com/v2/public/flights"
@@ -16,7 +17,7 @@ def get_flights(api_key, airport_iata):
 
 
 
-api_key = API_KEY
+#api_key = API_KEY
 
 airport_iata = 'BRS'  # IATA code for Bristol Airport
 

@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>D3 Visualization</title>
-        <script src="https://d3js.org/d3.v6.min.js"></script>
-    </head>
-    <body>
-        <script src="../tests/monthly.js"></script>
-    <h1>Flight Data Visualization by Year</h1>
-    <ul>
-        <li><a href="../templates/plot_div_2023.html">2023 Flight Data</a></li>
-        <li><a href="../templates/plot_div_2024.html">2024 Flight Data</a></li>
-        <!-- Add more years if needed -->
-    </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Data Visualization</title>
+    <!-- Include D3.js Library -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- Include GSAP for Animations (if you're using it) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <link rel="stylesheet" href="../src/styles.css">
+</head>
+<body>
+    <!-- Chart Containers -->
+    <div id="prev_monthly_chart_container"></div>
+    <div id="current_monthly_chart_container"></div>
+
+    <!-- Buttons for triggering chart updates -->
+    <button id="prev_night_button">Previous Year Night Flights</button>
+    <button id="prev_shoulder_button">Previous Year Shoulder Hour Flights</button>
+    <button id="prev_total_button">Previous Year Total Flights</button>
+    <button id="current_night_button">Current Year Night Flights</button>
+    <button id="current_shoulder_button">Current Year Shoulder Hour Flights</button>
+    <button id="current_total_button">Current Year Total Flights</button>
+    
+    <div id="prev_night_count"></div>
+<div id="prev_shoulder_count"></div>
+<div id="prev_total_count"></div>
+<div id="current_night_count"></div>
+<div id="current_shoulder_count"></div>
+<div id="current_total_count"></div>
+   
+<!-- Add other elements similarly -->
+
+
+    <!-- Include your JavaScript File -->
+    <script src="../tests/test3012.js"></script>
 </body>
 </html>

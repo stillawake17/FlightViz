@@ -2,18 +2,22 @@ import requests
 import json
 from datetime import datetime, timedelta
 import os
+from config import api_key 
+import os
+#api_key = os.getenv('api_key')
 
-# Your Aviation Edge API key
-api_key = '97634b-cd2101'
+api_key = api_key
+
 
 # Base URL for the API
 base_url = "https://aviation-edge.com/v2/public/flightsHistory"
+code = 'BRS'#BHX BRS BOL CWL LBA LCY LGW LTN NCL SOU
 
 # Function to fetch data for a specific date range and type (arrival/departure)
 def fetch_data(date_from, date_to, type):
     params = {
         'key': api_key,
-        'code': 'BRS',
+        'code': code,
         'type': type,
         'date_from': date_from,
         'date_to': date_to
@@ -27,7 +31,7 @@ def fetch_data(date_from, date_to, type):
 
 # Define the path for the JSON file in the data directory
 today_str = datetime.now().strftime("%Y-%m-%d")
-json_file_path = f'data/bristol_airport_{today_str}_data.json'
+json_file_path = f'data/{code}_airport_{today_str}_data.json'
 
 # Check if the file exists and load existing data
 if os.path.exists(json_file_path):
@@ -37,8 +41,8 @@ else:
     all_data = []
 
 # Define the overall start and end dates for your data retrieval
-overall_start_date = datetime(2023, 12, 20)  # Modify as needed
-overall_end_date = datetime(2023, 12, 22)  # Modify as needed
+overall_start_date = datetime(2023, 12, 25)  # Modify as needed
+overall_end_date = datetime(2023, 12, 28)  # needs to be > 3 days from now
 
 current_start_date = overall_start_date
 

@@ -4,7 +4,8 @@ import plotly.express as px
 import plotly.io as pio
 
 # Load data
-json_file_path = 'data\\bristol_airport_2023-12-21_data.json'
+#json_file_path = 'data\\bristol_airport_2023-12-21_data.json'
+json_file_path = 'data\\combined_flights_data2.json'
 with open(json_file_path, 'r') as file:
     data = json.load(file)
 

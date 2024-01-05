@@ -31,8 +31,10 @@ flight_dates = df['actualTime'].dt.strftime('%Y-%m')
 flight_counts = Counter(flight_dates)
 
 # Display the flight counts per month
-for month, count in sorted(flight_counts.items()):
-    print(f"Month: {month}, Number of Flights: {count}")
+for year_month, count in sorted(flight_counts.items()):
+    year, month = year_month.split('-')
+    print(f"Month: {year}-{month}, Number of Flights: {count}")
+
 
 
 

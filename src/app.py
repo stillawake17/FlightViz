@@ -11,7 +11,7 @@ api_key = api_key
 
 # Base URL for the API
 base_url = "https://aviation-edge.com/v2/public/flightsHistory"
-code = 'BRS'#BHX BRS BOL CWL LBA LCY LGW LTN NCL SOU
+code = 'BRS' # 'BHX' 'BOL' 'CWL' 'LBA' 'LCY' 'LGW' 'SOU' 'NCL' 'LTN'
 
 # Function to fetch data for a specific date range and type (arrival/departure)
 def fetch_data(date_from, date_to, type):
@@ -41,8 +41,8 @@ else:
     all_data = []
 
 # Define the overall start and end dates for your data retrieval
-overall_start_date = datetime(2023, 12, 27)  # Modify as needed
-overall_end_date = datetime(2023, 12, 31)  # needs to be > 3 days from now
+overall_start_date = datetime(2023, 12, 23)  # Modify as needed
+overall_end_date = datetime(2024, 1, 1)  # needs to be > 3 days from now
 
 current_start_date = overall_start_date
 

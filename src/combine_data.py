@@ -15,7 +15,7 @@ def load_json_data(file_path):
 combined_data = load_json_data('data/combined_flights_data.json')
 
 # Load the new data
-new_data = load_json_data('data/BRS_airport_2024-01-07_data.json')
+new_data = load_json_data('data/BRS_airport_2024-01-08_data.json')
 
 # Combine the datasets
 combined_data.extend(new_data)

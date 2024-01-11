@@ -41,7 +41,7 @@ loaded_data = load_json_data(file_path)
 filtered_data_safe = [filter_flight_data_safe(entry) for entry in loaded_data]
 
 # Save the filtered data to a new file
-filtered_file_path_safe = 'data\\combined_flights_data.json'  # Replace with your desired file path
+filtered_file_path_safe = 'data\\combined_flights_data_strip.json'  # Replace with your desired file path
 with open(filtered_file_path_safe, 'w') as file:
     json.dump(filtered_data_safe, file, indent=4)
 

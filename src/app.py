@@ -1,74 +1,83 @@
 import requests
 import json
 from datetime import datetime, timedelta
-import os
-from config import api_key 
-import os
-#api_key = os.getenv('api_key')
 
-api_key = api_key
+# Assuming api_key is imported from your config file
+from config import api_key
 
+# Base URL for the Aviationstack API
+base_url = "http://api.aviationstack.com/v1/flights"
+code = 'EGGD'  # Your airport code
 
-# Base URL for the API
-base_url = "https://aviation-edge.com/v2/public/flightsHistory"
-code = 'BRS' # 'BHX' 'BOL' 'CWL' 'LBA' 'LCY' 'LGW' 'SOU' 'NCL' 'LTN'
-
-# Function to fetch data for a specific date range and type (arrival/departure)
-def fetch_data(date_from, date_to, type):
+def fetch_data(date, is_arrival=True, filename=None):
     params = {
-        'key': api_key,
-        'code': code,
-        'type': type,
-        'date_from': date_from,
-        'date_to': date_to
+        'access_key': api_key,
+        'flight_date': date
     }
+
+    if is_arrival:
+        params['arr_icao'] = 'EGGD'  # For flights arriving at EGGD
+    else:
+        params['dep_icao'] = 'EGGD'  # For flights departing from EGGD
+
     response = requests.get(base_url, params=params)
     if response.status_code == 200:
-        return response.json()
+        data = response.json()
+        if filename:
+            with open(filename, 'w') as file:
+                json.dump(data, file)
+            print(f"Data saved to {filename}")
+        return data
     else:
-        print(f"Error fetching data from {date_from} to {date_to}: {response.status_code}")
+        print(f"Error fetching data for {date}: {response.status_code}")
+        print(response.text)
         return None
 
-# Define the path for the JSON file in the data directory
-today_str = datetime.now().strftime("%Y-%m-%d")
-json_file_path = f'data/{code}_airport_{today_str}_data.json'
 
-# Check if the file exists and load existing data
-if os.path.exists(json_file_path):
-    with open(json_file_path, 'r') as file:
-        all_data = json.load(file)
-else:
-    all_data = []
+# Get yesterday's date
+yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
 
-# Define the overall start and end dates for your data retrieval
-overall_start_date = datetime(2024, 1, 6)  # Modify as needed
-overall_end_date = datetime(2024, 1, 14)  # needs to be > 3 days from now
+# Fetch and save arrival data
+arrival_filename = f'EGGD_arrivals_{yesterday}.json'
+fetch_data(yesterday, is_arrival=True, filename=arrival_filename)
 
-current_start_date = overall_start_date
+# Fetch and save departure data
+departure_filename = f'EGGD_departures_{yesterday}.json'
+fetch_data(yesterday, is_arrival=False, filename=departure_filename)
 
-# Loop through each 30-day period and fetch data
-while current_start_date <= overall_end_date:
-    current_end_date = min(current_start_date + timedelta(days=30), overall_end_date)
-    start_date_str = current_start_date.strftime("%Y-%m-%d")
-    end_date_str = current_end_date.strftime("%Y-%m-%d")
-    
-    print(f"Fetching data from {start_date_str} to {end_date_str}")
 
-    # Fetch arrival data
-    arrivals = fetch_data(start_date_str, end_date_str, 'arrival')
-    if arrivals:
-        all_data.extend(arrivals)
+# Fetch data for yesterday
+print(f"Fetching data for {yesterday}")
+yesterday_data = fetch_data(yesterday)
 
-    # Fetch departure data
-    departures = fetch_data(start_date_str, end_date_str, 'departure')
-    if departures:
-        all_data.extend(departures)
+import json
 
-    # Move to the next period
-    current_start_date = current_end_date + timedelta(days=1)
+# Replace 'YYYY-MM-DD' with the actual date
+arrival_filename = f'EGGD_arrivals_{yesterday}.json'
+departure_filename = f'EGGD_departures_{yesterday}.json'
+combined_filename = f'EGGD_combined_{yesterday}.json'
 
-# Save combined data to the JSON file with today's date in the filename
-with open(json_file_path, 'w') as file:
-    json.dump(all_data, file)
+try:
+    # Read arrival data
+    with open(arrival_filename, 'r') as file:
+        arrivals = json.load(file)
 
-print("Data collection complete.")
+    # Read departure data
+    with open(departure_filename, 'r') as file:
+        departures = json.load(file)
+
+    # Combine the data
+    combined_data = {
+        'arrivals': arrivals,
+        'departures': departures
+    }
+
+    # Write the combined data to a new file
+    with open(combined_filename, 'w') as file:
+        json.dump(combined_data, file)
+
+    print(f"Combined data saved to {combined_filename}")
+
+except FileNotFoundError as e:
+    print(f"Error: {e}")
+

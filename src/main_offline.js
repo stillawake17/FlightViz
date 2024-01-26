@@ -1,67 +1,97 @@
-// Function to aggregate flight data by month for a given year
-function aggregateDataByMonth(flightData, year) {
-    const monthlyCounts = new Array(12).fill(0); // Array for each month
-    
-    flightData.forEach(d => {
-        // Assuming the date is in d.arrival.actualTime or d.departure.actualTime
-        
-        // let date = new Date(d.lastSeen * 1000); // Convert to milliseconds
-        let actualTime = d.arrival ? d.arrival.actualTime : (d.departure ? d.departure.actualTime : null);
-              
-            let date = new Date(actualTime);
-            let flightYear = date.getFullYear();
-            let flightMonth = date.getMonth(); // getMonth() returns 0-11 for Jan-Dec
-            
-            if (flightYear === year) {
-                monthlyCounts[flightMonth]++;
-            }
+const fs = require('fs');
+
+// Function to determine the time category of a flight
+function getTimeCategory(hour, minute) {
+    if (hour === 23 && minute < 30) return "Shoulder hour flights";
+    if ((hour === 23 && minute >= 30) || hour < 6) return "Night hour arrivals";
+    if (hour === 6) return "Shoulder hour flights";
+    return "Regular arrivals";
+}
+
+// Function to process and categorize flights for a specific year and airport
+function processAndCategorizeFlights(flightData, year, airportCode) {
+    return flightData.reduce((acc, d) => {
+        let actualTime = null;
+
+        // Check for specific airport code in arrival or departure
+        if (d.arrival && d.arrival.iataCode === airportCode && d.arrival.actualTime) {
+            actualTime = d.arrival.actualTime;
+        } else if (d.departure && d.departure.iataCode === airportCode && d.departure.actualTime) {
+            actualTime = d.departure.actualTime;
         }
-)    };
-
-    return monthlyCounts;
-
-
-
-//TO TEST
-// Example usage with mock data
- let FlightData = 'data\\combined_strip.json'
-
- console.log(aggregateDataByMonth(FlightData, 2023));
-
-
- // This code should update the categories according to the new API.
-
- d3.json('data/combined_flights_data.json').then(function(data) {
-    // Process data
-    data.forEach(function(d) {
-        // Assuming the date is in d.arrival.actualTime or d.departure.actualTime
-        let actualTime = d.arrival ? d.arrival.actualTime : (d.departure ? d.departure.actualTime : null);
 
         if (actualTime) {
-            let date = new Date(actualTime); // Parsing ISO 8601 date format
-            d.latestTime = date;
-            d.Hour = date.getHours();
-            d.Minute = date.getMinutes();
+            let date = new Date(actualTime);
+            if (date.getFullYear() === year) {
+                d.latestTime = date;
+                d.Hour = date.getHours();
+                d.Minute = date.getMinutes();
+                d.Time_Category = getTimeCategory(d.Hour, d.Minute);
+                acc.push(d);
+            }
+        }
+        return acc;
+    }, []);
+}
 
-            d.Time_Category = "Regular arrivals";
-            if (d.Hour === 23 && d.Minute < 30) d.Time_Category = "Shoulder hour flights";
-            else if ((d.Hour === 23 && d.Minute >= 30) || d.Hour < 6) d.Time_Category = "Night hour arrivals";
-            else if (d.Hour === 6) d.Time_Category = "Shoulder hour flights";
+
+// Function to aggregate flight data by month and category
+function aggregateDataByMonth(flightData) {
+    const monthlyCounts = {
+        total: new Array(12).fill(0),
+        shoulder: new Array(12).fill(0),
+        night: new Array(12).fill(0)
+    };
+
+    flightData.forEach(d => {
+        let flightMonth = d.latestTime.getMonth();
+
+        monthlyCounts.total[flightMonth]++;
+        if (d.Time_Category === "Shoulder hour flights") {
+            monthlyCounts.shoulder[flightMonth]++;
+        }
+        if (d.Time_Category === "Night hour arrivals") {
+            monthlyCounts.night[flightMonth]++;
         }
     });
 
-    let total_flights = data.length;
-    let shoulder_hour_flights = data.filter(d => d.Time_Category === 'Shoulder hour flights').length;
-    let night_hour_flights = data.filter(d => d.Time_Category === 'Night hour arrivals').length;
+    return monthlyCounts;
+}
 
-    // Quotas
-    let quotas = [85990, 9500, 4000];
+// Read and parse the JSON file
+const filePath = '../data/combined_strip.json';
+fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+        console.error('Error reading the file:', err);
+        return;
+    }
+    try {
+        const flightData = JSON.parse(data);
 
-    // Categories and counts
-    let categories = ['Total Flights', 'Shoulder Hour Flights', 'Night Hour Flights'];
-    let counts = [total_flights, shoulder_hour_flights, night_hour_flights];
+        // Process and categorize flights for 2023 and 2024 for 'brs' airport
+        const data2023 = processAndCategorizeFlights(flightData, 2023, 'brs');
+        const data2024 = processAndCategorizeFlights(flightData, 2024, 'brs');
 
-    // Calculating percentages
-    let percentages = counts.map((count, index) => (count / quotas[index]) * 100);
+        // Aggregate data by month for 2023 and 2024
+        const aggregatedData2023 = aggregateDataByMonth(data2023);
+        const aggregatedData2024 = aggregateDataByMonth(data2024);
 
- })
+        // Create JSON objects for 2023 and 2024
+        let jsonData = {
+            "2023": aggregatedData2023,
+            "2024": aggregatedData2024
+        };
+
+        // Convert JSON object to string
+        let jsonString = JSON.stringify(jsonData, null, 2); // Pretty formatting
+
+        // Write JSON string to a file
+        fs.writeFile('combined_output.json', jsonString, (err) => {
+            if (err) throw err;
+            console.log('Data for 2023 and 2024 written to file');
+        });
+
+    } catch (parseErr) {
+        console.error('Error parsing JSON:', parseErr);
+    }
+});

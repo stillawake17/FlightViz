@@ -10,13 +10,16 @@ function getTimeCategory(hour, minute) {
 
 // Function to process and categorize flights for a specific year and airport
 function processAndCategorizeFlights(flightData, year, airportCode) {
+    // Convert airportCode to lowercase
+    airportCode = airportCode.toLowerCase();
+    
     return flightData.reduce((acc, d) => {
         let actualTime = null;
 
         // Check for specific airport code in arrival or departure
-        if (d.arrival && d.arrival.iataCode === airportCode && d.arrival.actualTime) {
+        if (d.arrival && d.arrival.iataCode.toLowerCase() === airportCode && d.arrival.actualTime) {
             actualTime = d.arrival.actualTime;
-        } else if (d.departure && d.departure.iataCode === airportCode && d.departure.actualTime) {
+        } else if (d.departure && d.departure.iataCode.toLowerCase() === airportCode && d.departure.actualTime) {
             actualTime = d.departure.actualTime;
         }
 

@@ -12,7 +12,9 @@ code = 'EGGD'  # Your airport code
 def fetch_data(date, is_arrival=True, filename=None):
     params = {
         'access_key': api_key,
-        'flight_date': date
+        'flight_date': date,
+        'limit': 100,  # adjust limit based on API documentation
+        'offset': 0    # Start at the beginning
     }
 
     if is_arrival:
@@ -35,7 +37,7 @@ def fetch_data(date, is_arrival=True, filename=None):
 
 
 # Get yesterday's date
-yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+yesterday = (datetime.now() - timedelta(days=5)).strftime("%Y-%m-%d")
 
 # Fetch and save arrival data
 arrival_filename = f'EGGD_arrivals_{yesterday}.json'
@@ -80,4 +82,3 @@ try:
 
 except FileNotFoundError as e:
     print(f"Error: {e}")
-

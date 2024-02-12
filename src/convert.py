@@ -1,10 +1,12 @@
+
+#Run convert.py after app.py
 import json
 from datetime import datetime
 
 # Path to the file containing the new API JSON response
-input_file_path = '.\combined_flights.json'
+input_file_path = 'EGGD_combined_2024-01-31.json'
 # Path where the converted data will be saved
-output_file_path = 'converted_data.json'
+output_file_path = 'converted_data240131.json'
 
 # Read the new API data from a file
 with open(input_file_path, 'r') as file:
@@ -54,8 +56,19 @@ with open(input_file_path, 'r') as file:
 arrival_data = new_api_data.get("arrivals", [])
 departure_data = new_api_data.get("departures", [])
 
-converted_arrivals = convert_to_old_api_format(arrival_data, "arrival")
-converted_departures = convert_to_old_api_format(departure_data, "departure")
+# Extract the flight information from arrival_data
+actual_arrival_data = arrival_data['data']  # This should be the list of flight dictionaries
+
+# Similarly, do the same for departure_data if it has the same structure
+actual_departure_data = departure_data['data']
+
+# Now, pass these to your function
+converted_arrivals = convert_to_old_api_format(actual_arrival_data, "arrival")
+converted_departures = convert_to_old_api_format(actual_departure_data, "departure")
+
+
+#converted_arrivals = convert_to_old_api_format(arrival_data, "arrival")
+#converted_departures = convert_to_old_api_format(departure_data, "departure")
 
 # Combine arrivals and departures
 converted_data = converted_arrivals + converted_departures

@@ -1,8 +1,8 @@
 import json
 
 # Replace 'file1.json' and 'file2.json' with your actual file paths
-file1_path = 'data\combined_flights_data_strip.json'
-file2_path = 'data\converted_data.json'
+file1_path = 'data\combined_strip.json'
+file2_path = 'converted_data240131.json'
 
 def read_json(file_path):
     try:

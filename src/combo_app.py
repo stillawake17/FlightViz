@@ -14,7 +14,7 @@ def fetch_data(date, is_arrival=True, filename=None):
         'access_key': api_key,
         'flight_date': date,
         'limit': 100,  # adjust limit based on API documentation
-        'offset': 0    # this tells the api at which record to start; begin at 0
+        'offset': 100    # this tells the api at which record to start; begin at 0
     }
 
     if is_arrival:
@@ -37,7 +37,7 @@ def fetch_data(date, is_arrival=True, filename=None):
 
 
 # Get yesterday's date by deleting one day in days=1
-yesterday = (datetime.now() - timedelta(days=3)).strftime("%Y-%m-%d")
+yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
 
 # Fetch and save arrival data
 arrival_filename = f'EGGD_arrivals_{yesterday}.json'

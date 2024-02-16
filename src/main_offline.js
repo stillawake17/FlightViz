@@ -1,5 +1,13 @@
 const fs = require('fs');
 
+// Helper function to create a unique identifier for a flight record
+function createFlightKey(flight) {
+    const departureCode = flight.departure ? flight.departure.iataCode.toLowerCase() : ''; // Ensure lowercase for consistency
+    const arrivalCode = flight.arrival ? flight.arrival.iataCode.toLowerCase() : ''; // Ensure lowercase for consistency
+    const departureTime = flight.departure ? flight.departure.actualTime : '';
+    return `${departureCode}-${arrivalCode}-${departureTime}`;
+}
+
 // Function to determine the time category of a flight
 function getTimeCategory(hour, minute) {
     if (hour === 23 && minute < 30) return "Shoulder hour flights";
@@ -10,50 +18,51 @@ function getTimeCategory(hour, minute) {
 
 // Function to process and categorize flights for a specific year and airport
 function processAndCategorizeFlights(flightData, year, airportCode) {
-    // Convert airportCode to lowercase
-    airportCode = airportCode.toLowerCase();
-    
-    return flightData.reduce((acc, d) => {
-        let actualTime = null;
+    airportCode = airportCode.toLowerCase(); // Ensure airportCode is lowercase
+    const seenFlights = new Set();
+    return flightData.reduce((acc, flight) => {
+        const flightKey = createFlightKey(flight);
+        if (!seenFlights.has(flightKey)) {
+            seenFlights.add(flightKey);
+            let actualTime = null;
 
-        // Check for specific airport code in arrival or departure
-        if (d.arrival && d.arrival.iataCode.toLowerCase() === airportCode && d.arrival.actualTime) {
-            actualTime = d.arrival.actualTime;
-        } else if (d.departure && d.departure.iataCode.toLowerCase() === airportCode && d.departure.actualTime) {
-            actualTime = d.departure.actualTime;
-        }
+            if (flight.arrival && flight.arrival.iataCode.toLowerCase() === airportCode && flight.arrival.actualTime) {
+                actualTime = flight.arrival.actualTime;
+            } else if (flight.departure && flight.departure.iataCode.toLowerCase() === airportCode && flight.departure.actualTime) {
+                actualTime = flight.departure.actualTime;
+            }
 
-        if (actualTime) {
-            let date = new Date(actualTime);
-            if (date.getFullYear() === year) {
-                d.latestTime = date;
-                d.Hour = date.getHours();
-                d.Minute = date.getMinutes();
-                d.Time_Category = getTimeCategory(d.Hour, d.Minute);
-                acc.push(d);
+            if (actualTime) {
+                let date = new Date(actualTime);
+                if (date.getFullYear() === year) {
+                    flight.latestTime = date;
+                    flight.Hour = date.getHours();
+                    flight.Minute = date.getMinutes();
+                    flight.Time_Category = getTimeCategory(flight.Hour, flight.Minute);
+                    acc.push(flight);
+                }
             }
         }
         return acc;
     }, []);
 }
 
-
 // Function to aggregate flight data by month and category
 function aggregateDataByMonth(flightData) {
     const monthlyCounts = {
         total: new Array(12).fill(0),
         shoulder: new Array(12).fill(0),
-        night: new Array(12).fill(0)
+        night: new Array(12).fill(0),
     };
 
-    flightData.forEach(d => {
-        let flightMonth = d.latestTime.getMonth();
+    flightData.forEach(flight => {
+        let flightMonth = flight.latestTime.getMonth();
 
         monthlyCounts.total[flightMonth]++;
-        if (d.Time_Category === "Shoulder hour flights") {
+        if (flight.Time_Category === "Shoulder hour flights") {
             monthlyCounts.shoulder[flightMonth]++;
         }
-        if (d.Time_Category === "Night hour arrivals") {
+        if (flight.Time_Category === "Night hour arrivals") {
             monthlyCounts.night[flightMonth]++;
         }
     });
@@ -82,11 +91,11 @@ fs.readFile(filePath, 'utf8', (err, data) => {
         // Create JSON objects for 2023 and 2024
         let jsonData = {
             "2023": aggregatedData2023,
-            "2024": aggregatedData2024
+            "2024": aggregatedData2024,
         };
 
-        // Convert JSON object to string
-        let jsonString = JSON.stringify(jsonData, null, 2); // Pretty formatting
+        // Convert JSON object to string with pretty formatting
+        let jsonString = JSON.stringify(jsonData, null, 2);
 
         // Write JSON string to a file
         fs.writeFile('combined_output.json', jsonString, (err) => {

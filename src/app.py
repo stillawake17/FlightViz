@@ -37,7 +37,7 @@ def fetch_data(date, is_arrival=True, filename=None):
 
 
 # Get yesterday's date
-yesterday = (datetime.now() - timedelta(days=5)).strftime("%Y-%m-%d")
+yesterday = (datetime.now() - timedelta(days=407)).strftime("%Y-%m-%d")
 
 # Fetch and save arrival data
 arrival_filename = f'EGGD_arrivals_{yesterday}.json'

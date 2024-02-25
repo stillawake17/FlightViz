@@ -1,62 +1,47 @@
 import requests
 import json
 from datetime import datetime, timedelta
-from config import api_key  # Assuming your API key is stored in a separate config file
 
+# Api_key is imported from config file
+from config import api_key
+
+# Base URL for the Aviationstack API
 base_url = "http://api.aviationstack.com/v1/flights"
 code = 'EGGD'  # Your airport code
 
 def fetch_data(date, is_arrival=True, filename=None):
-    all_data = []  # Initialize an empty list to hold all records
     params = {
         'access_key': api_key,
         'flight_date': date,
-        'limit': 100,  # Adjust limit based on API documentation
-        'offset': 0  # Initially start at 0
+        'limit': 100,  # adjust limit based on API documentation
+        'offset': 0    # this tells the api at which record to start; begin at 0
     }
 
     if is_arrival:
-        params['arr_icao'] = code  # For flights arriving at the specified code
+        params['arr_icao'] = 'EGGD'  # For flights arriving at EGGD
     else:
-        params['dep_icao'] = code  # For flights departing from the specified code
+        params['dep_icao'] = 'EGGD'  # For flights departing from EGGD
 
-    while True:
-        response = requests.get(base_url, params=params)
-        if response.status_code == 200:
-            data = response.json()
-            all_data.extend(data.get('data', []))  # Append the fetched records to all_data list
-            
-            # Check if we fetched fewer records than the limit, indicating we are done
-            if len(data.get('data', [])) < params['limit']:
-                break
-            
-            params['offset'] += params['limit']  # Increment the offset to fetch the next batch
-        else:
-            print(f"Error fetching data for {date}: {response.status_code}")
-            print(response.text)
-            break  # Exit the loop in case of an error
-
-    if filename:
-        with open(filename, 'w') as file:
-            json.dump(all_data, file)  # Save all fetched data to the specified file
-        print(f"Data saved to {filename}")
-
-    return all_data  # Return the combined data for further processing
-
-
+    response = requests.get(base_url, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        if filename:
+            with open(filename, 'w') as file:
+                json.dump(data, file)
+            print(f"Data saved to {filename}")
+        return data
+    else:
+        print(f"Error fetching data for {date}: {response.status_code}")
+        print(response.text)
+        return None
 
 
 # Get yesterday's date by deleting one day in days=1
-yesterday = (datetime.now() - timedelta(days=62)).strftime("%Y-%m-%d")
+yesterday = (datetime.now() - timedelta(days=61)).strftime("%Y-%m-%d")
 
 # Fetch and save arrival data
 arrival_filename = f'EGGD_arrivals_{yesterday}.json'
-arrival_data = fetch_data(yesterday, is_arrival=True, filename=arrival_filename)
-
-# Fetch and save departure data
-departure_filename = f'EGGD_departures_{yesterday}.json'
-departure_data = fetch_data(yesterday, is_arrival=False, filename=departure_filename)
-
+fetch_data(yesterday, is_arrival=True, filename=arrival_filename)
 
 # Fetch and save departure data
 departure_filename = f'EGGD_departures_{yesterday}.json'
@@ -66,8 +51,6 @@ fetch_data(yesterday, is_arrival=False, filename=departure_filename)
 # Fetch data for yesterday
 print(f"Fetching data for {yesterday}")
 yesterday_data = fetch_data(yesterday)
-
-
 
 import json
 
@@ -159,23 +142,14 @@ arrival_data = new_api_data.get("arrivals", [])
 departure_data = new_api_data.get("departures", [])
 
 # Extract the flight information from arrival_data
-# actual_arrival_data = arrival_data['data']  # This should be the list of flight dictionaries
+actual_arrival_data = arrival_data['data']  # This should be the list of flight dictionaries
 
 # Similarly, do the same for departure_data if it has the same structure
-#actual_departure_data = departure_data['data']
-
-# Assuming fetch_data has been called and has returned lists of data
-
-# No need to extract 'data' key since fetch_data now returns a list directly
-actual_arrival_data = arrival_data  # This is already the list of flight dictionaries
-actual_departure_data = departure_data  # This is already the list of flight dictionaries
+actual_departure_data = departure_data['data']
 
 # Now, pass these to your function
 converted_arrivals = convert_to_old_api_format(actual_arrival_data, "arrival")
 converted_departures = convert_to_old_api_format(actual_departure_data, "departure")
-
-
-
 
 
 #converted_arrivals = convert_to_old_api_format(arrival_data, "arrival")

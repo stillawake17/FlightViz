@@ -16,11 +16,13 @@ function getTimeCategory(hour, minute) {
     return "Regular arrivals";
 }
 
-// Function to process and categorize flights for a specific year and airport
-function processAndCategorizeFlights(flightData, year, airportCode) {
+// Function to list flights by day, including the time category and flight number
+function listFlightsByDay(flightData, year, airportCode) {
     airportCode = airportCode.toLowerCase(); // Ensure airportCode is lowercase
+    const flightsByDay = {};
     const seenFlights = new Set();
-    return flightData.reduce((acc, flight) => {
+
+    flightData.forEach(flight => {
         const flightKey = createFlightKey(flight);
         if (!seenFlights.has(flightKey)) {
             seenFlights.add(flightKey);
@@ -33,45 +35,33 @@ function processAndCategorizeFlights(flightData, year, airportCode) {
             }
 
             if (actualTime) {
-                let date = new Date(actualTime);
+                const date = new Date(actualTime);
                 if (date.getFullYear() === year) {
-                    flight.latestTime = date;
-                    flight.Hour = date.getHours();
-                    flight.Minute = date.getMinutes();
-                    flight.Time_Category = getTimeCategory(flight.Hour, flight.Minute);
-                    acc.push(flight);
+                    const dayKey = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+                    const timeCategory = getTimeCategory(date.getHours(), date.getMinutes());
+                    // Include flight number in the output, assuming it's stored in a property like flight.flightNumber
+                    const flightNumber = flight.flightNumber || 'Unknown'; // Adjust based on actual data structure
+
+                    if (!flightsByDay[dayKey]) {
+                        flightsByDay[dayKey] = [];
+                    }
+                    flightsByDay[dayKey].push({
+                        ...flight, // Includes all original flight data
+                        Time_Category: timeCategory,
+                        Flight_Number: flightNumber
+                    });
                 }
             }
         }
-        return acc;
-    }, []);
-}
-
-// Function to aggregate flight data by month and category
-function aggregateDataByMonth(flightData) {
-    const monthlyCounts = {
-        total: new Array(12).fill(0),
-        shoulder: new Array(12).fill(0),
-        night: new Array(12).fill(0),
-    };
-
-    flightData.forEach(flight => {
-        let flightMonth = flight.latestTime.getMonth();
-
-        monthlyCounts.total[flightMonth]++;
-        if (flight.Time_Category === "Shoulder hour flights") {
-            monthlyCounts.shoulder[flightMonth]++;
-        }
-        if (flight.Time_Category === "Night hour arrivals") {
-            monthlyCounts.night[flightMonth]++;
-        }
     });
 
-    return monthlyCounts;
+    return flightsByDay;
 }
 
 // Read and parse the JSON file
-const filePath = '../data/combined_strip.json';
+const filePath = '../data/combined_strip_lowercase.json'; // Adjust this path as necessary
+
+
 fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
         console.error('Error reading the file:', err);
@@ -80,27 +70,25 @@ fs.readFile(filePath, 'utf8', (err, data) => {
     try {
         const flightData = JSON.parse(data);
 
-        // Process and categorize flights for 2023 and 2024 for 'brs' airport
-        const data2023 = processAndCategorizeFlights(flightData, 2023, 'brs');
-        const data2024 = processAndCategorizeFlights(flightData, 2024, 'brs');
+        // Process and list flights by day for 2023 and 2024 for 'brs' airport
+        const flightsByDay2023 = listFlightsByDay(flightData, 2023, 'brs');
+        const flightsByDay2024 = listFlightsByDay(flightData, 2024, 'brs');
 
-        // Aggregate data by month for 2023 and 2024
-        const aggregatedData2023 = aggregateDataByMonth(data2023);
-        const aggregatedData2024 = aggregateDataByMonth(data2024);
+        // Write the data for 2023 and 2024 to separate files
+        fs.writeFile('./flights_by_day_2023.json', JSON.stringify(flightsByDay2023, null, 2), (err) => {
+            if (err) {
+                console.error('Error writing data for 2023:', err);
+            } else {
+                console.log('Flight data for 2023 written to file successfully.');
+            }
+        });
 
-        // Create JSON objects for 2023 and 2024
-        let jsonData = {
-            "2023": aggregatedData2023,
-            "2024": aggregatedData2024,
-        };
-
-        // Convert JSON object to string with pretty formatting
-        let jsonString = JSON.stringify(jsonData, null, 2);
-
-        // Write JSON string to a file
-        fs.writeFile('combined_output.json', jsonString, (err) => {
-            if (err) throw err;
-            console.log('Data for 2023 and 2024 written to file');
+        fs.writeFile('./flights_by_day_2024.json', JSON.stringify(flightsByDay2024, null, 2), (err) => {
+            if (err) {
+                console.error('Error writing data for 2024:', err);
+            } else {
+                console.log('Flight data for 2024 written to file successfully.');
+            }
         });
 
     } catch (parseErr) {

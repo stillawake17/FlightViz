@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Data Visualization</title>
+    <!-- Include D3.js from CDN -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- Optional: Include GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <style>
+        /* Add some basic styling */
+        #prev_monthly_chart_container, #current_monthly_chart_container {
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="prev_monthly_chart_container"></div>
+    <div id="current_monthly_chart_container"></div>
+
+    <!-- Custom buttons for interaction -->
+    <!-- Existing button for 2023 -->
+<button id="prev_total_button">Show 2023 Total Flights</button>
+<!-- New button for 2024 -->
+<button id="current_total_button">Show 2024 Total Flights</button>
+
+
+    <!-- Include your JavaScript file -->
+    <script src="../tests/test_newmain.js"></script>
+</body>
+</html>

@@ -2,6 +2,7 @@ import json
 import pandas as pd
 
 json_file_path = 'data/combined_strip.json'
+#json_file_path = 'deduplicated_data_2024-02-22.json'
 
 # Load the flight data from JSON file
 with open(json_file_path, 'r') as file:
@@ -12,21 +13,28 @@ flattened_data = []
 for entry in data:
     if 'arrival' in entry and 'actualTime' in entry['arrival'] and entry['arrival']['actualTime']:
         actualTime = entry['arrival']['actualTime']
-        if entry['arrival']['iataCode'].lower() == 'brs':  # Capitalize 'BRS'
+        if entry['arrival']['iataCode'].lower() == 'brs':  # lower case to match the api
             flattened_data.append({'actualTime': actualTime, 'type': 'arrival'})
     if 'departure' in entry and 'actualTime' in entry['departure'] and entry['departure']['actualTime']:
         actualTime = entry['departure']['actualTime']
-        if entry['departure']['iataCode'].lower() == 'brs':  # Capitalize 'BRS'
+        if entry['departure']['iataCode'].lower() == 'brs':  # lower case to match the api
             flattened_data.append({'actualTime': actualTime, 'type': 'departure'})
 
 # Convert to DataFrame and format the 'actualTime' to datetime
 df = pd.DataFrame(flattened_data)
 df['actualTime'] = pd.to_datetime(df['actualTime'])
 
-# Extract year-month from 'actualTime' and count flights per month
+# Extract year-month and date from 'actualTime'
 df['year_month'] = df['actualTime'].dt.to_period('M')
-flight_counts = df.groupby('year_month').size()
+df['date'] = df['actualTime'].dt.date
 
-# Display the flight counts per month
-for year_month, count in flight_counts.items():
-    print(f"Month: {year_month}, Number of Flights: {count}")
+# Count flights per month
+monthly_counts = df.groupby('year_month').size().reset_index(name='count')
+# Count flights per day
+daily_counts = df.groupby('date').size().reset_index(name='count')
+
+# Export counts to CSV
+monthly_counts.to_csv('monthly_flight_counts.csv', index=False)
+daily_counts.to_csv('daily_flight_counts.csv', index=False)
+
+print("Monthly and daily flight counts have been exported to CSV files.")

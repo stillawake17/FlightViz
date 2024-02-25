@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 
-json_file_path = 'combined.json'
+json_file_path = '../data/combined_strip.json'
 
 # Load the flight data from JSON file
 with open(json_file_path, 'r') as file:

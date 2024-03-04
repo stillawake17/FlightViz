@@ -59,7 +59,7 @@ function listFlightsByDay(flightData, year, airportCode) {
 }
 
 // Read and parse the JSON file
-const filePath = '../data/combined_strip_lowercase.json'; // Adjust this path as necessary
+const filePath = '../data/combined_strip.json'; // Adjust this path as necessary
 
 
 fs.readFile(filePath, 'utf8', (err, data) => {

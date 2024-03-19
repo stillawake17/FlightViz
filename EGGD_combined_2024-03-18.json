@@ -188,7 +188,12 @@
                 "icao": "EIN3280",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "EI-GZV",
+                "iata": "AT76",
+                "icao": "AT76",
+                "icao24": "4CAD13"
+            },
             "live": null
         },
         {
@@ -331,7 +336,12 @@
                 "icao": "RYR2291",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "EI-HEW",
+                "iata": "B38M",
+                "icao": "B38M",
+                "icao24": "4CAD2B"
+            },
             "live": null
         },
         {
@@ -527,7 +537,7 @@
         },
         {
             "flight_date": "2024-03-18",
-            "flight_status": "scheduled",
+            "flight_status": "landed",
             "departure": {
                 "airport": "Pablo Ruiz Picasso",
                 "timezone": "Europe/Madrid",
@@ -535,7 +545,7 @@
                 "icao": "LEMG",
                 "terminal": null,
                 "gate": "255",
-                "delay": 48,
+                "delay": 64,
                 "scheduled": "2024-03-18T21:10:00+00:00",
                 "estimated": "2024-03-18T21:10:00+00:00",
                 "actual": "2024-03-18T22:13:00+00:00",
@@ -550,12 +560,12 @@
                 "terminal": "1",
                 "gate": null,
                 "baggage": null,
-                "delay": 28,
+                "delay": 29,
                 "scheduled": "2024-03-18T23:00:00+00:00",
                 "estimated": "2024-03-18T23:00:00+00:00",
-                "actual": null,
-                "estimated_runway": null,
-                "actual_runway": null
+                "actual": "2024-03-18T23:29:00+00:00",
+                "estimated_runway": "2024-03-18T23:29:00+00:00",
+                "actual_runway": "2024-03-18T23:29:00+00:00"
             },
             "airline": {
                 "name": "easyJet",
@@ -574,20 +584,11 @@
                 "icao": "A21N",
                 "icao24": "40768D"
             },
-            "live": {
-                "updated": "2024-03-18T22:51:55+00:00",
-                "latitude": 46.88,
-                "longitude": -3.7372,
-                "altitude": 10972.8,
-                "direction": 359.48,
-                "speed_horizontal": 822.312,
-                "speed_vertical": 0,
-                "is_ground": false
-            }
+            "live": null
         },
         {
             "flight_date": "2024-03-18",
-            "flight_status": "scheduled",
+            "flight_status": "landed",
             "departure": {
                 "airport": "Pablo Ruiz Picasso",
                 "timezone": "Europe/Madrid",
@@ -595,7 +596,7 @@
                 "icao": "LEMG",
                 "terminal": null,
                 "gate": "363",
-                "delay": 30,
+                "delay": 49,
                 "scheduled": "2024-03-18T21:40:00+00:00",
                 "estimated": "2024-03-18T21:40:00+00:00",
                 "actual": "2024-03-18T22:29:00+00:00",
@@ -610,12 +611,12 @@
                 "terminal": "1",
                 "gate": null,
                 "baggage": null,
-                "delay": 21,
+                "delay": 17,
                 "scheduled": "2024-03-18T23:25:00+00:00",
                 "estimated": "2024-03-18T23:25:00+00:00",
-                "actual": null,
-                "estimated_runway": null,
-                "actual_runway": null
+                "actual": "2024-03-18T23:41:00+00:00",
+                "estimated_runway": "2024-03-18T23:41:00+00:00",
+                "actual_runway": "2024-03-18T23:41:00+00:00"
             },
             "airline": {
                 "name": "Ryanair",
@@ -628,7 +629,12 @@
                 "icao": "RYR4122",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "EI-IHW",
+                "iata": "B38M",
+                "icao": "B38M",
+                "icao24": "4CAE49"
+            },
             "live": null
         },
         {
@@ -656,7 +662,7 @@
                 "terminal": "1",
                 "gate": null,
                 "baggage": null,
-                "delay": 6,
+                "delay": 12,
                 "scheduled": "2024-03-18T22:20:00+00:00",
                 "estimated": "2024-03-18T22:20:00+00:00",
                 "actual": "2024-03-18T22:31:00+00:00",
@@ -720,7 +726,12 @@
                 "icao": "EZY2732",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "G-UZLA",
+                "iata": "A20N",
+                "icao": "A20N",
+                "icao24": "407793"
+            },
             "live": null
         },
         {
@@ -914,7 +925,12 @@
                 "icao": "EZY2884",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "G-EZWX",
+                "iata": "A320",
+                "icao": "A320",
+                "icao24": "406B90"
+            },
             "live": null
         },
         {
@@ -1280,7 +1296,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "T",
                 "gate": null,
                 "baggage": null,
                 "delay": 44,
@@ -1428,7 +1444,7 @@
                 "terminal": "1",
                 "gate": null,
                 "baggage": null,
-                "delay": 12,
+                "delay": 13,
                 "scheduled": "2024-03-18T22:55:00+00:00",
                 "estimated": "2024-03-18T22:55:00+00:00",
                 "actual": "2024-03-18T23:08:00+00:00",
@@ -1481,7 +1497,7 @@
                 "terminal": "1",
                 "gate": null,
                 "baggage": null,
-                "delay": 12,
+                "delay": 13,
                 "scheduled": "2024-03-18T22:55:00+00:00",
                 "estimated": "2024-03-18T22:55:00+00:00",
                 "actual": "2024-03-18T23:08:00+00:00",
@@ -1950,10 +1966,10 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "T",
                 "gate": null,
                 "baggage": null,
-                "delay": 2,
+                "delay": 6,
                 "scheduled": "2024-03-18T17:10:00+00:00",
                 "estimated": "2024-03-18T17:10:00+00:00",
                 "actual": "2024-03-18T17:15:00+00:00",
@@ -2093,7 +2109,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": 7,
@@ -2139,7 +2155,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -2768,7 +2784,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": 1,
@@ -2790,10 +2806,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "G-DRTM",
+                "registration": "G-JZBO",
                 "iata": "B738",
                 "icao": "B738",
-                "icao24": "407862"
+                "icao24": "40753C"
             },
             "live": null
         },
@@ -2819,7 +2835,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": 25,
@@ -2853,7 +2869,7 @@
                 "icao": "GCFV",
                 "terminal": null,
                 "gate": "16",
-                "delay": 44,
+                "delay": 45,
                 "scheduled": "2024-03-18T18:25:00+00:00",
                 "estimated": "2024-03-18T18:25:00+00:00",
                 "actual": "2024-03-18T19:09:00+00:00",
@@ -2945,7 +2961,7 @@
                 "icao": "LPPT",
                 "terminal": "1",
                 "gate": null,
-                "delay": 51,
+                "delay": 67,
                 "scheduled": "2024-03-18T19:30:00+00:00",
                 "estimated": "2024-03-18T19:30:00+00:00",
                 "actual": "2024-03-18T20:37:00+00:00",
@@ -3003,7 +3019,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -3049,7 +3065,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -3102,7 +3118,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -3390,7 +3406,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "T",
                 "gate": "11",
                 "baggage": null,
                 "delay": null,
@@ -3436,7 +3452,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "T",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -3482,7 +3498,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": 30,
@@ -3533,7 +3549,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": 1,
@@ -3579,7 +3595,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -3671,7 +3687,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -3717,7 +3733,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": 3,
@@ -3763,7 +3779,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "T",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -3816,7 +3832,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "T",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -3915,7 +3931,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "T",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -3961,7 +3977,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -4007,7 +4023,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": 7,
@@ -4060,7 +4076,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": 7,
@@ -4402,7 +4418,7 @@
         },
         {
             "flight_date": "2024-03-18",
-            "flight_status": "active",
+            "flight_status": "landed",
             "departure": {
                 "airport": "Hurghada",
                 "timezone": "Africa/Cairo",
@@ -4428,9 +4444,9 @@
                 "delay": null,
                 "scheduled": "2024-03-18T23:55:00+00:00",
                 "estimated": "2024-03-18T23:55:00+00:00",
-                "actual": null,
-                "estimated_runway": null,
-                "actual_runway": null
+                "actual": "2024-03-18T23:53:00+00:00",
+                "estimated_runway": "2024-03-18T23:53:00+00:00",
+                "actual_runway": "2024-03-18T23:53:00+00:00"
             },
             "airline": {
                 "name": "TUIfly",
@@ -4519,10 +4535,10 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
-                "delay": 1,
+                "delay": 2,
                 "scheduled": "2024-03-18T18:30:00+00:00",
                 "estimated": "2024-03-18T18:30:00+00:00",
                 "actual": "2024-03-18T18:31:00+00:00",
@@ -4540,7 +4556,12 @@
                 "icao": "EZY220",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "G-EZGK",
+                "iata": "A319",
+                "icao": "A319",
+                "icao24": "40653A"
+            },
             "live": null
         },
         {
@@ -4823,7 +4844,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "T",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -4920,7 +4941,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "T",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -4966,7 +4987,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": 28,
@@ -5107,7 +5128,7 @@
                 "terminal": "1",
                 "gate": null,
                 "baggage": null,
-                "delay": 1,
+                "delay": 6,
                 "scheduled": "2024-03-18T21:55:00+00:00",
                 "estimated": "2024-03-18T21:55:00+00:00",
                 "actual": "2024-03-18T22:01:00+00:00",
@@ -5158,7 +5179,7 @@
                 "terminal": "1",
                 "gate": null,
                 "baggage": null,
-                "delay": 12,
+                "delay": 30,
                 "scheduled": "2024-03-18T21:25:00+00:00",
                 "estimated": "2024-03-18T21:25:00+00:00",
                 "actual": "2024-03-18T21:54:00+00:00",
@@ -5250,7 +5271,7 @@
                 "terminal": "1",
                 "gate": null,
                 "baggage": null,
-                "delay": 1,
+                "delay": 4,
                 "scheduled": "2024-03-18T20:45:00+00:00",
                 "estimated": "2024-03-18T20:45:00+00:00",
                 "actual": "2024-03-18T20:49:00+00:00",
@@ -5293,7 +5314,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": null,
@@ -5489,7 +5510,7 @@
                 "timezone": "Europe/London",
                 "iata": "BRS",
                 "icao": "EGGD",
-                "terminal": "1",
+                "terminal": "2",
                 "gate": null,
                 "baggage": null,
                 "delay": 3,
@@ -5630,7 +5651,7 @@
                 "terminal": "1",
                 "gate": null,
                 "baggage": null,
-                "delay": 12,
+                "delay": 13,
                 "scheduled": "2024-03-18T22:55:00+00:00",
                 "estimated": "2024-03-18T22:55:00+00:00",
                 "actual": "2024-03-18T23:08:00+00:00",
@@ -5916,7 +5937,7 @@
                 "terminal": "1",
                 "gate": null,
                 "baggage": null,
-                "delay": 12,
+                "delay": 13,
                 "scheduled": "2024-03-18T22:55:00+00:00",
                 "estimated": "2024-03-18T22:55:00+00:00",
                 "actual": "2024-03-18T23:08:00+00:00",
@@ -6112,7 +6133,7 @@
                 "terminal": "1",
                 "gate": null,
                 "baggage": null,
-                "delay": 6,
+                "delay": 9,
                 "scheduled": "2024-03-18T22:20:00+00:00",
                 "estimated": "2024-03-18T22:20:00+00:00",
                 "actual": "2024-03-18T22:29:00+00:00",
@@ -7739,7 +7760,12 @@
                 "icao": "EZY245",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "G-EZGJ",
+                "iata": "A319",
+                "icao": "A319",
+                "icao24": "406539"
+            },
             "live": null
         },
         {
@@ -7994,7 +8020,7 @@
                 "timezone": "Europe/London",
                 "iata": "EDI",
                 "icao": "EGPH",
-                "terminal": "2",
+                "terminal": "1",
                 "gate": null,
                 "baggage": "10",
                 "delay": null,
@@ -8178,7 +8204,7 @@
                 "timezone": "Europe/London",
                 "iata": "EDI",
                 "icao": "EGPH",
-                "terminal": "2",
+                "terminal": "1",
                 "gate": null,
                 "baggage": "10",
                 "delay": null,
@@ -8769,10 +8795,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "PH-EZB",
+                "registration": "PH-EZS",
                 "iata": "E190",
                 "icao": "E190",
-                "icao24": "484ACC"
+                "icao24": "484CC3"
             },
             "live": null
         },
@@ -9174,7 +9200,12 @@
                 "icao": "EZY7848",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "OE-LKK",
+                "iata": "A319",
+                "icao": "A319",
+                "icao24": "44061B"
+            },
             "live": null
         },
         {
@@ -9973,7 +10004,12 @@
                 "icao": "RYR505",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "EI-IGO",
+                "iata": "B38M",
+                "icao": "B38M",
+                "icao24": "4CADC1"
+            },
             "live": null
         },
         {
@@ -10045,9 +10081,9 @@
                 "iata": "DUB",
                 "icao": "EIDW",
                 "terminal": "1",
-                "gate": "26",
+                "gate": "VCC4",
                 "baggage": "9",
-                "delay": 12,
+                "delay": 11,
                 "scheduled": "2024-03-18T22:25:00+00:00",
                 "estimated": "2024-03-18T22:25:00+00:00",
                 "actual": "2024-03-18T22:36:00+00:00",
@@ -10424,7 +10460,7 @@
                 "timezone": "Europe/Warsaw",
                 "iata": "WRO",
                 "icao": "EPWR",
-                "terminal": "1",
+                "terminal": "3",
                 "gate": "15",
                 "baggage": "A",
                 "delay": null,
@@ -10818,7 +10854,12 @@
                 "icao": "RYR4753",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "EI-EKX",
+                "iata": "B738",
+                "icao": "B738",
+                "icao24": "4CA816"
+            },
             "live": null
         },
         {
@@ -10864,7 +10905,12 @@
                 "icao": "EXS1891",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "G-JZBO",
+                "iata": "B738",
+                "icao": "B738",
+                "icao24": "40753C"
+            },
             "live": null
         },
         {
@@ -10935,7 +10981,7 @@
                 "timezone": "Africa/Cairo",
                 "iata": "HRG",
                 "icao": "HEGN",
-                "terminal": "1",
+                "terminal": "C",
                 "gate": null,
                 "baggage": null,
                 "delay": 2,
@@ -11002,7 +11048,12 @@
                 "icao": "RYR2292",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "EI-IGO",
+                "iata": "B38M",
+                "icao": "B38M",
+                "icao24": "4CADC1"
+            },
             "live": null
         },
         {
@@ -11380,7 +11431,12 @@
                 "icao": "EZY2713",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "G-UZMJ",
+                "iata": "A21N",
+                "icao": "A21N",
+                "icao24": "4078F0"
+            },
             "live": null
         },
         {
@@ -11523,7 +11579,12 @@
                 "icao": "EZY2709",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "G-UZHH",
+                "iata": "A20N",
+                "icao": "A20N",
+                "icao24": "4074B8"
+            },
             "live": null
         },
         {
@@ -12059,7 +12120,7 @@
                 "timezone": "Europe/Rome",
                 "iata": "BGY",
                 "icao": "LIME",
-                "terminal": "3",
+                "terminal": "2",
                 "gate": "13",
                 "baggage": null,
                 "delay": null,
@@ -12463,7 +12524,12 @@
                 "icao": "EZY2871",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "G-UZLA",
+                "iata": "A20N",
+                "icao": "A20N",
+                "icao24": "407793"
+            },
             "live": null
         },
         {

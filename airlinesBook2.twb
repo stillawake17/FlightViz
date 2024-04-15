@@ -1,0 +1,513 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.24.0112.1233                               -->
+<workbook original-version='18.1' source-build='2023.3.2 (20233.24.0112.1233)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='combined_airline_data' inline='true' name='federated.06jsiyy1yzr98t15hn9ua15q9k8v' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='combined_airline_data' name='textscan.0ey7y4o1pbftjg132mbez08y7yzv'>
+            <connection class='textscan' directory='C:/Users/josti/OneDrive/Desktop/Gitlab clone/LDR/FlightViz' filename='combined_airline_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0ey7y4o1pbftjg132mbez08y7yzv' name='combined_airline_data.csv' table='[combined_airline_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='Airline' ordinal='0' />
+            <column datatype='string' name='Departure Airport' ordinal='1' />
+            <column datatype='string' name='Scheduled Departure' ordinal='2' />
+            <column datatype='string' name='Actual Departure' ordinal='3' />
+            <column datatype='string' name='Arrival Airport' ordinal='4' />
+            <column datatype='string' name='Scheduled Arrival' ordinal='5' />
+            <column datatype='string' name='Actual Arrival' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0ey7y4o1pbftjg132mbez08y7yzv' name='combined_airline_data.csv' table='[combined_airline_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='Airline' ordinal='0' />
+            <column datatype='string' name='Departure Airport' ordinal='1' />
+            <column datatype='string' name='Scheduled Departure' ordinal='2' />
+            <column datatype='string' name='Actual Departure' ordinal='3' />
+            <column datatype='string' name='Arrival Airport' ordinal='4' />
+            <column datatype='string' name='Scheduled Arrival' ordinal='5' />
+            <column datatype='string' name='Actual Arrival' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[combined_airline_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Airline</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Airline]</local-name>
+            <parent-name>[combined_airline_data.csv]</parent-name>
+            <remote-alias>Airline</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Departure Airport</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Departure Airport]</local-name>
+            <parent-name>[combined_airline_data.csv]</parent-name>
+            <remote-alias>Departure Airport</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Scheduled Departure</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Scheduled Departure]</local-name>
+            <parent-name>[combined_airline_data.csv]</parent-name>
+            <remote-alias>Scheduled Departure</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Actual Departure</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Actual Departure]</local-name>
+            <parent-name>[combined_airline_data.csv]</parent-name>
+            <remote-alias>Actual Departure</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Arrival Airport</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Arrival Airport]</local-name>
+            <parent-name>[combined_airline_data.csv]</parent-name>
+            <remote-alias>Arrival Airport</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Scheduled Arrival</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Scheduled Arrival]</local-name>
+            <parent-name>[combined_airline_data.csv]</parent-name>
+            <remote-alias>Scheduled Arrival</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Actual Arrival</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Actual Arrival]</local-name>
+            <parent-name>[combined_airline_data.csv]</parent-name>
+            <remote-alias>Actual Arrival</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='combined_airline_data.csv' datatype='table' name='[__tableau_internal_object_id__].[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='combined_airline_data.csv' id='combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE'>
+            <properties context=''>
+              <relation connection='textscan.0ey7y4o1pbftjg132mbez08y7yzv' name='combined_airline_data.csv' table='[combined_airline_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='Airline' ordinal='0' />
+                  <column datatype='string' name='Departure Airport' ordinal='1' />
+                  <column datatype='string' name='Scheduled Departure' ordinal='2' />
+                  <column datatype='string' name='Actual Departure' ordinal='3' />
+                  <column datatype='string' name='Arrival Airport' ordinal='4' />
+                  <column datatype='string' name='Scheduled Arrival' ordinal='5' />
+                  <column datatype='string' name='Actual Arrival' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Flights by airline departing Bristol Airport, 6 April to 13 April 2024</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_airline_data' name='federated.06jsiyy1yzr98t15hn9ua15q9k8v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06jsiyy1yzr98t15hn9ua15q9k8v'>
+            <column datatype='string' name='[Airline]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='combined_airline_data.csv' datatype='integer' name='[__tableau_internal_object_id__].[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='combined_airline_data.csv' datatype='table' name='[__tableau_internal_object_id__].[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]' role='measure' type='quantitative' />
+            <column-instance column='[Airline]' derivation='None' name='[none:Airline:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Airline:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Airline:nk]' />
+              <groupfilter function='member' level='[none:Airline:nk]' member='&quot;empty&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Airline:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[__tableau_internal_object_id__].[cnt:combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE:qk]' />
+              <color column='[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[__tableau_internal_object_id__].[cnt:combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE:qk]' />
+              <text column='[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Airline:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A3921298-193E-41D3-A161-070F642D689E}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_airline_data' name='federated.06jsiyy1yzr98t15hn9ua15q9k8v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06jsiyy1yzr98t15hn9ua15q9k8v'>
+            <column datatype='string' name='[Airline]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Arrival Airport]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='combined_airline_data.csv' datatype='integer' name='[__tableau_internal_object_id__].[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='combined_airline_data.csv' datatype='table' name='[__tableau_internal_object_id__].[combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE]' role='measure' type='quantitative' />
+            <column-instance column='[Airline]' derivation='None' name='[none:Airline:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Arrival Airport]' derivation='None' name='[none:Arrival Airport:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Airline:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Airline:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Airline:nk]' member='%null%' />
+                <groupfilter function='member' level='[none:Airline:nk]' member='&quot;empty&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Arrival Airport:nk]'>
+            <groupfilter function='member' level='[none:Arrival Airport:nk]' member='&quot;Bristol&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Airline:nk]</column>
+            <column>[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Arrival Airport:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[__tableau_internal_object_id__].[cnt:combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE:qk]' />
+              <color column='[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[__tableau_internal_object_id__].[cnt:combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE:qk]' />
+              <text column='[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Airline:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A6437448-D5CF-44D8-93C5-0AB6D478792A}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[__tableau_internal_object_id__].[cnt:combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Airline:nk]</field>
+            <field>[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Departure Airport:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{53C5E28F-B979-47A0-B83E-95D2C4F3EDF3}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[__tableau_internal_object_id__].[cnt:combined_airline_data.csv_7D47FBF50DEE4914A99E2CC6D1EF5EEE:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Airline:nk]</field>
+            <field>[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Arrival Airport:nk]</field>
+            <field>[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Departure Airport:nk]</field>
+            <field>[federated.06jsiyy1yzr98t15hn9ua15q9k8v].[none:Scheduled Arrival:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{EB585A7B-8FD2-478C-98CE-98E8ACC2FBF5}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      RK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+      zX8BLFqp+lhFksgAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -8,7 +8,7 @@ directory = r'C:\Users\josti\OneDrive\Desktop\Gitlab clone\LDR\FlightViz'
 dataframes = []
 
 # Loop through the range of dates
-for i in range(6, 14):  # Adjust the range according to your files
+for i in range(6, 20):  # Adjust the range according to your files
     date_str = f'202404{i:02}'  # Formats i as two digits
     file_path = os.path.join(directory, f'flight_data_{date_str}.csv')
     if os.path.exists(file_path):

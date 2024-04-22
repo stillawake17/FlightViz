@@ -1033,7 +1033,12 @@
         "icao": "EZY2904",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "G-EZTB",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "405F12"
+      },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "2904"
@@ -2901,7 +2906,12 @@
         "icao": "RYR4122",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "EI-IGV",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "4CADE0"
+      },
       "live": null,
       "Time_Category": "Night hour arrivals",
       "Flight_Number": "4122"
@@ -3093,7 +3103,12 @@
         "icao": "EZY2778",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "G-EZWP",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "406A91"
+      },
       "live": null,
       "Time_Category": "Night hour arrivals",
       "Flight_Number": "2778"
@@ -3400,7 +3415,12 @@
         "icao": "RYR4758",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "EI-IHB",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "4CADE7"
+      },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "4758"
@@ -4433,10 +4453,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "G-EZTT",
-        "iata": "A320",
-        "icao": "A320",
-        "icao24": "40622B"
+        "registration": "G-UZHI",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "407568"
       },
       "live": null,
       "Time_Category": "Night hour arrivals",
@@ -4581,8 +4601,22 @@
         "icao": "RUK6920",
         "codeshared": null
       },
-      "aircraft": null,
-      "live": null,
+      "aircraft": {
+        "registration": "EI-IJB",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "4CAE52"
+      },
+      "live": {
+        "updated": "2024-04-16T11:51:45+00:00",
+        "latitude": 49.444,
+        "longitude": 8.0268,
+        "altitude": 11582.4,
+        "direction": 304,
+        "speed_horizontal": 790.804,
+        "speed_vertical": 0,
+        "is_ground": false
+      },
       "Time_Category": "Night hour arrivals",
       "Flight_Number": "6920"
     },
@@ -4725,7 +4759,12 @@
         "icao": "EZY216",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "G-EZWP",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "406A91"
+      },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "216"
@@ -5179,7 +5218,12 @@
         "icao": "EZY2844",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "G-UZHC",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "4073A0"
+      },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "2844"
@@ -9521,7 +9565,12 @@
         "icao": "RYR4757",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "EI-IHB",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "4CADE7"
+      },
       "live": null,
       "Time_Category": "Shoulder hour flights",
       "Flight_Number": "4757"
@@ -11509,7 +11558,12 @@
         "icao": "EXS1831",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "G-JZDC",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "407F7D"
+      },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "1831"
@@ -12345,7 +12399,12 @@
         "icao": "EXS1817",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "G-DRTJ",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "407C6D"
+      },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "1817"

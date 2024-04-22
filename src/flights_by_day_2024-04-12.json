@@ -146,7 +146,12 @@
         "icao": "RYR5342",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "EI-IJB",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "4CAE52"
+      },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "5342"
@@ -453,7 +458,12 @@
         "icao": "RYR3559",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "9H-QAL",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "4D21FC"
+      },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "3559"
@@ -794,7 +804,12 @@
         "icao": "EZY2766",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "G-EZUA",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "40643C"
+      },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "2766"
@@ -1044,8 +1059,22 @@
         "icao": "RUK5919",
         "codeshared": null
       },
-      "aircraft": null,
-      "live": null,
+      "aircraft": {
+        "registration": "EI-IJB",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "4CAE52"
+      },
+      "live": {
+        "updated": "2024-04-19T09:17:35+00:00",
+        "latitude": 31.6041,
+        "longitude": -8.0246,
+        "altitude": 0,
+        "direction": 98,
+        "speed_horizontal": 0,
+        "speed_vertical": 0,
+        "is_ground": true
+      },
       "Time_Category": "Night hour arrivals",
       "Flight_Number": "5919"
     },
@@ -1193,7 +1222,12 @@
         "icao": "EXS1818",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "G-JZBV",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "407E71"
+      },
       "live": null,
       "Time_Category": "Night hour arrivals",
       "Flight_Number": "1818"
@@ -1990,8 +2024,22 @@
         "icao": "EZY2936",
         "codeshared": null
       },
-      "aircraft": null,
-      "live": null,
+      "aircraft": {
+        "registration": "G-UZMD",
+        "iata": "A21N",
+        "icao": "A21N",
+        "icao24": "407667"
+      },
+      "live": {
+        "updated": "2024-04-15T22:02:09+00:00",
+        "latitude": 51.6103,
+        "longitude": 1.5829,
+        "altitude": 10431.8,
+        "direction": 268,
+        "speed_horizontal": 744.504,
+        "speed_vertical": 0,
+        "is_ground": false
+      },
       "Time_Category": "Night hour arrivals",
       "Flight_Number": "2936"
     },
@@ -2873,8 +2921,22 @@
         "icao": "AUR642",
         "codeshared": null
       },
-      "aircraft": null,
-      "live": null,
+      "aircraft": {
+        "registration": "9H-LWB",
+        "iata": "DH8D",
+        "icao": "DH8D",
+        "icao24": "4D2522"
+      },
+      "live": {
+        "updated": "2024-04-15T12:42:34+00:00",
+        "latitude": 51.2917,
+        "longitude": -2.8615,
+        "altitude": 1691.64,
+        "direction": 81,
+        "speed_horizontal": 433.368,
+        "speed_vertical": 0,
+        "is_ground": false
+      },
       "Time_Category": "Night hour arrivals",
       "Flight_Number": "642"
     },
@@ -5104,7 +5166,12 @@
         "icao": "RYR8122",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "EI-EKO",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "4CA80F"
+      },
       "live": null,
       "Time_Category": "Night hour arrivals",
       "Flight_Number": "8122"
@@ -6604,8 +6671,22 @@
         "icao": "EZY2941",
         "codeshared": null
       },
-      "aircraft": null,
-      "live": null,
+      "aircraft": {
+        "registration": "G-UZMD",
+        "iata": "A21N",
+        "icao": "A21N",
+        "icao24": "407667"
+      },
+      "live": {
+        "updated": "2024-04-15T06:22:20+00:00",
+        "latitude": 48.0079,
+        "longitude": 6.9728,
+        "altitude": 10668,
+        "direction": 124,
+        "speed_horizontal": 901.924,
+        "speed_vertical": 0,
+        "is_ground": false
+      },
       "Time_Category": "Regular arrivals",
       "Flight_Number": "2941"
     },
@@ -12141,7 +12222,12 @@
         "icao": "RYR4133",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "SP-RSP",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "48C22F"
+      },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "4133"
@@ -13112,10 +13198,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "G-DRTJ",
+        "registration": "G-JZBV",
         "iata": "B738",
         "icao": "B738",
-        "icao24": "407C6D"
+        "icao24": "407E71"
       },
       "live": null,
       "Time_Category": "Regular arrivals",

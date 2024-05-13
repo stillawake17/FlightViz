@@ -31,8 +31,8 @@ def save_flights_to_json(flights_data, date, airport_iata, flight_type):
     print(f"{flight_type.capitalize()} data saved to {filename}")
 
 #api_key = os.getenv('api_key')  # Ensure the API key is set in your environment variables
-airport_iata = 'BRS'  # Bristol Airport
-date = '2023-05-31'  # Change date here
+airport_iata = 'BRS'  # Bristol Airport BRS
+date = '2024-04-30'  # Change date here
 
 # Get departure data for BRS
 departure_data = get_flight_data(api_key, airport_iata, 'departure', date)

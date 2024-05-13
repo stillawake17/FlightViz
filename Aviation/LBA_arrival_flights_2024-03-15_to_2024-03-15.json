@@ -1,0 +1,2328 @@
+[
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "krk",
+            "icaoCode": "epkk",
+            "terminal": "t",
+            "gate": "20",
+            "delay": 79,
+            "scheduledTime": "2024-03-15t06:00:00.000",
+            "estimatedTime": "2024-03-15t06:17:00.000",
+            "actualTime": "2024-03-15t07:18:00.000",
+            "estimatedRunway": "2024-03-15t07:18:00.000",
+            "actualRunway": "2024-03-15t07:18:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "15-1",
+            "delay": 64,
+            "scheduledTime": "2024-03-15t07:35:00.000",
+            "estimatedTime": "2024-03-15t08:38:00.000"
+        },
+        "airline": {
+            "name": "ryanair sun",
+            "iataCode": "rr",
+            "icaoCode": "rys"
+        },
+        "flight": {
+            "number": "2333",
+            "iataNumber": "rr2333",
+            "icaoNumber": "rys2333"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "wro",
+            "icaoCode": "epwr",
+            "gate": "17",
+            "delay": 9,
+            "scheduledTime": "2024-03-15t06:30:00.000",
+            "estimatedTime": "2024-03-15t06:30:00.000",
+            "actualTime": "2024-03-15t06:38:00.000",
+            "estimatedRunway": "2024-03-15t06:38:00.000",
+            "actualRunway": "2024-03-15t06:38:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "9",
+            "scheduledTime": "2024-03-15t07:45:00.000",
+            "estimatedTime": "2024-03-15t07:47:00.000",
+            "actualTime": "2024-03-15t07:31:00.000",
+            "estimatedRunway": "2024-03-15t07:31:00.000",
+            "actualRunway": "2024-03-15t07:31:00.000"
+        },
+        "airline": {
+            "name": "ryanair sun",
+            "iataCode": "rr",
+            "icaoCode": "rys"
+        },
+        "flight": {
+            "number": "4108",
+            "iataNumber": "rr4108",
+            "icaoNumber": "rys4108"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "bhd",
+            "icaoCode": "egac",
+            "delay": 4,
+            "scheduledTime": "2024-03-15t07:10:00.000",
+            "estimatedTime": "2024-03-15t07:10:00.000",
+            "actualTime": "2024-03-15t07:13:00.000",
+            "estimatedRunway": "2024-03-15t07:13:00.000",
+            "actualRunway": "2024-03-15t07:13:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t08:20:00.000",
+            "actualTime": "2024-03-15t08:01:00.000",
+            "estimatedRunway": "2024-03-15t08:01:00.000",
+            "actualRunway": "2024-03-15t08:01:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "8854",
+            "iataNumber": "ba8854",
+            "icaoNumber": "baw8854"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "aer lingus",
+                "iataCode": "ei",
+                "icaoCode": "ein"
+            },
+            "flight": {
+                "number": "3670",
+                "iataNumber": "ei3670",
+                "icaoNumber": "ein3670"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "bhd",
+            "icaoCode": "egac",
+            "delay": 4,
+            "scheduledTime": "2024-03-15t07:10:00.000",
+            "estimatedTime": "2024-03-15t07:10:00.000",
+            "actualTime": "2024-03-15t07:13:00.000",
+            "estimatedRunway": "2024-03-15t07:13:00.000",
+            "actualRunway": "2024-03-15t07:13:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t08:20:00.000",
+            "actualTime": "2024-03-15t08:01:00.000",
+            "estimatedRunway": "2024-03-15t08:01:00.000",
+            "actualRunway": "2024-03-15t08:01:00.000"
+        },
+        "airline": {
+            "name": "aer lingus",
+            "iataCode": "ei",
+            "icaoCode": "ein"
+        },
+        "flight": {
+            "number": "3670",
+            "iataNumber": "ei3670",
+            "icaoNumber": "ein3670"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "dub",
+            "icaoCode": "eidw",
+            "terminal": "2",
+            "gate": "334",
+            "delay": 15,
+            "scheduledTime": "2024-03-15t07:10:00.000",
+            "estimatedTime": "2024-03-15t07:38:00.000",
+            "actualTime": "2024-03-15t07:24:00.000",
+            "estimatedRunway": "2024-03-15t07:24:00.000",
+            "actualRunway": "2024-03-15t07:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t08:25:00.000",
+            "estimatedTime": "2024-03-15t08:09:00.000",
+            "actualTime": "2024-03-15t08:11:00.000",
+            "estimatedRunway": "2024-03-15t08:11:00.000",
+            "actualRunway": "2024-03-15t08:11:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "8960",
+            "iataNumber": "ba8960",
+            "icaoNumber": "baw8960"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "aer lingus",
+                "iataCode": "ei",
+                "icaoCode": "ein"
+            },
+            "flight": {
+                "number": "3390",
+                "iataNumber": "ei3390",
+                "icaoNumber": "ein3390"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "dub",
+            "icaoCode": "eidw",
+            "terminal": "2",
+            "gate": "334",
+            "delay": 15,
+            "scheduledTime": "2024-03-15t07:10:00.000",
+            "estimatedTime": "2024-03-15t07:38:00.000",
+            "actualTime": "2024-03-15t07:24:00.000",
+            "estimatedRunway": "2024-03-15t07:24:00.000",
+            "actualRunway": "2024-03-15t07:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t08:25:00.000",
+            "estimatedTime": "2024-03-15t08:09:00.000",
+            "actualTime": "2024-03-15t08:11:00.000",
+            "estimatedRunway": "2024-03-15t08:11:00.000",
+            "actualRunway": "2024-03-15t08:11:00.000"
+        },
+        "airline": {
+            "name": "aer lingus",
+            "iataCode": "ei",
+            "icaoCode": "ein"
+        },
+        "flight": {
+            "number": "3390",
+            "iataNumber": "ei3390",
+            "icaoNumber": "ein3390"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "dub",
+            "icaoCode": "eidw",
+            "terminal": "1",
+            "gate": "116",
+            "delay": 45,
+            "scheduledTime": "2024-03-15t07:30:00.000",
+            "estimatedTime": "2024-03-15t07:30:00.000",
+            "actualTime": "2024-03-15t08:14:00.000",
+            "estimatedRunway": "2024-03-15t08:14:00.000",
+            "actualRunway": "2024-03-15t08:14:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "116",
+            "delay": 24,
+            "scheduledTime": "2024-03-15t08:30:00.000",
+            "actualTime": "2024-03-15t08:53:00.000",
+            "estimatedRunway": "2024-03-15t08:53:00.000",
+            "actualRunway": "2024-03-15t08:53:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "152",
+            "iataNumber": "fr152",
+            "icaoNumber": "ryr152"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "otp",
+            "icaoCode": "lrop",
+            "delay": 6,
+            "scheduledTime": "2024-03-15t07:00:00.000",
+            "estimatedTime": "2024-03-15t07:00:00.000",
+            "actualTime": "2024-03-15t07:05:00.000",
+            "estimatedRunway": "2024-03-15t07:05:00.000",
+            "actualRunway": "2024-03-15t07:05:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t08:45:00.000",
+            "estimatedTime": "2024-03-15t08:16:00.000",
+            "actualTime": "2024-03-15t08:18:00.000",
+            "estimatedRunway": "2024-03-15t08:18:00.000",
+            "actualRunway": "2024-03-15t08:18:00.000"
+        },
+        "airline": {
+            "name": "wizz air",
+            "iataCode": "w6",
+            "icaoCode": "wzz"
+        },
+        "flight": {
+            "number": "3015",
+            "iataNumber": "w63015",
+            "icaoNumber": "wzz3015"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 138,
+            "scheduledTime": "2024-03-15t09:25:00.000",
+            "estimatedTime": "2024-03-15t11:43:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t09:30:00.000"
+        },
+        "airline": {
+            "name": "delta air lines",
+            "iataCode": "dl",
+            "icaoCode": "dal"
+        },
+        "flight": {
+            "number": "9638",
+            "iataNumber": "dl9638",
+            "icaoNumber": "dal9638"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "german airways",
+                "iataCode": "zq",
+                "icaoCode": "ger"
+            },
+            "flight": {
+                "number": "1545",
+                "iataNumber": "zq1545",
+                "icaoNumber": "ger1545"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 138,
+            "scheduledTime": "2024-03-15t09:25:00.000",
+            "estimatedTime": "2024-03-15t11:43:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t09:30:00.000"
+        },
+        "airline": {
+            "name": "kenya airways",
+            "iataCode": "kq",
+            "icaoCode": "kqa"
+        },
+        "flight": {
+            "number": "1545",
+            "iataNumber": "kq1545",
+            "icaoNumber": "kqa1545"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "german airways",
+                "iataCode": "zq",
+                "icaoCode": "ger"
+            },
+            "flight": {
+                "number": "1545",
+                "iataNumber": "zq1545",
+                "icaoNumber": "ger1545"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 138,
+            "scheduledTime": "2024-03-15t09:25:00.000",
+            "estimatedTime": "2024-03-15t11:43:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t09:30:00.000"
+        },
+        "airline": {
+            "name": "china eastern airlines",
+            "iataCode": "mu",
+            "icaoCode": "ces"
+        },
+        "flight": {
+            "number": "1633",
+            "iataNumber": "mu1633",
+            "icaoNumber": "ces1633"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "german airways",
+                "iataCode": "zq",
+                "icaoCode": "ger"
+            },
+            "flight": {
+                "number": "1545",
+                "iataNumber": "zq1545",
+                "icaoNumber": "ger1545"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 138,
+            "scheduledTime": "2024-03-15t09:25:00.000",
+            "estimatedTime": "2024-03-15t11:43:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t09:30:00.000"
+        },
+        "airline": {
+            "name": "virgin atlantic",
+            "iataCode": "vs",
+            "icaoCode": "vir"
+        },
+        "flight": {
+            "number": "6981",
+            "iataNumber": "vs6981",
+            "icaoNumber": "vir6981"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "german airways",
+                "iataCode": "zq",
+                "icaoCode": "ger"
+            },
+            "flight": {
+                "number": "1545",
+                "iataNumber": "zq1545",
+                "icaoNumber": "ger1545"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 138,
+            "scheduledTime": "2024-03-15t09:25:00.000",
+            "estimatedTime": "2024-03-15t11:43:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t09:30:00.000"
+        },
+        "airline": {
+            "name": "german airways",
+            "iataCode": "zq",
+            "icaoCode": "ger"
+        },
+        "flight": {
+            "number": "1545",
+            "iataNumber": "zq1545",
+            "icaoNumber": "ger1545"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "bva",
+            "icaoCode": "lfob",
+            "terminal": "t1",
+            "delay": 46,
+            "scheduledTime": "2024-03-15t11:45:00.000",
+            "estimatedTime": "2024-03-15t12:10:00.000",
+            "actualTime": "2024-03-15t12:30:00.000",
+            "estimatedRunway": "2024-03-15t12:30:00.000",
+            "actualRunway": "2024-03-15t12:30:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "t1 b",
+            "delay": 30,
+            "scheduledTime": "2024-03-15t12:00:00.000",
+            "estimatedTime": "2024-03-15t12:26:00.000",
+            "actualTime": "2024-03-15t12:29:00.000",
+            "estimatedRunway": "2024-03-15t12:29:00.000",
+            "actualRunway": "2024-03-15t12:29:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "3580",
+            "iataNumber": "fr3580",
+            "icaoNumber": "ryr3580"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "alc",
+            "icaoCode": "leal",
+            "gate": "50",
+            "delay": 130,
+            "scheduledTime": "2024-03-15t10:25:00.000",
+            "estimatedTime": "2024-03-15t12:25:00.000",
+            "actualTime": "2024-03-15t12:34:00.000",
+            "estimatedRunway": "2024-03-15t12:34:00.000",
+            "actualRunway": "2024-03-15t12:34:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "b29",
+            "delay": 118,
+            "scheduledTime": "2024-03-15t12:15:00.000",
+            "estimatedTime": "2024-03-15t14:13:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "9078",
+            "iataNumber": "fr9078",
+            "icaoNumber": "ryr9078"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 36,
+            "scheduledTime": "2024-03-15t13:00:00.000",
+            "estimatedTime": "2024-03-15t13:12:00.000",
+            "actualTime": "2024-03-15t13:35:00.000",
+            "estimatedRunway": "2024-03-15t13:35:00.000",
+            "actualRunway": "2024-03-15t13:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "delay": 17,
+            "scheduledTime": "2024-03-15t13:10:00.000",
+            "estimatedTime": "2024-03-15t13:24:00.000",
+            "actualTime": "2024-03-15t13:27:00.000",
+            "estimatedRunway": "2024-03-15t13:27:00.000",
+            "actualRunway": "2024-03-15t13:27:00.000"
+        },
+        "airline": {
+            "name": "delta air lines",
+            "iataCode": "dl",
+            "icaoCode": "dal"
+        },
+        "flight": {
+            "number": "9464",
+            "iataNumber": "dl9464",
+            "icaoNumber": "dal9464"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1547",
+                "iataNumber": "kl1547",
+                "icaoNumber": "klm1547"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 36,
+            "scheduledTime": "2024-03-15t13:00:00.000",
+            "estimatedTime": "2024-03-15t13:12:00.000",
+            "actualTime": "2024-03-15t13:35:00.000",
+            "estimatedRunway": "2024-03-15t13:35:00.000",
+            "actualRunway": "2024-03-15t13:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "delay": 17,
+            "scheduledTime": "2024-03-15t13:10:00.000",
+            "estimatedTime": "2024-03-15t13:24:00.000",
+            "actualTime": "2024-03-15t13:27:00.000",
+            "estimatedRunway": "2024-03-15t13:27:00.000",
+            "actualRunway": "2024-03-15t13:27:00.000"
+        },
+        "airline": {
+            "name": "virgin atlantic",
+            "iataCode": "vs",
+            "icaoCode": "vir"
+        },
+        "flight": {
+            "number": "7107",
+            "iataNumber": "vs7107",
+            "icaoNumber": "vir7107"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1547",
+                "iataNumber": "kl1547",
+                "icaoNumber": "klm1547"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 36,
+            "scheduledTime": "2024-03-15t13:00:00.000",
+            "estimatedTime": "2024-03-15t13:12:00.000",
+            "actualTime": "2024-03-15t13:35:00.000",
+            "estimatedRunway": "2024-03-15t13:35:00.000",
+            "actualRunway": "2024-03-15t13:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "delay": 17,
+            "scheduledTime": "2024-03-15t13:10:00.000",
+            "estimatedTime": "2024-03-15t13:24:00.000",
+            "actualTime": "2024-03-15t13:27:00.000",
+            "estimatedRunway": "2024-03-15t13:27:00.000",
+            "actualRunway": "2024-03-15t13:27:00.000"
+        },
+        "airline": {
+            "name": "klm",
+            "iataCode": "kl",
+            "icaoCode": "klm"
+        },
+        "flight": {
+            "number": "1547",
+            "iataNumber": "kl1547",
+            "icaoNumber": "klm1547"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "alc",
+            "icaoCode": "leal",
+            "gate": "130",
+            "delay": 7,
+            "scheduledTime": "2024-03-15t11:40:00.000",
+            "estimatedTime": "2024-03-15t11:51:00.000",
+            "actualTime": "2024-03-15t11:47:00.000",
+            "estimatedRunway": "2024-03-15t11:47:00.000",
+            "actualRunway": "2024-03-15t11:47:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t13:40:00.000",
+            "estimatedTime": "2024-03-15t13:20:00.000",
+            "actualTime": "2024-03-15t13:21:00.000",
+            "estimatedRunway": "2024-03-15t13:21:00.000",
+            "actualRunway": "2024-03-15t13:21:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "272",
+            "iataNumber": "ls272",
+            "icaoNumber": "exs272"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "rix",
+            "icaoCode": "evra",
+            "delay": 73,
+            "scheduledTime": "2024-03-15t12:45:00.000",
+            "estimatedTime": "2024-03-15t13:40:00.000",
+            "actualTime": "2024-03-15t13:58:00.000",
+            "estimatedRunway": "2024-03-15t13:58:00.000",
+            "actualRunway": "2024-03-15t13:58:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "delay": 54,
+            "scheduledTime": "2024-03-15t13:45:00.000",
+            "estimatedTime": "2024-03-15t14:38:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "2483",
+            "iataNumber": "fr2483",
+            "icaoNumber": "ryr2483"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "bcn",
+            "icaoCode": "lebl",
+            "terminal": "2",
+            "gate": "y53",
+            "delay": 40,
+            "scheduledTime": "2024-03-15t12:00:00.000",
+            "estimatedTime": "2024-03-15t12:29:00.000",
+            "actualTime": "2024-03-15t12:40:00.000",
+            "estimatedRunway": "2024-03-15t12:40:00.000",
+            "actualRunway": "2024-03-15t12:40:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "delay": 2,
+            "scheduledTime": "2024-03-15t13:45:00.000",
+            "estimatedTime": "2024-03-15t13:47:00.000",
+            "actualTime": "2024-03-15t13:46:00.000",
+            "estimatedRunway": "2024-03-15t13:46:00.000",
+            "actualRunway": "2024-03-15t13:46:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "232",
+            "iataNumber": "ls232",
+            "icaoNumber": "exs232"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "gva",
+            "icaoCode": "lsgg",
+            "terminal": "2",
+            "gate": "b42",
+            "delay": 8,
+            "scheduledTime": "2024-03-15t12:45:00.000",
+            "estimatedTime": "2024-03-15t12:58:00.000",
+            "actualTime": "2024-03-15t12:53:00.000",
+            "estimatedRunway": "2024-03-15t12:53:00.000",
+            "actualRunway": "2024-03-15t12:53:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t13:45:00.000",
+            "estimatedTime": "2024-03-15t13:24:00.000",
+            "actualTime": "2024-03-15t13:23:00.000",
+            "estimatedRunway": "2024-03-15t13:23:00.000",
+            "actualRunway": "2024-03-15t13:23:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "286",
+            "iataNumber": "ls286",
+            "icaoNumber": "exs286"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "agp",
+            "icaoCode": "lemg",
+            "gate": "381",
+            "delay": 8,
+            "scheduledTime": "2024-03-15t12:05:00.000",
+            "estimatedTime": "2024-03-15t12:21:00.000",
+            "actualTime": "2024-03-15t12:12:00.000",
+            "estimatedRunway": "2024-03-15t12:12:00.000",
+            "actualRunway": "2024-03-15t12:12:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t14:15:00.000",
+            "estimatedTime": "2024-03-15t13:56:00.000",
+            "actualTime": "2024-03-15t13:53:00.000",
+            "estimatedRunway": "2024-03-15t13:53:00.000",
+            "actualRunway": "2024-03-15t13:53:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "186",
+            "iataNumber": "ls186",
+            "icaoNumber": "exs186"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "wmi",
+            "icaoCode": "epmo",
+            "delay": 8,
+            "scheduledTime": "2024-03-15t13:00:00.000",
+            "estimatedTime": "2024-03-15t13:00:00.000",
+            "actualTime": "2024-03-15t13:07:00.000",
+            "estimatedRunway": "2024-03-15t13:07:00.000",
+            "actualRunway": "2024-03-15t13:07:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "1b",
+            "scheduledTime": "2024-03-15t14:40:00.000",
+            "estimatedTime": "2024-03-15t14:19:00.000",
+            "actualTime": "2024-03-15t14:21:00.000",
+            "estimatedRunway": "2024-03-15t14:21:00.000",
+            "actualRunway": "2024-03-15t14:21:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "1932",
+            "iataNumber": "fr1932",
+            "icaoNumber": "ryr1932"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "fco",
+            "icaoCode": "lirf",
+            "terminal": "3",
+            "delay": 62,
+            "scheduledTime": "2024-03-15t12:45:00.000",
+            "estimatedTime": "2024-03-15t13:38:00.000",
+            "actualTime": "2024-03-15t13:47:00.000",
+            "estimatedRunway": "2024-03-15t13:47:00.000",
+            "actualRunway": "2024-03-15t13:47:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "delay": 30,
+            "scheduledTime": "2024-03-15t14:45:00.000",
+            "estimatedTime": "2024-03-15t15:13:00.000",
+            "actualTime": "2024-03-15t15:15:00.000",
+            "estimatedRunway": "2024-03-15t15:15:00.000",
+            "actualRunway": "2024-03-15t15:15:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "332",
+            "iataNumber": "ls332",
+            "icaoNumber": "exs332"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "pmi",
+            "icaoCode": "lepa",
+            "gate": "c65",
+            "delay": 13,
+            "scheduledTime": "2024-03-15t13:00:00.000",
+            "estimatedTime": "2024-03-15t13:11:00.000",
+            "actualTime": "2024-03-15t13:12:00.000",
+            "estimatedRunway": "2024-03-15t13:12:00.000",
+            "actualRunway": "2024-03-15t13:12:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "delay": 10,
+            "scheduledTime": "2024-03-15t14:50:00.000",
+            "estimatedTime": "2024-03-15t14:51:00.000",
+            "actualTime": "2024-03-15t14:59:00.000",
+            "estimatedRunway": "2024-03-15t14:59:00.000",
+            "actualRunway": "2024-03-15t14:59:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "258",
+            "iataNumber": "ls258",
+            "icaoNumber": "exs258"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "fao",
+            "icaoCode": "lpfr",
+            "delay": 20,
+            "scheduledTime": "2024-03-15t11:45:00.000",
+            "estimatedTime": "2024-03-15t11:55:00.000",
+            "actualTime": "2024-03-15t12:05:00.000",
+            "estimatedRunway": "2024-03-15t12:05:00.000",
+            "actualRunway": "2024-03-15t12:05:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t14:55:00.000",
+            "estimatedTime": "2024-03-15t14:53:00.000",
+            "actualTime": "2024-03-15t14:54:00.000",
+            "estimatedRunway": "2024-03-15t14:54:00.000",
+            "actualRunway": "2024-03-15t14:54:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "252",
+            "iataNumber": "ls252",
+            "icaoNumber": "exs252"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "bhd",
+            "icaoCode": "egac",
+            "delay": 9,
+            "scheduledTime": "2024-03-15t14:15:00.000",
+            "estimatedTime": "2024-03-15t14:15:00.000",
+            "actualTime": "2024-03-15t14:23:00.000",
+            "estimatedRunway": "2024-03-15t14:23:00.000",
+            "actualRunway": "2024-03-15t14:23:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t15:25:00.000",
+            "estimatedTime": "2024-03-15t15:15:00.000",
+            "actualTime": "2024-03-15t15:11:00.000",
+            "estimatedRunway": "2024-03-15t15:11:00.000",
+            "actualRunway": "2024-03-15t15:11:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "8872",
+            "iataNumber": "ba8872",
+            "icaoNumber": "baw8872"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "aer lingus",
+                "iataCode": "ei",
+                "icaoCode": "ein"
+            },
+            "flight": {
+                "number": "3676",
+                "iataNumber": "ei3676",
+                "icaoNumber": "ein3676"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "bhd",
+            "icaoCode": "egac",
+            "delay": 9,
+            "scheduledTime": "2024-03-15t14:15:00.000",
+            "estimatedTime": "2024-03-15t14:15:00.000",
+            "actualTime": "2024-03-15t14:23:00.000",
+            "estimatedRunway": "2024-03-15t14:23:00.000",
+            "actualRunway": "2024-03-15t14:23:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t15:25:00.000",
+            "estimatedTime": "2024-03-15t15:15:00.000",
+            "actualTime": "2024-03-15t15:11:00.000",
+            "estimatedRunway": "2024-03-15t15:11:00.000",
+            "actualRunway": "2024-03-15t15:11:00.000"
+        },
+        "airline": {
+            "name": "aer lingus",
+            "iataCode": "ei",
+            "icaoCode": "ein"
+        },
+        "flight": {
+            "number": "3676",
+            "iataNumber": "ei3676",
+            "icaoNumber": "ein3676"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "dub",
+            "icaoCode": "eidw",
+            "terminal": "1",
+            "gate": "103",
+            "delay": 1,
+            "scheduledTime": "2024-03-15t15:10:00.000",
+            "estimatedTime": "2024-03-15t15:10:00.000",
+            "actualTime": "2024-03-15t15:11:00.000",
+            "estimatedRunway": "2024-03-15t15:11:00.000",
+            "actualRunway": "2024-03-15t15:11:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "103",
+            "scheduledTime": "2024-03-15t16:10:00.000",
+            "estimatedTime": "2024-03-15t15:48:00.000",
+            "actualTime": "2024-03-15t15:50:00.000",
+            "estimatedRunway": "2024-03-15t15:50:00.000",
+            "actualRunway": "2024-03-15t15:50:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "156",
+            "iataNumber": "fr156",
+            "icaoNumber": "ryr156"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "gate": "e21",
+            "delay": 96,
+            "scheduledTime": "2024-03-15t16:35:00.000",
+            "estimatedTime": "2024-03-15t18:11:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t16:45:00.000"
+        },
+        "airline": {
+            "name": "air france",
+            "iataCode": "af",
+            "icaoCode": "afr"
+        },
+        "flight": {
+            "number": "8387",
+            "iataNumber": "af8387",
+            "icaoNumber": "afr8387"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1549",
+                "iataNumber": "kl1549",
+                "icaoNumber": "klm1549"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "gate": "e21",
+            "delay": 96,
+            "scheduledTime": "2024-03-15t16:35:00.000",
+            "estimatedTime": "2024-03-15t18:11:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t16:45:00.000"
+        },
+        "airline": {
+            "name": "delta air lines",
+            "iataCode": "dl",
+            "icaoCode": "dal"
+        },
+        "flight": {
+            "number": "9251",
+            "iataNumber": "dl9251",
+            "icaoNumber": "dal9251"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1549",
+                "iataNumber": "kl1549",
+                "icaoNumber": "klm1549"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "gate": "e21",
+            "delay": 96,
+            "scheduledTime": "2024-03-15t16:35:00.000",
+            "estimatedTime": "2024-03-15t18:11:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t16:45:00.000"
+        },
+        "airline": {
+            "name": "gol",
+            "iataCode": "g3",
+            "icaoCode": "glo"
+        },
+        "flight": {
+            "number": "5552",
+            "iataNumber": "g35552",
+            "icaoNumber": "glo5552"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1549",
+                "iataNumber": "kl1549",
+                "icaoNumber": "klm1549"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "gate": "e21",
+            "delay": 96,
+            "scheduledTime": "2024-03-15t16:35:00.000",
+            "estimatedTime": "2024-03-15t18:11:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t16:45:00.000"
+        },
+        "airline": {
+            "name": "kenya airways",
+            "iataCode": "kq",
+            "icaoCode": "kqa"
+        },
+        "flight": {
+            "number": "1549",
+            "iataNumber": "kq1549",
+            "icaoNumber": "kqa1549"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1549",
+                "iataNumber": "kl1549",
+                "icaoNumber": "klm1549"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "gate": "e21",
+            "delay": 96,
+            "scheduledTime": "2024-03-15t16:35:00.000",
+            "estimatedTime": "2024-03-15t18:11:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t16:45:00.000"
+        },
+        "airline": {
+            "name": "virgin atlantic",
+            "iataCode": "vs",
+            "icaoCode": "vir"
+        },
+        "flight": {
+            "number": "6982",
+            "iataNumber": "vs6982",
+            "icaoNumber": "vir6982"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1549",
+                "iataNumber": "kl1549",
+                "icaoNumber": "klm1549"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "gate": "e21",
+            "delay": 96,
+            "scheduledTime": "2024-03-15t16:35:00.000",
+            "estimatedTime": "2024-03-15t18:11:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t16:45:00.000"
+        },
+        "airline": {
+            "name": "klm",
+            "iataCode": "kl",
+            "icaoCode": "klm"
+        },
+        "flight": {
+            "number": "1549",
+            "iataNumber": "kl1549",
+            "icaoNumber": "klm1549"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "bfs",
+            "icaoCode": "egaa",
+            "scheduledTime": "2024-03-15t16:10:00.000",
+            "estimatedTime": "2024-03-15t16:10:00.000",
+            "actualTime": "2024-03-15t16:08:00.000",
+            "estimatedRunway": "2024-03-15t16:08:00.000",
+            "actualRunway": "2024-03-15t16:08:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t17:05:00.000",
+            "estimatedTime": "2024-03-15t16:46:00.000",
+            "actualTime": "2024-03-15t16:47:00.000",
+            "estimatedRunway": "2024-03-15t16:47:00.000",
+            "actualRunway": "2024-03-15t16:47:00.000"
+        },
+        "airline": {
+            "name": "easyjet",
+            "iataCode": "u2",
+            "icaoCode": "ezy"
+        },
+        "flight": {
+            "number": "49",
+            "iataNumber": "u249",
+            "icaoNumber": "ezy49"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "bts",
+            "icaoCode": "lzib",
+            "delay": 27,
+            "scheduledTime": "2024-03-15t16:25:00.000",
+            "estimatedTime": "2024-03-15t16:30:00.000",
+            "actualTime": "2024-03-15t16:52:00.000",
+            "estimatedRunway": "2024-03-15t16:52:00.000",
+            "actualRunway": "2024-03-15t16:52:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "11",
+            "delay": 5,
+            "scheduledTime": "2024-03-15t17:55:00.000",
+            "estimatedTime": "2024-03-15t18:01:00.000",
+            "actualTime": "2024-03-15t18:00:00.000",
+            "estimatedRunway": "2024-03-15t18:00:00.000",
+            "actualRunway": "2024-03-15t18:00:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "5042",
+            "iataNumber": "fr5042",
+            "icaoNumber": "ryr5042"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "3",
+            "gate": "2",
+            "delay": 23,
+            "scheduledTime": "2024-03-15t17:25:00.000",
+            "estimatedTime": "2024-03-15t17:36:00.000",
+            "actualTime": "2024-03-15t17:48:00.000",
+            "estimatedRunway": "2024-03-15t17:48:00.000",
+            "actualRunway": "2024-03-15t17:48:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t17:55:00.000",
+            "estimatedTime": "2024-03-15t17:50:00.000",
+            "actualTime": "2024-03-15t17:52:00.000",
+            "estimatedRunway": "2024-03-15t17:52:00.000",
+            "actualRunway": "2024-03-15t17:52:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "316",
+            "iataNumber": "ls316",
+            "icaoNumber": "exs316"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "tfs",
+            "icaoCode": "gcts",
+            "gate": "63",
+            "delay": 26,
+            "scheduledTime": "2024-03-15t13:40:00.000",
+            "estimatedTime": "2024-03-15t13:46:00.000",
+            "actualTime": "2024-03-15t14:05:00.000",
+            "estimatedRunway": "2024-03-15t14:05:00.000",
+            "actualRunway": "2024-03-15t14:05:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t18:25:00.000",
+            "estimatedTime": "2024-03-15t18:18:00.000",
+            "actualTime": "2024-03-15t18:18:00.000",
+            "estimatedRunway": "2024-03-15t18:18:00.000",
+            "actualRunway": "2024-03-15t18:18:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "224",
+            "iataNumber": "ls224",
+            "icaoNumber": "exs224"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "bhd",
+            "icaoCode": "egac",
+            "delay": 20,
+            "scheduledTime": "2024-03-15t17:35:00.000",
+            "estimatedTime": "2024-03-15t17:35:00.000",
+            "actualTime": "2024-03-15t17:54:00.000",
+            "estimatedRunway": "2024-03-15t17:54:00.000",
+            "actualRunway": "2024-03-15t17:54:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t18:45:00.000",
+            "estimatedTime": "2024-03-15t18:44:00.000",
+            "actualTime": "2024-03-15t18:42:00.000",
+            "estimatedRunway": "2024-03-15t18:42:00.000",
+            "actualRunway": "2024-03-15t18:42:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "8986",
+            "iataNumber": "ba8986",
+            "icaoNumber": "baw8986"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "aer lingus",
+                "iataCode": "ei",
+                "icaoCode": "ein"
+            },
+            "flight": {
+                "number": "3678",
+                "iataNumber": "ei3678",
+                "icaoNumber": "ein3678"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "bhd",
+            "icaoCode": "egac",
+            "delay": 20,
+            "scheduledTime": "2024-03-15t17:35:00.000",
+            "estimatedTime": "2024-03-15t17:35:00.000",
+            "actualTime": "2024-03-15t17:54:00.000",
+            "estimatedRunway": "2024-03-15t17:54:00.000",
+            "actualRunway": "2024-03-15t17:54:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t18:45:00.000",
+            "estimatedTime": "2024-03-15t18:44:00.000",
+            "actualTime": "2024-03-15t18:42:00.000",
+            "estimatedRunway": "2024-03-15t18:42:00.000",
+            "actualRunway": "2024-03-15t18:42:00.000"
+        },
+        "airline": {
+            "name": "aer lingus",
+            "iataCode": "ei",
+            "icaoCode": "ein"
+        },
+        "flight": {
+            "number": "3678",
+            "iataNumber": "ei3678",
+            "icaoNumber": "ein3678"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "waw",
+            "icaoCode": "epwa",
+            "delay": 12,
+            "scheduledTime": "2024-03-15t17:30:00.000",
+            "estimatedTime": "2024-03-15t17:48:00.000",
+            "actualTime": "2024-03-15t17:41:00.000",
+            "estimatedRunway": "2024-03-15t17:41:00.000",
+            "actualRunway": "2024-03-15t17:41:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t19:15:00.000",
+            "estimatedTime": "2024-03-15t18:57:00.000",
+            "actualTime": "2024-03-15t18:55:00.000",
+            "estimatedRunway": "2024-03-15t18:55:00.000",
+            "actualRunway": "2024-03-15t18:55:00.000"
+        },
+        "airline": {
+            "name": "wizz air",
+            "iataCode": "w6",
+            "icaoCode": "wzz"
+        },
+        "flight": {
+            "number": "1315",
+            "iataNumber": "w61315",
+            "icaoNumber": "wzz1315"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ace",
+            "icaoCode": "gcrr",
+            "terminal": "1",
+            "gate": "3",
+            "delay": 7,
+            "scheduledTime": "2024-03-15t15:10:00.000",
+            "estimatedTime": "2024-03-15t15:10:00.000",
+            "actualTime": "2024-03-15t15:16:00.000",
+            "estimatedRunway": "2024-03-15t15:16:00.000",
+            "actualRunway": "2024-03-15t15:16:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t19:40:00.000",
+            "estimatedTime": "2024-03-15t19:05:00.000",
+            "actualTime": "2024-03-15t19:07:00.000",
+            "estimatedRunway": "2024-03-15t19:07:00.000",
+            "actualRunway": "2024-03-15t19:07:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "218",
+            "iataNumber": "ls218",
+            "icaoNumber": "exs218"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "dub",
+            "icaoCode": "eidw",
+            "terminal": "2",
+            "gate": "334",
+            "delay": 20,
+            "scheduledTime": "2024-03-15t18:35:00.000",
+            "estimatedTime": "2024-03-15t18:55:00.000",
+            "actualTime": "2024-03-15t18:55:00.000",
+            "estimatedRunway": "2024-03-15t18:55:00.000",
+            "actualRunway": "2024-03-15t18:55:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t19:55:00.000",
+            "estimatedTime": "2024-03-15t19:48:00.000",
+            "actualTime": "2024-03-15t19:43:00.000",
+            "estimatedRunway": "2024-03-15t19:43:00.000",
+            "actualRunway": "2024-03-15t19:43:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "8962",
+            "iataNumber": "ba8962",
+            "icaoNumber": "baw8962"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "aer lingus",
+                "iataCode": "ei",
+                "icaoCode": "ein"
+            },
+            "flight": {
+                "number": "3394",
+                "iataNumber": "ei3394",
+                "icaoNumber": "ein3394"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "dub",
+            "icaoCode": "eidw",
+            "terminal": "2",
+            "gate": "334",
+            "delay": 20,
+            "scheduledTime": "2024-03-15t18:35:00.000",
+            "estimatedTime": "2024-03-15t18:55:00.000",
+            "actualTime": "2024-03-15t18:55:00.000",
+            "estimatedRunway": "2024-03-15t18:55:00.000",
+            "actualRunway": "2024-03-15t18:55:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t19:55:00.000",
+            "estimatedTime": "2024-03-15t19:48:00.000",
+            "actualTime": "2024-03-15t19:43:00.000",
+            "estimatedRunway": "2024-03-15t19:43:00.000",
+            "actualRunway": "2024-03-15t19:43:00.000"
+        },
+        "airline": {
+            "name": "aer lingus",
+            "iataCode": "ei",
+            "icaoCode": "ein"
+        },
+        "flight": {
+            "number": "3394",
+            "iataNumber": "ei3394",
+            "icaoNumber": "ein3394"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "tfs",
+            "icaoCode": "gcts",
+            "gate": "63",
+            "delay": 47,
+            "scheduledTime": "2024-03-15t16:10:00.000",
+            "estimatedTime": "2024-03-15t16:30:00.000",
+            "actualTime": "2024-03-15t16:56:00.000",
+            "estimatedRunway": "2024-03-15t16:56:00.000",
+            "actualRunway": "2024-03-15t16:56:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "delay": 3,
+            "scheduledTime": "2024-03-15t20:55:00.000",
+            "estimatedTime": "2024-03-15t21:00:00.000",
+            "actualTime": "2024-03-15t20:58:00.000",
+            "estimatedRunway": "2024-03-15t20:58:00.000",
+            "actualRunway": "2024-03-15t20:58:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "244",
+            "iataNumber": "ls244",
+            "icaoNumber": "exs244"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "bud",
+            "icaoCode": "lhbp",
+            "terminal": "2b",
+            "delay": 7,
+            "scheduledTime": "2024-03-15t19:15:00.000",
+            "estimatedTime": "2024-03-15t19:10:00.000",
+            "actualTime": "2024-03-15t19:22:00.000",
+            "estimatedRunway": "2024-03-15t19:22:00.000",
+            "actualRunway": "2024-03-15t19:22:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t21:05:00.000",
+            "estimatedTime": "2024-03-15t20:43:00.000",
+            "actualTime": "2024-03-15t20:44:00.000",
+            "estimatedRunway": "2024-03-15t20:44:00.000",
+            "actualRunway": "2024-03-15t20:44:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "432",
+            "iataNumber": "ls432",
+            "icaoNumber": "exs432"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "opo",
+            "icaoCode": "lppr",
+            "delay": 21,
+            "scheduledTime": "2024-03-15t18:35:00.000",
+            "estimatedTime": "2024-03-15t18:35:00.000",
+            "actualTime": "2024-03-15t18:56:00.000",
+            "estimatedRunway": "2024-03-15t18:56:00.000",
+            "actualRunway": "2024-03-15t18:56:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "12",
+            "scheduledTime": "2024-03-15t21:10:00.000",
+            "estimatedTime": "2024-03-15t21:04:00.000",
+            "actualTime": "2024-03-15t21:03:00.000",
+            "estimatedRunway": "2024-03-15t21:03:00.000",
+            "actualRunway": "2024-03-15t21:03:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "2400",
+            "iataNumber": "fr2400",
+            "icaoNumber": "ryr2400"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "dlm",
+            "icaoCode": "ltbs",
+            "terminal": "i",
+            "gate": "35",
+            "delay": 15,
+            "scheduledTime": "2024-03-15t19:55:00.000",
+            "estimatedTime": "2024-03-15t20:05:00.000",
+            "actualTime": "2024-03-15t20:10:00.000",
+            "estimatedRunway": "2024-03-15t20:10:00.000",
+            "actualRunway": "2024-03-15t20:10:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "delay": 3,
+            "scheduledTime": "2024-03-15t21:25:00.000",
+            "estimatedTime": "2024-03-15t21:30:00.000",
+            "actualTime": "2024-03-15t21:28:00.000",
+            "estimatedRunway": "2024-03-15t21:28:00.000",
+            "actualRunway": "2024-03-15t21:28:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "476",
+            "iataNumber": "ls476",
+            "icaoNumber": "exs476"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "dub",
+            "icaoCode": "eidw",
+            "terminal": "1",
+            "gate": "113",
+            "delay": 29,
+            "scheduledTime": "2024-03-15t20:30:00.000",
+            "estimatedTime": "2024-03-15t20:30:00.000",
+            "actualTime": "2024-03-15t20:58:00.000",
+            "estimatedRunway": "2024-03-15t20:58:00.000",
+            "actualRunway": "2024-03-15t20:58:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "113",
+            "delay": 6,
+            "scheduledTime": "2024-03-15t21:30:00.000",
+            "estimatedTime": "2024-03-15t21:37:00.000",
+            "actualTime": "2024-03-15t21:35:00.000",
+            "estimatedRunway": "2024-03-15t21:35:00.000",
+            "actualRunway": "2024-03-15t21:35:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "457",
+            "iataNumber": "fr457",
+            "icaoNumber": "ryr457"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "agp",
+            "icaoCode": "lemg",
+            "gate": "363",
+            "delay": 42,
+            "scheduledTime": "2024-03-15t19:25:00.000",
+            "estimatedTime": "2024-03-15t19:44:00.000",
+            "actualTime": "2024-03-15t20:07:00.000",
+            "estimatedRunway": "2024-03-15t20:07:00.000",
+            "actualRunway": "2024-03-15t20:07:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "c33",
+            "delay": 23,
+            "scheduledTime": "2024-03-15t21:30:00.000",
+            "estimatedTime": "2024-03-15t21:47:00.000",
+            "actualTime": "2024-03-15t21:53:00.000",
+            "estimatedRunway": "2024-03-15t21:53:00.000",
+            "actualRunway": "2024-03-15t21:53:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "2447",
+            "iataNumber": "fr2447",
+            "icaoNumber": "ryr2447"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "krk",
+            "icaoCode": "epkk",
+            "terminal": "t",
+            "gate": "2",
+            "delay": 5,
+            "scheduledTime": "2024-03-15t19:55:00.000",
+            "estimatedTime": "2024-03-15t19:55:00.000",
+            "actualTime": "2024-03-15t19:59:00.000",
+            "estimatedRunway": "2024-03-15t19:59:00.000",
+            "actualRunway": "2024-03-15t19:59:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t21:35:00.000",
+            "estimatedTime": "2024-03-15t21:16:00.000",
+            "actualTime": "2024-03-15t21:15:00.000",
+            "estimatedRunway": "2024-03-15t21:15:00.000",
+            "actualRunway": "2024-03-15t21:15:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "296",
+            "iataNumber": "ls296",
+            "icaoNumber": "exs296"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ace",
+            "icaoCode": "gcrr",
+            "terminal": "1",
+            "gate": "2",
+            "delay": 47,
+            "scheduledTime": "2024-03-15t17:50:00.000",
+            "estimatedTime": "2024-03-15t18:14:00.000",
+            "actualTime": "2024-03-15t18:37:00.000",
+            "estimatedRunway": "2024-03-15t18:37:00.000",
+            "actualRunway": "2024-03-15t18:37:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "gate": "2",
+            "delay": 15,
+            "scheduledTime": "2024-03-15t22:10:00.000",
+            "estimatedTime": "2024-03-15t22:33:00.000",
+            "actualTime": "2024-03-15t22:24:00.000",
+            "estimatedRunway": "2024-03-15t22:24:00.000",
+            "actualRunway": "2024-03-15t22:24:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "2047",
+            "iataNumber": "fr2047",
+            "icaoNumber": "ryr2047"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 16,
+            "scheduledTime": "2024-03-15t22:00:00.000",
+            "estimatedTime": "2024-03-15t22:11:00.000",
+            "actualTime": "2024-03-15t22:16:00.000",
+            "estimatedRunway": "2024-03-15t22:16:00.000",
+            "actualRunway": "2024-03-15t22:16:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t22:10:00.000",
+            "estimatedTime": "2024-03-15t22:09:00.000",
+            "actualTime": "2024-03-15t22:09:00.000",
+            "estimatedRunway": "2024-03-15t22:09:00.000",
+            "actualRunway": "2024-03-15t22:09:00.000"
+        },
+        "airline": {
+            "name": "air france",
+            "iataCode": "af",
+            "icaoCode": "afr"
+        },
+        "flight": {
+            "number": "8381",
+            "iataNumber": "af8381",
+            "icaoNumber": "afr8381"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1551",
+                "iataNumber": "kl1551",
+                "icaoNumber": "klm1551"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 16,
+            "scheduledTime": "2024-03-15t22:00:00.000",
+            "estimatedTime": "2024-03-15t22:11:00.000",
+            "actualTime": "2024-03-15t22:16:00.000",
+            "estimatedRunway": "2024-03-15t22:16:00.000",
+            "actualRunway": "2024-03-15t22:16:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t22:10:00.000",
+            "estimatedTime": "2024-03-15t22:09:00.000",
+            "actualTime": "2024-03-15t22:09:00.000",
+            "estimatedRunway": "2024-03-15t22:09:00.000",
+            "actualRunway": "2024-03-15t22:09:00.000"
+        },
+        "airline": {
+            "name": "alitalia",
+            "iataCode": "az",
+            "icaoCode": "aza"
+        },
+        "flight": {
+            "number": "3804",
+            "iataNumber": "az3804",
+            "icaoNumber": "aza3804"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1551",
+                "iataNumber": "kl1551",
+                "icaoNumber": "klm1551"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 16,
+            "scheduledTime": "2024-03-15t22:00:00.000",
+            "estimatedTime": "2024-03-15t22:11:00.000",
+            "actualTime": "2024-03-15t22:16:00.000",
+            "estimatedRunway": "2024-03-15t22:16:00.000",
+            "actualRunway": "2024-03-15t22:16:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t22:10:00.000",
+            "estimatedTime": "2024-03-15t22:09:00.000",
+            "actualTime": "2024-03-15t22:09:00.000",
+            "estimatedRunway": "2024-03-15t22:09:00.000",
+            "actualRunway": "2024-03-15t22:09:00.000"
+        },
+        "airline": {
+            "name": "kenya airways",
+            "iataCode": "kq",
+            "icaoCode": "kqa"
+        },
+        "flight": {
+            "number": "1551",
+            "iataNumber": "kq1551",
+            "icaoNumber": "kqa1551"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1551",
+                "iataNumber": "kl1551",
+                "icaoNumber": "klm1551"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 16,
+            "scheduledTime": "2024-03-15t22:00:00.000",
+            "estimatedTime": "2024-03-15t22:11:00.000",
+            "actualTime": "2024-03-15t22:16:00.000",
+            "estimatedRunway": "2024-03-15t22:16:00.000",
+            "actualRunway": "2024-03-15t22:16:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t22:10:00.000",
+            "estimatedTime": "2024-03-15t22:09:00.000",
+            "actualTime": "2024-03-15t22:09:00.000",
+            "estimatedRunway": "2024-03-15t22:09:00.000",
+            "actualRunway": "2024-03-15t22:09:00.000"
+        },
+        "airline": {
+            "name": "xiamen airlines",
+            "iataCode": "mf",
+            "icaoCode": "cxa"
+        },
+        "flight": {
+            "number": "9793",
+            "iataNumber": "mf9793",
+            "icaoNumber": "cxa9793"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1551",
+                "iataNumber": "kl1551",
+                "icaoNumber": "klm1551"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 16,
+            "scheduledTime": "2024-03-15t22:00:00.000",
+            "estimatedTime": "2024-03-15t22:11:00.000",
+            "actualTime": "2024-03-15t22:16:00.000",
+            "estimatedRunway": "2024-03-15t22:16:00.000",
+            "actualRunway": "2024-03-15t22:16:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t22:10:00.000",
+            "estimatedTime": "2024-03-15t22:09:00.000",
+            "actualTime": "2024-03-15t22:09:00.000",
+            "estimatedRunway": "2024-03-15t22:09:00.000",
+            "actualRunway": "2024-03-15t22:09:00.000"
+        },
+        "airline": {
+            "name": "china eastern airlines",
+            "iataCode": "mu",
+            "icaoCode": "ces"
+        },
+        "flight": {
+            "number": "1635",
+            "iataNumber": "mu1635",
+            "icaoNumber": "ces1635"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1551",
+                "iataNumber": "kl1551",
+                "icaoNumber": "klm1551"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 16,
+            "scheduledTime": "2024-03-15t22:00:00.000",
+            "estimatedTime": "2024-03-15t22:11:00.000",
+            "actualTime": "2024-03-15t22:16:00.000",
+            "estimatedRunway": "2024-03-15t22:16:00.000",
+            "actualRunway": "2024-03-15t22:16:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t22:10:00.000",
+            "estimatedTime": "2024-03-15t22:09:00.000",
+            "actualTime": "2024-03-15t22:09:00.000",
+            "estimatedRunway": "2024-03-15t22:09:00.000",
+            "actualRunway": "2024-03-15t22:09:00.000"
+        },
+        "airline": {
+            "name": "virgin atlantic",
+            "iataCode": "vs",
+            "icaoCode": "vir"
+        },
+        "flight": {
+            "number": "7058",
+            "iataNumber": "vs7058",
+            "icaoNumber": "vir7058"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "1551",
+                "iataNumber": "kl1551",
+                "icaoNumber": "klm1551"
+            }
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "terminal": "2",
+            "gate": "d6",
+            "delay": 16,
+            "scheduledTime": "2024-03-15t22:00:00.000",
+            "estimatedTime": "2024-03-15t22:11:00.000",
+            "actualTime": "2024-03-15t22:16:00.000",
+            "estimatedRunway": "2024-03-15t22:16:00.000",
+            "actualRunway": "2024-03-15t22:16:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t22:10:00.000",
+            "estimatedTime": "2024-03-15t22:09:00.000",
+            "actualTime": "2024-03-15t22:09:00.000",
+            "estimatedRunway": "2024-03-15t22:09:00.000",
+            "actualRunway": "2024-03-15t22:09:00.000"
+        },
+        "airline": {
+            "name": "klm",
+            "iataCode": "kl",
+            "icaoCode": "klm"
+        },
+        "flight": {
+            "number": "1551",
+            "iataNumber": "kl1551",
+            "icaoNumber": "klm1551"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "lpl",
+            "icaoCode": "eggp",
+            "delay": 8,
+            "scheduledTime": "2024-03-15t17:55:00.000",
+            "estimatedTime": "2024-03-15t18:05:00.000",
+            "actualTime": "2024-03-15t18:02:00.000",
+            "estimatedRunway": "2024-03-15t18:02:00.000",
+            "actualRunway": "2024-03-15t18:02:00.000"
+        },
+        "arrival": {
+            "iataCode": "lba",
+            "icaoCode": "egnm",
+            "scheduledTime": "2024-03-15t18:25:00.000",
+            "estimatedTime": "2024-03-15t18:24:00.000",
+            "actualTime": "2024-03-15t18:24:00.000",
+            "estimatedRunway": "2024-03-15t18:24:00.000",
+            "actualRunway": "2024-03-15t18:24:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "60",
+            "iataNumber": "ls60",
+            "icaoNumber": "exs60"
+        }
+    }
+]

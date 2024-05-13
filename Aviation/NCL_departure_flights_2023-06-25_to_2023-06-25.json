@@ -1,0 +1,4320 @@
+[
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "delay": 10,
+            "scheduledTime": "2023-06-25t06:00:00.000",
+            "estimatedTime": "2023-06-25t06:00:00.000",
+            "actualTime": "2023-06-25t06:10:00.000",
+            "estimatedRunway": "2023-06-25t06:10:00.000",
+            "actualRunway": "2023-06-25t06:10:00.000"
+        },
+        "arrival": {
+            "iataCode": "agp",
+            "icaoCode": "lemg",
+            "scheduledTime": "2023-06-25t10:05:00.000",
+            "estimatedTime": "2023-06-25t10:04:00.000"
+        },
+        "airline": {
+            "name": "tuifly",
+            "iataCode": "x3",
+            "icaoCode": "tui"
+        },
+        "flight": {
+            "number": "1732",
+            "iataNumber": "x31732",
+            "icaoNumber": "tui1732"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 19,
+            "scheduledTime": "2023-06-25t06:05:00.000",
+            "estimatedTime": "2023-06-25t06:05:00.000",
+            "actualTime": "2023-06-25t06:23:00.000",
+            "estimatedRunway": "2023-06-25t06:23:00.000",
+            "actualRunway": "2023-06-25t06:23:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t07:25:00.000",
+            "estimatedTime": "2023-06-25t07:17:00.000"
+        },
+        "airline": {
+            "name": "qatar airways",
+            "iataCode": "qr",
+            "icaoCode": "qtr"
+        },
+        "flight": {
+            "number": "5979",
+            "iataNumber": "qr5979",
+            "icaoNumber": "qtr5979"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1321",
+                "iataNumber": "ba1321",
+                "icaoNumber": "baw1321"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 19,
+            "scheduledTime": "2023-06-25t06:05:00.000",
+            "estimatedTime": "2023-06-25t06:05:00.000",
+            "actualTime": "2023-06-25t06:23:00.000",
+            "estimatedRunway": "2023-06-25t06:23:00.000",
+            "actualRunway": "2023-06-25t06:23:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t07:25:00.000",
+            "estimatedTime": "2023-06-25t07:17:00.000"
+        },
+        "airline": {
+            "name": "iberia",
+            "iataCode": "ib",
+            "icaoCode": "ibe"
+        },
+        "flight": {
+            "number": "7538",
+            "iataNumber": "ib7538",
+            "icaoNumber": "ibe7538"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1321",
+                "iataNumber": "ba1321",
+                "icaoNumber": "baw1321"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 19,
+            "scheduledTime": "2023-06-25t06:05:00.000",
+            "estimatedTime": "2023-06-25t06:05:00.000",
+            "actualTime": "2023-06-25t06:23:00.000",
+            "estimatedRunway": "2023-06-25t06:23:00.000",
+            "actualRunway": "2023-06-25t06:23:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t07:25:00.000",
+            "estimatedTime": "2023-06-25t07:17:00.000"
+        },
+        "airline": {
+            "name": "malaysia airlines",
+            "iataCode": "mh",
+            "icaoCode": "mas"
+        },
+        "flight": {
+            "number": "9885",
+            "iataNumber": "mh9885",
+            "icaoNumber": "mas9885"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1321",
+                "iataNumber": "ba1321",
+                "icaoNumber": "baw1321"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 19,
+            "scheduledTime": "2023-06-25t06:05:00.000",
+            "estimatedTime": "2023-06-25t06:05:00.000",
+            "actualTime": "2023-06-25t06:23:00.000",
+            "estimatedRunway": "2023-06-25t06:23:00.000",
+            "actualRunway": "2023-06-25t06:23:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t07:25:00.000",
+            "estimatedTime": "2023-06-25t07:17:00.000"
+        },
+        "airline": {
+            "name": "american airlines",
+            "iataCode": "aa",
+            "icaoCode": "aal"
+        },
+        "flight": {
+            "number": "6652",
+            "iataNumber": "aa6652",
+            "icaoNumber": "aal6652"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1321",
+                "iataNumber": "ba1321",
+                "icaoNumber": "baw1321"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 19,
+            "scheduledTime": "2023-06-25t06:05:00.000",
+            "estimatedTime": "2023-06-25t06:05:00.000",
+            "actualTime": "2023-06-25t06:23:00.000",
+            "estimatedRunway": "2023-06-25t06:23:00.000",
+            "actualRunway": "2023-06-25t06:23:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t07:25:00.000",
+            "estimatedTime": "2023-06-25t07:17:00.000"
+        },
+        "airline": {
+            "name": "jet linx aviation",
+            "iataCode": "jl",
+            "icaoCode": "jtl"
+        },
+        "flight": {
+            "number": "6512",
+            "iataNumber": "jl6512",
+            "icaoNumber": "jtl6512"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1321",
+                "iataNumber": "ba1321",
+                "icaoNumber": "baw1321"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 19,
+            "scheduledTime": "2023-06-25t06:05:00.000",
+            "estimatedTime": "2023-06-25t06:05:00.000",
+            "actualTime": "2023-06-25t06:23:00.000",
+            "estimatedRunway": "2023-06-25t06:23:00.000",
+            "actualRunway": "2023-06-25t06:23:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t07:25:00.000",
+            "estimatedTime": "2023-06-25t07:17:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "1321",
+            "iataNumber": "ba1321",
+            "icaoNumber": "baw1321"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "10",
+            "delay": 21,
+            "scheduledTime": "2023-06-25t06:10:00.000",
+            "estimatedTime": "2023-06-25t06:10:00.000",
+            "actualTime": "2023-06-25t06:31:00.000",
+            "estimatedRunway": "2023-06-25t06:31:00.000",
+            "actualRunway": "2023-06-25t06:31:00.000"
+        },
+        "arrival": {
+            "iataCode": "tfs",
+            "icaoCode": "gcts",
+            "baggage": "a2",
+            "gate": "10",
+            "delay": 7,
+            "scheduledTime": "2023-06-25t10:55:00.000",
+            "estimatedTime": "2023-06-25t11:01:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "416",
+            "iataNumber": "fr416",
+            "icaoNumber": "ryr416"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "31",
+            "scheduledTime": "2023-06-25t06:20:00.000",
+            "estimatedTime": "2023-06-25t06:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "41",
+            "scheduledTime": "2023-06-25t09:10:00.000"
+        },
+        "airline": {
+            "name": "alitalia",
+            "iataCode": "az",
+            "icaoCode": "aza"
+        },
+        "flight": {
+            "number": "3587",
+            "iataNumber": "az3587",
+            "icaoNumber": "aza3587"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1559",
+                "iataNumber": "af1559",
+                "icaoNumber": "afr1559"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "31",
+            "scheduledTime": "2023-06-25t06:20:00.000",
+            "estimatedTime": "2023-06-25t06:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "41",
+            "scheduledTime": "2023-06-25t09:10:00.000"
+        },
+        "airline": {
+            "name": "delta air lines",
+            "iataCode": "dl",
+            "icaoCode": "dal"
+        },
+        "flight": {
+            "number": "8437",
+            "iataNumber": "dl8437",
+            "icaoNumber": "dal8437"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1559",
+                "iataNumber": "af1559",
+                "icaoNumber": "afr1559"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "31",
+            "scheduledTime": "2023-06-25t06:20:00.000",
+            "estimatedTime": "2023-06-25t06:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "41",
+            "scheduledTime": "2023-06-25t09:10:00.000"
+        },
+        "airline": {
+            "name": "kenya airways",
+            "iataCode": "kq",
+            "icaoCode": "kqa"
+        },
+        "flight": {
+            "number": "3087",
+            "iataNumber": "kq3087",
+            "icaoNumber": "kqa3087"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1559",
+                "iataNumber": "af1559",
+                "icaoNumber": "afr1559"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "31",
+            "scheduledTime": "2023-06-25t06:20:00.000",
+            "estimatedTime": "2023-06-25t06:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "41",
+            "scheduledTime": "2023-06-25t09:10:00.000"
+        },
+        "airline": {
+            "name": "air mauritius",
+            "iataCode": "mk",
+            "icaoCode": "mau"
+        },
+        "flight": {
+            "number": "9455",
+            "iataNumber": "mk9455",
+            "icaoNumber": "mau9455"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1559",
+                "iataNumber": "af1559",
+                "icaoNumber": "afr1559"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "31",
+            "scheduledTime": "2023-06-25t06:20:00.000",
+            "estimatedTime": "2023-06-25t06:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "41",
+            "scheduledTime": "2023-06-25t09:10:00.000"
+        },
+        "airline": {
+            "name": "singapore airlines",
+            "iataCode": "sq",
+            "icaoCode": "sia"
+        },
+        "flight": {
+            "number": "1887",
+            "iataNumber": "sq1887",
+            "icaoNumber": "sia1887"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1559",
+                "iataNumber": "af1559",
+                "icaoNumber": "afr1559"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "31",
+            "scheduledTime": "2023-06-25t06:20:00.000",
+            "estimatedTime": "2023-06-25t06:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "41",
+            "scheduledTime": "2023-06-25t09:10:00.000"
+        },
+        "airline": {
+            "name": "saudia",
+            "iataCode": "sv",
+            "icaoCode": "sva"
+        },
+        "flight": {
+            "number": "6096",
+            "iataNumber": "sv6096",
+            "icaoNumber": "sva6096"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1559",
+                "iataNumber": "af1559",
+                "icaoNumber": "afr1559"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "31",
+            "scheduledTime": "2023-06-25t06:20:00.000",
+            "estimatedTime": "2023-06-25t06:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "41",
+            "scheduledTime": "2023-06-25t09:10:00.000"
+        },
+        "airline": {
+            "name": "virgin atlantic",
+            "iataCode": "vs",
+            "icaoCode": "vir"
+        },
+        "flight": {
+            "number": "6723",
+            "iataNumber": "vs6723",
+            "icaoNumber": "vir6723"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1559",
+                "iataNumber": "af1559",
+                "icaoNumber": "afr1559"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "31",
+            "scheduledTime": "2023-06-25t06:20:00.000",
+            "estimatedTime": "2023-06-25t06:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "41",
+            "scheduledTime": "2023-06-25t09:10:00.000"
+        },
+        "airline": {
+            "name": "westjet",
+            "iataCode": "ws",
+            "icaoCode": "wja"
+        },
+        "flight": {
+            "number": "5020",
+            "iataNumber": "ws5020",
+            "icaoNumber": "wja5020"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1559",
+                "iataNumber": "af1559",
+                "icaoNumber": "afr1559"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "31",
+            "scheduledTime": "2023-06-25t06:20:00.000",
+            "estimatedTime": "2023-06-25t06:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "41",
+            "scheduledTime": "2023-06-25t09:10:00.000"
+        },
+        "airline": {
+            "name": "air france",
+            "iataCode": "af",
+            "icaoCode": "afr"
+        },
+        "flight": {
+            "number": "1559",
+            "iataNumber": "af1559",
+            "icaoNumber": "afr1559"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "24",
+            "delay": 65,
+            "scheduledTime": "2023-06-25t06:25:00.000",
+            "estimatedTime": "2023-06-25t07:30:00.000"
+        },
+        "arrival": {
+            "iataCode": "kgs",
+            "icaoCode": "lgko",
+            "scheduledTime": "2023-06-25t12:40:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "565",
+            "iataNumber": "ls565",
+            "icaoNumber": "exs565"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "19",
+            "delay": 10,
+            "scheduledTime": "2023-06-25t06:30:00.000",
+            "estimatedTime": "2023-06-25t06:40:00.000"
+        },
+        "arrival": {
+            "iataCode": "dbv",
+            "icaoCode": "lddu",
+            "scheduledTime": "2023-06-25t10:40:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "569",
+            "iataNumber": "ls569",
+            "icaoNumber": "exs569"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "17",
+            "delay": 14,
+            "scheduledTime": "2023-06-25t06:30:00.000",
+            "estimatedTime": "2023-06-25t06:30:00.000",
+            "actualTime": "2023-06-25t06:43:00.000",
+            "estimatedRunway": "2023-06-25t06:43:00.000",
+            "actualRunway": "2023-06-25t06:43:00.000"
+        },
+        "arrival": {
+            "iataCode": "pmi",
+            "icaoCode": "lepa",
+            "baggage": "01",
+            "scheduledTime": "2023-06-25t10:10:00.000"
+        },
+        "airline": {
+            "name": "tuifly",
+            "iataCode": "x3",
+            "icaoCode": "tui"
+        },
+        "flight": {
+            "number": "1708",
+            "iataNumber": "x31708",
+            "icaoNumber": "tui1708"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "2",
+            "scheduledTime": "2023-06-25t06:45:00.000",
+            "estimatedTime": "2023-06-25t06:45:00.000"
+        },
+        "arrival": {
+            "iataCode": "fao",
+            "icaoCode": "lpfr",
+            "scheduledTime": "2023-06-25t10:05:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "597",
+            "iataNumber": "ls597",
+            "icaoNumber": "exs597"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "16",
+            "delay": 11,
+            "scheduledTime": "2023-06-25t06:50:00.000",
+            "estimatedTime": "2023-06-25t06:50:00.000",
+            "actualTime": "2023-06-25t07:01:00.000",
+            "estimatedRunway": "2023-06-25t07:01:00.000",
+            "actualRunway": "2023-06-25t07:01:00.000"
+        },
+        "arrival": {
+            "iataCode": "pmi",
+            "icaoCode": "lepa",
+            "baggage": "09",
+            "scheduledTime": "2023-06-25t10:45:00.000",
+            "estimatedTime": "2023-06-25t10:27:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "531",
+            "iataNumber": "ls531",
+            "icaoNumber": "exs531"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "26",
+            "delay": 16,
+            "scheduledTime": "2023-06-25t07:10:00.000",
+            "estimatedTime": "2023-06-25t07:10:00.000",
+            "actualTime": "2023-06-25t07:26:00.000",
+            "estimatedRunway": "2023-06-25t07:26:00.000",
+            "actualRunway": "2023-06-25t07:26:00.000"
+        },
+        "arrival": {
+            "iataCode": "agp",
+            "icaoCode": "lemg",
+            "scheduledTime": "2023-06-25t11:30:00.000",
+            "estimatedTime": "2023-06-25t11:16:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "557",
+            "iataNumber": "ls557",
+            "icaoNumber": "exs557"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "7",
+            "delay": 14,
+            "scheduledTime": "2023-06-25t07:15:00.000",
+            "estimatedTime": "2023-06-25t07:15:00.000",
+            "actualTime": "2023-06-25t07:29:00.000",
+            "estimatedRunway": "2023-06-25t07:29:00.000",
+            "actualRunway": "2023-06-25t07:29:00.000"
+        },
+        "arrival": {
+            "iataCode": "lpa",
+            "icaoCode": "gclp",
+            "baggage": "42",
+            "gate": "7",
+            "scheduledTime": "2023-06-25t12:00:00.000",
+            "estimatedTime": "2023-06-25t11:57:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "425",
+            "iataNumber": "fr425",
+            "icaoNumber": "ryr425"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "16",
+            "delay": 8,
+            "scheduledTime": "2023-06-25t07:30:00.000",
+            "estimatedTime": "2023-06-25t07:30:00.000",
+            "actualTime": "2023-06-25t07:37:00.000",
+            "estimatedRunway": "2023-06-25t07:37:00.000",
+            "actualRunway": "2023-06-25t07:37:00.000"
+        },
+        "arrival": {
+            "iataCode": "alc",
+            "icaoCode": "leal",
+            "baggage": "3b",
+            "scheduledTime": "2023-06-25t11:35:00.000",
+            "estimatedTime": "2023-06-25t11:14:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "583",
+            "iataNumber": "ls583",
+            "icaoNumber": "exs583"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "1",
+            "scheduledTime": "2023-06-25t07:45:00.000",
+            "estimatedTime": "2023-06-25t07:45:00.000"
+        },
+        "arrival": {
+            "iataCode": "sou",
+            "icaoCode": "eghi",
+            "scheduledTime": "2023-06-25t09:00:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "4003",
+            "iataNumber": "ba4003",
+            "icaoNumber": "baw4003"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "loganair",
+                "iataCode": "lm",
+                "icaoCode": "log"
+            },
+            "flight": {
+                "number": "533",
+                "iataNumber": "lm533",
+                "icaoNumber": "log533"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "1",
+            "scheduledTime": "2023-06-25t07:45:00.000",
+            "estimatedTime": "2023-06-25t07:45:00.000"
+        },
+        "arrival": {
+            "iataCode": "sou",
+            "icaoCode": "eghi",
+            "scheduledTime": "2023-06-25t09:00:00.000"
+        },
+        "airline": {
+            "name": "sierra pacific airlines",
+            "iataCode": "si",
+            "icaoCode": "spa"
+        },
+        "flight": {
+            "number": "7033",
+            "iataNumber": "si7033",
+            "icaoNumber": "spa7033"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "loganair",
+                "iataCode": "lm",
+                "icaoCode": "log"
+            },
+            "flight": {
+                "number": "533",
+                "iataNumber": "lm533",
+                "icaoNumber": "log533"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "1",
+            "scheduledTime": "2023-06-25t07:45:00.000",
+            "estimatedTime": "2023-06-25t07:45:00.000"
+        },
+        "arrival": {
+            "iataCode": "sou",
+            "icaoCode": "eghi",
+            "scheduledTime": "2023-06-25t09:00:00.000"
+        },
+        "airline": {
+            "name": "loganair",
+            "iataCode": "lm",
+            "icaoCode": "log"
+        },
+        "flight": {
+            "number": "533",
+            "iataNumber": "lm533",
+            "icaoNumber": "log533"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "10",
+            "scheduledTime": "2023-06-25t07:45:00.000",
+            "estimatedTime": "2023-06-25t07:45:00.000"
+        },
+        "arrival": {
+            "iataCode": "ibz",
+            "icaoCode": "leib",
+            "terminal": "1",
+            "baggage": "07",
+            "scheduledTime": "2023-06-25t11:50:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "555",
+            "iataNumber": "ls555",
+            "icaoNumber": "exs555"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "21",
+            "delay": 37,
+            "scheduledTime": "2023-06-25t07:50:00.000",
+            "estimatedTime": "2023-06-25t07:50:00.000",
+            "actualTime": "2023-06-25t08:26:00.000",
+            "estimatedRunway": "2023-06-25t08:26:00.000",
+            "actualRunway": "2023-06-25t08:26:00.000"
+        },
+        "arrival": {
+            "iataCode": "kgs",
+            "icaoCode": "lgko",
+            "delay": 21,
+            "scheduledTime": "2023-06-25t14:00:00.000",
+            "estimatedTime": "2023-06-25t14:20:00.000"
+        },
+        "airline": {
+            "name": "tuifly",
+            "iataCode": "x3",
+            "icaoCode": "tui"
+        },
+        "flight": {
+            "number": "1756",
+            "iataNumber": "x31756",
+            "icaoNumber": "tui1756"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 7,
+            "scheduledTime": "2023-06-25t07:55:00.000",
+            "estimatedTime": "2023-06-25t07:55:00.000",
+            "actualTime": "2023-06-25t08:02:00.000",
+            "estimatedRunway": "2023-06-25t08:02:00.000",
+            "actualRunway": "2023-06-25t08:02:00.000"
+        },
+        "arrival": {
+            "iataCode": "mah",
+            "icaoCode": "lemh",
+            "terminal": "ter1",
+            "baggage": "01",
+            "scheduledTime": "2023-06-25t11:30:00.000",
+            "estimatedTime": "2023-06-25t11:27:00.000"
+        },
+        "airline": {
+            "name": "tuifly",
+            "iataCode": "x3",
+            "icaoCode": "tui"
+        },
+        "flight": {
+            "number": "1776",
+            "iataNumber": "x31776",
+            "icaoNumber": "tui1776"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "7",
+            "delay": 2,
+            "scheduledTime": "2023-06-25t08:20:00.000",
+            "estimatedTime": "2023-06-25t08:20:00.000",
+            "actualTime": "2023-06-25t08:22:00.000",
+            "estimatedRunway": "2023-06-25t08:22:00.000",
+            "actualRunway": "2023-06-25t08:22:00.000"
+        },
+        "arrival": {
+            "iataCode": "snn",
+            "icaoCode": "einn",
+            "gate": "07",
+            "scheduledTime": "2023-06-25t09:40:00.000",
+            "estimatedTime": "2023-06-25t09:25:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "3008",
+            "iataNumber": "fr3008",
+            "icaoNumber": "ryr3008"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "19",
+            "delay": 9,
+            "scheduledTime": "2023-06-25t08:30:00.000",
+            "estimatedTime": "2023-06-25t08:30:00.000",
+            "actualTime": "2023-06-25t08:38:00.000",
+            "estimatedRunway": "2023-06-25t08:38:00.000",
+            "actualRunway": "2023-06-25t08:38:00.000"
+        },
+        "arrival": {
+            "iataCode": "gro",
+            "icaoCode": "lege",
+            "terminal": "1",
+            "scheduledTime": "2023-06-25t12:05:00.000",
+            "estimatedTime": "2023-06-25t11:46:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "525",
+            "iataNumber": "ls525",
+            "icaoNumber": "exs525"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "26",
+            "delay": 10,
+            "scheduledTime": "2023-06-25t09:25:00.000",
+            "estimatedTime": "2023-06-25t09:25:00.000",
+            "actualTime": "2023-06-25t09:34:00.000",
+            "estimatedRunway": "2023-06-25t09:34:00.000",
+            "actualRunway": "2023-06-25t09:34:00.000"
+        },
+        "arrival": {
+            "iataCode": "agp",
+            "icaoCode": "lemg",
+            "terminal": "2",
+            "gate": "26",
+            "scheduledTime": "2023-06-25t13:35:00.000",
+            "estimatedTime": "2023-06-25t13:20:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "431",
+            "iataNumber": "fr431",
+            "icaoNumber": "ryr431"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 2,
+            "scheduledTime": "2023-06-25t09:35:00.000",
+            "estimatedTime": "2023-06-25t09:35:00.000",
+            "actualTime": "2023-06-25t09:37:00.000",
+            "estimatedRunway": "2023-06-25t09:37:00.000",
+            "actualRunway": "2023-06-25t09:37:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "008",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t11:55:00.000",
+            "estimatedTime": "2023-06-25t11:38:00.000"
+        },
+        "airline": {
+            "name": "china southern airlines",
+            "iataCode": "cz",
+            "icaoCode": "csn"
+        },
+        "flight": {
+            "number": "7734",
+            "iataNumber": "cz7734",
+            "icaoNumber": "csn7734"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "954",
+                "iataNumber": "kl954",
+                "icaoNumber": "klm954"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 2,
+            "scheduledTime": "2023-06-25t09:35:00.000",
+            "estimatedTime": "2023-06-25t09:35:00.000",
+            "actualTime": "2023-06-25t09:37:00.000",
+            "estimatedRunway": "2023-06-25t09:37:00.000",
+            "actualRunway": "2023-06-25t09:37:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "008",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t11:55:00.000",
+            "estimatedTime": "2023-06-25t11:38:00.000"
+        },
+        "airline": {
+            "name": "delta air lines",
+            "iataCode": "dl",
+            "icaoCode": "dal"
+        },
+        "flight": {
+            "number": "9652",
+            "iataNumber": "dl9652",
+            "icaoNumber": "dal9652"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "954",
+                "iataNumber": "kl954",
+                "icaoNumber": "klm954"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 2,
+            "scheduledTime": "2023-06-25t09:35:00.000",
+            "estimatedTime": "2023-06-25t09:35:00.000",
+            "actualTime": "2023-06-25t09:37:00.000",
+            "estimatedRunway": "2023-06-25t09:37:00.000",
+            "actualRunway": "2023-06-25t09:37:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "008",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t11:55:00.000",
+            "estimatedTime": "2023-06-25t11:38:00.000"
+        },
+        "airline": {
+            "name": "etihad airways",
+            "iataCode": "ey",
+            "icaoCode": "etd"
+        },
+        "flight": {
+            "number": "7290",
+            "iataNumber": "ey7290",
+            "icaoNumber": "etd7290"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "954",
+                "iataNumber": "kl954",
+                "icaoNumber": "klm954"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 2,
+            "scheduledTime": "2023-06-25t09:35:00.000",
+            "estimatedTime": "2023-06-25t09:35:00.000",
+            "actualTime": "2023-06-25t09:37:00.000",
+            "estimatedRunway": "2023-06-25t09:37:00.000",
+            "actualRunway": "2023-06-25t09:37:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "008",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t11:55:00.000",
+            "estimatedTime": "2023-06-25t11:38:00.000"
+        },
+        "airline": {
+            "name": "kenya airways",
+            "iataCode": "kq",
+            "icaoCode": "kqa"
+        },
+        "flight": {
+            "number": "954",
+            "iataNumber": "kq954",
+            "icaoNumber": "kqa954"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "954",
+                "iataNumber": "kl954",
+                "icaoNumber": "klm954"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 2,
+            "scheduledTime": "2023-06-25t09:35:00.000",
+            "estimatedTime": "2023-06-25t09:35:00.000",
+            "actualTime": "2023-06-25t09:37:00.000",
+            "estimatedRunway": "2023-06-25t09:37:00.000",
+            "actualRunway": "2023-06-25t09:37:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "008",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t11:55:00.000",
+            "estimatedTime": "2023-06-25t11:38:00.000"
+        },
+        "airline": {
+            "name": "xiamen airlines",
+            "iataCode": "mf",
+            "icaoCode": "cxa"
+        },
+        "flight": {
+            "number": "9168",
+            "iataNumber": "mf9168",
+            "icaoNumber": "cxa9168"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "954",
+                "iataNumber": "kl954",
+                "icaoNumber": "klm954"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 2,
+            "scheduledTime": "2023-06-25t09:35:00.000",
+            "estimatedTime": "2023-06-25t09:35:00.000",
+            "actualTime": "2023-06-25t09:37:00.000",
+            "estimatedRunway": "2023-06-25t09:37:00.000",
+            "actualRunway": "2023-06-25t09:37:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "008",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t11:55:00.000",
+            "estimatedTime": "2023-06-25t11:38:00.000"
+        },
+        "airline": {
+            "name": "virgin atlantic",
+            "iataCode": "vs",
+            "icaoCode": "vir"
+        },
+        "flight": {
+            "number": "6934",
+            "iataNumber": "vs6934",
+            "icaoNumber": "vir6934"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "954",
+                "iataNumber": "kl954",
+                "icaoNumber": "klm954"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 2,
+            "scheduledTime": "2023-06-25t09:35:00.000",
+            "estimatedTime": "2023-06-25t09:35:00.000",
+            "actualTime": "2023-06-25t09:37:00.000",
+            "estimatedRunway": "2023-06-25t09:37:00.000",
+            "actualRunway": "2023-06-25t09:37:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "008",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t11:55:00.000",
+            "estimatedTime": "2023-06-25t11:38:00.000"
+        },
+        "airline": {
+            "name": "klm",
+            "iataCode": "kl",
+            "icaoCode": "klm"
+        },
+        "flight": {
+            "number": "954",
+            "iataNumber": "kl954",
+            "icaoNumber": "klm954"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "delay": 10,
+            "scheduledTime": "2023-06-25t09:45:00.000",
+            "estimatedTime": "2023-06-25t09:55:00.000"
+        },
+        "arrival": {
+            "iataCode": "bma",
+            "icaoCode": "essb",
+            "scheduledTime": "2023-06-25t13:14:00.000"
+        },
+        "airline": {
+            "name": "naljets",
+            "iataCode": "",
+            "icaoCode": "apx"
+        },
+        "flight": {
+            "number": "926",
+            "iataNumber": "",
+            "icaoNumber": "apx926"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 26,
+            "scheduledTime": "2023-06-25t10:10:00.000",
+            "estimatedTime": "2023-06-25t10:10:00.000",
+            "actualTime": "2023-06-25t10:35:00.000",
+            "estimatedRunway": "2023-06-25t10:35:00.000",
+            "actualRunway": "2023-06-25t10:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t11:30:00.000",
+            "estimatedTime": "2023-06-25t11:29:00.000"
+        },
+        "airline": {
+            "name": "royal jordanian",
+            "iataCode": "rj",
+            "icaoCode": "rja"
+        },
+        "flight": {
+            "number": "3006",
+            "iataNumber": "rj3006",
+            "icaoNumber": "rja3006"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1327",
+                "iataNumber": "ba1327",
+                "icaoNumber": "baw1327"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 26,
+            "scheduledTime": "2023-06-25t10:10:00.000",
+            "estimatedTime": "2023-06-25t10:10:00.000",
+            "actualTime": "2023-06-25t10:35:00.000",
+            "estimatedRunway": "2023-06-25t10:35:00.000",
+            "actualRunway": "2023-06-25t10:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t11:30:00.000",
+            "estimatedTime": "2023-06-25t11:29:00.000"
+        },
+        "airline": {
+            "name": "qatar airways",
+            "iataCode": "qr",
+            "icaoCode": "qtr"
+        },
+        "flight": {
+            "number": "5981",
+            "iataNumber": "qr5981",
+            "icaoNumber": "qtr5981"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1327",
+                "iataNumber": "ba1327",
+                "icaoNumber": "baw1327"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 26,
+            "scheduledTime": "2023-06-25t10:10:00.000",
+            "estimatedTime": "2023-06-25t10:10:00.000",
+            "actualTime": "2023-06-25t10:35:00.000",
+            "estimatedRunway": "2023-06-25t10:35:00.000",
+            "actualRunway": "2023-06-25t10:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t11:30:00.000",
+            "estimatedTime": "2023-06-25t11:29:00.000"
+        },
+        "airline": {
+            "name": "iberia",
+            "iataCode": "ib",
+            "icaoCode": "ibe"
+        },
+        "flight": {
+            "number": "7541",
+            "iataNumber": "ib7541",
+            "icaoNumber": "ibe7541"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1327",
+                "iataNumber": "ba1327",
+                "icaoNumber": "baw1327"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 26,
+            "scheduledTime": "2023-06-25t10:10:00.000",
+            "estimatedTime": "2023-06-25t10:10:00.000",
+            "actualTime": "2023-06-25t10:35:00.000",
+            "estimatedRunway": "2023-06-25t10:35:00.000",
+            "actualRunway": "2023-06-25t10:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t11:30:00.000",
+            "estimatedTime": "2023-06-25t11:29:00.000"
+        },
+        "airline": {
+            "name": "american airlines",
+            "iataCode": "aa",
+            "icaoCode": "aal"
+        },
+        "flight": {
+            "number": "6666",
+            "iataNumber": "aa6666",
+            "icaoNumber": "aal6666"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1327",
+                "iataNumber": "ba1327",
+                "icaoNumber": "baw1327"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 26,
+            "scheduledTime": "2023-06-25t10:10:00.000",
+            "estimatedTime": "2023-06-25t10:10:00.000",
+            "actualTime": "2023-06-25t10:35:00.000",
+            "estimatedRunway": "2023-06-25t10:35:00.000",
+            "actualRunway": "2023-06-25t10:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t11:30:00.000",
+            "estimatedTime": "2023-06-25t11:29:00.000"
+        },
+        "airline": {
+            "name": "jet linx aviation",
+            "iataCode": "jl",
+            "icaoCode": "jtl"
+        },
+        "flight": {
+            "number": "7748",
+            "iataNumber": "jl7748",
+            "icaoNumber": "jtl7748"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1327",
+                "iataNumber": "ba1327",
+                "icaoNumber": "baw1327"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 26,
+            "scheduledTime": "2023-06-25t10:10:00.000",
+            "estimatedTime": "2023-06-25t10:10:00.000",
+            "actualTime": "2023-06-25t10:35:00.000",
+            "estimatedRunway": "2023-06-25t10:35:00.000",
+            "actualRunway": "2023-06-25t10:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t11:30:00.000",
+            "estimatedTime": "2023-06-25t11:29:00.000"
+        },
+        "airline": {
+            "name": "kenya airways",
+            "iataCode": "kq",
+            "icaoCode": "kqa"
+        },
+        "flight": {
+            "number": "4089",
+            "iataNumber": "kq4089",
+            "icaoNumber": "kqa4089"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1327",
+                "iataNumber": "ba1327",
+                "icaoNumber": "baw1327"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "delay": 26,
+            "scheduledTime": "2023-06-25t10:10:00.000",
+            "estimatedTime": "2023-06-25t10:10:00.000",
+            "actualTime": "2023-06-25t10:35:00.000",
+            "estimatedRunway": "2023-06-25t10:35:00.000",
+            "actualRunway": "2023-06-25t10:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t11:30:00.000",
+            "estimatedTime": "2023-06-25t11:29:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "1327",
+            "iataNumber": "ba1327",
+            "icaoNumber": "baw1327"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 15,
+            "scheduledTime": "2023-06-25t11:10:00.000",
+            "estimatedTime": "2023-06-25t11:10:00.000",
+            "actualTime": "2023-06-25t11:24:00.000",
+            "estimatedRunway": "2023-06-25t11:24:00.000",
+            "actualRunway": "2023-06-25t11:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "33",
+            "scheduledTime": "2023-06-25t13:50:00.000",
+            "estimatedTime": "2023-06-25t13:37:00.000"
+        },
+        "airline": {
+            "name": "alitalia",
+            "iataCode": "az",
+            "icaoCode": "aza"
+        },
+        "flight": {
+            "number": "3589",
+            "iataNumber": "az3589",
+            "icaoNumber": "aza3589"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1059",
+                "iataNumber": "af1059",
+                "icaoNumber": "afr1059"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 15,
+            "scheduledTime": "2023-06-25t11:10:00.000",
+            "estimatedTime": "2023-06-25t11:10:00.000",
+            "actualTime": "2023-06-25t11:24:00.000",
+            "estimatedRunway": "2023-06-25t11:24:00.000",
+            "actualRunway": "2023-06-25t11:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "33",
+            "scheduledTime": "2023-06-25t13:50:00.000",
+            "estimatedTime": "2023-06-25t13:37:00.000"
+        },
+        "airline": {
+            "name": "delta air lines",
+            "iataCode": "dl",
+            "icaoCode": "dal"
+        },
+        "flight": {
+            "number": "8317",
+            "iataNumber": "dl8317",
+            "icaoNumber": "dal8317"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1059",
+                "iataNumber": "af1059",
+                "icaoNumber": "afr1059"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 15,
+            "scheduledTime": "2023-06-25t11:10:00.000",
+            "estimatedTime": "2023-06-25t11:10:00.000",
+            "actualTime": "2023-06-25t11:24:00.000",
+            "estimatedRunway": "2023-06-25t11:24:00.000",
+            "actualRunway": "2023-06-25t11:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "33",
+            "scheduledTime": "2023-06-25t13:50:00.000",
+            "estimatedTime": "2023-06-25t13:37:00.000"
+        },
+        "airline": {
+            "name": "gol",
+            "iataCode": "g3",
+            "icaoCode": "glo"
+        },
+        "flight": {
+            "number": "5226",
+            "iataNumber": "g35226",
+            "icaoNumber": "glo5226"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1059",
+                "iataNumber": "af1059",
+                "icaoNumber": "afr1059"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 15,
+            "scheduledTime": "2023-06-25t11:10:00.000",
+            "estimatedTime": "2023-06-25t11:10:00.000",
+            "actualTime": "2023-06-25t11:24:00.000",
+            "estimatedRunway": "2023-06-25t11:24:00.000",
+            "actualRunway": "2023-06-25t11:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "33",
+            "scheduledTime": "2023-06-25t13:50:00.000",
+            "estimatedTime": "2023-06-25t13:37:00.000"
+        },
+        "airline": {
+            "name": "kenya airways",
+            "iataCode": "kq",
+            "icaoCode": "kqa"
+        },
+        "flight": {
+            "number": "3899",
+            "iataNumber": "kq3899",
+            "icaoNumber": "kqa3899"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1059",
+                "iataNumber": "af1059",
+                "icaoNumber": "afr1059"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 15,
+            "scheduledTime": "2023-06-25t11:10:00.000",
+            "estimatedTime": "2023-06-25t11:10:00.000",
+            "actualTime": "2023-06-25t11:24:00.000",
+            "estimatedRunway": "2023-06-25t11:24:00.000",
+            "actualRunway": "2023-06-25t11:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "33",
+            "scheduledTime": "2023-06-25t13:50:00.000",
+            "estimatedTime": "2023-06-25t13:37:00.000"
+        },
+        "airline": {
+            "name": "air mauritius",
+            "iataCode": "mk",
+            "icaoCode": "mau"
+        },
+        "flight": {
+            "number": "9451",
+            "iataNumber": "mk9451",
+            "icaoNumber": "mau9451"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1059",
+                "iataNumber": "af1059",
+                "icaoNumber": "afr1059"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 15,
+            "scheduledTime": "2023-06-25t11:10:00.000",
+            "estimatedTime": "2023-06-25t11:10:00.000",
+            "actualTime": "2023-06-25t11:24:00.000",
+            "estimatedRunway": "2023-06-25t11:24:00.000",
+            "actualRunway": "2023-06-25t11:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "33",
+            "scheduledTime": "2023-06-25t13:50:00.000",
+            "estimatedTime": "2023-06-25t13:37:00.000"
+        },
+        "airline": {
+            "name": "singapore airlines",
+            "iataCode": "sq",
+            "icaoCode": "sia"
+        },
+        "flight": {
+            "number": "1859",
+            "iataNumber": "sq1859",
+            "icaoNumber": "sia1859"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1059",
+                "iataNumber": "af1059",
+                "icaoNumber": "afr1059"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 15,
+            "scheduledTime": "2023-06-25t11:10:00.000",
+            "estimatedTime": "2023-06-25t11:10:00.000",
+            "actualTime": "2023-06-25t11:24:00.000",
+            "estimatedRunway": "2023-06-25t11:24:00.000",
+            "actualRunway": "2023-06-25t11:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "33",
+            "scheduledTime": "2023-06-25t13:50:00.000",
+            "estimatedTime": "2023-06-25t13:37:00.000"
+        },
+        "airline": {
+            "name": "air austral",
+            "iataCode": "uu",
+            "icaoCode": "reu"
+        },
+        "flight": {
+            "number": "8059",
+            "iataNumber": "uu8059",
+            "icaoNumber": "reu8059"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1059",
+                "iataNumber": "af1059",
+                "icaoNumber": "afr1059"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 15,
+            "scheduledTime": "2023-06-25t11:10:00.000",
+            "estimatedTime": "2023-06-25t11:10:00.000",
+            "actualTime": "2023-06-25t11:24:00.000",
+            "estimatedRunway": "2023-06-25t11:24:00.000",
+            "actualRunway": "2023-06-25t11:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "33",
+            "scheduledTime": "2023-06-25t13:50:00.000",
+            "estimatedTime": "2023-06-25t13:37:00.000"
+        },
+        "airline": {
+            "name": "virgin atlantic",
+            "iataCode": "vs",
+            "icaoCode": "vir"
+        },
+        "flight": {
+            "number": "6721",
+            "iataNumber": "vs6721",
+            "icaoNumber": "vir6721"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1059",
+                "iataNumber": "af1059",
+                "icaoNumber": "afr1059"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 15,
+            "scheduledTime": "2023-06-25t11:10:00.000",
+            "estimatedTime": "2023-06-25t11:10:00.000",
+            "actualTime": "2023-06-25t11:24:00.000",
+            "estimatedRunway": "2023-06-25t11:24:00.000",
+            "actualRunway": "2023-06-25t11:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "33",
+            "scheduledTime": "2023-06-25t13:50:00.000",
+            "estimatedTime": "2023-06-25t13:37:00.000"
+        },
+        "airline": {
+            "name": "delta air lines",
+            "iataCode": "dl",
+            "icaoCode": "dal"
+        },
+        "flight": {
+            "number": "8437",
+            "iataNumber": "dl8437",
+            "icaoNumber": "dal8437"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1059",
+                "iataNumber": "af1059",
+                "icaoNumber": "afr1059"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 15,
+            "scheduledTime": "2023-06-25t11:10:00.000",
+            "estimatedTime": "2023-06-25t11:10:00.000",
+            "actualTime": "2023-06-25t11:24:00.000",
+            "estimatedRunway": "2023-06-25t11:24:00.000",
+            "actualRunway": "2023-06-25t11:24:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "33",
+            "scheduledTime": "2023-06-25t13:50:00.000",
+            "estimatedTime": "2023-06-25t13:37:00.000"
+        },
+        "airline": {
+            "name": "air france",
+            "iataCode": "af",
+            "icaoCode": "afr"
+        },
+        "flight": {
+            "number": "1059",
+            "iataNumber": "af1059",
+            "icaoNumber": "afr1059"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "10",
+            "scheduledTime": "2023-06-25t11:15:00.000",
+            "estimatedTime": "2023-06-25t11:15:00.000",
+            "actualTime": "2023-06-25t11:11:00.000",
+            "estimatedRunway": "2023-06-25t11:11:00.000",
+            "actualRunway": "2023-06-25t11:11:00.000"
+        },
+        "arrival": {
+            "iataCode": "svg",
+            "icaoCode": "enzv",
+            "baggage": "1",
+            "scheduledTime": "2023-06-25t13:40:00.000",
+            "estimatedTime": "2023-06-25t13:18:00.000"
+        },
+        "airline": {
+            "name": "loganair",
+            "iataCode": "lm",
+            "icaoCode": "log"
+        },
+        "flight": {
+            "number": "504",
+            "iataNumber": "lm504",
+            "icaoNumber": "log504"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "delay": 35,
+            "scheduledTime": "2023-06-25t12:00:00.000",
+            "estimatedTime": "2023-06-25t12:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "dub",
+            "icaoCode": "eidw",
+            "terminal": "2",
+            "baggage": "2",
+            "gate": "bus",
+            "scheduledTime": "2023-06-25t13:15:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "8965",
+            "iataNumber": "ba8965",
+            "icaoNumber": "baw8965"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "aer lingus",
+                "iataCode": "ei",
+                "icaoCode": "ein"
+            },
+            "flight": {
+                "number": "3351",
+                "iataNumber": "ei3351",
+                "icaoNumber": "ein3351"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "delay": 35,
+            "scheduledTime": "2023-06-25t12:00:00.000",
+            "estimatedTime": "2023-06-25t12:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "dub",
+            "icaoCode": "eidw",
+            "terminal": "2",
+            "baggage": "2",
+            "gate": "bus",
+            "scheduledTime": "2023-06-25t13:15:00.000"
+        },
+        "airline": {
+            "name": "aer lingus",
+            "iataCode": "ei",
+            "icaoCode": "ein"
+        },
+        "flight": {
+            "number": "3351",
+            "iataNumber": "ei3351",
+            "icaoNumber": "ein3351"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 33,
+            "scheduledTime": "2023-06-25t12:30:00.000",
+            "estimatedTime": "2023-06-25t12:30:00.000",
+            "actualTime": "2023-06-25t13:02:00.000",
+            "estimatedRunway": "2023-06-25t13:02:00.000",
+            "actualRunway": "2023-06-25t13:02:00.000"
+        },
+        "arrival": {
+            "iataCode": "bcn",
+            "icaoCode": "lebl",
+            "terminal": "2",
+            "baggage": "45",
+            "gate": "20",
+            "delay": 23,
+            "scheduledTime": "2023-06-25t15:55:00.000",
+            "estimatedTime": "2023-06-25t16:17:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "3169",
+            "iataNumber": "fr3169",
+            "icaoNumber": "ryr3169"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "31",
+            "scheduledTime": "2023-06-25t13:20:00.000",
+            "estimatedTime": "2023-06-25t13:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "abz",
+            "icaoCode": "egpd",
+            "scheduledTime": "2023-06-25t14:15:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "7843",
+            "iataNumber": "ba7843",
+            "icaoNumber": "baw7843"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "loganair",
+                "iataCode": "lm",
+                "icaoCode": "log"
+            },
+            "flight": {
+                "number": "3",
+                "iataNumber": "lm3",
+                "icaoNumber": "log3"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "31",
+            "scheduledTime": "2023-06-25t13:20:00.000",
+            "estimatedTime": "2023-06-25t13:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "abz",
+            "icaoCode": "egpd",
+            "scheduledTime": "2023-06-25t14:15:00.000"
+        },
+        "airline": {
+            "name": "loganair",
+            "iataCode": "lm",
+            "icaoCode": "log"
+        },
+        "flight": {
+            "number": "3",
+            "iataNumber": "lm3",
+            "icaoNumber": "log3"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "7",
+            "delay": 60,
+            "scheduledTime": "2023-06-25t13:25:00.000",
+            "estimatedTime": "2023-06-25t14:25:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "012",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t15:40:00.000"
+        },
+        "airline": {
+            "name": "china southern airlines",
+            "iataCode": "cz",
+            "icaoCode": "csn"
+        },
+        "flight": {
+            "number": "7735",
+            "iataNumber": "cz7735",
+            "icaoNumber": "csn7735"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "960",
+                "iataNumber": "kl960",
+                "icaoNumber": "klm960"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "7",
+            "delay": 60,
+            "scheduledTime": "2023-06-25t13:25:00.000",
+            "estimatedTime": "2023-06-25t14:25:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "012",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t15:40:00.000"
+        },
+        "airline": {
+            "name": "delta air lines",
+            "iataCode": "dl",
+            "icaoCode": "dal"
+        },
+        "flight": {
+            "number": "9613",
+            "iataNumber": "dl9613",
+            "icaoNumber": "dal9613"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "960",
+                "iataNumber": "kl960",
+                "icaoNumber": "klm960"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "7",
+            "delay": 60,
+            "scheduledTime": "2023-06-25t13:25:00.000",
+            "estimatedTime": "2023-06-25t14:25:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "012",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t15:40:00.000"
+        },
+        "airline": {
+            "name": "etihad airways",
+            "iataCode": "ey",
+            "icaoCode": "etd"
+        },
+        "flight": {
+            "number": "7328",
+            "iataNumber": "ey7328",
+            "icaoNumber": "etd7328"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "960",
+                "iataNumber": "kl960",
+                "icaoNumber": "klm960"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "7",
+            "delay": 60,
+            "scheduledTime": "2023-06-25t13:25:00.000",
+            "estimatedTime": "2023-06-25t14:25:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "012",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t15:40:00.000"
+        },
+        "airline": {
+            "name": "kenya airways",
+            "iataCode": "kq",
+            "icaoCode": "kqa"
+        },
+        "flight": {
+            "number": "960",
+            "iataNumber": "kq960",
+            "icaoNumber": "kqa960"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "960",
+                "iataNumber": "kl960",
+                "icaoNumber": "klm960"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "7",
+            "delay": 60,
+            "scheduledTime": "2023-06-25t13:25:00.000",
+            "estimatedTime": "2023-06-25t14:25:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "012",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t15:40:00.000"
+        },
+        "airline": {
+            "name": "xiamen airlines",
+            "iataCode": "mf",
+            "icaoCode": "cxa"
+        },
+        "flight": {
+            "number": "9362",
+            "iataNumber": "mf9362",
+            "icaoNumber": "cxa9362"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "960",
+                "iataNumber": "kl960",
+                "icaoNumber": "klm960"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "7",
+            "delay": 60,
+            "scheduledTime": "2023-06-25t13:25:00.000",
+            "estimatedTime": "2023-06-25t14:25:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "012",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t15:40:00.000"
+        },
+        "airline": {
+            "name": "virgin atlantic",
+            "iataCode": "vs",
+            "icaoCode": "vir"
+        },
+        "flight": {
+            "number": "6936",
+            "iataNumber": "vs6936",
+            "icaoNumber": "vir6936"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "960",
+                "iataNumber": "kl960",
+                "icaoNumber": "klm960"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "7",
+            "delay": 60,
+            "scheduledTime": "2023-06-25t13:25:00.000",
+            "estimatedTime": "2023-06-25t14:25:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "012",
+            "gate": "a08",
+            "scheduledTime": "2023-06-25t15:40:00.000"
+        },
+        "airline": {
+            "name": "klm",
+            "iataCode": "kl",
+            "icaoCode": "klm"
+        },
+        "flight": {
+            "number": "960",
+            "iataNumber": "kl960",
+            "icaoNumber": "klm960"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "26",
+            "delay": 10,
+            "scheduledTime": "2023-06-25t13:45:00.000",
+            "estimatedTime": "2023-06-25t13:55:00.000"
+        },
+        "arrival": {
+            "iataCode": "dxb",
+            "icaoCode": "omdb",
+            "terminal": "3",
+            "baggage": "303",
+            "scheduledTime": "2023-06-25t23:59:00.000"
+        },
+        "airline": {
+            "name": "qantas",
+            "iataCode": "qf",
+            "icaoCode": "qfa"
+        },
+        "flight": {
+            "number": "8036",
+            "iataNumber": "qf8036",
+            "icaoNumber": "qfa8036"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "emirates",
+                "iataCode": "ek",
+                "icaoCode": "uae"
+            },
+            "flight": {
+                "number": "36",
+                "iataNumber": "ek36",
+                "icaoNumber": "uae36"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "26",
+            "delay": 10,
+            "scheduledTime": "2023-06-25t13:45:00.000",
+            "estimatedTime": "2023-06-25t13:55:00.000"
+        },
+        "arrival": {
+            "iataCode": "dxb",
+            "icaoCode": "omdb",
+            "terminal": "3",
+            "baggage": "303",
+            "scheduledTime": "2023-06-25t23:59:00.000"
+        },
+        "airline": {
+            "name": "emirates",
+            "iataCode": "ek",
+            "icaoCode": "uae"
+        },
+        "flight": {
+            "number": "36",
+            "iataNumber": "ek36",
+            "icaoNumber": "uae36"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "scheduledTime": "2023-06-25t14:15:00.000",
+            "estimatedTime": "2023-06-25t14:15:00.000"
+        },
+        "arrival": {
+            "iataCode": "lca",
+            "icaoCode": "lclk",
+            "scheduledTime": "2023-06-25t20:55:00.000"
+        },
+        "airline": {
+            "name": "tuifly",
+            "iataCode": "x3",
+            "icaoCode": "tui"
+        },
+        "flight": {
+            "number": "1714",
+            "iataNumber": "x31714",
+            "icaoNumber": "tui1714"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "scheduledTime": "2023-06-25t14:15:00.000",
+            "estimatedTime": "2023-06-25t14:15:00.000"
+        },
+        "arrival": {
+            "iataCode": "zth",
+            "icaoCode": "lgza",
+            "scheduledTime": "2023-06-25t19:55:00.000"
+        },
+        "airline": {
+            "name": "tuifly",
+            "iataCode": "x3",
+            "icaoCode": "tui"
+        },
+        "flight": {
+            "number": "1740",
+            "iataNumber": "x31740",
+            "icaoNumber": "tui1740"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "delay": 20,
+            "scheduledTime": "2023-06-25t14:50:00.000",
+            "estimatedTime": "2023-06-25t15:02:00.000",
+            "actualTime": "2023-06-25t15:10:00.000",
+            "estimatedRunway": "2023-06-25t15:10:00.000",
+            "actualRunway": "2023-06-25t15:10:00.000"
+        },
+        "arrival": {
+            "iataCode": "bfs",
+            "icaoCode": "egaa",
+            "delay": 7,
+            "scheduledTime": "2023-06-25t15:45:00.000",
+            "estimatedTime": "2023-06-25t15:51:00.000"
+        },
+        "airline": {
+            "name": "easyjet",
+            "iataCode": "u2",
+            "icaoCode": "ezy"
+        },
+        "flight": {
+            "number": "72",
+            "iataNumber": "u272",
+            "icaoNumber": "ezy72"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "delay": 10,
+            "scheduledTime": "2023-06-25t15:00:00.000",
+            "estimatedTime": "2023-06-25t15:10:00.000"
+        },
+        "arrival": {
+            "iataCode": "lca",
+            "icaoCode": "lclk",
+            "scheduledTime": "2023-06-25t22:00:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "543",
+            "iataNumber": "ls543",
+            "icaoNumber": "exs543"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "scheduledTime": "2023-06-25t15:20:00.000",
+            "estimatedTime": "2023-06-25t15:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "ext",
+            "icaoCode": "egte",
+            "scheduledTime": "2023-06-25t16:35:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "4085",
+            "iataNumber": "ba4085",
+            "icaoNumber": "baw4085"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "loganair",
+                "iataCode": "lm",
+                "icaoCode": "log"
+            },
+            "flight": {
+                "number": "545",
+                "iataNumber": "lm545",
+                "icaoNumber": "log545"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "scheduledTime": "2023-06-25t15:20:00.000",
+            "estimatedTime": "2023-06-25t15:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "ext",
+            "icaoCode": "egte",
+            "scheduledTime": "2023-06-25t16:35:00.000"
+        },
+        "airline": {
+            "name": "sierra pacific airlines",
+            "iataCode": "si",
+            "icaoCode": "spa"
+        },
+        "flight": {
+            "number": "7145",
+            "iataNumber": "si7145",
+            "icaoNumber": "spa7145"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "loganair",
+                "iataCode": "lm",
+                "icaoCode": "log"
+            },
+            "flight": {
+                "number": "545",
+                "iataNumber": "lm545",
+                "icaoNumber": "log545"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "scheduledTime": "2023-06-25t15:20:00.000",
+            "estimatedTime": "2023-06-25t15:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "ext",
+            "icaoCode": "egte",
+            "scheduledTime": "2023-06-25t16:35:00.000"
+        },
+        "airline": {
+            "name": "loganair",
+            "iataCode": "lm",
+            "icaoCode": "log"
+        },
+        "flight": {
+            "number": "545",
+            "iataNumber": "lm545",
+            "icaoNumber": "log545"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "21",
+            "delay": 22,
+            "scheduledTime": "2023-06-25t15:30:00.000",
+            "estimatedTime": "2023-06-25t16:07:00.000",
+            "actualTime": "2023-06-25t15:51:00.000",
+            "estimatedRunway": "2023-06-25t15:51:00.000",
+            "actualRunway": "2023-06-25t15:51:00.000"
+        },
+        "arrival": {
+            "iataCode": "ace",
+            "icaoCode": "gcrr",
+            "terminal": "1",
+            "baggage": "3",
+            "delay": 1,
+            "scheduledTime": "2023-06-25t20:00:00.000",
+            "estimatedTime": "2023-06-25t20:01:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "545",
+            "iataNumber": "ls545",
+            "icaoNumber": "exs545"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "24",
+            "delay": 36,
+            "scheduledTime": "2023-06-25t15:35:00.000",
+            "estimatedTime": "2023-06-25t15:59:00.000",
+            "actualTime": "2023-06-25t16:11:00.000",
+            "estimatedRunway": "2023-06-25t16:11:00.000",
+            "actualRunway": "2023-06-25t16:11:00.000"
+        },
+        "arrival": {
+            "iataCode": "dlm",
+            "icaoCode": "ltbs",
+            "terminal": "i",
+            "delay": 7,
+            "scheduledTime": "2023-06-25t22:05:00.000",
+            "estimatedTime": "2023-06-25t22:12:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "561",
+            "iataNumber": "ls561",
+            "icaoNumber": "exs561"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "7",
+            "delay": 40,
+            "scheduledTime": "2023-06-25t15:35:00.000",
+            "estimatedTime": "2023-06-25t16:13:00.000",
+            "actualTime": "2023-06-25t16:15:00.000",
+            "estimatedRunway": "2023-06-25t16:15:00.000",
+            "actualRunway": "2023-06-25t16:15:00.000"
+        },
+        "arrival": {
+            "iataCode": "rho",
+            "icaoCode": "lgrp",
+            "delay": 21,
+            "scheduledTime": "2023-06-25t21:55:00.000",
+            "estimatedTime": "2023-06-25t22:16:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "581",
+            "iataNumber": "ls581",
+            "icaoNumber": "exs581"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "16",
+            "delay": 54,
+            "scheduledTime": "2023-06-25t15:40:00.000",
+            "estimatedTime": "2023-06-25t16:34:00.000"
+        },
+        "arrival": {
+            "iataCode": "tfs",
+            "icaoCode": "gcts",
+            "baggage": "a7",
+            "scheduledTime": "2023-06-25t20:30:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "517",
+            "iataNumber": "ls517",
+            "icaoNumber": "exs517"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "25",
+            "delay": 18,
+            "scheduledTime": "2023-06-25t15:40:00.000",
+            "estimatedTime": "2023-06-25t15:40:00.000",
+            "actualTime": "2023-06-25t15:58:00.000",
+            "estimatedRunway": "2023-06-25t15:58:00.000",
+            "actualRunway": "2023-06-25t15:58:00.000"
+        },
+        "arrival": {
+            "iataCode": "tfs",
+            "icaoCode": "gcts",
+            "baggage": "a6",
+            "delay": 12,
+            "scheduledTime": "2023-06-25t20:15:00.000",
+            "estimatedTime": "2023-06-25t20:26:00.000"
+        },
+        "airline": {
+            "name": "tuifly",
+            "iataCode": "x3",
+            "icaoCode": "tui"
+        },
+        "flight": {
+            "number": "1710",
+            "iataNumber": "x31710",
+            "icaoNumber": "tui1710"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "2",
+            "delay": 22,
+            "scheduledTime": "2023-06-25t15:45:00.000",
+            "estimatedTime": "2023-06-25t15:45:00.000",
+            "actualTime": "2023-06-25t16:06:00.000",
+            "estimatedRunway": "2023-06-25t16:06:00.000",
+            "actualRunway": "2023-06-25t16:06:00.000"
+        },
+        "arrival": {
+            "iataCode": "dub",
+            "icaoCode": "eidw",
+            "terminal": "1",
+            "baggage": "6",
+            "gate": "02",
+            "delay": 4,
+            "scheduledTime": "2023-06-25t16:50:00.000",
+            "estimatedTime": "2023-06-25t16:53:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "17",
+            "iataNumber": "fr17",
+            "icaoNumber": "ryr17"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "26",
+            "delay": 50,
+            "scheduledTime": "2023-06-25t15:55:00.000",
+            "estimatedTime": "2023-06-25t16:45:00.000"
+        },
+        "arrival": {
+            "iataCode": "lpa",
+            "icaoCode": "gclp",
+            "baggage": "41",
+            "scheduledTime": "2023-06-25t20:40:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "541",
+            "iataNumber": "ls541",
+            "icaoNumber": "exs541"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "scheduledTime": "2023-06-25t16:30:00.000",
+            "estimatedTime": "2023-06-25t16:30:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t17:45:00.000"
+        },
+        "airline": {
+            "name": "qatar airways",
+            "iataCode": "qr",
+            "icaoCode": "qtr"
+        },
+        "flight": {
+            "number": "5911",
+            "iataNumber": "qr5911",
+            "icaoNumber": "qtr5911"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1335",
+                "iataNumber": "ba1335",
+                "icaoNumber": "baw1335"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "scheduledTime": "2023-06-25t16:30:00.000",
+            "estimatedTime": "2023-06-25t16:30:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t17:45:00.000"
+        },
+        "airline": {
+            "name": "latam airlines",
+            "iataCode": "la",
+            "icaoCode": "lan"
+        },
+        "flight": {
+            "number": "5509",
+            "iataNumber": "la5509",
+            "icaoNumber": "lan5509"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1335",
+                "iataNumber": "ba1335",
+                "icaoNumber": "baw1335"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "scheduledTime": "2023-06-25t16:30:00.000",
+            "estimatedTime": "2023-06-25t16:30:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t17:45:00.000"
+        },
+        "airline": {
+            "name": "malaysia airlines",
+            "iataCode": "mh",
+            "icaoCode": "mas"
+        },
+        "flight": {
+            "number": "9889",
+            "iataNumber": "mh9889",
+            "icaoNumber": "mas9889"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1335",
+                "iataNumber": "ba1335",
+                "icaoNumber": "baw1335"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "scheduledTime": "2023-06-25t16:30:00.000",
+            "estimatedTime": "2023-06-25t16:30:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t17:45:00.000"
+        },
+        "airline": {
+            "name": "american airlines",
+            "iataCode": "aa",
+            "icaoCode": "aal"
+        },
+        "flight": {
+            "number": "6883",
+            "iataNumber": "aa6883",
+            "icaoNumber": "aal6883"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1335",
+                "iataNumber": "ba1335",
+                "icaoNumber": "baw1335"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "scheduledTime": "2023-06-25t16:30:00.000",
+            "estimatedTime": "2023-06-25t16:30:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t17:45:00.000"
+        },
+        "airline": {
+            "name": "jet linx aviation",
+            "iataCode": "jl",
+            "icaoCode": "jtl"
+        },
+        "flight": {
+            "number": "7846",
+            "iataNumber": "jl7846",
+            "icaoNumber": "jtl7846"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "british airways",
+                "iataCode": "ba",
+                "icaoCode": "baw"
+            },
+            "flight": {
+                "number": "1335",
+                "iataNumber": "ba1335",
+                "icaoNumber": "baw1335"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "3",
+            "scheduledTime": "2023-06-25t16:30:00.000",
+            "estimatedTime": "2023-06-25t16:30:00.000"
+        },
+        "arrival": {
+            "iataCode": "lhr",
+            "icaoCode": "egll",
+            "terminal": "5",
+            "scheduledTime": "2023-06-25t17:45:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "1335",
+            "iataNumber": "ba1335",
+            "icaoNumber": "baw1335"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "10",
+            "delay": 50,
+            "scheduledTime": "2023-06-25t16:30:00.000",
+            "estimatedTime": "2023-06-25t17:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "pmi",
+            "icaoCode": "lepa",
+            "baggage": "06",
+            "scheduledTime": "2023-06-25t20:25:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "533",
+            "iataNumber": "ls533",
+            "icaoNumber": "exs533"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "19",
+            "scheduledTime": "2023-06-25t17:00:00.000",
+            "estimatedTime": "2023-06-25t17:00:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "32",
+            "scheduledTime": "2023-06-25t19:40:00.000"
+        },
+        "airline": {
+            "name": "gol",
+            "iataCode": "g3",
+            "icaoCode": "glo"
+        },
+        "flight": {
+            "number": "5116",
+            "iataNumber": "g35116",
+            "icaoNumber": "glo5116"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1159",
+                "iataNumber": "af1159",
+                "icaoNumber": "afr1159"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "19",
+            "scheduledTime": "2023-06-25t17:00:00.000",
+            "estimatedTime": "2023-06-25t17:00:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "32",
+            "scheduledTime": "2023-06-25t19:40:00.000"
+        },
+        "airline": {
+            "name": "air mauritius",
+            "iataCode": "mk",
+            "icaoCode": "mau"
+        },
+        "flight": {
+            "number": "9453",
+            "iataNumber": "mk9453",
+            "icaoNumber": "mau9453"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1159",
+                "iataNumber": "af1159",
+                "icaoNumber": "afr1159"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "19",
+            "scheduledTime": "2023-06-25t17:00:00.000",
+            "estimatedTime": "2023-06-25t17:00:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "32",
+            "scheduledTime": "2023-06-25t19:40:00.000"
+        },
+        "airline": {
+            "name": "air austral",
+            "iataCode": "uu",
+            "icaoCode": "reu"
+        },
+        "flight": {
+            "number": "8159",
+            "iataNumber": "uu8159",
+            "icaoNumber": "reu8159"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1159",
+                "iataNumber": "af1159",
+                "icaoNumber": "afr1159"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "19",
+            "scheduledTime": "2023-06-25t17:00:00.000",
+            "estimatedTime": "2023-06-25t17:00:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "32",
+            "scheduledTime": "2023-06-25t19:40:00.000"
+        },
+        "airline": {
+            "name": "virgin atlantic",
+            "iataCode": "vs",
+            "icaoCode": "vir"
+        },
+        "flight": {
+            "number": "6722",
+            "iataNumber": "vs6722",
+            "icaoNumber": "vir6722"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "air france",
+                "iataCode": "af",
+                "icaoCode": "afr"
+            },
+            "flight": {
+                "number": "1159",
+                "iataNumber": "af1159",
+                "icaoNumber": "afr1159"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "19",
+            "scheduledTime": "2023-06-25t17:00:00.000",
+            "estimatedTime": "2023-06-25t17:00:00.000"
+        },
+        "arrival": {
+            "iataCode": "cdg",
+            "icaoCode": "lfpg",
+            "terminal": "2e",
+            "baggage": "32",
+            "scheduledTime": "2023-06-25t19:40:00.000"
+        },
+        "airline": {
+            "name": "air france",
+            "iataCode": "af",
+            "icaoCode": "afr"
+        },
+        "flight": {
+            "number": "1159",
+            "iataNumber": "af1159",
+            "icaoNumber": "afr1159"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "25",
+            "delay": 85,
+            "scheduledTime": "2023-06-25t17:00:00.000",
+            "estimatedTime": "2023-06-25t18:25:00.000"
+        },
+        "arrival": {
+            "iataCode": "alc",
+            "icaoCode": "leal",
+            "baggage": "5b",
+            "scheduledTime": "2023-06-25t21:05:00.000"
+        },
+        "airline": {
+            "name": "jet2",
+            "iataCode": "ls",
+            "icaoCode": "exs"
+        },
+        "flight": {
+            "number": "585",
+            "iataNumber": "ls585",
+            "icaoNumber": "exs585"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "7",
+            "scheduledTime": "2023-06-25t17:20:00.000",
+            "estimatedTime": "2023-06-25t17:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "bhd",
+            "icaoCode": "egac",
+            "scheduledTime": "2023-06-25t18:30:00.000"
+        },
+        "airline": {
+            "name": "aer lingus",
+            "iataCode": "ei",
+            "icaoCode": "ein"
+        },
+        "flight": {
+            "number": "3669",
+            "iataNumber": "ei3669",
+            "icaoNumber": "ein3669"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "26",
+            "delay": 10,
+            "scheduledTime": "2023-06-25t17:20:00.000",
+            "estimatedTime": "2023-06-25t17:30:00.000"
+        },
+        "arrival": {
+            "iataCode": "rix",
+            "icaoCode": "evra",
+            "scheduledTime": "2023-06-25t21:45:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "452",
+            "iataNumber": "fr452",
+            "icaoNumber": "ryr452"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 1,
+            "scheduledTime": "2023-06-25t17:30:00.000",
+            "estimatedTime": "2023-06-25t17:31:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "017",
+            "gate": "e20",
+            "scheduledTime": "2023-06-25t19:50:00.000"
+        },
+        "airline": {
+            "name": "etihad airways",
+            "iataCode": "ey",
+            "icaoCode": "etd"
+        },
+        "flight": {
+            "number": "5801",
+            "iataNumber": "ey5801",
+            "icaoNumber": "etd5801"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "964",
+                "iataNumber": "kl964",
+                "icaoNumber": "klm964"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 1,
+            "scheduledTime": "2023-06-25t17:30:00.000",
+            "estimatedTime": "2023-06-25t17:31:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "017",
+            "gate": "e20",
+            "scheduledTime": "2023-06-25t19:50:00.000"
+        },
+        "airline": {
+            "name": "kenya airways",
+            "iataCode": "kq",
+            "icaoCode": "kqa"
+        },
+        "flight": {
+            "number": "964",
+            "iataNumber": "kq964",
+            "icaoNumber": "kqa964"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "964",
+                "iataNumber": "kl964",
+                "icaoNumber": "klm964"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 1,
+            "scheduledTime": "2023-06-25t17:30:00.000",
+            "estimatedTime": "2023-06-25t17:31:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "017",
+            "gate": "e20",
+            "scheduledTime": "2023-06-25t19:50:00.000"
+        },
+        "airline": {
+            "name": "xiamen airlines",
+            "iataCode": "mf",
+            "icaoCode": "cxa"
+        },
+        "flight": {
+            "number": "9940",
+            "iataNumber": "mf9940",
+            "icaoNumber": "cxa9940"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "964",
+                "iataNumber": "kl964",
+                "icaoNumber": "klm964"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 1,
+            "scheduledTime": "2023-06-25t17:30:00.000",
+            "estimatedTime": "2023-06-25t17:31:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "017",
+            "gate": "e20",
+            "scheduledTime": "2023-06-25t19:50:00.000"
+        },
+        "airline": {
+            "name": "virgin atlantic",
+            "iataCode": "vs",
+            "icaoCode": "vir"
+        },
+        "flight": {
+            "number": "6937",
+            "iataNumber": "vs6937",
+            "icaoNumber": "vir6937"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "klm",
+                "iataCode": "kl",
+                "icaoCode": "klm"
+            },
+            "flight": {
+                "number": "964",
+                "iataNumber": "kl964",
+                "icaoNumber": "klm964"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "20",
+            "delay": 1,
+            "scheduledTime": "2023-06-25t17:30:00.000",
+            "estimatedTime": "2023-06-25t17:31:00.000"
+        },
+        "arrival": {
+            "iataCode": "ams",
+            "icaoCode": "eham",
+            "baggage": "017",
+            "gate": "e20",
+            "scheduledTime": "2023-06-25t19:50:00.000"
+        },
+        "airline": {
+            "name": "klm",
+            "iataCode": "kl",
+            "icaoCode": "klm"
+        },
+        "flight": {
+            "number": "964",
+            "iataNumber": "kl964",
+            "icaoNumber": "klm964"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "2",
+            "delay": 20,
+            "scheduledTime": "2023-06-25t17:30:00.000",
+            "estimatedTime": "2023-06-25t17:50:00.000"
+        },
+        "arrival": {
+            "iataCode": "brs",
+            "icaoCode": "eggd",
+            "scheduledTime": "2023-06-25t18:35:00.000"
+        },
+        "airline": {
+            "name": "easyjet",
+            "iataCode": "u2",
+            "icaoCode": "ezy"
+        },
+        "flight": {
+            "number": "240",
+            "iataNumber": "u2240",
+            "icaoNumber": "ezy240"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "26",
+            "delay": 23,
+            "scheduledTime": "2023-06-25t17:50:00.000",
+            "estimatedTime": "2023-06-25t17:50:00.000",
+            "actualTime": "2023-06-25t18:12:00.000",
+            "estimatedRunway": "2023-06-25t18:12:00.000",
+            "actualRunway": "2023-06-25t18:12:00.000"
+        },
+        "arrival": {
+            "iataCode": "krk",
+            "icaoCode": "epkk",
+            "terminal": "t",
+            "gate": "24",
+            "delay": 3,
+            "scheduledTime": "2023-06-25t21:20:00.000",
+            "estimatedTime": "2023-06-25t21:22:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "450",
+            "iataNumber": "fr450",
+            "icaoNumber": "ryr450"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "10",
+            "delay": 30,
+            "scheduledTime": "2023-06-25t17:50:00.000",
+            "estimatedTime": "2023-06-25t17:50:00.000",
+            "actualTime": "2023-06-25t18:19:00.000",
+            "estimatedRunway": "2023-06-25t18:19:00.000",
+            "actualRunway": "2023-06-25t18:19:00.000"
+        },
+        "arrival": {
+            "iataCode": "fra",
+            "icaoCode": "eddf",
+            "terminal": "1",
+            "delay": 10,
+            "scheduledTime": "2023-06-25t20:30:00.000",
+            "estimatedTime": "2023-06-25t20:40:00.000"
+        },
+        "airline": {
+            "name": "lufthansa",
+            "iataCode": "lh",
+            "icaoCode": "dlh"
+        },
+        "flight": {
+            "number": "951",
+            "iataNumber": "lh951",
+            "icaoNumber": "dlh951"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "21",
+            "scheduledTime": "2023-06-25t18:15:00.000",
+            "estimatedTime": "2023-06-25t18:15:00.000"
+        },
+        "arrival": {
+            "iataCode": "ayt",
+            "icaoCode": "ltai",
+            "terminal": "2",
+            "scheduledTime": "2023-06-26t00:40:00.000"
+        },
+        "airline": {
+            "name": "tuifly",
+            "iataCode": "x3",
+            "icaoCode": "tui"
+        },
+        "flight": {
+            "number": "744",
+            "iataNumber": "x3744",
+            "icaoNumber": "tui744"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "1",
+            "delay": 27,
+            "scheduledTime": "2023-06-25t18:55:00.000",
+            "estimatedTime": "2023-06-25t19:08:00.000",
+            "actualTime": "2023-06-25t19:21:00.000",
+            "estimatedRunway": "2023-06-25t19:21:00.000",
+            "actualRunway": "2023-06-25t19:21:00.000"
+        },
+        "arrival": {
+            "iataCode": "sou",
+            "icaoCode": "eghi",
+            "delay": 8,
+            "scheduledTime": "2023-06-25t20:10:00.000",
+            "estimatedTime": "2023-06-25t20:18:00.000"
+        },
+        "airline": {
+            "name": "british airways",
+            "iataCode": "ba",
+            "icaoCode": "baw"
+        },
+        "flight": {
+            "number": "4011",
+            "iataNumber": "ba4011",
+            "icaoNumber": "baw4011"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "loganair",
+                "iataCode": "lm",
+                "icaoCode": "log"
+            },
+            "flight": {
+                "number": "539",
+                "iataNumber": "lm539",
+                "icaoNumber": "log539"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "1",
+            "delay": 27,
+            "scheduledTime": "2023-06-25t18:55:00.000",
+            "estimatedTime": "2023-06-25t19:08:00.000",
+            "actualTime": "2023-06-25t19:21:00.000",
+            "estimatedRunway": "2023-06-25t19:21:00.000",
+            "actualRunway": "2023-06-25t19:21:00.000"
+        },
+        "arrival": {
+            "iataCode": "sou",
+            "icaoCode": "eghi",
+            "delay": 8,
+            "scheduledTime": "2023-06-25t20:10:00.000",
+            "estimatedTime": "2023-06-25t20:18:00.000"
+        },
+        "airline": {
+            "name": "sierra pacific airlines",
+            "iataCode": "si",
+            "icaoCode": "spa"
+        },
+        "flight": {
+            "number": "7039",
+            "iataNumber": "si7039",
+            "icaoNumber": "spa7039"
+        },
+        "codeshared": {
+            "airline": {
+                "name": "loganair",
+                "iataCode": "lm",
+                "icaoCode": "log"
+            },
+            "flight": {
+                "number": "539",
+                "iataNumber": "lm539",
+                "icaoNumber": "log539"
+            }
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "1",
+            "delay": 27,
+            "scheduledTime": "2023-06-25t18:55:00.000",
+            "estimatedTime": "2023-06-25t19:08:00.000",
+            "actualTime": "2023-06-25t19:21:00.000",
+            "estimatedRunway": "2023-06-25t19:21:00.000",
+            "actualRunway": "2023-06-25t19:21:00.000"
+        },
+        "arrival": {
+            "iataCode": "sou",
+            "icaoCode": "eghi",
+            "delay": 8,
+            "scheduledTime": "2023-06-25t20:10:00.000",
+            "estimatedTime": "2023-06-25t20:18:00.000"
+        },
+        "airline": {
+            "name": "loganair",
+            "iataCode": "lm",
+            "icaoCode": "log"
+        },
+        "flight": {
+            "number": "539",
+            "iataNumber": "lm539",
+            "icaoNumber": "log539"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "scheduledTime": "2023-06-25t19:10:00.000",
+            "estimatedTime": "2023-06-25t19:10:00.000"
+        },
+        "arrival": {
+            "iataCode": "alc",
+            "icaoCode": "leal",
+            "baggage": "3b",
+            "scheduledTime": "2023-06-25t23:05:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "4080",
+            "iataNumber": "fr4080",
+            "icaoNumber": "ryr4080"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "scheduledTime": "2023-06-25t21:00:00.000",
+            "estimatedTime": "2023-06-25t21:00:00.000"
+        },
+        "arrival": {
+            "iataCode": "dub",
+            "icaoCode": "eidw",
+            "terminal": "1",
+            "baggage": "9",
+            "gate": "107",
+            "scheduledTime": "2023-06-25t22:05:00.000"
+        },
+        "airline": {
+            "name": "ryanair",
+            "iataCode": "fr",
+            "icaoCode": "ryr"
+        },
+        "flight": {
+            "number": "21",
+            "iataNumber": "fr21",
+            "icaoNumber": "ryr21"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "delay": 70,
+            "scheduledTime": "2023-06-25t21:45:00.000",
+            "estimatedTime": "2023-06-25t22:55:00.000"
+        },
+        "arrival": {
+            "iataCode": "brs",
+            "icaoCode": "eggd",
+            "scheduledTime": "2023-06-25t22:50:00.000"
+        },
+        "airline": {
+            "name": "easyjet",
+            "iataCode": "u2",
+            "icaoCode": "ezy"
+        },
+        "flight": {
+            "number": "242",
+            "iataNumber": "u2242",
+            "icaoNumber": "ezy242"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "delay": 67,
+            "scheduledTime": "2023-06-25t21:50:00.000",
+            "estimatedTime": "2023-06-25t22:57:00.000"
+        },
+        "arrival": {
+            "iataCode": "bfs",
+            "icaoCode": "egaa",
+            "scheduledTime": "2023-06-25t22:45:00.000"
+        },
+        "airline": {
+            "name": "easyjet",
+            "iataCode": "u2",
+            "icaoCode": "ezy"
+        },
+        "flight": {
+            "number": "76",
+            "iataNumber": "u276",
+            "icaoNumber": "ezy76"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "active",
+        "departure": {
+            "iataCode": "ncl",
+            "icaoCode": "egnt",
+            "gate": "21",
+            "delay": 50,
+            "scheduledTime": "2023-06-25t23:15:00.000",
+            "estimatedTime": "2023-06-26t00:05:00.000"
+        },
+        "arrival": {
+            "iataCode": "ath",
+            "icaoCode": "lgav",
+            "scheduledTime": "2023-06-26t05:00:00.000"
+        },
+        "airline": {
+            "name": "aegean airlines",
+            "iataCode": "a3",
+            "icaoCode": "aee"
+        },
+        "flight": {
+            "number": "635",
+            "iataNumber": "a3635",
+            "icaoNumber": "aee635"
+        }
+    }
+]

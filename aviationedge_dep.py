@@ -1,7 +1,6 @@
-
-
 import json
 import pandas as pd
+import os
 
 def process_flight_data(file_path):
     # Load JSON data from the file
@@ -52,39 +51,11 @@ def append_flights_to_csv(flights_df, special_flights_df, csv_file_path, special
     # Return counts for summary
     return special_flights_df['time_category'].value_counts().to_dict()
 
-# List of file paths
-file_paths = ['BRS_departure_flights_2023-05-01.json', 
-              'BRS_departure_flights_2023-05-02.json', 
-              'BRS_departure_flights_2023-05-03.json',
-              'BRS_departure_flights_2023-05-04.json',
-              'BRS_departure_flights_2023-05-05.json',
-              'BRS_departure_flights_2023-05-06.json',
-              'BRS_departure_flights_2023-05-07.json',
-              'BRS_departure_flights_2023-05-08.json',
-              'BRS_departure_flights_2023-05-09.json',
-              'BRS_departure_flights_2023-05-10.json',
-              'BRS_departure_flights_2023-05-11.json',
-              'BRS_departure_flights_2023-05-12.json',
-              'BRS_departure_flights_2023-05-13.json',
-              'BRS_departure_flights_2023-05-14.json',
-              'BRS_departure_flights_2023-05-15.json',
-              'BRS_departure_flights_2023-05-16.json',
-              'BRS_departure_flights_2023-05-17.json',
-              'BRS_departure_flights_2023-05-18.json',
-              'BRS_departure_flights_2023-05-19.json',
-              'BRS_departure_flights_2023-05-20.json',
-              'BRS_departure_flights_2023-05-21.json',
-              'BRS_departure_flights_2023-05-22.json',
-              'BRS_departure_flights_2023-05-23.json',
-              'BRS_departure_flights_2023-05-24.json',
-              'BRS_departure_flights_2023-05-25.json',
-              'BRS_departure_flights_2023-05-26.json',
-              'BRS_departure_flights_2023-05-27.json',
-              'BRS_departure_flights_2023-05-28.json',
-              'BRS_departure_flights_2023-05-29.json',
-              'BRS_departure_flights_2023-05-30.json',
-              'BRS_departure_flights_2023-05-31.json'
-]
+# Directory where the files are stored
+directory_path = './Aviation/BRS'
+
+# List of file paths, now dynamically filled with file names from the directory
+file_paths = [os.path.join(directory_path, file) for file in os.listdir(directory_path) if file.endswith('.json')]
 
 summary_csv_path = 'departure_flights_summary.csv'
 special_summary_csv_path = 'special_flights_summary.csv'

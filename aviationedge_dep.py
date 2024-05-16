@@ -1,79 +1,86 @@
 import json
 import pandas as pd
 import os
+import re
 
-def process_flight_data(file_path):
-    # Load JSON data from the file
+def categorize_flight(departure_time):
+    """ Categorize flights based on the time of departure. """
+    hour = departure_time.hour
+    minute = departure_time.minute
+    if (hour == 23 and minute < 30) or hour == 6:
+        return "Shoulder hour flights"
+    if (hour == 23 and minute >= 30) or hour < 6:
+        return "Night hour departures"
+    return "Regular departures"
+
+def process_departure_data(file_path):
+    """ Load departure data from a JSON file and process it into a structured DataFrame. """
     with open(file_path, 'r') as file:
         flights_data = json.load(file)
 
-    # Filter for flights with actual departure time and create a DataFrame
-    flights_with_actual_time = [flight for flight in flights_data if 'actualTime' in flight['departure'] and flight['status'] == 'active']
-    df = pd.DataFrame([{
-        'flight_number': flight['flight']['iataNumber'],
-        'airline_name': flight['airline']['name'],
-        'flight_status': flight['status'],
-        'scheduled_departure': flight['departure']['scheduledTime'],
-        'estimated_departure': flight['departure'].get('estimatedTime', ''),
-        'actual_departure': flight['departure'].get('actualTime', ''),
-        'departure_delay': flight['departure'].get('delay', 0)
-    } for flight in flights_with_actual_time])
+    all_departures = []
 
-    # Convert time strings to datetime objects
-    df['actual_departure'] = pd.to_datetime(df['actual_departure'])
+    for flight in flights_data:
+        if (flight['type'] == 'departure' and 
+            flight['status'] == 'active' and
+            'actualTime' in flight['departure'] and
+            flight['departure']['iataCode'].lower() == 'brs'):
+            actual_departure_time = pd.to_datetime(flight['departure'].get('actualTime', ''))
+            flight_info = {
+                'flight_number': flight['flight']['iataNumber'],
+                'airline_name': flight['airline']['name'],
+                'flight_status': flight['status'],
+                'scheduled_departure': flight['departure']['scheduledTime'],
+                'estimated_departure': flight['departure'].get('estimatedTime', ''),
+                'actual_departure': actual_departure_time,
+                'departure_date': actual_departure_time.date(),
+                'departure_time': actual_departure_time.time(),
+                'departure_delay': flight['departure'].get('delay', 0),
+                'flight_type': categorize_flight(actual_departure_time)
+            }
+            all_departures.append(flight_info)
 
-    # Categorize flights by actual departure time
-    def categorize_flight(row):
-        hour = row['actual_departure'].hour
-        minute = row['actual_departure'].minute
-        if (hour == 23 and minute < 30) or hour == 6:
-            return "Shoulder hour flights"
-        if (hour == 23 and minute >= 30) or hour < 6:
-            return "Night hour departures"
-        return "Regular departures"
+    if not all_departures:
+        print(f"No valid departures found in {file_path}.")
+        return pd.DataFrame()
 
-    df['time_category'] = df.apply(categorize_flight, axis=1)
-    
-    # Filter for night and shoulder hour flights
-    special_flights_df = df[df['time_category'].isin(['Night hour departures', 'Shoulder hour flights'])]
-    
-    return df, special_flights_df
+    return pd.DataFrame(all_departures)
 
-def append_flights_to_csv(flights_df, special_flights_df, csv_file_path, special_csv_file_path):
-    # General flights data appending
-    header = not pd.io.common.file_exists(csv_file_path)
-    flights_df.to_csv(csv_file_path, mode='a', header=header, index=False)
+def append_departures_to_csv(departures_df, csv_file_path):
+    """ Append departures data to a CSV file. """
+    if departures_df.empty:
+        print("No data to append.")
+        return
 
-    # Special flights data appending
-    special_header = not pd.io.common.file_exists(special_csv_file_path)
-    special_flights_df.to_csv(special_csv_file_path, mode='a', header=special_header, index=False)
+    header = not os.path.exists(csv_file_path)
+    departures_df.to_csv(csv_file_path, mode='a', header=header, index=False)
+    print(f"Appended data to {csv_file_path}")
 
-    # Return counts for summary
-    return special_flights_df['time_category'].value_counts().to_dict()
+def extract_date_from_filename(file_path):
+    """ Extract the date from the filename using regular expressions. """
+    match = re.search(r'\d{4}-\d{2}-\d{2}', file_path)
+    if match:
+        return match.group(0)
+    else:
+        raise ValueError("No valid date found in filename")
 
 # Directory where the files are stored
-directory_path = './Aviation/BRS'
+directory_path = './Aviation/BRS/oct'
+file_paths = [os.path.join(directory_path, file) for file in os.listdir(directory_path) if file.startswith('BRS_departure_flights') and file.endswith('.json')]
 
-# List of file paths, now dynamically filled with file names from the directory
-file_paths = [os.path.join(directory_path, file) for file in os.listdir(directory_path) if file.endswith('.json')]
-
-summary_csv_path = 'departure_flights_summary.csv'
-special_summary_csv_path = 'special_flights_summary.csv'
-
-summary_stats = []
+base_csv_path = 'C:/Users/josti/OneDrive/Desktop/Gitlab clone/LDR/FlightViz/departure_flights_summary.csv'
 
 for file_path in file_paths:
     try:
-        full_flights_df, special_flights_df = process_flight_data(file_path)
-        day_summary = append_flights_to_csv(full_flights_df, special_flights_df, summary_csv_path, special_summary_csv_path)
-        day_summary['date'] = file_path[-14:-5]  # Extracting date from the file name
-        summary_stats.append(day_summary)
-        print(f"Processed and appended data from {file_path}")
+        date_str = extract_date_from_filename(file_path)
+        dated_csv_path = f"{os.path.splitext(base_csv_path)[0]}_{date_str}.csv"
+        departures_df = process_departure_data(file_path)
+        if not departures_df.empty:
+            append_departures_to_csv(departures_df, dated_csv_path)
+            print(f"Processed and appended data from {file_path}")
+        else:
+            print(f"No valid departures found in {file_path}")
     except Exception as e:
         print(f"Failed to process {file_path}: {str(e)}")
-
-# Save the summary statistics to a separate CSV
-if summary_stats:
-    pd.DataFrame(summary_stats).fillna(0).to_csv('night_shoulder_summary_statistics.csv', index=False)
 
 print("All departure flights data has been processed and summarized.")

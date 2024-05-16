@@ -36,10 +36,10 @@ def daterange(start_date, end_date):
         yield start_date + timedelta(n)
 
 # Set up your date range here
-start_date = datetime.strptime('2023-06-01', '%Y-%m-%d')
-end_date = datetime.strptime('2024-04-30', '%Y-%m-%d')
+start_date = datetime.strptime('2023-10-02', '%Y-%m-%d')
+end_date = datetime.strptime('2023-10-08', '%Y-%m-%d')
 
-airport_iata = 'BHX'  # Bristol Airport BRS -- OTHERS LBA, NCL LGW
+airport_iata = 'BRS'  # Bristol Airport BRS -- OTHERS LBA, NCL LGW
 
 # Iterate over each date
 for single_date in daterange(start_date, end_date):

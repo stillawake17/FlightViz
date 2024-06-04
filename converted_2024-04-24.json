@@ -1,58 +1,30 @@
 [
     {
         "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ALC",
+            "icaoCode": "LEAL",
+            "actualTime": "2024-04-24t10:06:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t11:46:00.000"
+        }
+    },
+    {
+        "type": "arrival",
         "status": "scheduled",
         "departure": {
-            "iataCode": "KUN",
-            "icaoCode": "EYKA",
+            "iataCode": "PMI",
+            "icaoCode": "LEPA",
+            "actualTime": "2024-04-24t12:22:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
             "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BWF",
-            "icaoCode": "EGNL",
-            "actualTime": "2024-04-24t16:18:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t17:01:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t08:49:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:42:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "KUN",
-            "icaoCode": "EYKA",
-            "actualTime": "2024-04-24t06:16:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:44:00.000"
         }
     },
     {
@@ -61,515 +33,11 @@
         "departure": {
             "iataCode": "AGP",
             "icaoCode": "LEMG",
-            "actualTime": "2024-04-24t10:37:00.000"
+            "actualTime": "2024-04-24t13:51:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t12:05:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AYT",
-            "icaoCode": "LTAI",
-            "actualTime": "2024-04-24t10:43:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t12:59:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "MLA",
-            "icaoCode": "LMML",
-            "actualTime": "2024-04-24t11:06:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:22:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ALC",
-            "icaoCode": "LEAL",
-            "actualTime": "2024-04-24t13:45:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:01:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "LPA",
-            "icaoCode": "GCLP",
-            "actualTime": "2024-04-24t21:45:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-25t01:18:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ALC",
-            "icaoCode": "LEAL",
-            "actualTime": "2024-04-24t10:18:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t11:42:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "SSH",
-            "icaoCode": "HESH",
-            "actualTime": "2024-04-24t14:17:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:38:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t14:08:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:11:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BFS",
-            "icaoCode": "EGAA",
-            "actualTime": "2024-04-24t08:45:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:33:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "VCE",
-            "icaoCode": "LIPZ",
-            "actualTime": "2024-04-24t14:06:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:11:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "INV",
-            "icaoCode": "EGPE",
-            "actualTime": "2024-04-24t12:46:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:45:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AYT",
-            "icaoCode": "LTAI",
-            "actualTime": "2024-04-24t15:34:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t17:48:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "PMI",
-            "icaoCode": "LEPA",
-            "actualTime": "2024-04-24t11:48:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:05:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DLM",
-            "icaoCode": "LTBS",
-            "actualTime": "2024-04-25t00:16:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-25t02:13:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t13:14:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:09:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t13:14:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:09:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t13:14:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:09:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t13:14:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:09:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "NBE",
-            "icaoCode": "DTNH",
-            "actualTime": "2024-04-24t10:29:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:32:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "NCE",
-            "icaoCode": "LFMN",
-            "actualTime": "2024-04-24t15:07:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:01:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t14:40:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:32:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t14:40:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:32:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t14:40:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:32:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AGP",
-            "icaoCode": "LEMG",
-            "actualTime": "2024-04-24t13:44:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:14:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "PMI",
-            "icaoCode": "LEPA",
-            "actualTime": "2024-04-24t13:47:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:58:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "TLS",
-            "icaoCode": "LFBO",
-            "actualTime": "2024-04-24t15:13:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:47:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t12:38:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t12:38:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "OPO",
-            "icaoCode": "LPPR",
-            "actualTime": "2024-04-24t11:07:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t12:53:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AYT",
-            "icaoCode": "LTAI",
-            "actualTime": "2024-04-24t17:18:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:38:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "GRO",
-            "icaoCode": "LEGE",
-            "actualTime": "2024-04-24t11:14:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t12:15:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ORK",
-            "icaoCode": "EICK",
-            "actualTime": "2024-04-24t18:22:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:19:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ORK",
-            "icaoCode": "EICK",
-            "actualTime": "2024-04-24t18:22:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:19:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "FUE",
-            "icaoCode": "GCFV",
-            "actualTime": "2024-04-24t15:48:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:23:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "FUE",
-            "icaoCode": "GCFV",
-            "actualTime": "2024-04-24t15:52:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:26:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BCN",
-            "icaoCode": "LEBL",
-            "actualTime": "2024-04-24t17:12:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:08:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "PMI",
-            "icaoCode": "LEPA",
-            "actualTime": "2024-04-24t14:22:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
             "actualTime": "2024-04-24t15:35:00.000"
         }
     },
@@ -577,196 +45,14 @@
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "CDG",
-            "icaoCode": "LFPG",
-            "actualTime": "2024-04-24t18:08:00.000"
+            "iataCode": "PMI",
+            "icaoCode": "LEPA",
+            "actualTime": "2024-04-24t11:08:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:05:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t17:33:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:29:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t17:33:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:29:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t17:33:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:29:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "EDI",
-            "icaoCode": "EGPH",
-            "actualTime": "2024-04-24t18:03:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:54:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "IOM",
-            "icaoCode": "EGNS",
-            "actualTime": "2024-04-24t13:10:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:48:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BER",
-            "icaoCode": "EDDB",
-            "actualTime": "2024-04-24t17:38:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:19:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "CPH",
-            "icaoCode": "EKCH",
-            "actualTime": "2024-04-24t17:32:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:16:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "LIS",
-            "icaoCode": "LPPT",
-            "actualTime": "2024-04-24t17:51:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t16:59:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:57:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t16:59:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:57:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t16:59:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:57:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t16:59:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:57:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "FCO",
-            "icaoCode": "LIRF",
-            "actualTime": "2024-04-24t17:33:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:03:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t12:54:00.000"
         }
     },
     {
@@ -775,81 +61,109 @@
         "departure": {
             "iataCode": "TFS",
             "icaoCode": "GCTS",
-            "actualTime": "2024-04-24t16:26:00.000"
+            "actualTime": "2024-04-24t13:49:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t20:13:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t18:17:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "cancelled",
+        "departure": {
+            "iataCode": "PIK",
+            "icaoCode": "EGPK",
+            "actualTime": "2024-04-24t12:21:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t12:59:00.000"
         }
     },
     {
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "TFS",
-            "icaoCode": "GCTS",
-            "actualTime": "2024-04-24t11:12:00.000"
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t14:00:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:52:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t14:51:00.000"
         }
     },
     {
         "type": "arrival",
         "status": "landed",
+        "departure": {
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t14:00:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t14:51:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "active",
         "departure": {
             "iataCode": "AMS",
             "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t10:23:00.000"
+            "actualTime": "2024-04-24t16:55:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t10:23:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
         }
     },
     {
         "type": "arrival",
-        "status": "landed",
+        "status": "active",
         "departure": {
-            "iataCode": "GVA",
-            "icaoCode": "LSGG",
-            "actualTime": "2024-04-24t18:00:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t16:55:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:33:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
         }
     },
     {
         "type": "arrival",
-        "status": "landed",
+        "status": "active",
         "departure": {
-            "iataCode": "ORY",
-            "icaoCode": "LFPO",
-            "actualTime": "2024-04-24t19:31:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t16:55:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:45:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
         }
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "active",
         "departure": {
-            "iataCode": "OTP",
-            "icaoCode": "LROP",
-            "actualTime": "2024-04-24t22:19:00.000"
+            "iataCode": "WRO",
+            "icaoCode": "EPWR",
+            "actualTime": "2024-04-24t15:20:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
             "actualTime": ""
         }
     },
@@ -857,83 +171,13 @@
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t19:30:00.000"
+            "iataCode": "LCA",
+            "icaoCode": "LCLK",
+            "actualTime": "2024-04-24t16:59:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:42:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t22:16:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t22:08:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "CPH",
-            "icaoCode": "EKCH",
-            "actualTime": "2024-04-24t14:26:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:09:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "FAO",
-            "icaoCode": "LPFR",
-            "actualTime": "2024-04-24t22:52:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-25t01:15:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "SSH",
-            "icaoCode": "HESH",
-            "actualTime": "2024-04-24t21:32:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-25t01:37:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "FAO",
-            "icaoCode": "LPFR",
-            "actualTime": "2024-04-24t17:07:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
             "actualTime": "2024-04-24t19:29:00.000"
         }
     },
@@ -941,210 +185,56 @@
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "PFO",
-            "icaoCode": "LCPH",
-            "actualTime": "2024-04-24t22:16:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t09:37:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-25t00:39:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t09:27:00.000"
         }
     },
     {
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "IBZ",
-            "icaoCode": "LEIB",
-            "actualTime": "2024-04-24t20:36:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t09:37:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t21:46:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t09:27:00.000"
         }
     },
     {
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "AYT",
-            "icaoCode": "LTAI",
-            "actualTime": "2024-04-24t23:20:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t09:37:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-25t01:25:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t09:27:00.000"
         }
     },
     {
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "BFS",
-            "icaoCode": "EGAA",
-            "actualTime": "2024-04-24t17:36:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t09:37:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:23:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ABZ",
-            "icaoCode": "EGPD",
-            "actualTime": "2024-04-24t17:43:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:51:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ABZ",
-            "icaoCode": "EGPD",
-            "actualTime": "2024-04-24t17:43:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:51:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ABZ",
-            "icaoCode": "EGPD",
-            "actualTime": "2024-04-24t17:43:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:51:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "PMI",
-            "icaoCode": "LEPA",
-            "actualTime": "2024-04-24t22:37:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t23:42:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "PMI",
-            "icaoCode": "LEPA",
-            "actualTime": "2024-04-25t00:11:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-25t01:22:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "FAO",
-            "icaoCode": "LPFR",
-            "actualTime": "2024-04-24t21:05:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t23:27:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "GLA",
-            "icaoCode": "EGPF",
-            "actualTime": "2024-04-24t13:33:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:22:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "OPO",
-            "icaoCode": "LPPR",
-            "actualTime": "2024-04-24t21:48:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t23:33:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "VCE",
-            "icaoCode": "LIPZ",
-            "actualTime": "2024-04-24t20:00:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t21:00:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BCN",
-            "icaoCode": "LEBL",
-            "actualTime": "2024-04-24t22:52:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t23:45:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "GLA",
-            "icaoCode": "EGPF",
-            "actualTime": "2024-04-24t21:49:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t22:38:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t09:27:00.000"
         }
     },
     {
@@ -1153,67 +243,67 @@
         "departure": {
             "iataCode": "MAN",
             "icaoCode": "EGCC",
-            "actualTime": "2024-04-24t10:38:00.000"
+            "actualTime": "2024-04-24t15:17:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t11:15:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t22:16:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t22:08:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t22:16:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t22:08:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "EDI",
-            "icaoCode": "EGPH",
-            "actualTime": "2024-04-24t22:10:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t23:01:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t15:32:00.000"
         }
     },
     {
         "type": "arrival",
         "status": "scheduled",
         "departure": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": "2024-04-24t17:35:00.000"
+            "iataCode": "POZ",
+            "icaoCode": "EPPO",
+            "actualTime": ""
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "PFO",
+            "icaoCode": "LCPH",
+            "actualTime": "2024-04-24t16:53:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t19:21:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "MAN",
+            "icaoCode": "EGCC",
+            "actualTime": ""
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "active",
+        "departure": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t16:55:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
             "actualTime": ""
         }
     },
@@ -1223,39 +313,81 @@
         "departure": {
             "iataCode": "ACE",
             "icaoCode": "GCRR",
-            "actualTime": "2024-04-24t19:27:00.000"
+            "actualTime": "2024-04-24t15:20:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t22:59:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t19:18:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "active",
+        "departure": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t16:55:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "cancelled",
+        "departure": {
+            "iataCode": "BBS",
+            "icaoCode": "EGLK",
+            "actualTime": ""
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "active",
+        "departure": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t16:55:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
         }
     },
     {
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "ATH",
-            "icaoCode": "LGAV",
-            "actualTime": "2024-04-25t00:36:00.000"
+            "iataCode": "AGP",
+            "icaoCode": "LEMG",
+            "actualTime": "2024-04-24t15:20:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-25t02:02:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t17:05:00.000"
         }
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "active",
         "departure": {
-            "iataCode": "BFS",
-            "icaoCode": "EGAA",
-            "actualTime": "2024-04-24t23:06:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t16:55:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
             "actualTime": ""
         }
     },
@@ -1265,26 +397,110 @@
         "departure": {
             "iataCode": "AMS",
             "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t13:14:00.000"
+            "actualTime": "2024-04-24t22:18:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:09:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t22:07:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "active",
+        "departure": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t16:55:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
         }
     },
     {
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "EDI",
-            "icaoCode": "EGPH",
-            "actualTime": "2024-04-24t09:01:00.000"
+            "iataCode": "RIX",
+            "icaoCode": "EVRA",
+            "actualTime": "2024-04-24t21:30:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:51:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t21:52:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "AGP",
+            "icaoCode": "LEMG",
+            "actualTime": "2024-04-24t11:58:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t13:51:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "AGP",
+            "icaoCode": "LEMG",
+            "actualTime": "2024-04-24t12:11:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t14:10:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "DLM",
+            "icaoCode": "LTBS",
+            "actualTime": "2024-04-24t18:04:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t20:00:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "active",
+        "departure": {
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
+            "actualTime": "2024-04-24t19:01:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "active",
+        "departure": {
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
+            "actualTime": "2024-04-24t19:01:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
         }
     },
     {
@@ -1293,474 +509,12 @@
         "departure": {
             "iataCode": "AMS",
             "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t22:16:00.000"
+            "actualTime": "2024-04-24t09:37:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t22:08:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "RZE",
-            "icaoCode": "EPRZ",
-            "actualTime": "2024-04-24t15:37:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t17:04:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ZTH",
-            "icaoCode": "LGZA",
-            "actualTime": "2024-04-24t13:01:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:27:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "PFO",
-            "icaoCode": "LCPH",
-            "actualTime": "2024-04-24t15:39:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:12:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "GLA",
-            "icaoCode": "EGPF",
-            "actualTime": "2024-04-24t08:56:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:47:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "FUE",
-            "icaoCode": "GCFV",
-            "actualTime": "2024-04-24t11:34:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:06:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "KRK",
-            "icaoCode": "EPKK",
-            "actualTime": "2024-04-24t06:13:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:24:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BGY",
-            "icaoCode": "LIME",
-            "actualTime": "2024-04-24t06:13:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:58:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DBV",
-            "icaoCode": "LDDU",
-            "actualTime": "2024-04-24t11:03:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t12:44:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t21:29:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t22:11:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "active",
-        "departure": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "active",
-        "departure": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "active",
-        "departure": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "RHO",
-            "icaoCode": "LGRP",
-            "actualTime": "2024-04-24t14:43:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:45:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "HER",
-            "icaoCode": "LGIR",
-            "actualTime": "2024-04-24t22:34:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-25t00:22:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "TLL",
-            "icaoCode": "EETN",
-            "actualTime": "2024-04-24t14:57:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:42:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "PFO",
-            "icaoCode": "LCPH",
-            "actualTime": "2024-04-24t14:59:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t17:28:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t12:19:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:02:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "PMI",
-            "icaoCode": "LEPA",
-            "actualTime": "2024-04-24t10:12:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t11:25:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "NCL",
-            "icaoCode": "EGNT",
-            "actualTime": "2024-04-24t22:44:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "MXP",
-            "icaoCode": "LIMC",
-            "actualTime": "2024-04-24t23:03:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t23:48:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "EDI",
-            "icaoCode": "EGPH",
-            "actualTime": "2024-04-24t20:13:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t21:04:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "CDG",
-            "icaoCode": "LFPG",
-            "actualTime": "2024-04-24t10:33:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t10:33:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "CFU",
-            "icaoCode": "LGKR",
-            "actualTime": "2024-04-24t12:51:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:54:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ALC",
-            "icaoCode": "LEAL",
-            "actualTime": "2024-04-24t11:25:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t12:41:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "SOF",
-            "icaoCode": "LBSF",
-            "actualTime": "2024-04-24t16:36:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t17:44:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ZRH",
-            "icaoCode": "LSZH",
-            "actualTime": "2024-04-24t07:11:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:41:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "TFS",
-            "icaoCode": "GCTS",
-            "actualTime": "2024-04-24t05:58:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:44:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ALC",
-            "icaoCode": "LEAL",
-            "actualTime": "2024-04-24t07:09:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:36:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BUD",
-            "icaoCode": "LHBP",
-            "actualTime": "2024-04-24t08:19:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:39:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "GVA",
-            "icaoCode": "LSGG",
-            "actualTime": "2024-04-24t08:10:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:39:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BCN",
-            "icaoCode": "LEBL",
-            "actualTime": "2024-04-24t08:06:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:10:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t07:04:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:59:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t07:04:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:59:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t09:27:00.000"
         }
     },
     {
@@ -1769,12 +523,138 @@
         "departure": {
             "iataCode": "FAO",
             "icaoCode": "LPFR",
-            "actualTime": "2024-04-24t07:01:00.000"
+            "actualTime": "2024-04-24t11:50:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:36:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t14:39:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "BQH",
+            "icaoCode": "EGKB",
+            "actualTime": ""
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "BRU",
+            "icaoCode": "EBBR",
+            "actualTime": "2024-04-24t10:19:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t10:57:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "active",
+        "departure": {
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
+            "actualTime": "2024-04-24t19:01:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "MLA",
+            "icaoCode": "LMML",
+            "actualTime": "2024-04-24t13:01:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t15:20:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t10:25:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t11:14:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t18:18:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t19:07:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t18:18:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t19:07:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "ALC",
+            "icaoCode": "LEAL",
+            "actualTime": "2024-04-24t14:15:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t15:51:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "WMI",
+            "icaoCode": "EPMO",
+            "actualTime": "2024-04-24t10:37:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t11:42:00.000"
         }
     },
     {
@@ -1783,12 +663,68 @@
         "departure": {
             "iataCode": "AMS",
             "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t08:49:00.000"
+            "actualTime": "2024-04-24t22:18:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:42:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t22:07:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t22:18:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t22:07:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t22:18:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t22:07:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t22:18:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t22:07:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "active",
+        "departure": {
+            "iataCode": "POZ",
+            "icaoCode": "EPPO",
+            "actualTime": "2024-04-24t15:43:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
         }
     },
     {
@@ -1797,25 +733,39 @@
         "departure": {
             "iataCode": "DUB",
             "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t08:03:00.000"
+            "actualTime": "2024-04-24t14:42:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:46:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t15:22:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "NAP",
+            "icaoCode": "LIRN",
+            "actualTime": "2024-04-24t11:34:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t13:11:00.000"
         }
     },
     {
         "type": "arrival",
         "status": "scheduled",
         "departure": {
-            "iataCode": "GCI",
-            "icaoCode": "EGJB",
-            "actualTime": "2024-04-24t13:44:00.000"
+            "iataCode": "ALC",
+            "icaoCode": "LEAL",
+            "actualTime": ""
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
             "actualTime": ""
         }
     },
@@ -1823,1133 +773,293 @@
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t08:49:00.000"
+            "iataCode": "ALC",
+            "icaoCode": "LEAL",
+            "actualTime": "2024-04-24t12:18:00.000"
         },
         "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:42:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t13:56:00.000"
         }
     },
     {
-        "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:33:00.000"
-        },
-        "arrival": {
-            "iataCode": "NBE",
-            "icaoCode": "DTNH",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
+        "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:50:00.000"
+            "iataCode": "PMI",
+            "icaoCode": "LEPA",
+            "actualTime": "2024-04-24t06:47:00.000"
         },
         "arrival": {
-            "iataCode": "BER",
-            "icaoCode": "EDDB",
-            "actualTime": "2024-04-24t16:27:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t08:20:00.000"
         }
     },
     {
-        "type": "departure",
+        "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:04:00.000"
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t06:55:00.000"
         },
         "arrival": {
-            "iataCode": "BFS",
-            "icaoCode": "EGAA",
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t07:45:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t06:55:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t07:45:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "AYT",
+            "icaoCode": "LTAI",
+            "actualTime": "2024-04-24t08:39:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t10:48:00.000"
+        }
+    },
+    {
+        "type": "arrival",
+        "status": "landed",
+        "departure": {
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
+            "actualTime": "2024-04-24t07:06:00.000"
+        },
+        "arrival": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
             "actualTime": "2024-04-24t07:58:00.000"
         }
     },
     {
-        "type": "departure",
+        "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:48:00.000"
-        },
-        "arrival": {
-            "iataCode": "BFS",
-            "icaoCode": "EGAA",
-            "actualTime": "2024-04-24t16:41:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t21:01:00.000"
-        },
-        "arrival": {
-            "iataCode": "BFS",
-            "icaoCode": "EGAA",
-            "actualTime": "2024-04-24t21:56:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:12:00.000"
-        },
-        "arrival": {
-            "iataCode": "GCI",
-            "icaoCode": "EGJB",
-            "actualTime": "2024-04-24t15:52:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "GCI",
-            "icaoCode": "EGJB",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:09:00.000"
-        },
-        "arrival": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": "2024-04-24t19:49:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t20:42:00.000"
-        },
-        "arrival": {
-            "iataCode": "LGW",
-            "icaoCode": "EGKK",
-            "actualTime": "2024-04-24t21:21:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t17:35:00.000"
-        },
-        "arrival": {
-            "iataCode": "BWF",
-            "icaoCode": "EGNL",
-            "actualTime": "2024-04-24t18:23:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t11:09:00.000"
-        },
-        "arrival": {
-            "iataCode": "IOM",
-            "icaoCode": "EGNS",
-            "actualTime": "2024-04-24t11:54:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t20:56:00.000"
-        },
-        "arrival": {
-            "iataCode": "NCL",
-            "icaoCode": "EGNT",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:46:00.000"
-        },
-        "arrival": {
-            "iataCode": "ABZ",
-            "icaoCode": "EGPD",
-            "actualTime": "2024-04-24t20:59:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:46:00.000"
-        },
-        "arrival": {
-            "iataCode": "ABZ",
-            "icaoCode": "EGPD",
-            "actualTime": "2024-04-24t20:59:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:46:00.000"
-        },
-        "arrival": {
-            "iataCode": "ABZ",
-            "icaoCode": "EGPD",
-            "actualTime": "2024-04-24t20:59:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t10:50:00.000"
-        },
-        "arrival": {
-            "iataCode": "INV",
-            "icaoCode": "EGPE",
-            "actualTime": "2024-04-24t12:02:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
             "actualTime": "2024-04-24t07:06:00.000"
         },
         "arrival": {
-            "iataCode": "GLA",
-            "icaoCode": "EGPF",
-            "actualTime": "2024-04-24t08:10:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t07:58:00.000"
         }
     },
     {
-        "type": "departure",
+        "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t11:37:00.000"
-        },
-        "arrival": {
-            "iataCode": "GLA",
-            "icaoCode": "EGPF",
-            "actualTime": "2024-04-24t12:39:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t20:00:00.000"
-        },
-        "arrival": {
-            "iataCode": "GLA",
-            "icaoCode": "EGPF",
-            "actualTime": "2024-04-24t20:57:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:12:00.000"
-        },
-        "arrival": {
-            "iataCode": "EDI",
-            "icaoCode": "EGPH",
-            "actualTime": "2024-04-24t08:10:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:18:00.000"
-        },
-        "arrival": {
-            "iataCode": "EDI",
-            "icaoCode": "EGPH",
-            "actualTime": "2024-04-24t17:18:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t20:20:00.000"
-        },
-        "arrival": {
-            "iataCode": "EDI",
-            "icaoCode": "EGPH",
-            "actualTime": "2024-04-24t21:18:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t21:54:00.000"
-        },
-        "arrival": {
-            "iataCode": "EDI",
-            "icaoCode": "EGPH",
-            "actualTime": "2024-04-24t22:53:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "EXT",
-            "icaoCode": "EGTE",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:35:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t08:36:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:58:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:35:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t08:36:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:40:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t11:41:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t17:49:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t19:45:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:35:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t08:36:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:40:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t11:41:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:58:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t15:56:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:35:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t08:36:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:40:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t11:41:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:58:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:15:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t09:13:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:13:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t18:11:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:38:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t11:37:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:07:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t17:05:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:35:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t08:36:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:40:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t11:41:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:58:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t17:49:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t19:45:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t17:49:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-04-24t19:45:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:23:00.000"
-        },
-        "arrival": {
-            "iataCode": "ORK",
-            "icaoCode": "EICK",
-            "actualTime": "2024-04-24t17:26:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:23:00.000"
-        },
-        "arrival": {
-            "iataCode": "ORK",
-            "icaoCode": "EICK",
-            "actualTime": "2024-04-24t17:26:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:41:00.000"
-        },
-        "arrival": {
             "iataCode": "DUB",
             "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t09:35:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:30:00.000"
+            "actualTime": "2024-04-24t07:47:00.000"
         },
         "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t20:26:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t08:25:00.000"
         }
     },
     {
-        "type": "departure",
+        "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t20:25:00.000"
+            "iataCode": "BEG",
+            "icaoCode": "LYBE",
+            "actualTime": "2024-04-24t09:03:00.000"
         },
         "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t21:17:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:41:00.000"
-        },
-        "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t09:35:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:30:00.000"
-        },
-        "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t20:26:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t20:25:00.000"
-        },
-        "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t21:17:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:02:00.000"
-        },
-        "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t06:55:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:01:00.000"
-        },
-        "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t14:44:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t22:47:00.000"
-        },
-        "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t23:27:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:41:00.000"
-        },
-        "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-04-24t09:35:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:52:00.000"
-        },
-        "arrival": {
-            "iataCode": "CPH",
-            "icaoCode": "EKCH",
-            "actualTime": "2024-04-24t21:35:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t10:52:00.000"
-        },
-        "arrival": {
-            "iataCode": "CPH",
-            "icaoCode": "EKCH",
-            "actualTime": "2024-04-24t13:31:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:18:00.000"
-        },
-        "arrival": {
-            "iataCode": "KRK",
-            "icaoCode": "EPKK",
-            "actualTime": "2024-04-24t11:37:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t11:27:00.000"
-        },
-        "arrival": {
-            "iataCode": "RZE",
-            "icaoCode": "EPRZ",
-            "actualTime": "2024-04-24t14:50:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:35:00.000"
-        },
-        "arrival": {
-            "iataCode": "KUN",
-            "icaoCode": "EYKA",
-            "actualTime": "2024-04-24t12:05:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t10:38:00.000"
-        },
-        "arrival": {
-            "iataCode": "FUE",
-            "icaoCode": "GCFV",
-            "actualTime": "2024-04-24t14:28:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:50:00.000"
-        },
-        "arrival": {
-            "iataCode": "FUE",
-            "icaoCode": "GCFV",
-            "actualTime": "2024-04-24t10:31:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t10:45:00.000"
-        },
-        "arrival": {
-            "iataCode": "FUE",
-            "icaoCode": "GCFV",
-            "actualTime": "2024-04-24t14:31:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:37:00.000"
-        },
-        "arrival": {
-            "iataCode": "LPA",
-            "icaoCode": "GCLP",
-            "actualTime": "2024-04-24t20:36:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:32:00.000"
-        },
-        "arrival": {
-            "iataCode": "ACE",
-            "icaoCode": "GCRR",
-            "actualTime": "2024-04-24t18:18:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
             "actualTime": "2024-04-24t10:40:00.000"
-        },
-        "arrival": {
-            "iataCode": "TFS",
-            "icaoCode": "GCTS",
-            "actualTime": "2024-04-24t14:49:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t11:06:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t11:28:00.000"
         },
         "arrival": {
-            "iataCode": "TFS",
-            "icaoCode": "GCTS",
-            "actualTime": "2024-04-24t15:13:00.000"
+            "iataCode": "LGG",
+            "icaoCode": "EBLG",
+            "actualTime": "2024-04-24t13:53:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:07:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t08:31:00.000"
         },
         "arrival": {
-            "iataCode": "TFS",
-            "icaoCode": "GCTS",
-            "actualTime": "2024-04-24t10:06:00.000"
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t09:22:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:07:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t15:38:00.000"
         },
         "arrival": {
-            "iataCode": "SSH",
-            "icaoCode": "HESH",
-            "actualTime": "2024-04-24t20:21:00.000"
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t16:28:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:35:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t19:46:00.000"
         },
         "arrival": {
-            "iataCode": "SOF",
-            "icaoCode": "LBSF",
-            "actualTime": "2024-04-24t23:27:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:11:00.000"
-        },
-        "arrival": {
-            "iataCode": "PFO",
-            "icaoCode": "LCPH",
-            "actualTime": ""
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t20:34:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:03:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t08:31:00.000"
         },
         "arrival": {
-            "iataCode": "PFO",
-            "icaoCode": "LCPH",
-            "actualTime": "2024-04-24t21:20:00.000"
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t09:22:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:17:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t12:05:00.000"
         },
         "arrival": {
-            "iataCode": "PFO",
-            "icaoCode": "LCPH",
-            "actualTime": "2024-04-24t13:35:00.000"
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t13:01:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:48:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t15:38:00.000"
         },
         "arrival": {
-            "iataCode": "DBV",
-            "icaoCode": "LDDU",
-            "actualTime": "2024-04-24t10:10:00.000"
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t16:28:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:19:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t19:46:00.000"
         },
         "arrival": {
-            "iataCode": "ALC",
-            "icaoCode": "LEAL",
-            "actualTime": "2024-04-24t09:20:00.000"
+            "iataCode": "BHD",
+            "icaoCode": "EGAC",
+            "actualTime": "2024-04-24t20:34:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:35:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t11:49:00.000"
         },
         "arrival": {
-            "iataCode": "ALC",
-            "icaoCode": "LEAL",
+            "iataCode": "JER",
+            "icaoCode": "EGJJ",
+            "actualTime": "2024-04-24t12:43:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t06:27:00.000"
+        },
+        "arrival": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t08:14:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t17:21:00.000"
+        },
+        "arrival": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t19:08:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t10:42:00.000"
+        },
+        "arrival": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
             "actualTime": "2024-04-24t12:33:00.000"
         }
     },
@@ -2957,97 +1067,293 @@
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:08:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t06:27:00.000"
         },
         "arrival": {
-            "iataCode": "ALC",
-            "icaoCode": "LEAL",
-            "actualTime": "2024-04-24t10:08:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t08:14:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:25:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t06:27:00.000"
         },
         "arrival": {
-            "iataCode": "ALC",
-            "icaoCode": "LEAL",
-            "actualTime": "2024-04-24t16:36:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t08:14:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:01:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t10:42:00.000"
         },
         "arrival": {
-            "iataCode": "BCN",
-            "icaoCode": "LEBL",
-            "actualTime": "2024-04-24t15:46:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t12:33:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:07:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t06:27:00.000"
         },
         "arrival": {
-            "iataCode": "BCN",
-            "icaoCode": "LEBL",
-            "actualTime": "2024-04-24t21:49:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t08:14:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t10:13:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t06:27:00.000"
         },
         "arrival": {
-            "iataCode": "BCN",
-            "icaoCode": "LEBL",
-            "actualTime": "2024-04-24t12:54:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t08:14:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t08:00:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t17:21:00.000"
         },
         "arrival": {
-            "iataCode": "GRO",
-            "icaoCode": "LEGE",
-            "actualTime": "2024-04-24t10:32:00.000"
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t19:08:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t06:27:00.000"
+        },
+        "arrival": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t08:14:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t10:42:00.000"
+        },
+        "arrival": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t12:33:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t17:21:00.000"
+        },
+        "arrival": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t19:08:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t10:42:00.000"
+        },
+        "arrival": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t12:33:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t06:27:00.000"
+        },
+        "arrival": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t08:14:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t17:21:00.000"
+        },
+        "arrival": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t19:08:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t10:42:00.000"
+        },
+        "arrival": {
+            "iataCode": "AMS",
+            "icaoCode": "EHAM",
+            "actualTime": "2024-04-24t12:33:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t08:48:00.000"
+        },
+        "arrival": {
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
+            "actualTime": "2024-04-24t09:36:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t20:28:00.000"
+        },
+        "arrival": {
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
+            "actualTime": "2024-04-24t21:19:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t08:48:00.000"
+        },
+        "arrival": {
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
+            "actualTime": "2024-04-24t09:36:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t20:28:00.000"
+        },
+        "arrival": {
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
+            "actualTime": "2024-04-24t21:19:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t06:01:00.000"
+        },
+        "arrival": {
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
+            "actualTime": "2024-04-24t06:35:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t13:06:00.000"
+        },
+        "arrival": {
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
+            "actualTime": "2024-04-24t13:45:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t08:48:00.000"
+        },
+        "arrival": {
+            "iataCode": "DUB",
+            "icaoCode": "EIDW",
+            "actualTime": "2024-04-24t09:36:00.000"
         }
     },
     {
         "type": "departure",
         "status": "active",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:40:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t06:43:00.000"
         },
         "arrival": {
-            "iataCode": "IBZ",
-            "icaoCode": "LEIB",
+            "iataCode": "WMI",
+            "icaoCode": "EPMO",
             "actualTime": ""
         }
     },
@@ -3055,65 +1361,191 @@
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:00:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t17:14:00.000"
+        },
+        "arrival": {
+            "iataCode": "POZ",
+            "icaoCode": "EPPO",
+            "actualTime": "2024-04-24t20:01:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t16:57:00.000"
+        },
+        "arrival": {
+            "iataCode": "WRO",
+            "icaoCode": "EPWR",
+            "actualTime": "2024-04-24t19:50:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t16:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "RIX",
+            "icaoCode": "EVRA",
+            "actualTime": "2024-04-24t20:39:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t09:53:00.000"
+        },
+        "arrival": {
+            "iataCode": "ACE",
+            "icaoCode": "GCRR",
+            "actualTime": "2024-04-24t13:53:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t08:08:00.000"
+        },
+        "arrival": {
+            "iataCode": "TFS",
+            "icaoCode": "GCTS",
+            "actualTime": "2024-04-24t12:24:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t08:53:00.000"
+        },
+        "arrival": {
+            "iataCode": "LCA",
+            "icaoCode": "LCLK",
+            "actualTime": "2024-04-24t15:22:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t09:09:00.000"
+        },
+        "arrival": {
+            "iataCode": "PFO",
+            "icaoCode": "LCPH",
+            "actualTime": "2024-04-24t15:33:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t12:35:00.000"
+        },
+        "arrival": {
+            "iataCode": "ALC",
+            "icaoCode": "LEAL",
+            "actualTime": "2024-04-24t15:53:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t16:42:00.000"
+        },
+        "arrival": {
+            "iataCode": "ALC",
+            "icaoCode": "LEAL",
+            "actualTime": "2024-04-24t20:02:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t07:20:00.000"
+        },
+        "arrival": {
+            "iataCode": "ALC",
+            "icaoCode": "LEAL",
+            "actualTime": "2024-04-24t10:36:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t09:03:00.000"
         },
         "arrival": {
             "iataCode": "AGP",
             "icaoCode": "LEMG",
-            "actualTime": "2024-04-24t09:12:00.000"
+            "actualTime": "2024-04-24t12:39:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t20:33:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t07:03:00.000"
         },
         "arrival": {
             "iataCode": "AGP",
             "icaoCode": "LEMG",
-            "actualTime": "2024-04-24t23:45:00.000"
+            "actualTime": "2024-04-24t10:37:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:49:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t09:16:00.000"
         },
         "arrival": {
             "iataCode": "PMI",
             "icaoCode": "LEPA",
-            "actualTime": "2024-04-24t12:48:00.000"
+            "actualTime": "2024-04-24t12:21:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:39:00.000"
-        },
-        "arrival": {
-            "iataCode": "PMI",
-            "icaoCode": "LEPA",
-            "actualTime": "2024-04-24t21:36:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:33:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t07:11:00.000"
         },
         "arrival": {
             "iataCode": "PMI",
@@ -3123,169 +1555,29 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "PMI",
-            "icaoCode": "LEPA",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:12:00.000"
-        },
-        "arrival": {
-            "iataCode": "PMI",
-            "icaoCode": "LEPA",
-            "actualTime": "2024-04-24t09:07:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t20:14:00.000"
-        },
-        "arrival": {
-            "iataCode": "PMI",
-            "icaoCode": "LEPA",
-            "actualTime": "2024-04-24t23:12:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t20:14:00.000"
-        },
-        "arrival": {
-            "iataCode": "PMI",
-            "icaoCode": "LEPA",
-            "actualTime": "2024-04-24t23:12:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:35:00.000"
-        },
-        "arrival": {
-            "iataCode": "TLS",
-            "icaoCode": "LFBO",
-            "actualTime": "2024-04-24t19:05:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t11:13:00.000"
-        },
-        "arrival": {
-            "iataCode": "NCE",
-            "icaoCode": "LFMN",
-            "actualTime": "2024-04-24t13:58:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:10:00.000"
-        },
-        "arrival": {
-            "iataCode": "CDG",
-            "icaoCode": "LFPG",
-            "actualTime": "2024-04-24t09:09:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:56:00.000"
-        },
-        "arrival": {
-            "iataCode": "CDG",
-            "icaoCode": "LFPG",
-            "actualTime": "2024-04-24t16:52:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:33:00.000"
-        },
-        "arrival": {
-            "iataCode": "ORY",
-            "icaoCode": "LFPO",
-            "actualTime": "2024-04-24t18:33:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:13:00.000"
-        },
-        "arrival": {
-            "iataCode": "ATH",
-            "icaoCode": "LGAV",
-            "actualTime": "2024-04-24t23:31:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:51:00.000"
-        },
-        "arrival": {
-            "iataCode": "HER",
-            "icaoCode": "LGIR",
-            "actualTime": "2024-04-24t21:31:00.000"
-        }
-    },
-    {
-        "type": "departure",
         "status": "active",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:01:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
         },
         "arrival": {
-            "iataCode": "CFU",
-            "icaoCode": "LGKR",
+            "iataCode": "BOD",
+            "icaoCode": "LFBD",
+            "actualTime": ""
+        }
+    },
+    {
+        "type": "departure",
+        "status": "scheduled",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": ""
+        },
+        "arrival": {
+            "iataCode": "TUF",
+            "icaoCode": "LFOT",
             "actualTime": ""
         }
     },
@@ -3293,345 +1585,65 @@
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:38:00.000"
-        },
-        "arrival": {
-            "iataCode": "RHO",
-            "icaoCode": "LGRP",
-            "actualTime": "2024-04-24t13:27:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t06:46:00.000"
-        },
-        "arrival": {
-            "iataCode": "ZTH",
-            "icaoCode": "LGZA",
-            "actualTime": "2024-04-24t11:55:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t10:42:00.000"
-        },
-        "arrival": {
-            "iataCode": "BUD",
-            "icaoCode": "LHBP",
-            "actualTime": "2024-04-24t13:56:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:22:00.000"
-        },
-        "arrival": {
-            "iataCode": "MXP",
-            "icaoCode": "LIMC",
-            "actualTime": "2024-04-24t22:04:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t07:56:00.000"
-        },
-        "arrival": {
-            "iataCode": "BGY",
-            "icaoCode": "LIME",
-            "actualTime": "2024-04-24t10:40:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:20:00.000"
-        },
-        "arrival": {
-            "iataCode": "VCE",
-            "icaoCode": "LIPZ",
-            "actualTime": "2024-04-24t19:06:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:05:00.000"
-        },
-        "arrival": {
-            "iataCode": "VCE",
-            "icaoCode": "LIPZ",
-            "actualTime": "2024-04-24t19:00:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:12:00.000"
-        },
-        "arrival": {
-            "iataCode": "FCO",
-            "icaoCode": "LIRF",
-            "actualTime": "2024-04-24t16:18:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
             "actualTime": "2024-04-24t06:04:00.000"
+        },
+        "arrival": {
+            "iataCode": "NAP",
+            "icaoCode": "LIRN",
+            "actualTime": "2024-04-24t09:33:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": "landed",
+        "departure": {
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t07:49:00.000"
         },
         "arrival": {
             "iataCode": "MLA",
             "icaoCode": "LMML",
-            "actualTime": "2024-04-24t09:59:00.000"
+            "actualTime": "2024-04-24t12:04:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t18:03:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t08:02:00.000"
         },
         "arrival": {
             "iataCode": "FAO",
             "icaoCode": "LPFR",
-            "actualTime": "2024-04-24t20:12:00.000"
+            "actualTime": "2024-04-24t10:44:00.000"
         }
     },
     {
         "type": "departure",
         "status": "landed",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:56:00.000"
-        },
-        "arrival": {
-            "iataCode": "FAO",
-            "icaoCode": "LPFR",
-            "actualTime": "2024-04-24t16:12:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:43:00.000"
-        },
-        "arrival": {
-            "iataCode": "FAO",
-            "icaoCode": "LPFR",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t10:30:00.000"
-        },
-        "arrival": {
-            "iataCode": "FAO",
-            "icaoCode": "LPFR",
-            "actualTime": "2024-04-24t12:49:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:05:00.000"
-        },
-        "arrival": {
-            "iataCode": "OPO",
-            "icaoCode": "LPPR",
-            "actualTime": "2024-04-24t20:49:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t13:52:00.000"
-        },
-        "arrival": {
-            "iataCode": "OPO",
-            "icaoCode": "LPPR",
-            "actualTime": "2024-04-24t15:41:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:35:00.000"
-        },
-        "arrival": {
-            "iataCode": "LIS",
-            "icaoCode": "LPPT",
-            "actualTime": "2024-04-24t16:47:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t16:30:00.000"
-        },
-        "arrival": {
-            "iataCode": "OTP",
-            "icaoCode": "LROP",
-            "actualTime": "2024-04-24t21:22:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:30:00.000"
-        },
-        "arrival": {
-            "iataCode": "GVA",
-            "icaoCode": "LSGG",
-            "actualTime": "2024-04-24t11:52:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:43:00.000"
-        },
-        "arrival": {
-            "iataCode": "GVA",
-            "icaoCode": "LSGG",
-            "actualTime": "2024-04-24t17:03:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:03:00.000"
-        },
-        "arrival": {
-            "iataCode": "ZRH",
-            "icaoCode": "LSZH",
-            "actualTime": "2024-04-24t11:21:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t09:45:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t12:27:00.000"
         },
         "arrival": {
             "iataCode": "AYT",
             "icaoCode": "LTAI",
-            "actualTime": "2024-04-24t15:48:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t15:38:00.000"
-        },
-        "arrival": {
-            "iataCode": "AYT",
-            "icaoCode": "LTAI",
-            "actualTime": "2024-04-24t21:37:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t14:14:00.000"
-        },
-        "arrival": {
-            "iataCode": "AYT",
-            "icaoCode": "LTAI",
-            "actualTime": "2024-04-24t20:18:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t19:12:00.000"
-        },
-        "arrival": {
-            "iataCode": "AYT",
-            "icaoCode": "LTAI",
-            "actualTime": "2024-04-25t01:13:00.000"
+            "actualTime": "2024-04-24t18:35:00.000"
         }
     },
     {
         "type": "departure",
         "status": "scheduled",
         "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-04-24t17:07:00.000"
+            "iataCode": "LBA",
+            "icaoCode": "EGNM",
+            "actualTime": "2024-04-24t10:53:00.000"
         },
         "arrival": {
             "iataCode": "DLM",

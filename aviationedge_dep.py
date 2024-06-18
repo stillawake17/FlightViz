@@ -64,11 +64,23 @@ def extract_date_from_filename(file_path):
     else:
         raise ValueError("No valid date found in filename")
 
+def save_summary_statistics(departures_df, date_str, summary_csv_path):
+    """ Save summary statistics to a CSV file. """
+    summary_stats = departures_df.groupby(['departure_date', 'flight_type']).agg(
+        total_flights=('flight_number', 'count'),
+        avg_departure_delay=('departure_delay', 'mean')
+    ).reset_index()
+
+    header = not os.path.exists(summary_csv_path)
+    summary_stats.to_csv(summary_csv_path, mode='a', header=header, index=False)
+    print(f"Saved summary statistics to {summary_csv_path}")
+
 # Directory where the files are stored
-directory_path = './Aviation/BRS/oct'
+directory_path = './Aviation/BRS'
 file_paths = [os.path.join(directory_path, file) for file in os.listdir(directory_path) if file.startswith('BRS_departure_flights') and file.endswith('.json')]
 
-base_csv_path = 'C:/Users/josti/OneDrive/Desktop/Gitlab clone/LDR/FlightViz/departure_flights_summary.csv'
+base_csv_path = 'C:/Users/josti/OneDrive/Desktop/Gitlab clone/LDR/FlightViz/avi_departure_flights_summary.csv'
+summary_csv_path = 'C:/Users/josti/OneDrive/Desktop/Gitlab clone/LDR/FlightViz/avi_departure_flights_summary_statistics.csv'
 
 for file_path in file_paths:
     try:
@@ -77,6 +89,7 @@ for file_path in file_paths:
         departures_df = process_departure_data(file_path)
         if not departures_df.empty:
             append_departures_to_csv(departures_df, dated_csv_path)
+            save_summary_statistics(departures_df, date_str, summary_csv_path)
             print(f"Processed and appended data from {file_path}")
         else:
             print(f"No valid departures found in {file_path}")

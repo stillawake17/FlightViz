@@ -56,10 +56,10 @@ def append_arrivals_to_csv(arrivals_df, csv_file_path):
         'average_actual_arrival': arrivals_df['actual_arrival'].mean()
     }
 
-directory_path = './Aviation/BRS/oct'
+directory_path = './Aviation/BRS'
 file_paths = [os.path.join(directory_path, file) for file in os.listdir(directory_path) if file.startswith('BRS_arrival_flights') and file.endswith('.json')]
 
-base_csv_path = 'C:/Users/josti/OneDrive/Desktop/Gitlab clone/LDR/FlightViz/oct_arrival_flights_summary'
+base_csv_path = 'C:/Users/josti/OneDrive/Desktop/Gitlab clone/LDR/FlightViz/arrival_arrival_flights_summary'
 
 arrival_stats = []
 
@@ -81,6 +81,6 @@ for file_path in file_paths:
 if arrival_stats:
     summary_df = pd.DataFrame(arrival_stats)
     summary_df['average_actual_arrival'] = pd.to_datetime(summary_df['average_actual_arrival'])
-    summary_df.fillna(0).to_csv('oct_arrival_summary_statistics.csv', index=False)
+    summary_df.fillna(0).to_csv('arrival_arrival_summary_statistics.csv', index=False)
 
 print("All arrival flights data has been processed and summarized.")

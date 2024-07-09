@@ -45,7 +45,7 @@ def fetch_data(date, is_arrival=True, filename=None):
 
 
 # Get yesterday's date by deleting one day in days=1
-yesterday = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
+yesterday = (datetime.now() - timedelta(days=4)).strftime("%Y-%m-%d")
 
 # Fetch and save arrival data
 arrival_filename = f'EGGD_arrivals_{yesterday}.json'

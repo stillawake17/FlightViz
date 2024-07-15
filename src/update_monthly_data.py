@@ -10,7 +10,7 @@ db = client['flight_data']
 collection = db['daily_flights']
 
 monthly_file_path = 'monthly_data.json'
-combined_file_path = 'combined_output2.json'
+combined_file_path = 'combined_output.json'
 
 def read_json(file_path):
     try:
@@ -100,7 +100,7 @@ def update_combined_data(combined_data, daily_summary, date):
     return combined_data
 
 def main():
-    yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+    yesterday = (datetime.now() - timedelta(days=4)).strftime("%Y-%m-%d")
     flight_data = get_flight_data(yesterday, yesterday)
     daily_summary = summarize_flight_data(flight_data)
     

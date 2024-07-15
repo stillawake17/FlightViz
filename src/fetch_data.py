@@ -51,7 +51,7 @@ def insert_data(date, arrivals, departures):
     print(f"Data for {date} inserted into MongoDB.")
 
 def main():
-    yesterday = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
+    yesterday = (datetime.now() - timedelta(days=14)).strftime("%Y-%m-%d")
     arrival_data = fetch_data(yesterday, is_arrival=True)
     departure_data = fetch_data(yesterday, is_arrival=False)
     

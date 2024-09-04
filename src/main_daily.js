@@ -71,7 +71,7 @@ function summarizeFlightStatusesWithTimeCategories(flightData) {
 }
 
 // Path to JSON file
-const filePath = '../EGGD_combined_2024-08-30.json'; // Adjust this path to update data
+const filePath = '../EGGD_combined_2024-09-03.json'; // Adjust this path to update data
 
 // Read and parse the JSON file
 fs.readFile(filePath, 'utf8', (err, data) => {

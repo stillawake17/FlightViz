@@ -1,0 +1,30 @@
+[
+    {
+        "type": "arrival",
+        "status": "active",
+        "departure": {
+            "iataCode": "LCA",
+            "icaoCode": "LCLK",
+            "actualTime": "2024-08-26t13:37:00.000"
+        },
+        "arrival": {
+            "iataCode": "HFA",
+            "icaoCode": "LLHA",
+            "actualTime": "2024-08-26t14:16:00.000"
+        }
+    },
+    {
+        "type": "departure",
+        "status": null,
+        "departure": {
+            "iataCode": "HFA",
+            "icaoCode": "LLHA",
+            "actualTime": ""
+        },
+        "arrival": {
+            "iataCode": "LCA",
+            "icaoCode": "LCLK",
+            "actualTime": ""
+        }
+    }
+]

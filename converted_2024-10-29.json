@@ -185,20 +185,6 @@
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-10-29t06:41:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-10-29t07:50:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
             "iataCode": "AYT",
             "icaoCode": "LTAI",
             "actualTime": "2024-10-29t08:48:00.000"
@@ -309,7 +295,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BFS",
             "icaoCode": "EGAA",
@@ -351,20 +337,6 @@
     },
     {
         "type": "arrival",
-        "status": "cancelled",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
         "status": "landed",
         "departure": {
             "iataCode": "DUB",
@@ -403,34 +375,6 @@
             "iataCode": "BRS",
             "icaoCode": "EGGD",
             "actualTime": "2024-10-29t15:14:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "cancelled",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "cancelled",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
         }
     },
     {
@@ -729,7 +673,7 @@
     },
     {
         "type": "arrival",
-        "status": "active",
+        "status": "landed",
         "departure": {
             "iataCode": "EDI",
             "icaoCode": "EGPH",
@@ -1429,20 +1373,6 @@
     },
     {
         "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "ABZ",
-            "icaoCode": "EGPD",
-            "actualTime": "2024-10-29t17:58:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-10-29t19:03:00.000"
-        }
-    },
-    {
-        "type": "arrival",
         "status": "scheduled",
         "departure": {
             "iataCode": "RAK",
@@ -1571,34 +1501,6 @@
         "type": "arrival",
         "status": "landed",
         "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-10-29t08:25:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-10-29t08:16:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-10-29t08:25:00.000"
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-10-29t08:16:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "landed",
-        "departure": {
             "iataCode": "EDI",
             "icaoCode": "EGPH",
             "actualTime": "2024-10-29t08:38:00.000"
@@ -1607,48 +1509,6 @@
             "iataCode": "BRS",
             "icaoCode": "EGGD",
             "actualTime": "2024-10-29t09:28:00.000"
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "active",
-        "departure": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "active",
-        "departure": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-10-29t19:57:00.000"
-        },
-        "arrival": {
-            "iataCode": "ABZ",
-            "icaoCode": "EGPD",
-            "actualTime": "2024-10-29t21:05:00.000"
         }
     },
     {
@@ -2049,54 +1909,12 @@
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
-            "actualTime": "2024-10-29t06:20:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-10-29t08:13:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
             "actualTime": "2024-10-29t09:10:00.000"
         },
         "arrival": {
             "iataCode": "AMS",
             "icaoCode": "EHAM",
             "actualTime": "2024-10-29t11:07:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-10-29t14:10:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-10-29t16:03:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-10-29t17:49:00.000"
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": "2024-10-29t19:46:00.000"
         }
     },
     {
@@ -2199,7 +2017,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -2371,34 +2189,6 @@
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
-            "actualTime": "2024-10-29t08:39:00.000"
-        },
-        "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-10-29t09:35:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": "2024-10-29t20:03:00.000"
-        },
-        "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": "2024-10-29t20:55:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "landed",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
             "actualTime": "2024-10-29t06:49:00.000"
         },
         "arrival": {
@@ -2437,7 +2227,7 @@
     },
     {
         "type": "departure",
-        "status": "active",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -2699,20 +2489,6 @@
             "iataCode": "JER",
             "icaoCode": "EGJJ",
             "actualTime": "2024-10-29t12:20:00.000"
-        }
-    },
-    {
-        "type": "departure",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "JER",
-            "icaoCode": "EGJJ",
-            "actualTime": ""
         }
     },
     {
@@ -3151,7 +2927,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",

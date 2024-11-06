@@ -577,61 +577,6 @@
       "flight_date": "2024-10-30",
       "flight_status": "landed",
       "departure": {
-        "airport": "Dublin International",
-        "timezone": "Europe/Dublin",
-        "iata": "DUB",
-        "icao": "EIDW",
-        "terminal": "2",
-        "gate": "332",
-        "delay": 18,
-        "scheduled": "2024-10-30T06:15:00+00:00",
-        "estimated": "2024-10-30T06:15:00+00:00",
-        "actual": "2024-10-30T06:32:00+00:00",
-        "estimated_runway": "2024-10-30T06:32:00+00:00",
-        "actual_runway": "2024-10-30T06:32:00+00:00"
-      },
-      "arrival": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": "M",
-        "gate": null,
-        "baggage": null,
-        "delay": null,
-        "scheduled": "2024-10-30T07:40:00+00:00",
-        "estimated": "2024-10-30T07:40:00+00:00",
-        "actual": "2024-10-30T07:24:00+00:00",
-        "estimated_runway": "2024-10-30T07:24:00+00:00",
-        "actual_runway": "2024-10-30T07:24:00+00:00"
-      },
-      "airline": {
-        "name": "British Airways",
-        "iata": "BA",
-        "icao": "BAW"
-      },
-      "flight": {
-        "number": "8936",
-        "iata": "BA8936",
-        "icao": "BAW8936",
-        "codeshared": {
-          "airline_name": "aer lingus",
-          "airline_iata": "ei",
-          "airline_icao": "ein",
-          "flight_number": "3280",
-          "flight_iata": "ei3280",
-          "flight_icao": "ein3280"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "8936"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "landed",
-      "departure": {
         "airport": "Alicante El Altet",
         "timezone": "Europe/Madrid",
         "iata": "ALC",
@@ -924,10 +869,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-EXD",
-        "iata": "B738",
-        "icao": "B738",
-        "icao24": "4CAA5F"
+        "registration": "EI-HAT",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "4CA92B"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -1508,10 +1453,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "G-UZHT",
-        "iata": "A20N",
-        "icao": "A20N",
-        "icao24": "407688"
+        "registration": "G-EZWS",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "406A93"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -2232,10 +2177,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-FSL",
+        "registration": "EI-HDH",
         "iata": "AT76",
         "icao": "AT76",
-        "icao24": "4CA6B2"
+        "icao24": "4CAD6D"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -2718,10 +2663,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-HAT",
-        "iata": "B38M",
-        "icao": "B38M",
-        "icao24": "4CA92B"
+        "registration": "EI-ENG",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "4CA893"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -2886,10 +2831,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "PH-NXC",
-        "iata": "E295",
-        "icao": "E295",
-        "icao24": "4863DB"
+        "registration": "PH-EXY",
+        "iata": "E190",
+        "icao": "E190",
+        "icao24": "485875"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -2939,10 +2884,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-FSL",
+        "registration": "EI-HDH",
         "iata": "AT76",
         "icao": "AT76",
-        "icao24": "4CA6B2"
+        "icao24": "4CAD6D"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -3154,226 +3099,6 @@
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "2782"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "landed",
-      "departure": {
-        "airport": "Schiphol",
-        "timezone": "Europe/Amsterdam",
-        "iata": "AMS",
-        "icao": "EHAM",
-        "terminal": null,
-        "gate": "D6",
-        "delay": 24,
-        "scheduled": "2024-10-30T16:35:00+00:00",
-        "estimated": "2024-10-30T16:35:00+00:00",
-        "actual": "2024-10-30T16:59:00+00:00",
-        "estimated_runway": "2024-10-30T16:59:00+00:00",
-        "actual_runway": "2024-10-30T16:59:00+00:00"
-      },
-      "arrival": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": "M",
-        "gate": null,
-        "baggage": null,
-        "delay": 4,
-        "scheduled": "2024-10-30T16:50:00+00:00",
-        "estimated": "2024-10-30T16:50:00+00:00",
-        "actual": "2024-10-30T16:54:00+00:00",
-        "estimated_runway": "2024-10-30T16:54:00+00:00",
-        "actual_runway": "2024-10-30T16:54:00+00:00"
-      },
-      "airline": {
-        "name": "Virgin Atlantic",
-        "iata": "VS",
-        "icao": "VIR"
-      },
-      "flight": {
-        "number": "6956",
-        "iata": "VS6956",
-        "icao": "VIR6956",
-        "codeshared": {
-          "airline_name": "klm",
-          "airline_iata": "kl",
-          "airline_icao": "klm",
-          "flight_number": "1081",
-          "flight_iata": "kl1081",
-          "flight_icao": "klm1081"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "6956"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "landed",
-      "departure": {
-        "airport": "Schiphol",
-        "timezone": "Europe/Amsterdam",
-        "iata": "AMS",
-        "icao": "EHAM",
-        "terminal": null,
-        "gate": "D6",
-        "delay": 24,
-        "scheduled": "2024-10-30T16:35:00+00:00",
-        "estimated": "2024-10-30T16:35:00+00:00",
-        "actual": "2024-10-30T16:59:00+00:00",
-        "estimated_runway": "2024-10-30T16:59:00+00:00",
-        "actual_runway": "2024-10-30T16:59:00+00:00"
-      },
-      "arrival": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": "M",
-        "gate": null,
-        "baggage": null,
-        "delay": 4,
-        "scheduled": "2024-10-30T16:50:00+00:00",
-        "estimated": "2024-10-30T16:50:00+00:00",
-        "actual": "2024-10-30T16:54:00+00:00",
-        "estimated_runway": "2024-10-30T16:54:00+00:00",
-        "actual_runway": "2024-10-30T16:54:00+00:00"
-      },
-      "airline": {
-        "name": "Kenya Airways",
-        "iata": "KQ",
-        "icao": "KQA"
-      },
-      "flight": {
-        "number": "1053",
-        "iata": "KQ1053",
-        "icao": "KQA1053",
-        "codeshared": {
-          "airline_name": "klm",
-          "airline_iata": "kl",
-          "airline_icao": "klm",
-          "flight_number": "1081",
-          "flight_iata": "kl1081",
-          "flight_icao": "klm1081"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "1053"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "landed",
-      "departure": {
-        "airport": "Schiphol",
-        "timezone": "Europe/Amsterdam",
-        "iata": "AMS",
-        "icao": "EHAM",
-        "terminal": null,
-        "gate": "D6",
-        "delay": 24,
-        "scheduled": "2024-10-30T16:35:00+00:00",
-        "estimated": "2024-10-30T16:35:00+00:00",
-        "actual": "2024-10-30T16:59:00+00:00",
-        "estimated_runway": "2024-10-30T16:59:00+00:00",
-        "actual_runway": "2024-10-30T16:59:00+00:00"
-      },
-      "arrival": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": "M",
-        "gate": null,
-        "baggage": null,
-        "delay": 4,
-        "scheduled": "2024-10-30T16:50:00+00:00",
-        "estimated": "2024-10-30T16:50:00+00:00",
-        "actual": "2024-10-30T16:54:00+00:00",
-        "estimated_runway": "2024-10-30T16:54:00+00:00",
-        "actual_runway": "2024-10-30T16:54:00+00:00"
-      },
-      "airline": {
-        "name": "Gol",
-        "iata": "G3",
-        "icao": "GLO"
-      },
-      "flight": {
-        "number": "5520",
-        "iata": "G35520",
-        "icao": "GLO5520",
-        "codeshared": {
-          "airline_name": "klm",
-          "airline_iata": "kl",
-          "airline_icao": "klm",
-          "flight_number": "1081",
-          "flight_iata": "kl1081",
-          "flight_icao": "klm1081"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "5520"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "landed",
-      "departure": {
-        "airport": "Schiphol",
-        "timezone": "Europe/Amsterdam",
-        "iata": "AMS",
-        "icao": "EHAM",
-        "terminal": null,
-        "gate": "D6",
-        "delay": 24,
-        "scheduled": "2024-10-30T16:35:00+00:00",
-        "estimated": "2024-10-30T16:35:00+00:00",
-        "actual": "2024-10-30T16:59:00+00:00",
-        "estimated_runway": "2024-10-30T16:59:00+00:00",
-        "actual_runway": "2024-10-30T16:59:00+00:00"
-      },
-      "arrival": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": "M",
-        "gate": null,
-        "baggage": null,
-        "delay": 4,
-        "scheduled": "2024-10-30T16:50:00+00:00",
-        "estimated": "2024-10-30T16:50:00+00:00",
-        "actual": "2024-10-30T16:54:00+00:00",
-        "estimated_runway": "2024-10-30T16:54:00+00:00",
-        "actual_runway": "2024-10-30T16:54:00+00:00"
-      },
-      "airline": {
-        "name": "Delta Air Lines",
-        "iata": "DL",
-        "icao": "DAL"
-      },
-      "flight": {
-        "number": "9228",
-        "iata": "DL9228",
-        "icao": "DAL9228",
-        "codeshared": {
-          "airline_name": "klm",
-          "airline_iata": "kl",
-          "airline_icao": "klm",
-          "flight_number": "1081",
-          "flight_iata": "kl1081",
-          "flight_icao": "klm1081"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "9228"
     },
     {
       "flight_date": "2024-10-30",
@@ -3896,124 +3621,14 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "G-JZBN",
+        "registration": "G-JZBG",
         "iata": "B738",
         "icao": "B738",
-        "icao24": "40717B"
+        "icao24": "407183"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "1892"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "landed",
-      "departure": {
-        "airport": "Dublin International",
-        "timezone": "Europe/Dublin",
-        "iata": "DUB",
-        "icao": "EIDW",
-        "terminal": "2",
-        "gate": "334",
-        "delay": 7,
-        "scheduled": "2024-10-30T14:00:00+00:00",
-        "estimated": "2024-10-30T14:00:00+00:00",
-        "actual": "2024-10-30T14:06:00+00:00",
-        "estimated_runway": "2024-10-30T14:06:00+00:00",
-        "actual_runway": "2024-10-30T14:06:00+00:00"
-      },
-      "arrival": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": "M",
-        "gate": null,
-        "baggage": null,
-        "delay": null,
-        "scheduled": "2024-10-30T15:20:00+00:00",
-        "estimated": "2024-10-30T15:20:00+00:00",
-        "actual": "2024-10-30T15:01:00+00:00",
-        "estimated_runway": "2024-10-30T15:01:00+00:00",
-        "actual_runway": "2024-10-30T15:01:00+00:00"
-      },
-      "airline": {
-        "name": "Qatar Airways",
-        "iata": "QR",
-        "icao": "QTR"
-      },
-      "flight": {
-        "number": "8248",
-        "iata": "QR8248",
-        "icao": "QTR8248",
-        "codeshared": {
-          "airline_name": "aer lingus",
-          "airline_iata": "ei",
-          "airline_icao": "ein",
-          "flight_number": "3284",
-          "flight_iata": "ei3284",
-          "flight_icao": "ein3284"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "8248"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "landed",
-      "departure": {
-        "airport": "Dublin International",
-        "timezone": "Europe/Dublin",
-        "iata": "DUB",
-        "icao": "EIDW",
-        "terminal": "2",
-        "gate": "334",
-        "delay": 7,
-        "scheduled": "2024-10-30T14:00:00+00:00",
-        "estimated": "2024-10-30T14:00:00+00:00",
-        "actual": "2024-10-30T14:06:00+00:00",
-        "estimated_runway": "2024-10-30T14:06:00+00:00",
-        "actual_runway": "2024-10-30T14:06:00+00:00"
-      },
-      "arrival": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": "M",
-        "gate": null,
-        "baggage": null,
-        "delay": null,
-        "scheduled": "2024-10-30T15:20:00+00:00",
-        "estimated": "2024-10-30T15:20:00+00:00",
-        "actual": "2024-10-30T15:01:00+00:00",
-        "estimated_runway": "2024-10-30T15:01:00+00:00",
-        "actual_runway": "2024-10-30T15:01:00+00:00"
-      },
-      "airline": {
-        "name": "British Airways",
-        "iata": "BA",
-        "icao": "BAW"
-      },
-      "flight": {
-        "number": "8940",
-        "iata": "BA8940",
-        "icao": "BAW8940",
-        "codeshared": {
-          "airline_name": "aer lingus",
-          "airline_iata": "ei",
-          "airline_icao": "ein",
-          "flight_number": "3284",
-          "flight_iata": "ei3284",
-          "flight_icao": "ein3284"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "8940"
     },
     {
       "flight_date": "2024-10-30",
@@ -4486,18 +4101,18 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "OE-LQZ",
+        "registration": "OE-LQQ",
         "iata": "A319",
         "icao": "A319",
-        "icao24": "440065"
+        "icao24": "44061D"
       },
       "live": {
-        "updated": "2024-10-30T16:40:38+00:00",
-        "latitude": 51.3788,
-        "longitude": -2.8184,
-        "altitude": 388.62,
+        "updated": "2024-10-31T15:57:29+00:00",
+        "latitude": 51.3825,
+        "longitude": -2.7241,
+        "altitude": 68.58,
         "direction": 86,
-        "speed_horizontal": 242.612,
+        "speed_horizontal": 218.536,
         "speed_vertical": 0,
         "is_ground": false
       },
@@ -4758,61 +4373,6 @@
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "494"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "active",
-      "departure": {
-        "airport": "Jersey",
-        "timezone": "Europe/Jersey",
-        "iata": "JER",
-        "icao": "EGJJ",
-        "terminal": null,
-        "gate": null,
-        "delay": null,
-        "scheduled": "2024-10-30T16:30:00+00:00",
-        "estimated": "2024-10-30T16:30:00+00:00",
-        "actual": null,
-        "estimated_runway": null,
-        "actual_runway": null
-      },
-      "arrival": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": "M",
-        "gate": null,
-        "baggage": null,
-        "delay": null,
-        "scheduled": "2024-10-30T17:30:00+00:00",
-        "estimated": "2024-10-30T17:30:00+00:00",
-        "actual": null,
-        "estimated_runway": null,
-        "actual_runway": null
-      },
-      "airline": {
-        "name": null,
-        "iata": "X1",
-        "icao": "X1"
-      },
-      "flight": {
-        "number": "4032",
-        "iata": "X14032",
-        "icao": "X14032",
-        "codeshared": {
-          "airline_name": "blue islands",
-          "airline_iata": "si",
-          "airline_icao": "bci",
-          "flight_number": "4494",
-          "flight_iata": "si4494",
-          "flight_icao": "bci4494"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Night hour arrivals",
-      "Flight_Number": "4032"
     },
     {
       "flight_date": "2024-10-30",
@@ -5387,10 +4947,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-EXD",
+        "registration": "EI-DWS",
         "iata": "B738",
         "icao": "B738",
-        "icao24": "4CAA5F"
+        "icao24": "4CA61F"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -5718,116 +5278,6 @@
       "flight_date": "2024-10-30",
       "flight_status": "landed",
       "departure": {
-        "airport": "Schiphol",
-        "timezone": "Europe/Amsterdam",
-        "iata": "AMS",
-        "icao": "EHAM",
-        "terminal": null,
-        "gate": "D6",
-        "delay": 18,
-        "scheduled": "2024-10-30T08:15:00+00:00",
-        "estimated": "2024-10-30T08:15:00+00:00",
-        "actual": "2024-10-30T08:33:00+00:00",
-        "estimated_runway": "2024-10-30T08:33:00+00:00",
-        "actual_runway": "2024-10-30T08:33:00+00:00"
-      },
-      "arrival": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": "M",
-        "gate": null,
-        "baggage": null,
-        "delay": 2,
-        "scheduled": "2024-10-30T08:30:00+00:00",
-        "estimated": "2024-10-30T08:30:00+00:00",
-        "actual": "2024-10-30T08:25:00+00:00",
-        "estimated_runway": "2024-10-30T08:25:00+00:00",
-        "actual_runway": "2024-10-30T08:25:00+00:00"
-      },
-      "airline": {
-        "name": "Virgin Atlantic",
-        "iata": "VS",
-        "icao": "VIR"
-      },
-      "flight": {
-        "number": "6953",
-        "iata": "VS6953",
-        "icao": "VIR6953",
-        "codeshared": {
-          "airline_name": "german airways",
-          "airline_iata": "zq",
-          "airline_icao": "ger",
-          "flight_number": "1075",
-          "flight_iata": "zq1075",
-          "flight_icao": "ger1075"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "6953"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "landed",
-      "departure": {
-        "airport": "Schiphol",
-        "timezone": "Europe/Amsterdam",
-        "iata": "AMS",
-        "icao": "EHAM",
-        "terminal": null,
-        "gate": "D6",
-        "delay": 18,
-        "scheduled": "2024-10-30T08:15:00+00:00",
-        "estimated": "2024-10-30T08:15:00+00:00",
-        "actual": "2024-10-30T08:33:00+00:00",
-        "estimated_runway": "2024-10-30T08:33:00+00:00",
-        "actual_runway": "2024-10-30T08:33:00+00:00"
-      },
-      "arrival": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": "M",
-        "gate": null,
-        "baggage": null,
-        "delay": 2,
-        "scheduled": "2024-10-30T08:30:00+00:00",
-        "estimated": "2024-10-30T08:30:00+00:00",
-        "actual": "2024-10-30T08:25:00+00:00",
-        "estimated_runway": "2024-10-30T08:25:00+00:00",
-        "actual_runway": "2024-10-30T08:25:00+00:00"
-      },
-      "airline": {
-        "name": "Delta Air Lines",
-        "iata": "DL",
-        "icao": "DAL"
-      },
-      "flight": {
-        "number": "9298",
-        "iata": "DL9298",
-        "icao": "DAL9298",
-        "codeshared": {
-          "airline_name": "german airways",
-          "airline_iata": "zq",
-          "airline_icao": "ger",
-          "flight_number": "1075",
-          "flight_iata": "zq1075",
-          "flight_icao": "ger1075"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "9298"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "landed",
-      "departure": {
         "airport": "Edinburgh",
         "timezone": "Europe/London",
         "iata": "EDI",
@@ -6091,7 +5541,7 @@
     },
     {
       "flight_date": "2024-10-30",
-      "flight_status": "scheduled",
+      "flight_status": "landed",
       "departure": {
         "airport": "Alicante El Altet",
         "timezone": "Europe/Madrid",
@@ -6138,16 +5588,7 @@
         "icao": "A20N",
         "icao24": "407569"
       },
-      "live": {
-        "updated": "2024-10-31T12:47:15+00:00",
-        "latitude": 45.7437,
-        "longitude": -3.3335,
-        "altitude": 11582.4,
-        "direction": 355,
-        "speed_horizontal": 864.884,
-        "speed_vertical": 0,
-        "is_ground": false
-      },
+      "live": null,
       "Time_Category": "Night hour arrivals",
       "Flight_Number": "2722"
     },
@@ -6682,7 +6123,7 @@
     },
     {
       "flight_date": "2024-10-30",
-      "flight_status": "scheduled",
+      "flight_status": "landed",
       "departure": {
         "airport": "Bristol",
         "timezone": "Europe/London",
@@ -6724,21 +6165,12 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "OE-LQZ",
+        "registration": "OE-LQQ",
         "iata": "A319",
         "icao": "A319",
-        "icao24": "440065"
+        "icao24": "44061D"
       },
-      "live": {
-        "updated": "2024-10-30T20:15:03+00:00",
-        "latitude": 36.68,
-        "longitude": -4.489,
-        "altitude": 0,
-        "direction": 199,
-        "speed_horizontal": 3.704,
-        "speed_vertical": 0,
-        "is_ground": true
-      },
+      "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "7004"
     },
@@ -6834,10 +6266,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-DPP",
+        "registration": "EI-DWS",
         "iata": "B738",
         "icao": "B738",
-        "icao24": "4CA4F4"
+        "icao24": "4CA61F"
       },
       "live": null,
       "Time_Category": "Shoulder hour flights",
@@ -7011,10 +6443,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "G-EZGY",
-        "iata": "A320",
-        "icao": "A320",
-        "icao24": "40756F"
+        "registration": "G-UZHM",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "407567"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -7508,7 +6940,7 @@
     },
     {
       "flight_date": "2024-10-30",
-      "flight_status": "active",
+      "flight_status": "landed",
       "departure": {
         "airport": "Bristol",
         "timezone": "Europe/London",
@@ -7549,14 +6981,19 @@
         "icao": "KLM1080",
         "codeshared": null
       },
-      "aircraft": null,
+      "aircraft": {
+        "registration": "G-CMLI",
+        "iata": "E170",
+        "icao": "E170",
+        "icao24": "407E9F"
+      },
       "live": null,
       "Time_Category": "Night hour arrivals",
       "Flight_Number": "1080"
     },
     {
       "flight_date": "2024-10-30",
-      "flight_status": "scheduled",
+      "flight_status": "landed",
       "departure": {
         "airport": "Bristol",
         "timezone": "Europe/London",
@@ -7598,21 +7035,12 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "PH-NXC",
-        "iata": "E295",
-        "icao": "E295",
-        "icao24": "4863DB"
+        "registration": "PH-EXY",
+        "iata": "E190",
+        "icao": "E190",
+        "icao24": "485875"
       },
-      "live": {
-        "updated": "2024-10-30T19:51:08+00:00",
-        "latitude": 52.2326,
-        "longitude": 4.5895,
-        "altitude": 533.4,
-        "direction": 54,
-        "speed_horizontal": 350.028,
-        "speed_vertical": 0,
-        "is_ground": false
-      },
+      "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "1082"
     },
@@ -7725,61 +7153,6 @@
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "1052"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "active",
-      "departure": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": null,
-        "gate": null,
-        "delay": 260,
-        "scheduled": "2024-10-30T13:40:00+00:00",
-        "estimated": "2024-10-30T13:40:00+00:00",
-        "actual": null,
-        "estimated_runway": null,
-        "actual_runway": null
-      },
-      "arrival": {
-        "airport": "Schiphol",
-        "timezone": "Europe/Amsterdam",
-        "iata": "AMS",
-        "icao": "EHAM",
-        "terminal": "3",
-        "gate": "D29",
-        "baggage": null,
-        "delay": null,
-        "scheduled": "2024-10-30T16:00:00+00:00",
-        "estimated": "2024-10-30T16:00:00+00:00",
-        "actual": null,
-        "estimated_runway": null,
-        "actual_runway": null
-      },
-      "airline": {
-        "name": "Kenya Airways",
-        "iata": "KQ",
-        "icao": "KQA"
-      },
-      "flight": {
-        "number": "1054",
-        "iata": "KQ1054",
-        "icao": "KQA1054",
-        "codeshared": {
-          "airline_name": "klm",
-          "airline_iata": "kl",
-          "airline_icao": "klm",
-          "flight_number": "1080",
-          "flight_iata": "kl1080",
-          "flight_icao": "klm1080"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Night hour arrivals",
-      "Flight_Number": "1054"
     },
     {
       "flight_date": "2024-10-30",
@@ -7980,61 +7353,6 @@
     },
     {
       "flight_date": "2024-10-30",
-      "flight_status": "cancelled",
-      "departure": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": null,
-        "gate": null,
-        "delay": 15,
-        "scheduled": "2024-10-30T06:00:00+00:00",
-        "estimated": "2024-10-30T06:00:00+00:00",
-        "actual": null,
-        "estimated_runway": null,
-        "actual_runway": null
-      },
-      "arrival": {
-        "airport": "Schiphol",
-        "timezone": "Europe/Amsterdam",
-        "iata": "AMS",
-        "icao": "EHAM",
-        "terminal": "3",
-        "gate": "D27",
-        "baggage": null,
-        "delay": null,
-        "scheduled": "2024-10-30T08:20:00+00:00",
-        "estimated": "2024-10-30T08:20:00+00:00",
-        "actual": null,
-        "estimated_runway": null,
-        "actual_runway": null
-      },
-      "airline": {
-        "name": "Virgin Atlantic",
-        "iata": "VS",
-        "icao": "VIR"
-      },
-      "flight": {
-        "number": "6948",
-        "iata": "VS6948",
-        "icao": "VIR6948",
-        "codeshared": {
-          "airline_name": "eastern airways",
-          "airline_iata": "t3",
-          "airline_icao": "eze",
-          "flight_number": "1074",
-          "flight_iata": "t31074",
-          "flight_icao": "eze1074"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Night hour arrivals",
-      "Flight_Number": "6948"
-    },
-    {
-      "flight_date": "2024-10-30",
       "flight_status": "landed",
       "departure": {
         "airport": "Bristol",
@@ -8087,116 +7405,6 @@
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "6949"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "active",
-      "departure": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": null,
-        "gate": null,
-        "delay": 260,
-        "scheduled": "2024-10-30T13:40:00+00:00",
-        "estimated": "2024-10-30T13:40:00+00:00",
-        "actual": null,
-        "estimated_runway": null,
-        "actual_runway": null
-      },
-      "arrival": {
-        "airport": "Schiphol",
-        "timezone": "Europe/Amsterdam",
-        "iata": "AMS",
-        "icao": "EHAM",
-        "terminal": "3",
-        "gate": "D29",
-        "baggage": null,
-        "delay": null,
-        "scheduled": "2024-10-30T16:00:00+00:00",
-        "estimated": "2024-10-30T16:00:00+00:00",
-        "actual": null,
-        "estimated_runway": null,
-        "actual_runway": null
-      },
-      "airline": {
-        "name": "Virgin Atlantic",
-        "iata": "VS",
-        "icao": "VIR"
-      },
-      "flight": {
-        "number": "6951",
-        "iata": "VS6951",
-        "icao": "VIR6951",
-        "codeshared": {
-          "airline_name": "klm",
-          "airline_iata": "kl",
-          "airline_icao": "klm",
-          "flight_number": "1080",
-          "flight_iata": "kl1080",
-          "flight_icao": "klm1080"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Night hour arrivals",
-      "Flight_Number": "6951"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "scheduled",
-      "departure": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": null,
-        "gate": "11",
-        "delay": 98,
-        "scheduled": "2024-10-30T17:20:00+00:00",
-        "estimated": "2024-10-30T17:20:00+00:00",
-        "actual": "2024-10-30T18:57:00+00:00",
-        "estimated_runway": "2024-10-30T18:57:00+00:00",
-        "actual_runway": "2024-10-30T18:57:00+00:00"
-      },
-      "arrival": {
-        "airport": "Schiphol",
-        "timezone": "Europe/Amsterdam",
-        "iata": "AMS",
-        "icao": "EHAM",
-        "terminal": "3",
-        "gate": "A08",
-        "baggage": "009",
-        "delay": 74,
-        "scheduled": "2024-10-30T19:40:00+00:00",
-        "estimated": "2024-10-30T19:40:00+00:00",
-        "actual": null,
-        "estimated_runway": null,
-        "actual_runway": null
-      },
-      "airline": {
-        "name": "Virgin Atlantic",
-        "iata": "VS",
-        "icao": "VIR"
-      },
-      "flight": {
-        "number": "6952",
-        "iata": "VS6952",
-        "icao": "VIR6952",
-        "codeshared": {
-          "airline_name": "klm",
-          "airline_iata": "kl",
-          "airline_icao": "klm",
-          "flight_number": "1082",
-          "flight_iata": "kl1082",
-          "flight_icao": "klm1082"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "6952"
     },
     {
       "flight_date": "2024-10-30",
@@ -8502,10 +7710,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-EGD",
-        "iata": "B738",
-        "icao": "B738",
-        "icao24": "4CA8AF"
+        "registration": "EI-IHI",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "4CADF4"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -8555,10 +7763,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "G-EZWU",
-        "iata": "A320",
-        "icao": "A320",
-        "icao24": "406A95"
+        "registration": "G-UZMA",
+        "iata": "A21N",
+        "icao": "A21N",
+        "icao24": "4075DF"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -8974,10 +8182,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "G-EZOP",
-        "iata": "A320",
-        "icao": "A320",
-        "icao24": "406D95"
+        "registration": "G-UZHW",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "40768B"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -9100,7 +8308,7 @@
     },
     {
       "flight_date": "2024-10-30",
-      "flight_status": "scheduled",
+      "flight_status": "landed",
       "departure": {
         "airport": "Bristol",
         "timezone": "Europe/London",
@@ -9147,16 +8355,7 @@
         "icao": "B738",
         "icao24": "4070E9"
       },
-      "live": {
-        "updated": "2024-10-30T19:04:14+00:00",
-        "latitude": 36.7224,
-        "longitude": 28.7905,
-        "altitude": 0,
-        "direction": 284,
-        "speed_horizontal": 0,
-        "speed_vertical": 0,
-        "is_ground": true
-      },
+      "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "1817"
     },
@@ -9204,10 +8403,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "G-EZWH",
-        "iata": "A320",
-        "icao": "A320",
-        "icao24": "406909"
+        "registration": "G-UZHJ",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "407569"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -9420,10 +8619,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-FSL",
+        "registration": "EI-HDH",
         "iata": "AT76",
         "icao": "AT76",
-        "icao24": "4CA6B2"
+        "icao24": "4CAD6D"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -9473,124 +8672,14 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-HAT",
-        "iata": "B38M",
-        "icao": "B38M",
-        "icao24": "4CA92B"
+        "registration": "EI-EMK",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "4CA853"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
       "Flight_Number": "505"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "landed",
-      "departure": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": null,
-        "gate": null,
-        "delay": 7,
-        "scheduled": "2024-10-30T08:20:00+00:00",
-        "estimated": "2024-10-30T08:20:00+00:00",
-        "actual": "2024-10-30T08:26:00+00:00",
-        "estimated_runway": "2024-10-30T08:26:00+00:00",
-        "actual_runway": "2024-10-30T08:26:00+00:00"
-      },
-      "arrival": {
-        "airport": "Dublin International",
-        "timezone": "Europe/Dublin",
-        "iata": "DUB",
-        "icao": "EIDW",
-        "terminal": "2",
-        "gate": "BUS",
-        "baggage": "2",
-        "delay": null,
-        "scheduled": "2024-10-30T09:40:00+00:00",
-        "estimated": "2024-10-30T09:40:00+00:00",
-        "actual": "2024-10-30T09:23:00+00:00",
-        "estimated_runway": "2024-10-30T09:23:00+00:00",
-        "actual_runway": "2024-10-30T09:23:00+00:00"
-      },
-      "airline": {
-        "name": "Qatar Airways",
-        "iata": "QR",
-        "icao": "QTR"
-      },
-      "flight": {
-        "number": "8247",
-        "iata": "QR8247",
-        "icao": "QTR8247",
-        "codeshared": {
-          "airline_name": "aer lingus",
-          "airline_iata": "ei",
-          "airline_icao": "ein",
-          "flight_number": "3281",
-          "flight_iata": "ei3281",
-          "flight_icao": "ein3281"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "8247"
-    },
-    {
-      "flight_date": "2024-10-30",
-      "flight_status": "landed",
-      "departure": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": null,
-        "gate": null,
-        "delay": 4,
-        "scheduled": "2024-10-30T19:40:00+00:00",
-        "estimated": "2024-10-30T19:40:00+00:00",
-        "actual": "2024-10-30T19:44:00+00:00",
-        "estimated_runway": "2024-10-30T19:44:00+00:00",
-        "actual_runway": "2024-10-30T19:44:00+00:00"
-      },
-      "arrival": {
-        "airport": "Dublin International",
-        "timezone": "Europe/Dublin",
-        "iata": "DUB",
-        "icao": "EIDW",
-        "terminal": "2",
-        "gate": "BUS",
-        "baggage": "2",
-        "delay": null,
-        "scheduled": "2024-10-30T21:00:00+00:00",
-        "estimated": "2024-10-30T21:00:00+00:00",
-        "actual": "2024-10-30T20:38:00+00:00",
-        "estimated_runway": "2024-10-30T20:38:00+00:00",
-        "actual_runway": "2024-10-30T20:38:00+00:00"
-      },
-      "airline": {
-        "name": "Qatar Airways",
-        "iata": "QR",
-        "icao": "QTR"
-      },
-      "flight": {
-        "number": "8282",
-        "iata": "QR8282",
-        "icao": "QTR8282",
-        "codeshared": {
-          "airline_name": "aer lingus",
-          "airline_iata": "ei",
-          "airline_icao": "ein",
-          "flight_number": "3287",
-          "flight_iata": "ei3287",
-          "flight_icao": "ein3287"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Regular arrivals",
-      "Flight_Number": "8282"
     },
     {
       "flight_date": "2024-10-30",
@@ -9790,10 +8879,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "G-EZWU",
+        "registration": "G-EZUW",
         "iata": "A320",
         "icao": "A320",
-        "icao24": "406A95"
+        "icao24": "406670"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -10108,10 +9197,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "G-UZHT",
-        "iata": "A20N",
-        "icao": "A20N",
-        "icao24": "407688"
+        "registration": "G-EZWS",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "406A93"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -10852,61 +9941,6 @@
     },
     {
       "flight_date": "2024-10-30",
-      "flight_status": "active",
-      "departure": {
-        "airport": "Bristol",
-        "timezone": "Europe/London",
-        "iata": "BRS",
-        "icao": "EGGD",
-        "terminal": null,
-        "gate": null,
-        "delay": null,
-        "scheduled": "2024-10-30T18:00:00+00:00",
-        "estimated": "2024-10-30T18:00:00+00:00",
-        "actual": null,
-        "estimated_runway": null,
-        "actual_runway": null
-      },
-      "arrival": {
-        "airport": "Jersey",
-        "timezone": "Europe/Jersey",
-        "iata": "JER",
-        "icao": "EGJJ",
-        "terminal": null,
-        "gate": null,
-        "baggage": null,
-        "delay": null,
-        "scheduled": "2024-10-30T19:00:00+00:00",
-        "estimated": "2024-10-30T19:00:00+00:00",
-        "actual": null,
-        "estimated_runway": null,
-        "actual_runway": null
-      },
-      "airline": {
-        "name": null,
-        "iata": "X1",
-        "icao": "X1"
-      },
-      "flight": {
-        "number": "4033",
-        "iata": "X14033",
-        "icao": "X14033",
-        "codeshared": {
-          "airline_name": "blue islands",
-          "airline_iata": "si",
-          "airline_icao": "bci",
-          "flight_number": "4495",
-          "flight_iata": "si4495",
-          "flight_icao": "bci4495"
-        }
-      },
-      "aircraft": null,
-      "live": null,
-      "Time_Category": "Night hour arrivals",
-      "Flight_Number": "4033"
-    },
-    {
-      "flight_date": "2024-10-30",
       "flight_status": "scheduled",
       "departure": {
         "airport": "Bristol",
@@ -10997,10 +10031,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-EXD",
-        "iata": "B738",
-        "icao": "B738",
-        "icao24": "4CAA5F"
+        "registration": "EI-HAT",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "4CA92B"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -11485,10 +10519,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-FSL",
+        "registration": "EI-HDH",
         "iata": "AT76",
         "icao": "AT76",
-        "icao24": "4CA6B2"
+        "icao24": "4CAD6D"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -11538,10 +10572,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-HAT",
-        "iata": "B38M",
-        "icao": "B38M",
-        "icao24": "4CA92B"
+        "registration": "EI-ENG",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "4CA893"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -11798,10 +10832,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "EI-EGD",
+        "registration": "EI-DCL",
         "iata": "B738",
         "icao": "B738",
-        "icao24": "4CA8AF"
+        "icao24": "4CA242"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -11957,10 +10991,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "OE-LQM",
+        "registration": "OE-LKF",
         "iata": "A319",
         "icao": "A319",
-        "icao24": "440589"
+        "icao24": "440582"
       },
       "live": null,
       "Time_Category": "Regular arrivals",
@@ -12178,10 +11212,10 @@
         "codeshared": null
       },
       "aircraft": {
-        "registration": "G-UZHJ",
+        "registration": "G-UZHA",
         "iata": "A20N",
         "icao": "A20N",
-        "icao24": "407569"
+        "icao24": "4072C7"
       },
       "live": null,
       "Time_Category": "Regular arrivals",

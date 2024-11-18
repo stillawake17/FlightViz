@@ -1,7 +1,7 @@
 [
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "EDI",
             "icaoCode": "EGPH",
@@ -29,7 +29,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "DBV",
             "icaoCode": "LDDU",
@@ -57,7 +57,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "MLA",
             "icaoCode": "LMML",
@@ -85,7 +85,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "ACE",
             "icaoCode": "GCRR",
@@ -117,20 +117,6 @@
         "departure": {
             "iataCode": "FAO",
             "icaoCode": "LPFR",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
             "actualTime": ""
         },
         "arrival": {
@@ -197,7 +183,7 @@
     },
     {
         "type": "arrival",
-        "status": "active",
+        "status": "landed",
         "departure": {
             "iataCode": "CPH",
             "icaoCode": "EKCH",
@@ -211,7 +197,7 @@
     },
     {
         "type": "arrival",
-        "status": "active",
+        "status": "landed",
         "departure": {
             "iataCode": "VLC",
             "icaoCode": "LEVC",
@@ -253,38 +239,10 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "LIS",
             "icaoCode": "LPPT",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "arrival",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
             "actualTime": ""
         },
         "arrival": {
@@ -309,7 +267,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "NCL",
             "icaoCode": "EGNT",
@@ -337,7 +295,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "FAO",
             "icaoCode": "LPFR",
@@ -421,7 +379,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "FNC",
             "icaoCode": "LPMA",
@@ -435,7 +393,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "FNC",
             "icaoCode": "LPMA",
@@ -449,7 +407,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "FUE",
             "icaoCode": "GCFV",
@@ -491,7 +449,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "IBZ",
             "icaoCode": "LEIB",
@@ -519,7 +477,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "ALC",
             "icaoCode": "LEAL",
@@ -533,7 +491,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "FUE",
             "icaoCode": "GCFV",
@@ -617,7 +575,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "TLS",
             "icaoCode": "LFBO",
@@ -701,7 +659,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "KGS",
             "icaoCode": "LGKO",
@@ -715,7 +673,7 @@
     },
     {
         "type": "arrival",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "VCE",
             "icaoCode": "LIPZ",
@@ -771,7 +729,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -799,7 +757,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -911,62 +869,6 @@
     },
     {
         "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "active",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
-            "iataCode": "AMS",
-            "icaoCode": "EHAM",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
         "status": "scheduled",
         "departure": {
             "iataCode": "BRS",
@@ -995,7 +897,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1009,7 +911,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1079,7 +981,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1184,20 +1086,6 @@
             "actualTime": ""
         },
         "arrival": {
-            "iataCode": "DUB",
-            "icaoCode": "EIDW",
-            "actualTime": ""
-        }
-    },
-    {
-        "type": "departure",
-        "status": "scheduled",
-        "departure": {
-            "iataCode": "BRS",
-            "icaoCode": "EGGD",
-            "actualTime": ""
-        },
-        "arrival": {
             "iataCode": "EDI",
             "icaoCode": "EGPH",
             "actualTime": ""
@@ -1205,7 +1093,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1289,7 +1177,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1373,7 +1261,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1429,7 +1317,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1443,7 +1331,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1457,7 +1345,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1471,7 +1359,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1499,7 +1387,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1541,7 +1429,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1569,7 +1457,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1625,7 +1513,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1695,7 +1583,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1709,7 +1597,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1723,7 +1611,7 @@
     },
     {
         "type": "departure",
-        "status": "active",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",
@@ -1737,7 +1625,7 @@
     },
     {
         "type": "departure",
-        "status": "scheduled",
+        "status": "landed",
         "departure": {
             "iataCode": "BRS",
             "icaoCode": "EGGD",

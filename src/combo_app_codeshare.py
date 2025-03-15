@@ -45,7 +45,7 @@ def fetch_data(date, is_arrival=True, filename=None):
 
 
 # Get yesterday's date by deleting one day in days=1
-yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+yesterday = (datetime.now() - timedelta(days=13)).strftime("%Y-%m-%d")
 
 # Fetch and save arrival data
 arrival_filename = f'EGGD_arrivals_{yesterday}.json'
@@ -86,14 +86,39 @@ try:
 except FileNotFoundError as e:
     print(f"Error: {e}")
 
-# Function to convert time formats
+# Function to convert time formats and return None if the time string is empty
 def convert_time_format(time_str):
     if time_str:
-        # Parse the datetime from the new format
-        dt = datetime.fromisoformat(time_str)
-        # Format it to the old format (without timezone information)
-        return dt.strftime("%Y-%m-%dt%H:%M:%S.000")
-    return ""
+        try:
+            # Parse the datetime from the new format
+            dt = datetime.fromisoformat(time_str)
+            # Format it to the old format (without timezone information)
+            return dt.strftime("%Y-%m-%dt%H:%M:%S.000")
+        except ValueError as e:
+            print(f"Error converting time: {e} for time_str: {time_str}")
+            return None
+    return None
+
+# Function to determine time category based on hour
+def get_time_category(time_str):
+    if not time_str:
+        return "unknown"  # Return unknown for missing time data
+    
+    try:
+        # Extract hour from the time string
+        time_obj = datetime.strptime(time_str, "%Y-%m-%dt%H:%M:%S.000")
+        hour = time_obj.hour
+        
+        # Categorize based on hour
+        if 6 <= hour < 23:  # 6 AM to 10:59 PM
+            return "regular"
+        elif 23 <= hour < 24 or 0 <= hour < 6:  # 11 PM to 5:59 AM
+            return "night"
+        else:
+            return "shoulder"  # This shouldn't happen with valid hours, but included for completeness
+    except ValueError as e:
+        print(f"Error determining time category: {e} for time_str: {time_str}")
+        return "unknown"
 
 # Function to convert to the old API format, adjusting for codeshare issues
 def convert_to_old_api_format(flight_data, flight_type):
@@ -112,19 +137,36 @@ def convert_to_old_api_format(flight_data, flight_type):
         departure_info = flight.get("departure", {})
         arrival_info = flight.get("arrival", {})
 
+        # Convert times, using actual times first, then scheduled times as fallback
+        dep_actual_time = convert_time_format(departure_info.get("actual"))
+        arr_actual_time = convert_time_format(arrival_info.get("actual"))
+        
+        # Fallback to scheduled times if actual times are not available
+        dep_time = dep_actual_time if dep_actual_time else convert_time_format(departure_info.get("scheduled"))
+        arr_time = arr_actual_time if arr_actual_time else convert_time_format(arrival_info.get("scheduled"))
+
+        # Determine time category based on the available time data
+        # For arrivals, use arrival time; for departures, use departure time
+        time_to_categorize = arr_time if flight_type == "arrival" else dep_time
+        time_category = get_time_category(time_to_categorize)
+
         old_api_flight = {
             "type": flight_type,
             "status": flight_status,
             "departure": {
                 "iataCode": departure_info.get("iata", ""),
                 "icaoCode": departure_info.get("icao", ""),
-                "actualTime": convert_time_format(departure_info.get("actual", ""))
+                "actualTime": dep_actual_time if dep_actual_time else "",
+                "scheduledTime": convert_time_format(departure_info.get("scheduled", "")) or ""
             },
             "arrival": {
                 "iataCode": arrival_info.get("iata", ""),
                 "icaoCode": arrival_info.get("icao", ""),
-                "actualTime": convert_time_format(arrival_info.get("actual", ""))
-            }
+                "actualTime": arr_actual_time if arr_actual_time else "",
+                "scheduledTime": convert_time_format(arrival_info.get("scheduled", "")) or ""
+            },
+            "timeCategory": time_category,
+            "hasMissingTimeData": dep_time is None or arr_time is None
         }
 
         # Add primary flight number to the processed list
@@ -132,6 +174,15 @@ def convert_to_old_api_format(flight_data, flight_type):
         processed_flights.add(flight_number)
 
         old_api_format.append(old_api_flight)
+
+    # Log summary of time categories
+    categories = {"regular": 0, "night": 0, "shoulder": 0, "unknown": 0}
+    for flight in old_api_format:
+        category = flight.get("timeCategory", "unknown")
+        categories[category] = categories.get(category, 0) + 1
+    
+    print(f"Time categories for {flight_type}s: {categories}")
+    print(f"Flights with missing time data: {sum(1 for f in old_api_format if f.get('hasMissingTimeData', False))}")
 
     return old_api_format
 
@@ -157,6 +208,8 @@ converted_data = converted_arrivals + converted_departures
 # Check if conversion produced any results
 if not converted_data:
     print("Conversion resulted in an empty list. Please check the conversion logic.")
+else:
+    print(f"Successfully converted {len(converted_data)} flights")
 
 # Write the converted data to a file
 with open(output_file_path, 'w') as file:

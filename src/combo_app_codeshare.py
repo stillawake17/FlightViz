@@ -45,7 +45,7 @@ def fetch_data(date, is_arrival=True, filename=None):
 
 
 # Get yesterday's date by deleting one day in days=1
-yesterday = (datetime.now() - timedelta(days=13)).strftime("%Y-%m-%d")
+yesterday = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
 
 # Fetch and save arrival data
 arrival_filename = f'EGGD_arrivals_{yesterday}.json'
@@ -93,7 +93,7 @@ def convert_time_format(time_str):
             # Parse the datetime from the new format
             dt = datetime.fromisoformat(time_str)
             # Format it to the old format (without timezone information)
-            return dt.strftime("%Y-%m-%dt%H:%M:%S.000")
+            return dt.strftime("%Y-%m-%dT%H:%M:%S.000")
         except ValueError as e:
             print(f"Error converting time: {e} for time_str: {time_str}")
             return None
@@ -106,7 +106,7 @@ def get_time_category(time_str):
     
     try:
         # Extract hour from the time string
-        time_obj = datetime.strptime(time_str, "%Y-%m-%dt%H:%M:%S.000")
+        time_obj = datetime.strptime(time_str, "%Y-%m-%dT%H:%M:%S.000")
         hour = time_obj.hour
         
         # Categorize based on hour
@@ -244,9 +244,9 @@ else:
     print(f"File {file2_path} read successfully with {len(data2)} records")
 
 # Append and save only if both files are read successfully
-if data1 is not None and data2 is not None:
-    combined_data = data1 + data2
-    output_path = 'data/combined_strip.json'
-    with open(output_path, 'w') as file:
-        json.dump(combined_data, file, indent=4)
-    print(f"Combined data saved successfully with {len(combined_data)} records")
+# if data1 is not None and data2 is not None:
+    # combined_data = data1 + data2
+    # output_path = 'data/combined_strip.json'
+    # with open(output_path, 'w') as file:
+        # json.dump(combined_data, file, indent=4)
+    # print(f"Combined data saved successfully with {len(combined_data)} records")

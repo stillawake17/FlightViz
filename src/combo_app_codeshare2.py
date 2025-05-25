@@ -234,6 +234,42 @@ class FlightDataCollector:
         
         return summary
 
+def create_index(self):
+    """
+    Create an index of all available data files.
+    This helps the web interface know which files are available.
+    """
+    index = []
+    for filename in os.listdir(self.data_dir):
+        if filename.startswith(self.airport_code) and filename.endswith('.json') and not filename.endswith('_month_.json'):
+            # Extract date from filename - handle both formats
+            if '_combined_' in filename:
+                # Format: EGGD_combined_2025-05-23.json
+                date_str = filename.split('_combined_')[1].split('.')[0]
+            else:
+                # Format: EGGD_2025-05-23.json
+                date_str = filename.split('_')[1].split('.')[0]
+            
+            # Validate date format
+            try:
+                datetime.strptime(date_str, '%Y-%m-%d')
+                index.append({
+                    "date": date_str,
+                    "url": filename,
+                    "airport": self.airport_code
+                })
+            except ValueError:
+                print(f"Skipping file with invalid date format: {filename}")
+    
+    # Sort by date
+    index.sort(key=lambda x: x["date"])
+    
+    # Write index file
+    with open(os.path.join(self.data_dir, "index.json"), 'w') as f:
+        json.dump(index, f, indent=2)
+    
+    print(f"Created index with {len(index)} data files")
+
 # Main execution
 if __name__ == "__main__":
     # Create collector with your airport code
@@ -244,3 +280,5 @@ if __name__ == "__main__":
     
     # You can also specify a date
     # collector.collect_daily_data('2025-03-16')
+
+   

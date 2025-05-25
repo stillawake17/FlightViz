@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bristol Airport Flight Dashboard</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js"></script>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .dashboard {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+	
+	#timeCategories {
+      max-width: 400px !important;
+      max-height: 300px !important;
+    }
+
+	#nightFlightsTrend {
+      max-width: 400px !important;
+      max-height: 300px !important;
+    }
+
+    .chart-container {
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      background: white;
+    }
+    .chart-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .chart-column {
+      flex: 1;
+      min-width: 45%;
+    }
+    .full-width {
+      width: 100%;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #666;
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+    .date-selector {
+      margin-bottom: 20px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 4px;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    .date-selector input {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .date-selector button {
+      padding: 8px 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .date-selector button:hover {
+      background: #0056b3;
+    }
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      font-style: italic;
+      color: #666;
+    }
+    .status-controls {
+      margin-bottom: 20px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 4px;
+    }
+    .status-toggle {
+      margin-bottom: 15px;
+    }
+    .toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .status-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .summary-card {
+      background: white;
+      padding: 15px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .summary-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .error-message {
+      background: #fff3cd;
+      color: #856404;
+      padding: 15px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      display: none;
+    }
+    .tabbed-chart {
+      display: none;
+    }
+    .tab-active {
+      display: block;
+    }
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .tab {
+      padding: 8px 16px;
+      background: #eee;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .tab.active {
+      background: #007bff;
+      color: white;
+    }
+    .export-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .export-btn:hover {
+      background-color: #218838;
+    }
+	
+	.flight-count-section {
+  margin-bottom: 15px;
+}
+.flight-count-section h3 {
+  font-size: 1em;
+  margin: 0 0 8px 0;
+  color: #555;
+}
+.count-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.count-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+.count-label {
+  font-weight: normal;
+}
+.count-value {
+  font-weight: bold;
+}
+.count-total {
+  font-weight: bold;
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px dashed #ddd;
+}
+    .delays-container {
+      max-width: 800px;
+      margin: 0 auto;
+      max-height: 150px;
+    }
+    #delays {
+      max-height: 150px;
+    }
+    .night-flights-list {
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 10px;
+      font-size: 0.9em;
+    }
+    .data-quality-indicator {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+    .quality-good { background-color: #d1e7dd; color: #0f5132; }
+    .quality-warning { background-color: #fff3cd; color: #856404; }
+    .quality-danger { background-color: #f8d7da; color: #721c24; }
+    .flight-count-indicator {
+      background-color: #e2e8f0;
+      padding: 15px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Bristol Airport Flight Dashboard</h1>
+
+    <div class="date-selector">
+      <label>Date Range:</label>
+      <input type="date" id="startDate" />
+      <input type="date" id="endDate" />
+      <button onclick="loadDataRange()">Load Data</button>
+      <button onclick="exportFlightData()" class="export-btn">Download Flight Data</button>
+      <div id="loading" class="loading">Loading data...</div>
+    </div>
+
+    <div class="status-controls">
+      <div class="status-toggle">
+        <label class="toggle-label">
+          <input type="checkbox" id="showAllFlights" onchange="loadDataRange()" />
+          Show All Flights (including codeshared flights)
+        </label>
+      </div>
+      <div class="status-summary">
+        <div class="summary-card">
+          <div class="summary-title">Flight Status Breakdown</div>
+          <div id="statusBreakdown"></div>
+        </div>
+        
+        <div class="summary-card">
+  <div class="summary-title">Flight Counts</div>
+  <div id="flightCountSummary">
+    <div class="flight-count-section">
+      <h3>Total Flights</h3>
+      <div id="totalFlightCount"></div>
+    </div>
+    <div class="flight-count-section">
+      <h3>By Status</h3>
+      <div id="flightStatusCount"></div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div id="errorMessage" class="error-message"></div>
+    <div id="dataQualityIndicator" class="data-quality-indicator"></div>
+    <div id="flightCountIndicator" class="flight-count-indicator"></div>
+
+    <div class="night-flights-summary">
+      <h2>Night Flights Analysis</h2>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="summary-title">Night Flights by Airline</div>
+          <div id="nightAirlinesStats" class="night-flights-list"></div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-title">Night Flight Origins</div>
+          <div id="nightOriginsStats" class="night-flights-list"></div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-title">Night Flights Trend</div>
+          <canvas id="nightFlightsTrend" style="height:300px;"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-container full-width">
+      <h2>Daily Flight Distribution by Airline</h2>
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('arrivals')">Arrivals</button>
+        <button class="tab" onclick="showTab('departures')">Departures</button>
+      </div>
+      <div id="arrivalsChart" class="tabbed-chart tab-active">
+        <canvas id="airlineArrivals"></canvas>
+      </div>
+      <div id="departuresChart" class="tabbed-chart">
+        <canvas id="airlineDepartures"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-row">
+      <div class="chart-column">
+        <div class="chart-container">
+          <h2>Top Arrival Origins</h2>
+          <canvas id="originAirports"></canvas>
+        </div>
+      </div>
+      <div class="chart-column">
+        <div class="chart-container">
+          <h2>Top Departure Destinations</h2>
+          <canvas id="destinationAirports"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <h2>Flight Time Categories Distribution</h2>
+      <canvas id="timeCategories"></canvas>
+    </div>
+	
+	<div class="chart-container">
+      <h2>Scheduled vs Actual Time Difference</h2>
+      <canvas id="delayDifference"></canvas>
+    </div>
+  </div>
+
+  <div class="delays-container">
+    <div class="chart-container">
+      <h2>Flight Delays (>15 minutes)</h2>
+      <canvas id="delays"></canvas>
+    </div>
+	</div>
+	<div class="chart-container">
+  <h2>Flights Pushed Into Night Hours Due to Delays</h2>
+  <div class="summary-card">
+    <div id="delayedNightFlights" class="night-flights-list"></div>
+  </div>
+  <canvas id="delayedNightFlightsChart"></canvas>
+</div>
+	
+  
+
+<script>
+// === Global Variables ===
+let flightStatusData = { 
+  total: { arrivals: 0, departures: 0 }, 
+  status: { arrivals: {}, departures: {} }, 
+  missingTimes: { arrivals: 0, departures: 0 }
+};
+let aggregatedData = {};
+let charts = {};
+const airportTimeZone = "Europe/London";
+
+// === Helper Functions ===
+function setDefaultDates() {
+  const end = new Date();
+  const start = new Date();
+  start.setDate(end.getDate() - 7);
+  document.getElementById('startDate').valueAsDate = start;
+  document.getElementById('endDate').valueAsDate = end;
+}
+
+function showError(message) {
+  const el = document.getElementById('errorMessage');
+  el.textContent = message;
+  el.style.display = 'block';
+  setTimeout(() => el.style.display = 'none', 5000);
+}
+
+function computeDelay(sched, act) {
+  return (new Date(act) - new Date(sched)) / 60000;
+}
+
+function calculateStats(delays) {
+  if (!delays.length) return { avg: 0, median: 0, variance: 0 };
+  const avg = delays.reduce((sum, d) => sum + d, 0) / delays.length;
+  const sorted = [...delays].sort((a, b) => a - b);
+  const mid = Math.floor(sorted.length / 2);
+  const median = sorted.length % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid];
+  const variance = delays.reduce((sum, d) => sum + (d - avg) ** 2, 0) / delays.length;
+  return { avg, median, variance };
+}
+
+// Add this function to your code
+function diagnoseFlightCounts() {
+  console.log("=== FLIGHT COUNT DIAGNOSTIC ===");
+  
+  // 1. Examine raw data counts
+  if (window.currentData) {
+    let rawTotal = { arrivals: 0, departures: 0 };
+    window.currentData.forEach(({ date, data }) => {
+      rawTotal.arrivals += (data.arrivals || []).length;
+      rawTotal.departures += (data.departures || []).length;
+    });
+    
+    console.log("Raw data counts:");
+    console.log(`- Arrivals: ${rawTotal.arrivals}`);
+    console.log(`- Departures: ${rawTotal.departures}`);
+    console.log(`- Total: ${rawTotal.arrivals + rawTotal.departures}`);
+  } else {
+    console.log("window.currentData not available");
+  }
+  
+  // 2. Examine flightStatusData
+  if (window.flightStatusData) {
+    console.log("\nflightStatusData counts:");
+    console.log(`- Arrivals: ${flightStatusData.total.arrivals}`);
+    console.log(`- Departures: ${flightStatusData.total.departures}`);
+    console.log(`- Total: ${flightStatusData.total.arrivals + flightStatusData.total.departures}`);
+    
+    // Status breakdown
+    console.log("\nStatus breakdown (arrivals):");
+    Object.entries(flightStatusData.status.arrivals).forEach(([status, count]) => {
+      console.log(`- ${status}: ${count}`);
+    });
+    
+    console.log("\nStatus breakdown (departures):");
+    Object.entries(flightStatusData.status.departures).forEach(([status, count]) => {
+      console.log(`- ${status}: ${count}`);
+    });
+  } else {
+    console.log("flightStatusData not available");
+  }
+  
+  // 3. Examine aggregatedData
+  if (window.aggregatedData && window.aggregatedData.timeCategories) {
+    console.log("\naggregatedData time categories:");
+    
+    // For arrivals
+    console.log("Arrivals by category:");
+    let arrivalTotal = 0;
+    Object.entries(aggregatedData.timeCategories.arrivals).forEach(([cat, count]) => {
+      console.log(`- ${cat}: ${count}`);
+      arrivalTotal += count;
+    });
+    console.log(`Total categorized arrivals: ${arrivalTotal}`);
+    
+    // For departures
+    console.log("\nDepartures by category:");
+    let departureTotal = 0;
+    Object.entries(aggregatedData.timeCategories.departures).forEach(([cat, count]) => {
+      console.log(`- ${cat}: ${count}`);
+      departureTotal += count;
+    });
+    console.log(`Total categorized departures: ${departureTotal}`);
+    
+    // Combined total
+    console.log(`\nTotal categorized flights: ${arrivalTotal + departureTotal}`);
+    
+    // Check if this matches what's displayed
+    const landedByTimeCategoryElement = document.getElementById('landedByTimeCategory');
+    if (landedByTimeCategoryElement) {
+      console.log("\nContent of landedByTimeCategory element:");
+      console.log(landedByTimeCategoryElement.textContent);
+    }
+  } else {
+    console.log("aggregatedData.timeCategories not available");
+  }
+  
+  // 4. Check if the aggregateData function is filtering by actual time
+  console.log("\nChecking for time filtering in aggregateData function:");
+  console.log("- The code checks for flight.arrival.actual or flight.departure.actual");
+  console.log("- Flights without actual time may be excluded from counts");
+  
+  console.log("\n=== END DIAGNOSTIC ===");
+}
+
+// To use this function, add it to your code and call it after data loads
+// For example, add this line at the end of your loadDataRange function:
+// diagnoseFlightCounts();
+
+function updateLandedSummary() {
+  let lb = document.getElementById('landedByTimeCategory');
+  
+  // If the element doesn't exist, create it
+  if (!lb) {
+    // Create a new summary card
+    const card = document.createElement('div');
+    card.className = 'summary-card';
+    
+    // Create title
+    const title = document.createElement('div');
+    title.className = 'summary-title';
+    title.textContent = 'Flight Breakdown by Time Category';
+    
+    // Create content container
+    lb = document.createElement('div');
+    lb.id = 'landedByTimeCategory';
+    
+    // Assemble the elements
+    card.appendChild(title);
+    card.appendChild(lb);
+    
+    // Add to the status summary
+    const statusSummary = document.querySelector('.status-summary');
+    if (statusSummary) {
+      statusSummary.appendChild(card);
+    } else {
+      console.warn('Could not find .status-summary element to append the new card');
+      return; // Exit if we can't find where to append
+    }
+  }
+  
+  let html = '<h3>Flights by Category</h3>';
+  
+  // Calculate totals for all flights
+  const totalRegular = (aggregatedData.timeCategories.arrivals['Regular flights'] || 0) +
+                      (aggregatedData.timeCategories.departures['Regular flights'] || 0);
+  const totalShoulder = (aggregatedData.timeCategories.arrivals['Shoulder hour flights'] || 0) +
+                        (aggregatedData.timeCategories.departures['Shoulder hour flights'] || 0);
+  const totalNight = (aggregatedData.timeCategories.arrivals['Night hour flights'] || 0) +
+                     (aggregatedData.timeCategories.departures['Night hour flights'] || 0);
+  const totalAll = totalRegular + totalShoulder + totalNight;
+  
+  // Calculate totals for landed flights
+  const landedRegular = (aggregatedData.landedByTimeCategory.arrivals['Regular flights'] || 0) +
+                        (aggregatedData.landedByTimeCategory.departures['Regular flights'] || 0);
+  const landedShoulder = (aggregatedData.landedByTimeCategory.arrivals['Shoulder hour flights'] || 0) +
+                         (aggregatedData.landedByTimeCategory.departures['Shoulder hour flights'] || 0);
+  const landedNight = (aggregatedData.landedByTimeCategory.arrivals['Night hour flights'] || 0) +
+                      (aggregatedData.landedByTimeCategory.departures['Night hour flights'] || 0);
+  const landedAll = landedRegular + landedShoulder + landedNight;
+  
+  // Display totals for all flights
+  html += '<table style="width:100%; margin-bottom:15px;">';
+  html += '<tr><th style="text-align:left;">Category</th><th>All Flights</th><th>Landed Only</th></tr>';
+  html += `<tr><td>Regular flights</td><td>${totalRegular}</td><td>${landedRegular}</td></tr>`;
+  html += `<tr><td>Shoulder hour flights</td><td>${totalShoulder}</td><td>${landedShoulder}</td></tr>`;
+  html += `<tr><td>Night hour flights</td><td>${totalNight}</td><td>${landedNight}</td></tr>`;
+  html += `<tr style="font-weight:bold;"><td>Total</td><td>${totalAll}</td><td>${landedAll}</td></tr>`;
+  html += '</table>';
+  
+  
+  
+  // Add detailed breakdown by type if needed
+  html += '<details>';
+  html += '<summary>Show Detailed Breakdown by Direction</summary>';
+  
+  html += '<h4>Arrivals by Category</h4>';
+  Object.entries(aggregatedData.timeCategories.arrivals).forEach(([cat,c]) => {
+    const landed = aggregatedData.landedByTimeCategory.arrivals[cat] || 0;
+    html += `<div>${cat}: ${c} total, ${landed} landed</div>`;
+  });
+  
+  html += '<h4>Departures by Category</h4>';
+  Object.entries(aggregatedData.timeCategories.departures).forEach(([cat,c]) => {
+    const landed = aggregatedData.landedByTimeCategory.departures[cat] || 0;
+    html += `<div>${cat}: ${c} total, ${landed} landed</div>`;
+  });
+  
+  html += '</details>';
+  
+  lb.innerHTML = html;
+}
+
+
+function categorizeFlight(timeStr, airportTimezone) {
+  if (!timeStr) return 'Unknown time';
+  // Use the provided timezone or fall back to Bristol's timezone
+  const timezone = airportTimezone || 'Europe/London';
+  const dt = luxon.DateTime.fromISO(timeStr, { zone: timezone });
+  if (!dt.isValid) return 'Unknown time';
+  
+  const h = dt.hour, m = dt.minute;
+  if (h === 23 && m < 30) return 'Shoulder hour flights';
+  if ((h === 23 && m >= 30) || h < 6) return 'Night hour flights';
+  if (h === 6) return 'Shoulder hour flights';
+  return 'Regular flights';
+}
+
+function updateDataQualityIndicator() {
+  const total = flightStatusData.total.arrivals + flightStatusData.total.departures;
+  const unkArr = aggregatedData.timeCategories.arrivals['Unknown time'] || 0;
+  const unkDep = aggregatedData.timeCategories.departures['Unknown time'] || 0;
+  const pct = total ? ((unkArr + unkDep) / total * 100).toFixed(1) : 0;
+  const ind = document.getElementById('dataQualityIndicator');
+  let cls = 'quality-good', msg = '<strong>Good:</strong> No missing time data.';
+  if (pct > 10) { cls = 'quality-danger'; msg = `<strong>Warning:</strong> ${pct}% missing/invalid time data.`; }
+  else if (pct > 5) { cls = 'quality-warning'; msg = `<strong>Note:</strong> ${pct}% missing/invalid time data.`; }
+  ind.className = `data-quality-indicator ${cls}`;
+  ind.innerHTML = msg;
+}
+
+function updateFlightCountIndicator() {
+  // Get total counts
+  const totalFlights = flightStatusData.total.arrivals + flightStatusData.total.departures;
+  
+  // Get counts of flights with actual times
+  const withActualTotal = flightStatusData.withActual ? 
+    (flightStatusData.withActual.arrivals + flightStatusData.withActual.departures) : 
+    (totalFlights - (flightStatusData.missingTimes.arrivals + flightStatusData.missingTimes.departures));
+  
+  // Get the element
+  const ind = document.getElementById('flightCountIndicator');
+  
+  // Create a more informative display
+  ind.innerHTML = `
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+      <div style="flex: 1; min-width: 280px;">
+        <h3 style="margin: 0 0 8px 0; font-size: 1.1em;">Total Flights (Airport Reported)</h3>
+        <div style="font-size: 1.6em; font-weight: bold;">${totalFlights}</div>
+        <div style="color: #666; margin-top: 5px; font-size: 0.9em;">
+          ${flightStatusData.total.arrivals} arrivals, ${flightStatusData.total.departures} departures
+        </div>
+      </div>
+      
+      <div style="flex: 1; min-width: 280px;">
+        <h3 style="margin: 0 0 8px 0; font-size: 1.1em;">Flights with Actual Times (Analyzed)</h3>
+        <div style="font-size: 1.6em; font-weight: bold;">${withActualTotal}</div>
+        <div style="color: #666; margin-top: 5px; font-size: 0.9em;">
+          ${flightStatusData.withActual.arrivals} arrivals, ${flightStatusData.withActual.departures} departures
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
+      <em>Note: Charts and time analysis only include flights with actual recorded times (${Math.round(withActualTotal/totalFlights*100)}% of total).</em>
+    </div>
+  `;
+}
+
+// === Improved Deduplication Function ===
+function improvedDedupeFlights(dataArray, includeCodeshares = false) {
+  // First, flatten all data into a single array for global deduplication
+  const allFlights = {
+    arrivals: [],
+    departures: []
+  };
+  
+  // Collect all flights
+  let totalBeforeFlattening = 0;
+  dataArray.forEach(({ date, data }) => {
+    ['arrivals', 'departures'].forEach(type => {
+      const flights = data[type] || [];
+      totalBeforeFlattening += flights.length;
+      
+      flights.forEach(flight => {
+        // Add date to each flight object for tracking if not present
+        flight.flightDate = flight.flightDate || date || flight.flight_date;
+        allFlights[type].push(flight);
+      });
+    });
+  });
+  
+  console.log(`Total flights before flattening: ${totalBeforeFlattening}`);
+  console.log(`Total flights before deduplication: ${allFlights.arrivals.length + allFlights.departures.length}`);
+  console.log(`- Arrivals: ${allFlights.arrivals.length}`);
+  console.log(`- Departures: ${allFlights.departures.length}`);
+  
+  // Now deduplicate across all dates
+  const deduped = {
+    arrivals: deduplicateFlightList(allFlights.arrivals, includeCodeshares, 'arrivals'),
+    departures: deduplicateFlightList(allFlights.departures, includeCodeshares, 'departures')
+  };
+  
+  const dedupePercent = 100 - (((deduped.arrivals.length + deduped.departures.length) / 
+                          (allFlights.arrivals.length + allFlights.departures.length)) * 100);
+  
+  console.log(`Total flights after deduplication: ${deduped.arrivals.length + deduped.departures.length}`);
+  console.log(`- Arrivals: ${deduped.arrivals.length}`);
+  console.log(`- Departures: ${deduped.departures.length}`);
+  console.log(`Deduplication reduced flights by ${dedupePercent.toFixed(2)}%`);
+  
+  // Group back by date
+  const result = [];
+  const flightsByDate = new Map();
+  
+  // Group arrivals by date
+  deduped.arrivals.forEach(flight => {
+    const date = flight.flightDate || flight.flight_date;
+    if (!date) {
+      console.warn('Flight missing date:', flight);
+      return;
+    }
+    
+    if (!flightsByDate.has(date)) {
+      flightsByDate.set(date, { arrivals: [], departures: [] });
+    }
+    flightsByDate.get(date).arrivals.push(flight);
+  });
+  
+  // Group departures by date
+  deduped.departures.forEach(flight => {
+    const date = flight.flightDate || flight.flight_date;
+    if (!date) {
+      console.warn('Flight missing date:', flight);
+      return;
+    }
+    
+    if (!flightsByDate.has(date)) {
+      flightsByDate.set(date, { arrivals: [], departures: [] });
+    }
+    flightsByDate.get(date).departures.push(flight);
+  });
+  
+  // Convert map to array format
+  flightsByDate.forEach((data, date) => {
+    result.push({ date, data });
+  });
+  
+  return result;
+}
+
+function deduplicateFlightList(flights, includeCodeshares, type) {
+  const seen = new Map();
+  const result = [];
+  let flightsProcessed = 0;
+  let flightsSkipped = 0;
+  let duplicatesFound = 0;
+  
+  console.log(`Starting deduplication of ${flights.length} ${type}`);
+  
+  flights.forEach(flight => {
+    // Skip null/undefined flights
+    if (!flight) {
+      flightsSkipped++;
+      return;
+    }
+    
+    try {
+      // Determine flight format
+      // We need to extract: flightNum, date, actual time, and optionally codeshare info
+      
+      let flightNum, date, actual, codeshared;
+      
+      // Get flight number - try various possible locations
+      if (flight.flight && flight.flight.number) {
+        // New API format with nested flight object
+        flightNum = flight.flight.number;
+        codeshared = flight.flight.codeshared;
+      } else if (flight.flight_number) {
+        // Old API format with direct flight_number
+        flightNum = flight.flight_number;
+      } else if (flight.flight_iata) {
+        // Alternative format with flight_iata
+        flightNum = flight.flight_iata;
+      } else if (flight.number) {
+        // Simple format with direct number
+        flightNum = flight.number;
+      } else {
+        // If we still can't find a flight number, create a synthetic one from other data
+        // This helps when flight number is missing but we have other identifying data
+        const airlineCode = 
+          (flight.airline && flight.airline.iata) || 
+          (flight.airline && flight.airline.icao) ||
+          flight.airline_iata || 
+          flight.airline_icao || 
+          'UNK';
+          
+        const depIata = 
+          (flight.departure && flight.departure.iata) || 
+          flight.departure_iata || 
+          'UNK';
+          
+        const arrIata = 
+          (flight.arrival && flight.arrival.iata) || 
+          flight.arrival_iata || 
+          'UNK';
+          
+        flightNum = `${airlineCode}_${depIata}_${arrIata}`;
+      }
+      
+      // Get flight date
+      date = flight.flightDate || flight.flight_date || '';
+      
+      // Get actual time based on type (arrival/departure)
+      if (type === 'arrivals') {
+        if (flight.arrival && flight.arrival.actual) {
+          actual = flight.arrival.actual;
+        } else if (flight.arrival_actual) {
+          actual = flight.arrival_actual;
+        }
+      } else { // departures
+        if (flight.departure && flight.departure.actual) {
+          actual = flight.departure.actual;
+        } else if (flight.departure_actual) {
+          actual = flight.departure_actual;
+        }
+      }
+      
+      // Skip flights without required data
+      if (!flightNum || !date) {
+        console.warn('Missing required flight data (number or date):', 
+          JSON.stringify({
+            flightNum, 
+            date, 
+            type
+          }));
+        flightsSkipped++;
+        return;
+      }
+      
+      // Add more details to key for better deduplication
+      // Include scheduled time and airport codes to distinguish truly unique flights
+      const scheduledTime = type === 'arrivals' 
+          ? (flight.arrival && flight.arrival.scheduled) 
+          : (flight.departure && flight.departure.scheduled);
+      
+      const depIcao = (flight.departure && flight.departure.icao) || 'UNK';
+      const arrIcao = (flight.arrival && flight.arrival.icao) || 'UNK';
+      
+      // Create a more robust unique key
+      const flight_key = `${date}|${flightNum}|${type}|${depIcao}|${arrIcao}|${scheduledTime}`;
+      
+      // Debug log for key creation
+      if (Math.random() < 0.01) { // Log 1% of flights for debugging
+        console.log(`Debug key: ${flight_key}`);
+      }
+      
+      // Only add if we haven't seen this flight before
+      if (!seen.has(flight_key)) {
+        seen.set(flight_key, flight);
+        result.push(flight);
+        flightsProcessed++;
+      } else {
+        duplicatesFound++;
+      }
+      
+      // Handle codeshare flights if requested and available
+      if (includeCodeshares && codeshared) {
+        const cs = codeshared;
+        // Skip if no flight number
+        if (!cs.flight_number && !cs.flight_iata) {
+          return;
+        }
+        
+        // Use flight number or flight iata for key
+        const csFlightNum = cs.flight_number || cs.flight_iata;
+        const csKey = `${date}|${csFlightNum}|${type}|${depIcao}|${arrIcao}|${scheduledTime}`;
+        
+        if (!seen.has(csKey)) {
+          // Create a deep copy of the flight object
+          const csFlight = JSON.parse(JSON.stringify(flight));
+          
+          // Update with codeshare info if using the nested format
+          if (csFlight.flight) {
+            csFlight.flight.number = csFlightNum;
+            csFlight.flight.iata = cs.flight_iata || '';
+            csFlight.flight.icao = cs.flight_icao || '';
+            
+            if (csFlight.airline) {
+              csFlight.airline.name = cs.airline_name || '';
+              csFlight.airline.iata = cs.airline_iata || '';
+              csFlight.airline.icao = cs.airline_icao || '';
+            }
+            
+            // Store original flight info
+            csFlight.flight.codeshared = {
+              airline_name: flight.airline && flight.airline.name || '',
+              airline_iata: flight.airline && flight.airline.iata || '',
+              airline_icao: flight.airline && flight.airline.icao || '',
+              flight_number: flight.flight && flight.flight.number || '',
+              flight_iata: flight.flight && flight.flight.iata || '',
+              flight_icao: flight.flight && flight.flight.icao || ''
+            };
+          }
+          
+          seen.set(csKey, csFlight);
+          result.push(csFlight);
+          flightsProcessed++;
+        }
+      }
+    } catch (error) {
+      console.error('Error processing flight:', error);
+      console.error('Problematic flight object:', JSON.stringify(flight).substring(0, 200) + '...');
+      flightsSkipped++;
+    }
+  });
+  
+  console.log(`${type} deduplication: processed ${flightsProcessed}, skipped ${flightsSkipped}, duplicates found ${duplicatesFound}`);
+  return result;
+}
+
+function updateFlightCountSummary() {
+  const totalFlightCount = document.getElementById('totalFlightCount');
+  const flightStatusCount = document.getElementById('flightStatusCount');
+  
+  // Clear existing content
+  totalFlightCount.innerHTML = '';
+  flightStatusCount.innerHTML = '';
+  
+  // Create a more structured layout with proper class names matching the original styling
+  const countContent = `
+    <div class="flight-count-section">
+      <h3>Total Reported Flights</h3>
+      <div class="count-grid">
+        <div class="count-row">
+          <span class="count-label">Arrivals:</span>
+          <span class="count-value">${flightStatusData.total.arrivals}</span>
+        </div>
+        <div class="count-row">
+          <span class="count-label">Departures:</span>
+          <span class="count-value">${flightStatusData.total.departures}</span>
+        </div>
+        <div class="count-row count-total">
+          <span class="count-label">Total Flights:</span>
+          <span class="count-value">${flightStatusData.total.arrivals + flightStatusData.total.departures}</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flight-count-section">
+      <h3>Flights with Actual Times</h3>
+      <div class="count-grid">
+        <div class="count-row">
+          <span class="count-label">Arrivals:</span>
+          <span class="count-value">${flightStatusData.withActual.arrivals}</span>
+        </div>
+        <div class="count-row">
+          <span class="count-label">Departures:</span>
+          <span class="count-value">${flightStatusData.withActual.departures}</span>
+        </div>
+        <div class="count-row count-total">
+          <span class="count-label">Total with Actual Times:</span>
+          <span class="count-value">${flightStatusData.withActual.arrivals + flightStatusData.withActual.departures}</span>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  totalFlightCount.innerHTML = countContent;
+  
+  // Create status breakdown HTML using the same styling pattern as the original
+  let statusHTML = '<div class="flight-count-section"><h3>Flight Status</h3><div class="count-grid">';
+  
+  // Count total landed flights
+  let totalLanded = 0;
+  if (flightStatusData.status.arrivals['landed']) {
+    totalLanded += flightStatusData.status.arrivals['landed'];
+  }
+  if (flightStatusData.status.departures['landed']) {
+    totalLanded += flightStatusData.status.departures['landed'];
+  }
+  
+  // Count total cancelled flights
+  let totalCancelled = 0;
+  if (flightStatusData.status.arrivals['cancelled']) {
+    totalCancelled += flightStatusData.status.arrivals['cancelled'];
+  }
+  if (flightStatusData.status.departures['cancelled']) {
+    totalCancelled += flightStatusData.status.departures['cancelled'];
+  }
+  
+  // Count other statuses
+  let totalScheduled = 0;
+  let totalOther = 0;
+  
+  ['arrivals', 'departures'].forEach(type => {
+    Object.entries(flightStatusData.status[type]).forEach(([status, count]) => {
+      if (status !== 'landed' && status !== 'cancelled') {
+        if (status === 'scheduled') {
+          totalScheduled += count;
+        } else {
+          totalOther += count;
+        }
+      }
+    });
+  });
+  
+  // Create status breakdown rows
+  statusHTML += `<div class="count-row"><span class="count-label">Landed:</span> <span class="count-value">${totalLanded}</span></div>`;
+  
+  if (totalScheduled > 0) {
+    statusHTML += `<div class="count-row"><span class="count-label">Scheduled:</span> <span class="count-value">${totalScheduled}</span></div>`;
+  }
+  
+  if (totalCancelled > 0) {
+    statusHTML += `<div class="count-row"><span class="count-label">Cancelled:</span> <span class="count-value">${totalCancelled}</span></div>`;
+  }
+  
+  if (totalOther > 0) {
+    statusHTML += `<div class="count-row"><span class="count-label">Other Status:</span> <span class="count-value">${totalOther}</span></div>`;
+  }
+  
+  statusHTML += '</div></div>';
+  
+  // Show flights with missing actual times
+  const missingTimes = (flightStatusData.missingTimes.arrivals + flightStatusData.missingTimes.departures);
+  if (missingTimes > 0) {
+    statusHTML += `
+      <div style="margin-top: 10px; font-style: italic; color: #666; font-size: 0.9em;">
+        ${missingTimes} flights are missing actual time data
+      </div>
+    `;
+  }
+  
+  flightStatusCount.innerHTML = statusHTML;
+}
+function updateAfterDataLoad() {
+  try {
+    // Status display
+    try {
+      updateStatusDisplay();
+    } catch (error) {
+      console.error("Error in updateStatusDisplay:", error);
+    }
+    
+    // Landed summary
+    try {
+      updateLandedSummary();
+    } catch (error) {
+      console.error("Error in updateLandedSummary:", error);
+    }
+    
+    // Data quality indicator
+    try {
+      updateDataQualityIndicator();
+    } catch (error) {
+      console.error("Error in updateDataQualityIndicator:", error);
+    }
+    
+    // Flight count summary
+    try {
+      updateFlightCountSummary();
+    } catch (error) {
+      console.error("Error in updateFlightCountSummary:", error);
+    }
+    
+    // Delay stats
+    try {
+      updateDelayStatsCard();
+    } catch (error) {
+      console.error("Error in updateDelayStatsCard:", error);
+    }
+    
+    // Night flights summary
+    try {
+      updateNightFlightsSummary();
+    } catch (error) {
+      console.error("Error in updateNightFlightsSummary:", error);
+    }
+    
+    // Charts
+    try {
+      destroyCharts();
+      createCharts();
+    } catch (error) {
+      console.error("Error in chart operations:", error);
+    }
+  } catch (error) {
+    console.error("Error in updateAfterDataLoad:", error);
+    showError("An error occurred while updating the dashboard");
+  }
+}
+
+// === Data Loading with Manifest-based Fetch ===
+async function loadDataRange() {
+  const startValue = document.getElementById('startDate').value;
+  const endValue = document.getElementById('endDate').value;
+  const includeCodeshares = document.getElementById('showAllFlights').checked;
+  const loadingEl = document.getElementById('loading');
+  loadingEl.style.display = 'block';
+  
+  try {
+    // 1) Load index.json
+    const manifestRes = await fetch('index.json');
+    if (!manifestRes.ok) throw new Error('Couldn\'t load index.json');
+    const manifest = await manifestRes.json();
+    
+    // 2) Determine files overlapping [start,end]
+    const toFetch = manifest
+      .filter(item => {
+        if (item.date) return item.date >= startValue && item.date <= endValue;
+        if (item.start && item.end) return item.start <= endValue && item.end >= startValue;
+        return false;
+      })
+      .map(item => item.url);
+    
+    if (!toFetch.length) { 
+      showError('No flight data available for that date range'); 
+      destroyCharts(); 
+      return; 
+    }
+    
+    // 3) Fetch & flatten
+    const raw = await Promise.all(toFetch.map(url => fetch(url).then(r => r.ok ? r.json() : null)));
+    const dataArray = raw.flatMap((chunk, i) => {
+      if (!chunk) return [];
+      const url = toFetch[i];
+      if (Array.isArray(chunk)) {
+        return chunk.filter(it => it.date >= startValue && it.date <= endValue)
+          .map(it => ({
+            date: it.date, 
+            data: {
+              arrivals: it.arrivals || [],
+              departures: it.departures || []
+            }
+          }));
+      } else {
+        const fileDate = chunk.date || (url.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
+        if (!fileDate || fileDate < startValue || fileDate > endValue) return [];
+        return [{
+          date: fileDate, 
+          data: {
+            arrivals: chunk.arrivals || [],
+            departures: chunk.departures || []
+          }
+        }];
+      }
+    });
+    
+    // 4) Dedup & filter codeshares
+    const deduped = improvedDedupeFlights(dataArray, includeCodeshares);
+    window.currentData = deduped;
+    
+	
+	
+    // 5) Aggregate & render
+	aggregateData(deduped);
+	aggregatedData.delayedNightFlights = identifyDelayedNightFlights(deduped);
+	
+
+    updateAfterDataLoad();
+    
+  } catch (err) { 
+    console.error(err); 
+    showError(err.message); 
+  } finally { 
+    loadingEl.style.display = 'none'; 
+  }
+}
+
+function identifyDelayedNightFlights(dataArray) {
+  const delayedNightFlights = {
+    flights: [],
+    byDate: {},
+    byAirline: {},
+    totalCount: 0
+  };
+  
+  dataArray.forEach(({date, data}) => {
+    ['arrivals', 'departures'].forEach(type => {
+      const flights = data[type] || [];
+      
+      flights.forEach(flight => {
+        // Get scheduled and actual times
+        const scheduled = type === 'arrivals' ? 
+          (flight.arrival && flight.arrival.scheduled) : 
+          (flight.departure && flight.departure.scheduled);
+        
+        const actual = type === 'arrivals' ? 
+          (flight.arrival && flight.arrival.actual) : 
+          (flight.departure && flight.departure.actual);
+        
+        // Skip if we don't have both times
+        if (!scheduled || !actual) return;
+        
+        // Categorize based on scheduled and actual times
+        const timezone = type === 'arrivals' ? flight.arrival.timezone : flight.departure.timezone;
+		const scheduledCategory = categorizeFlight(scheduled, timezone);
+		const actualCategory = categorizeFlight(actual, timezone);
+        
+        // Check if flight was delayed into night hours
+        if (actualCategory === 'Night hour flights' && 
+            scheduledCategory !== 'Night hour flights') {
+          
+          // Calculate delay in minutes
+          const delayMinutes = computeDelay(scheduled, actual);
+          
+          // Skip if there's no positive delay (shouldn't happen but just to be safe)
+          if (delayMinutes <= 0) return;
+          
+          // Get flight details
+          const flightNumber = flight.flight && flight.flight.number ? flight.flight.number : 'Unknown';
+          const airline = flight.airline && flight.airline.name ? flight.airline.name : 'Unknown';
+          const location = type === 'arrivals' ? 
+            (flight.departure && flight.departure.airport ? flight.departure.airport : 'Unknown') : 
+            (flight.arrival && flight.arrival.airport ? flight.arrival.airport : 'Unknown');
+          
+          // Convert times to local time for display
+          let scheduledLocal = '';
+          let actualLocal = '';
+          
+          const relevantTimezone = type === 'arrivals' ? flight.arrival.timezone : flight.departure.timezone;
+		scheduledLocal = convertToLocalTime(scheduled, relevantTimezone, 'yyyy-MM-dd HH:mm');
+		actualLocal = convertToLocalTime(actual, relevantTimezone, 'yyyy-MM-dd HH:mm');
+          
+          // Record this flight
+          const flightInfo = {
+            date,
+            type,
+            flightNumber,
+            airline,
+            location,
+            scheduledCategory,
+            actualCategory,
+            delayMinutes,
+            scheduledLocal,
+            actualLocal
+          };
+          
+          delayedNightFlights.flights.push(flightInfo);
+          
+          // Count by date
+          if (!delayedNightFlights.byDate[date]) {
+            delayedNightFlights.byDate[date] = 0;
+          }
+          delayedNightFlights.byDate[date]++;
+          
+          // Count by airline
+          if (!delayedNightFlights.byAirline[airline]) {
+            delayedNightFlights.byAirline[airline] = 0;
+          }
+          delayedNightFlights.byAirline[airline]++;
+          
+          // Increment total count
+          delayedNightFlights.totalCount++;
+        }
+      });
+    });
+  });  
+  return delayedNightFlights;
+}
+
+
+
+
+
+// 5. Add a function to update the delayed night flights display
+// Add this function to your JavaScript
+
+function updateDelayedNightFlightsDisplay() {
+  const container = document.getElementById('delayedNightFlights');
+  if (!container) return;
+  
+  // Get the delayed night flights data
+  const data = aggregatedData.delayedNightFlights;
+  if (!data || !data.flights || data.flights.length === 0) {
+    container.innerHTML = '<p>No flights were delayed into night hours in this period.</p>';
+    return;
+  }
+  
+  // Sort flights by date and then by delay amount (largest first)
+  const sortedFlights = [...data.flights].sort((a, b) => {
+    if (a.date !== b.date) return a.date.localeCompare(b.date);
+    return b.delayMinutes - a.delayMinutes;
+  });
+  
+  // Create HTML for the display
+  let html = `<p><strong>Total flights delayed into night hours: ${data.totalCount}</strong></p>`;
+  
+  // Display most delayed flights (up to 20)
+  html += '<h3>Most Delayed Flights</h3>';
+  html += '<table style="width:100%; border-collapse: collapse;">';
+  html += '<tr style="font-weight: bold; background-color: #f2f2f2;">';
+  html += '<th style="text-align:left; padding:5px;">Date</th>';
+  html += '<th style="text-align:left; padding:5px;">Type</th>';
+  html += '<th style="text-align:left; padding:5px;">Flight</th>';
+  html += '<th style="text-align:left; padding:5px;">Airline</th>';
+  html += '<th style="text-align:left; padding:5px;">Origin/Destination</th>';
+  html += '<th style="text-align:left; padding:5px;">Scheduled</th>';
+  html += '<th style="text-align:left; padding:5px;">Actual</th>';
+  html += '<th style="text-align:left; padding:5px;">Delay (min)</th>';
+  html += '</tr>';
+  
+  // Get top 20 most delayed flights
+  const topDelayedFlights = sortedFlights
+    .sort((a, b) => b.delayMinutes - a.delayMinutes)
+    .slice(0, 20);
+  
+  topDelayedFlights.forEach(flight => {
+    html += '<tr style="border-bottom: 1px solid #ddd;">';
+    html += `<td style="padding:5px;">${flight.date}</td>`;
+    html += `<td style="padding:5px;">${flight.type === 'arrivals' ? 'Arrival' : 'Departure'}</td>`;
+    html += `<td style="padding:5px;">${flight.flightNumber}</td>`;
+    html += `<td style="padding:5px;">${flight.airline}</td>`;
+    html += `<td style="padding:5px;">${flight.location}</td>`;
+    html += `<td style="padding:5px;">${flight.scheduledLocal}</td>`;
+    html += `<td style="padding:5px;">${flight.actualLocal}</td>`;
+    html += `<td style="padding:5px;">${Math.round(flight.delayMinutes)}</td>`;
+    html += '</tr>';
+  });
+  
+  html += '</table>';
+  
+  // Display breakdown by original category
+  html += '<h3>Original Scheduled Categories</h3>';
+  
+  const categoryBreakdown = {};
+  sortedFlights.forEach(flight => {
+    if (!categoryBreakdown[flight.scheduledCategory]) {
+      categoryBreakdown[flight.scheduledCategory] = 0;
+    }
+    categoryBreakdown[flight.scheduledCategory]++;
+  });
+  
+  html += '<ul>';
+  Object.entries(categoryBreakdown).forEach(([category, count]) => {
+    html += `<li>${category}: ${count} flights (${Math.round(count/data.totalCount*100)}%)</li>`;
+  });
+  html += '</ul>';
+  
+  // Display breakdown by airline
+  html += '<h3>Airlines with Delayed Night Flights</h3>';
+  html += '<ul>';
+  Object.entries(data.byAirline)
+    .sort((a, b) => b[1] - a[1]) // Sort by count (highest first)
+    .forEach(([airline, count]) => {
+      html += `<li>${airline}: ${count} flights</li>`;
+    });
+  html += '</ul>';
+  
+  container.innerHTML = html;
+  
+  // Create chart for delayed night flights by date
+  createDelayedNightFlightsChart(data);
+}
+
+// 6. Add a function to create a chart for delayed night flights
+// Add this function to your JavaScript
+
+function createDelayedNightFlightsChart(data) {
+  // Make sure we have a canvas to draw on
+  const canvas = document.getElementById('delayedNightFlightsChart');
+  if (!canvas) return;
+  
+  // Destroy existing chart if there is one
+  if (charts.delayedNightFlightsChart) {
+    charts.delayedNightFlightsChart.destroy();
+  }
+  
+  // Prepare data for the chart
+  const dates = Object.keys(data.byDate).sort();
+  const counts = dates.map(date => data.byDate[date]);
+  
+  // Create the chart
+  const ctx = canvas.getContext('2d');
+  charts.delayedNightFlightsChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: dates,
+      datasets: [{
+        label: 'Flights Delayed into Night Hours',
+        data: counts,
+        backgroundColor: 'rgba(255, 99, 132, 0.5)', // Red
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Number of Flights'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Date'
+          }
+        }
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: 'Flights Delayed into Night Hours by Date'
+        }
+      }
+    }
+  });
+}
+
+// 7. Add a call to update the delayed night flights display in the updateAfterDataLoad function
+// Find the updateAfterDataLoad function and add this line after the updateNightFlightsSummary call
+
+try {
+  updateDelayedNightFlightsDisplay();
+} catch (error) {
+  console.error("Error in updateDelayedNightFlightsDisplay:", error);
+}
+
+// === Data Aggregation ===
+function aggregateData(dataArray) {
+  flightStatusData = { 
+    total: {arrivals:0, departures:0},  // This will track ALL flights
+    withActual: {arrivals:0, departures:0},  // This will track flights with actual times
+    status: {arrivals:{}, departures:{}}, 
+    missingTimes: {arrivals:0, departures:0},
+    landed: {arrivals:0, departures:0}
+  };
+  
+  aggregatedData = { 
+  airlines: {arrivals:{}, departures:{}}, 
+  airports: {origins:{}, destinations:{}}, 
+  timeCategories: {arrivals:{}, departures:{}}, 
+  landedByTimeCategory: {arrivals:{}, departures:{}}, 
+  nightFlights: {
+    airlines: {arrivals:{}, departures:{}},
+    origins: {},
+    daily: {arrivals:{}, departures:{}}
+  }, 
+  delayStats: {
+    arrivals: {delays:[], early:0, onTime:0, late:0},
+    departures: {delays:[], early:0, onTime:0, late:0}
+  },
+  delayedNightFlights: {
+    flights: [],
+    byDate: {},
+    byAirline: {},
+    totalCount: 0
+  }
+};
+  
+  dataArray.forEach(({date, data}) => {
+    ['arrivals', 'departures'].forEach(type => {
+      const arr = data[type] || [];
+      
+      // Count ALL flights first (without filtering)
+      flightStatusData.total[type] += arr.length;
+      
+      arr.forEach(f => {
+        // Track status for all flights
+        const status = f.flight_status || 'Unknown';
+        flightStatusData.status[type][status] = (flightStatusData.status[type][status] || 0) + 1;
+        
+        // Check if this flight has actual time
+        const actual = type === 'arrivals' ? 
+          (f.arrival && f.arrival.actual) : 
+          (f.departure && f.departure.actual);
+          
+        if (!actual) {
+          flightStatusData.missingTimes[type]++;
+          return; // Skip further processing for flights without actual times
+        }
+        
+        // Count flights with actual times
+        flightStatusData.withActual[type]++;
+        
+        // From here on, only process flights with actual times (same as your original code)
+        
+        // Track landed flights specifically
+        if (status === 'landed') {
+          flightStatusData.landed[type]++;
+        }
+        
+        const timezone = type === 'arrivals' ? f.arrival.timezone : f.departure.timezone;
+		const cat = categorizeFlight(actual, timezone);
+        const name = f.airline && f.airline.name || '';
+        
+        if (type === 'arrivals') {
+          aggregatedData.airlines.arrivals[name] = (aggregatedData.airlines.arrivals[name] || 0) + 1;
+          if (f.departure && f.departure.airport) {
+            aggregatedData.airports.origins[f.departure.airport] = (aggregatedData.airports.origins[f.departure.airport] || 0) + 1;
+          }
+        } else {
+          aggregatedData.airlines.departures[name] = (aggregatedData.airlines.departures[name] || 0) + 1;
+          if (f.arrival && f.arrival.airport) {
+            aggregatedData.airports.destinations[f.arrival.airport] = (aggregatedData.airports.destinations[f.arrival.airport] || 0) + 1;
+          }
+        }
+        
+        aggregatedData.timeCategories[type][cat] = (aggregatedData.timeCategories[type][cat] || 0) + 1;
+        
+        if (status === 'landed') {
+          aggregatedData.landedByTimeCategory[type][cat] = (aggregatedData.landedByTimeCategory[type][cat] || 0) + 1;
+        }
+        
+        if (cat === 'Night hour flights' && status === 'landed') {
+          aggregatedData.nightFlights.airlines[type][name] = (aggregatedData.nightFlights.airlines[type][name] || 0) + 1;
+          const org = type === 'arrivals' ? 
+            (f.departure && f.departure.airport || 'Unknown') : 
+            (f.arrival && f.arrival.airport || 'Unknown');
+          aggregatedData.nightFlights.origins[org] = (aggregatedData.nightFlights.origins[org] || 0) + 1;
+          aggregatedData.nightFlights.daily[type][date] = (aggregatedData.nightFlights.daily[type][date] || 0) + 1;
+        }
+        
+        const sched = type === 'arrivals' ? 
+          (f.arrival && f.arrival.scheduled) : 
+          (f.departure && f.departure.scheduled);
+        if (sched && actual) {
+          const d = computeDelay(sched, actual);
+          const ds = aggregatedData.delayStats[type];
+          ds.delays.push(d);
+          if (d < -1) ds.early++; 
+          else if (d > 1) ds.late++; 
+          else ds.onTime++;
+        }
+      });
+    });
+  });
+  
+  // Add debug log to show the key counts
+  console.log("Aggregation results:");
+  console.log(`- Total flights: ${flightStatusData.total.arrivals + flightStatusData.total.departures}`);
+  console.log(`- Flights with actual times: ${flightStatusData.withActual.arrivals + flightStatusData.withActual.departures}`);
+  console.log(`- Flights missing actual times: ${flightStatusData.missingTimes.arrivals + flightStatusData.missingTimes.departures}`);
+}// === Display Updates ===
+function updateStatusDisplay() {
+  const sb = document.getElementById('statusBreakdown');
+  let html = '<h3>Arrivals</h3>';
+  Object.entries(flightStatusData.status.arrivals).forEach(([s,c]) => {
+    html += `<div>${s}: ${c}</div>`;
+  });
+  html += '<h3>Departures</h3>';
+  Object.entries(flightStatusData.status.departures).forEach(([s,c]) => {
+    html += `<div>${s}: ${c}</div>`;
+  });
+  sb.innerHTML = html;
+}
+
+function updateLandedSummary() {
+  try {
+    // SOLUTION PART 1: Get or create our container element
+    let lb = document.getElementById('landedByTimeCategory');
+    
+    if (!lb) {
+      console.log("landedByTimeCategory element not found, creating it");
+      
+      // Find status summary container
+      const statusSummary = document.querySelector('.status-summary');
+      if (!statusSummary) {
+        console.error("Could not find .status-summary element");
+        return;
+      }
+      
+      // Create the card container
+      const card = document.createElement('div');
+      card.className = 'summary-card';
+      
+      // Create card title
+      const title = document.createElement('div');
+      title.className = 'summary-title';
+      title.textContent = 'Flight Breakdown by Time Category';
+      
+      // Create content container
+      lb = document.createElement('div');
+      lb.id = 'landedByTimeCategory';
+      
+      // Assemble and append to DOM
+      card.appendChild(title);
+      card.appendChild(lb);
+      statusSummary.appendChild(card);
+      
+      // IMPORTANT: Get a fresh reference after DOM insertion
+      lb = document.getElementById('landedByTimeCategory');
+      if (!lb) {
+        console.error("Failed to create and retrieve landedByTimeCategory element");
+        return;
+      }
+    }
+    
+    // SOLUTION PART 2: Ensure aggregatedData has all required properties
+    if (!aggregatedData) {
+      console.error("aggregatedData is not defined");
+      return;
+    }
+    
+    // Initialize required objects if they don't exist
+    if (!aggregatedData.timeCategories) aggregatedData.timeCategories = {};
+    if (!aggregatedData.timeCategories.arrivals) aggregatedData.timeCategories.arrivals = {};
+    if (!aggregatedData.timeCategories.departures) aggregatedData.timeCategories.departures = {};
+    
+    if (!aggregatedData.landedByTimeCategory) aggregatedData.landedByTimeCategory = {};
+    if (!aggregatedData.landedByTimeCategory.arrivals) aggregatedData.landedByTimeCategory.arrivals = {};
+    if (!aggregatedData.landedByTimeCategory.departures) aggregatedData.landedByTimeCategory.departures = {};
+    
+    // SOLUTION PART 3: Build HTML with safe access to all properties
+    let html = '<h3>Flights by Category</h3>';
+    
+    // Calculate totals with safe property access
+    const totalRegular = (aggregatedData.timeCategories.arrivals['Regular flights'] || 0) +
+                        (aggregatedData.timeCategories.departures['Regular flights'] || 0);
+    const totalShoulder = (aggregatedData.timeCategories.arrivals['Shoulder hour flights'] || 0) +
+                          (aggregatedData.timeCategories.departures['Shoulder hour flights'] || 0);
+    const totalNight = (aggregatedData.timeCategories.arrivals['Night hour flights'] || 0) +
+                       (aggregatedData.timeCategories.departures['Night hour flights'] || 0);
+    const totalAll = totalRegular + totalShoulder + totalNight;
+    
+    // Calculate landed totals with safe property access
+    const landedRegular = (aggregatedData.landedByTimeCategory.arrivals['Regular flights'] || 0) +
+                          (aggregatedData.landedByTimeCategory.departures['Regular flights'] || 0);
+    const landedShoulder = (aggregatedData.landedByTimeCategory.arrivals['Shoulder hour flights'] || 0) +
+                           (aggregatedData.landedByTimeCategory.departures['Shoulder hour flights'] || 0);
+    const landedNight = (aggregatedData.landedByTimeCategory.arrivals['Night hour flights'] || 0) +
+                        (aggregatedData.landedByTimeCategory.departures['Night hour flights'] || 0);
+    const landedAll = landedRegular + landedShoulder + landedNight;
+    
+    // Build the HTML table
+    html += '<table style="width:100%; margin-bottom:15px;">';
+    html += '<tr><th style="text-align:left;">Category</th><th>All Flights</th><th>Landed Only</th></tr>';
+    html += `<tr><td>Regular flights</td><td>${totalRegular}</td><td>${landedRegular}</td></tr>`;
+    html += `<tr><td>Shoulder hour flights</td><td>${totalShoulder}</td><td>${landedShoulder}</td></tr>`;
+    html += `<tr><td>Night hour flights</td><td>${totalNight}</td><td>${landedNight}</td></tr>`;
+    html += `<tr style="font-weight:bold;"><td>Total</td><td>${totalAll}</td><td>${landedAll}</td></tr>`;
+    html += '</table>';
+    
+    // Add detailed breakdown with safe property access
+    html += '<details>';
+    html += '<summary>Show Detailed Breakdown by Direction</summary>';
+    
+    html += '<h4>Arrivals by Category</h4>';
+    for (const [cat, count] of Object.entries(aggregatedData.timeCategories.arrivals)) {
+      const landed = aggregatedData.landedByTimeCategory.arrivals[cat] || 0;
+      html += `<div>${cat}: ${count} total, ${landed} landed</div>`;
+    }
+    
+    html += '<h4>Departures by Category</h4>';
+    for (const [cat, count] of Object.entries(aggregatedData.timeCategories.departures)) {
+      const landed = aggregatedData.landedByTimeCategory.departures[cat] || 0;
+      html += `<div>${cat}: ${count} total, ${landed} landed</div>`;
+    }
+    
+    html += '</details>';
+    
+    // SOLUTION PART 4: Double-check element still exists and update with try/catch
+    try {
+      // Verify the element still exists in the DOM
+      if (document.getElementById('landedByTimeCategory')) {
+        lb.innerHTML = html;
+      } else {
+        console.error("Element no longer in DOM before setting innerHTML");
+      }
+    } catch (innerError) {
+      console.error("Error setting innerHTML:", innerError);
+    }
+  } catch (outerError) {
+    console.error("Error in updateLandedSummary:", outerError);
+  }
+}
+function updateDelayStatsCard() {
+  // Function intentionally left empty to disable delay stats card
+}
+function updateNightFlightsSummary() {
+  const airlinesDiv = document.getElementById('nightAirlinesStats');
+  const originsDiv  = document.getElementById('nightOriginsStats');
+  airlinesDiv.innerHTML = '';
+  originsDiv.innerHTML  = '';
+
+  // Night flights by airline (arrivals + departures)
+  Object.entries(aggregatedData.nightFlights.airlines.arrivals).forEach(([name, cnt]) => {
+    const d = document.createElement('div');
+    d.textContent = `Arrivals — ${name}: ${cnt}`;
+    airlinesDiv.appendChild(d);
+  });
+  Object.entries(aggregatedData.nightFlights.airlines.departures).forEach(([name, cnt]) => {
+    const d = document.createElement('div');
+    d.textContent = `Departures — ${name}: ${cnt}`;
+    airlinesDiv.appendChild(d);
+  });
+
+  // Night flight origins (for arrivals)
+  Object.entries(aggregatedData.nightFlights.origins).forEach(([origin, cnt]) => {
+    const d = document.createElement('div');
+    d.textContent = `${origin}: ${cnt}`;
+    originsDiv.appendChild(d);
+  });
+}
+
+// === Chart Creation & Destruction ===
+function createCharts() {
+  // 1) Airline Arrivals
+  const ctxArr = document.getElementById('airlineArrivals').getContext('2d');
+  charts.airlineArrivals = new Chart(ctxArr, {
+    type: 'bar',
+    data: {
+      labels: Object.keys(aggregatedData.airlines.arrivals),
+      datasets: [{
+        label: 'Arrivals',
+        data: Object.values(aggregatedData.airlines.arrivals),
+        backgroundColor: 'rgba(54, 162, 235, 0.5)'
+      }]
+    },
+    options: { responsive: true, plugins: { legend: { display: false } } }
+  });
+
+  // 2) Airline Departures
+  const ctxDep = document.getElementById('airlineDepartures').getContext('2d');
+  charts.airlineDepartures = new Chart(ctxDep, {
+    type: 'bar',
+    data: {
+      labels: Object.keys(aggregatedData.airlines.departures),
+      datasets: [{
+        label: 'Departures',
+        data: Object.values(aggregatedData.airlines.departures),
+        backgroundColor: 'rgba(75, 192, 192, 0.5)'
+      }]
+    },
+    options: { responsive: true, plugins: { legend: { display: false } } }
+  });
+
+  // 3) Top Arrival Origins (horizontal bar)
+  const ctxOrg = document.getElementById('originAirports').getContext('2d');
+  charts.originAirports = new Chart(ctxOrg, {
+    type: 'bar',
+    data: {
+      labels: Object.keys(aggregatedData.airports.origins),
+      datasets: [{
+        label: 'Arrivals from',
+        data: Object.values(aggregatedData.airports.origins),
+        backgroundColor: 'rgba(255, 159, 64, 0.5)'
+      }]
+    },
+    options: { indexAxis: 'y', responsive: true }
+  });
+
+  // 4) Top Departure Destinations (horizontal bar)
+  const ctxDst = document.getElementById('destinationAirports').getContext('2d');
+  charts.destinationAirports = new Chart(ctxDst, {
+    type: 'bar',
+    data: {
+      labels: Object.keys(aggregatedData.airports.destinations),
+      datasets: [{
+        label: 'Departures to',
+        data: Object.values(aggregatedData.airports.destinations),
+        backgroundColor: 'rgba(153, 102, 255, 0.5)'
+      }]
+    },
+    options: { indexAxis: 'y', responsive: true }
+  });
+
+  // 5) Flight Time Categories (pie)
+  //    We'll combine arrivals+departures so you see overall.
+  const catsArr = aggregatedData.timeCategories.arrivals;
+  const catsDep = aggregatedData.timeCategories.departures;
+  const labels = [...new Set([...Object.keys(catsArr), ...Object.keys(catsDep)])];
+  const data = labels.map(l => (catsArr[l]||0) + (catsDep[l]||0));
+  const ctxTime = document.getElementById('timeCategories').getContext('2d');
+  charts.timeCategories = new Chart(ctxTime, {
+    type: 'pie',
+    data: { 
+      labels, 
+      datasets: [{ 
+        data,
+        backgroundColor: [
+          'rgba(54, 162, 235, 0.5)',
+          'rgba(255, 206, 86, 0.5)',
+          'rgba(75, 192, 192, 0.5)',
+          'rgba(153, 102, 255, 0.5)'
+        ]
+      }] 
+    },
+    options: { responsive: true }
+  });
+
+  // 6) Scheduled vs Actual Time Difference (bar: early / on‑time / late)
+  const diffs = aggregatedData.delayStats;
+  const labelsDiff = [
+    'Arr Early','Arr On‑time','Arr Late',
+    'Dep Early','Dep On‑time','Dep Late'
+  ];
+  const dataDiff = [
+    diffs.arrivals.early, diffs.arrivals.onTime, diffs.arrivals.late,
+    diffs.departures.early, diffs.departures.onTime, diffs.departures.late
+  ];
+  const ctxDiff = document.getElementById('delayDifference').getContext('2d');
+  charts.delayDifference = new Chart(ctxDiff, {
+    type: 'bar',
+    data: {
+      labels: labelsDiff,
+      datasets: [{ 
+        label: 'Count', 
+        data: dataDiff,
+        backgroundColor: [
+          'rgba(75, 192, 192, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(255, 99, 132, 0.5)',
+          'rgba(75, 192, 192, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(255, 99, 132, 0.5)'
+        ]
+      }]
+    },
+    options: { responsive: true }
+  });
+
+  // 7) Flight Delays (>15 minutes) by Date
+  const delaysByDate = {};
+  window.currentData.forEach(day => {
+    let cnt = 0;
+    ['arrivals','departures'].forEach(type => {
+      day.data[type].forEach(f => {
+        const actual = type==='arrivals'?f.arrival.actual:f.departure.actual;
+        const sched  = type==='arrivals'?f.arrival.scheduled:f.departure.scheduled;
+        if (actual && sched) {
+          const d = computeDelay(sched, actual);
+          if (d > 15) cnt++;
+        }
+      });
+    });
+    delaysByDate[day.date] = cnt;
+  });
+  const dates = Object.keys(delaysByDate).sort();
+  const counts = dates.map(d => delaysByDate[d]);
+  const ctxDel = document.getElementById('delays').getContext('2d');
+  charts.delays = new Chart(ctxDel, {
+    type: 'bar',
+    data: { 
+      labels: dates, 
+      datasets: [{ 
+        label: '>15 min delays', 
+        data: counts,
+        backgroundColor: 'rgba(255, 99, 132, 0.5)' 
+      }] 
+    },
+    options: { responsive: true }
+  });
+
+  // 8) Night Flights Trend (line chart)
+  const nightArr = aggregatedData.nightFlights.daily.arrivals;
+  const nightDep = aggregatedData.nightFlights.daily.departures;
+  const trendDates = [...new Set([
+    ...Object.keys(nightArr), 
+    ...Object.keys(nightDep)
+  ])].sort();
+  const arrTrend = trendDates.map(d => nightArr[d] || 0);
+  const depTrend = trendDates.map(d => nightDep[d] || 0);
+  const ctxNight = document.getElementById('nightFlightsTrend').getContext('2d');
+  charts.nightFlightsTrend = new Chart(ctxNight, {
+    type: 'line',
+    data: {
+      labels: trendDates,
+      datasets: [
+        { 
+          label: 'Arrivals', 
+          data: arrTrend, 
+          fill: false,
+          borderColor: 'rgba(255, 99, 132, 1)',
+          tension: 0.1
+        },
+        { 
+          label: 'Departures', 
+          data: depTrend, 
+          fill: false,
+          borderColor: 'rgba(54, 162, 235, 1)',
+          tension: 0.1
+        }
+      ]
+    },
+    options: { responsive: true }
+  });
+}
+
+function destroyCharts() {
+  Object.values(charts).forEach(c => c && c.destroy());
+  charts = {};
+}
+
+function convertToLocalTime(utcTimeStr, timezone, format = 'yyyy-MM-dd HH:mm:ss') {
+  if (!utcTimeStr) return '';
+  
+  try {
+    // Parse the UTC timestamp
+    const dt = luxon.DateTime.fromISO(utcTimeStr, { zone: 'UTC' });
+    
+    if (dt.isValid) {
+      // Use provided timezone or fall back to Bristol's timezone
+      const tz = timezone || 'Europe/London';
+      return dt.setZone(tz).toFormat(format);
+    } else {
+      console.warn(`Invalid time string: ${utcTimeStr}`);
+      return '';
+    }
+  } catch (err) {
+    console.error(`Error converting time: ${utcTimeStr} to timezone ${timezone}`, err);
+    return '';
+  }
+}
+
+// === CSV Export with Local Time Conversion ===
+async function exportFlightData() {
+  // 1) Use the improved deduplication function
+  const includeCodeshares = document.getElementById('showAllFlights').checked;
+  const deduped = improvedDedupeFlights(window.currentData, includeCodeshares);
+
+  // 2) Prepare CSV headers
+  const headers = [
+    'Date',
+    'Flight Number',
+    'Type',
+    'Status',
+    'Time Category',
+    'Scheduled UTC',
+    'Actual UTC',
+    'Scheduled Local',
+    'Actual Local',
+    'Location',
+    'Airline',
+    'Codeshare Airline',
+    'Codeshare Flight'
+  ];
+  let csv = headers.join(',') + '\n';
+  const recordMap = new Map();
+
+  // 3) Count how many unique flights we're exporting
+  let uniqueFlightCount = 0;
+
+  // 4) Walk through deduped data and build a unique map
+  deduped.forEach(({ date, data }) => {
+    ['arrivals', 'departures'].forEach(type => {
+      (data[type] || []).forEach(f => {
+        const actual = type === 'arrivals' ? f.arrival.actual : f.departure.actual;
+        if (!actual) return;
+
+        const num       = f.flight.number;
+        const direction = type === 'arrivals' ? 'Arrival' : 'Departure';
+        const status    = f.flight_status || 'Unknown';
+        
+        // Use the proper timezone for categorization
+        const timezone = type === 'arrivals' ? f.arrival.timezone : f.departure.timezone;
+        const cat = categorizeFlight(actual, timezone);
+        
+        const sched     = type === 'arrivals' ? f.arrival.scheduled : f.departure.scheduled;
+        const loc       = type === 'arrivals' ? f.departure.airport : f.arrival.airport;
+        const airline   = f.airline.name || '';
+
+        // codeshare info, if any
+        const cs        = f.flight.codeshared || {};
+        const csAirline = cs.airline_name  || '';
+        const csFlight  = cs.flight_number || '';
+
+        // UTC ISO times
+        const schedISO  = sched ? new Date(sched).toISOString() : '';
+        const actualISO = actual ? new Date(actual).toISOString() : '';
+        
+        // Get the appropriate timezones with fallbacks
+        const arrivalTimezone = f.arrival.timezone || airportTimeZone;
+        const departureTimezone = f.departure.timezone || airportTimeZone;
+        
+        // Use appropriate timezone based on flight type
+        const relevantTimezone = type === 'arrivals' ? arrivalTimezone : departureTimezone;
+        
+        // Convert times to local time using the utility function
+        const schedLocal = convertToLocalTime(sched, relevantTimezone);
+        const actualLocal = convertToLocalTime(actual, relevantTimezone);
+
+        // Create a key that will deduplicate flights
+        // We want to differentiate genuine duplicate records vs the same flight number operating on different days
+        const key = [ date, num, direction ].join('|');
+
+        if (!recordMap.has(key)) {
+          recordMap.set(key, {
+            date, num, direction, status, cat,
+            schedISO, actualISO, schedLocal, actualLocal, 
+            loc, airline, csAirline, csFlight
+          });
+          uniqueFlightCount++;
+        }
+      });
+    });
+  });
+
+  console.log(`Exporting ${uniqueFlightCount} unique flights to CSV`);
+
+  // 5) Emit the CSV rows
+  for (const rec of recordMap.values()) {
+    // Properly escape CSV values (handle quotes within fields)
+    const escapeCSV = (val) => {
+      if (val === null || val === undefined) return '""';
+      return `"${String(val).replace(/"/g, '""')}"`;
+    };
+    
+    const row = [
+      rec.date,
+      rec.num,
+      rec.direction,
+      rec.status,
+      rec.cat,
+      rec.schedISO,
+      rec.actualISO,
+      rec.schedLocal,
+      rec.actualLocal,
+      rec.loc,
+      rec.airline,
+      rec.csAirline,
+      rec.csFlight
+    ]
+    .map(escapeCSV)
+    .join(',');
+    
+    csv += row + '\n';
+  }
+
+  // 6) Trigger download
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = `flights_${new Date().toISOString().slice(0,10)}.csv`;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+// === Tab Toggle ===
+function showTab(tabName) {
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.classList.toggle('active', tab.textContent.toLowerCase().includes(tabName));
+  });
+  document.querySelectorAll('.tabbed-chart').forEach(chart => {
+    chart.classList.toggle('tab-active', chart.id.includes(tabName));
+  });
+}
+
+// === Initialization ===
+setDefaultDates();
+window.loadDataRange = loadDataRange;
+window.exportFlightData = exportFlightData;
+window.showTab = showTab;
+loadDataRange();
+</script>
+</body>
+</html>

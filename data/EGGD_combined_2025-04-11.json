@@ -518,7 +518,7 @@
         },
         {
             "flight_date": "2025-04-11",
-            "flight_status": "scheduled",
+            "flight_status": "landed",
             "departure": {
                 "airport": "Charles De Gaulle",
                 "timezone": "Europe/Paris",
@@ -565,16 +565,7 @@
                 "icao": "A320",
                 "icao24": "4074B2"
             },
-            "live": {
-                "updated": "2025-04-14T21:50:57+00:00",
-                "latitude": 50.3084,
-                "longitude": 1.3306,
-                "altitude": 8526.78,
-                "direction": 320,
-                "speed_horizontal": 816.732,
-                "speed_vertical": 0,
-                "is_ground": false
-            },
+            "live": null,
             "time_category": "Night hour flights"
         },
         {
@@ -1263,7 +1254,7 @@
         },
         {
             "flight_date": "2025-04-11",
-            "flight_status": "active",
+            "flight_status": "landed",
             "departure": {
                 "airport": "Lisbon Portela",
                 "timezone": "Europe/Lisbon",
@@ -1304,7 +1295,12 @@
                 "icao": "EZY2870",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "G-UZHC",
+                "iata": "A20N",
+                "icao": "A20N",
+                "icao24": "4073A0"
+            },
             "live": null,
             "time_category": "Unknown"
         },
@@ -1552,10 +1548,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "G-DRTV",
+                "registration": "G-DRTJ",
                 "iata": "B738",
                 "icao": "B738",
-                "icao24": "407F8C"
+                "icao24": "407C6D"
             },
             "live": null,
             "time_category": "Regular flights"
@@ -1760,10 +1756,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "G-DRTJ",
+                "registration": "G-DRTV",
                 "iata": "B738",
                 "icao": "B738",
-                "icao24": "407C6D"
+                "icao24": "407F8C"
             },
             "live": null,
             "time_category": "Regular flights"
@@ -2799,10 +2795,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "9H-QFO",
+                "registration": "9H-QCF",
                 "iata": "B738",
                 "icao": "B738",
-                "icao24": "4D2095"
+                "icao24": "4D2234"
             },
             "live": null,
             "time_category": "Regular flights"
@@ -3071,7 +3067,7 @@
         },
         {
             "flight_date": "2025-04-11",
-            "flight_status": "active",
+            "flight_status": "landed",
             "departure": {
                 "airport": "Jersey",
                 "timezone": "Europe/Jersey",
@@ -3112,7 +3108,12 @@
                 "icao": "BCI494",
                 "codeshared": null
             },
-            "aircraft": null,
+            "aircraft": {
+                "registration": "G-ISLL",
+                "iata": "AT75",
+                "icao": "AT75",
+                "icao24": "407241"
+            },
             "live": null,
             "time_category": "Unknown"
         },
@@ -3170,7 +3171,7 @@
         },
         {
             "flight_date": "2025-04-11",
-            "flight_status": "scheduled",
+            "flight_status": "landed",
             "departure": {
                 "airport": "Aldergrove International Airport",
                 "timezone": "Europe/London",
@@ -3212,21 +3213,12 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "G-EZRT",
-                "iata": "A320",
-                "icao": "A320",
-                "icao24": "4074B2"
+                "registration": "G-EZDX",
+                "iata": "A319",
+                "icao": "A319",
+                "icao24": "405D11"
             },
-            "live": {
-                "updated": "2025-04-11T18:59:42+00:00",
-                "latitude": 52.5331,
-                "longitude": -3.367,
-                "altitude": 7749.54,
-                "direction": 150.2,
-                "speed_horizontal": 719.244,
-                "speed_vertical": -38.628,
-                "is_ground": false
-            },
+            "live": null,
             "time_category": "Regular flights"
         },
         {
@@ -3424,10 +3416,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "G-UZHK",
+                "registration": "G-UZHH",
                 "iata": "A20N",
                 "icao": "A20N",
-                "icao24": "40756A"
+                "icao24": "4074B8"
             },
             "live": null,
             "time_category": "Regular flights"
@@ -3580,10 +3572,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "G-JZBZ",
+                "registration": "G-DRTK",
                 "iata": "B738",
                 "icao": "B738",
-                "icao24": "408067"
+                "icao24": "407CE4"
             },
             "live": null,
             "time_category": "Regular flights"
@@ -4111,10 +4103,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "G-EZRT",
+                "registration": "G-EZWZ",
                 "iata": "A320",
                 "icao": "A320",
-                "icao24": "4074B2"
+                "icao24": "406C72"
             },
             "live": null,
             "time_category": "Regular flights"
@@ -4163,10 +4155,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "G-EZRT",
-                "iata": "A320",
-                "icao": "A320",
-                "icao24": "4074B2"
+                "registration": "G-EZDX",
+                "iata": "A319",
+                "icao": "A319",
+                "icao24": "405D11"
             },
             "live": null,
             "time_category": "Regular flights"
@@ -4471,8 +4463,22 @@
                 "icao": "BCI495",
                 "codeshared": null
             },
-            "aircraft": null,
-            "live": null,
+            "aircraft": {
+                "registration": "G-ISLL",
+                "iata": "AT75",
+                "icao": "AT75",
+                "icao24": "407241"
+            },
+            "live": {
+                "updated": "2025-04-16T19:13:23+00:00",
+                "latitude": 49.2289,
+                "longitude": -2.0098,
+                "altitude": 708.66,
+                "direction": 232,
+                "speed_horizontal": 288.912,
+                "speed_vertical": 0,
+                "is_ground": false
+            },
             "time_category": "Unknown"
         },
         {
@@ -6089,10 +6095,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "9H-QFO",
+                "registration": "9H-QCF",
                 "iata": "B738",
                 "icao": "B738",
-                "icao24": "4D2095"
+                "icao24": "4D2234"
             },
             "live": null,
             "time_category": "Regular flights"
@@ -6401,10 +6407,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "SP-RZH",
+                "registration": "EI-IJD",
                 "iata": "B38M",
                 "icao": "B38M",
-                "icao24": "48C2A7"
+                "icao24": "4CAE54"
             },
             "live": null,
             "time_category": "Regular flights"
@@ -6911,10 +6917,10 @@
                 "codeshared": null
             },
             "aircraft": {
-                "registration": "G-JZBZ",
+                "registration": "G-DRTK",
                 "iata": "B738",
                 "icao": "B738",
-                "icao24": "408067"
+                "icao24": "407CE4"
             },
             "live": null,
             "time_category": "Regular flights"

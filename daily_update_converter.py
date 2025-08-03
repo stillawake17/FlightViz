@@ -216,7 +216,7 @@ if __name__ == "__main__":
     data_dir = "data"
 
     # Compute the date two days ago
-    target_date = date.today() - timedelta(days=1)
+    target_date = date.today() - timedelta(days=7)
     target_str  = target_date.strftime("%Y-%m-%d")
 
     if len(sys.argv) > 1:
@@ -230,8 +230,16 @@ if __name__ == "__main__":
                 full_path = os.path.join(data_dir, fname)
                 try:
                     with open(full_path, 'r', encoding='utf-8') as f:
-                        info = json.load(f)
+                        raw = json.load(f)
                 except:
+                    continue
+
+                # Handle both dicts and single‐element [dict] payloads
+                if isinstance(raw, list) and raw and isinstance(raw[0], dict):
+                    info = raw[0]
+                elif isinstance(raw, dict):
+                    info = raw
+                else:
                     continue
 
                 if info.get('date') == target_str:
@@ -239,6 +247,7 @@ if __name__ == "__main__":
                     converter.convert_daily_file(full_path)
                     found = True
                     break
+
             if not found:
                 print(f"❌ No JSON file in '{data_dir}' has a 'date' of {target_str}.")
                 print("Ensure one of your data files contains a matching 'date' field.")

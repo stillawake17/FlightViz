@@ -150,7 +150,7 @@ def get_yesterday():
     Returns yesterday's date in YYYY-MM-DD format.
     """
     today = datetime.date.today()
-    yesterday = today - datetime.timedelta(days=4)
+    yesterday = today - datetime.timedelta(days=90)
     return yesterday.strftime("%Y-%m-%d")
 
 def analyze_flights(flights):

@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Night Ledger — airport flight scrutiny tool</title>
+<style>
+  :root{
+    --ink:#eaf1f6;          /* board text */
+    --ink-dim:#9fb3bf;      /* secondary text */
+    --bg:#1b2a35;           /* slate approach-sky */
+    --panel:#22323e;        /* raised panels */
+    --panel-2:#2a3d4a;      /* inputs */
+    --line:#3a5160;         /* hairlines */
+    --night:#e0533a;        /* runway approach red — night hours */
+    --shoulder:#f0a830;     /* taxiway amber — shoulder hours */
+    --regular:#3b6e7a;      /* daytime, muted teal */
+    --regular-ink:#7fd1c9;
+    --signal:#46e0c8;       /* live accent */
+    --focus:#9fe8ff;
+    --mono:"SFMono-Regular",ui-monospace,"Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:
+      radial-gradient(120% 80% at 50% -10%, #28404f 0%, var(--bg) 55%) fixed,
+      var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--focus)}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 22px 80px}
+
+  /* ---------- masthead ---------- */
+  header.masthead{
+    border-bottom:1px solid var(--line);
+    padding-bottom:20px;margin-bottom:26px;
+  }
+  .eyebrow{
+    font-family:var(--mono);font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--signal);margin:0 0 10px;
+  }
+  h1{
+    font-size:clamp(30px,5vw,52px);line-height:1.02;margin:0;
+    font-weight:760;letter-spacing:-.02em;
+  }
+  h1 .glow{color:var(--night)}
+  .sub{color:var(--ink-dim);max-width:62ch;margin:14px 0 0;font-size:15px}
+
+  /* ---------- step structure ---------- */
+  .step{margin-top:34px}
+  .step-head{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
+  .step-num{
+    font-family:var(--mono);font-size:13px;color:var(--bg);
+    background:var(--signal);border-radius:3px;padding:2px 8px;font-weight:700;
+    letter-spacing:.05em;
+  }
+  .step-title{font-size:20px;font-weight:680;margin:0;letter-spacing:-.01em}
+  .step-note{color:var(--ink-dim);font-size:14px;margin:4px 0 0 0}
+
+  /* ---------- controls ---------- */
+  .panel{
+    background:var(--panel);border:1px solid var(--line);
+    border-radius:10px;padding:18px;
+  }
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:680px){.grid2{grid-template-columns:1fr}}
+  label.field{display:block;font-size:13px;color:var(--ink-dim);margin-bottom:6px;
+    font-family:var(--mono);letter-spacing:.04em;text-transform:uppercase}
+  select,textarea,input[type=text]{
+    width:100%;background:var(--panel-2);color:var(--ink);
+    border:1px solid var(--line);border-radius:7px;padding:11px 12px;
+    font-family:var(--sans);font-size:15px;
+  }
+  textarea{min-height:150px;resize:vertical;font-family:var(--mono);font-size:13px;line-height:1.55}
+  select:focus,textarea:focus,input:focus,button:focus-visible,.drop:focus-visible{
+    outline:2px solid var(--focus);outline-offset:2px;
+  }
+  .feed-block{margin-top:14px}
+  .feed-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+  .feed-head .cnt{font-family:var(--mono);font-size:12px;color:var(--ink-dim)}
+  .drop{
+    border:1.5px dashed var(--line);border-radius:7px;padding:10px 12px;
+    font-size:13px;color:var(--ink-dim);background:var(--panel-2);
+    cursor:pointer;display:flex;align-items:center;gap:10px;
+  }
+  .drop.drag{border-color:var(--signal);color:var(--ink)}
+  .drop b{color:var(--focus);font-weight:600}
+
+  .actions{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+  button{
+    font-family:var(--sans);font-size:15px;font-weight:600;cursor:pointer;
+    border-radius:7px;padding:11px 20px;border:1px solid var(--line);
+    background:var(--panel-2);color:var(--ink);
+  }
+  button.primary{background:var(--signal);color:#04110f;border-color:var(--signal)}
+  button.primary:hover{filter:brightness(1.08)}
+  button.ghost:hover{border-color:var(--ink-dim)}
+  button:disabled{opacity:.4;cursor:not-allowed}
+
+  .err{color:var(--night);font-size:13px;margin-top:10px;font-family:var(--mono);white-space:pre-wrap}
+
+  /* ---------- results ---------- */
+  #results{margin-top:40px;display:none}
+  .result-head{display:flex;justify-content:space-between;align-items:flex-end;
+    gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px}
+  .result-airport{font-size:24px;font-weight:720;letter-spacing:-.01em}
+  .result-airport span{color:var(--ink-dim);font-weight:500;font-size:16px;font-family:var(--mono)}
+  .result-rules{font-family:var(--mono);font-size:12px;color:var(--ink-dim);text-align:right;line-height:1.7}
+  .result-rules b{color:var(--shoulder);font-weight:600}
+  .result-rules .nb{color:var(--night)}
+
+  /* signature: 24h clock band */
+  .clockwrap{margin:26px 0 8px}
+  .clock-label{display:flex;justify-content:space-between;font-family:var(--mono);
+    font-size:11px;color:var(--ink-dim);margin-bottom:7px;letter-spacing:.08em}
+  .clockband{
+    position:relative;height:74px;border:1px solid var(--line);border-radius:8px;
+    background:
+      repeating-linear-gradient(90deg,transparent,transparent calc(100%/24 - 1px),
+        var(--line) calc(100%/24 - 1px),var(--line) calc(100%/24));
+    overflow:hidden;
+  }
+  .band-zone{position:absolute;top:0;bottom:0;opacity:.13}
+  .band-zone.night{background:var(--night)}
+  .band-zone.shoulder{background:var(--shoulder)}
+  .tick{position:absolute;bottom:0;width:7px;border-radius:2px 2px 0 0;
+    transform:translateX(-50%);transition:height .5s ease}
+  .tick.night{background:var(--night)}
+  .tick.shoulder{background:var(--shoulder)}
+  .tick.regular{background:var(--regular)}
+  .hour-ax{display:grid;grid-template-columns:repeat(24,1fr);font-family:var(--mono);
+    font-size:9px;color:var(--ink-dim);margin-top:5px}
+  .hour-ax span{text-align:center}
+  .hour-ax span:nth-child(odd){opacity:0}
+
+  /* summary cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+  @media(max-width:680px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:18px 18px 16px;position:relative;overflow:hidden}
+  .card .cap{font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--ink-dim)}
+  .card .big{font-size:42px;font-weight:740;line-height:1;margin:10px 0 4px;
+    font-variant-numeric:tabular-nums}
+  .card .split{font-family:var(--mono);font-size:12px;color:var(--ink-dim)}
+  .card.night{border-color:#6b3a31}.card.night .big{color:var(--night)}
+  .card.night::before,.card.shoulder::before,.card.total::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:3px}
+  .card.night::before{background:var(--night)}
+  .card.shoulder{border-color:#5f4d22}.card.shoulder .big{color:var(--shoulder)}
+  .card.shoulder::before{background:var(--shoulder)}
+  .card.total::before{background:var(--regular-ink)}
+  .card.total .big{color:var(--ink)}
+
+  /* breakdown tables */
+  .tables{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;margin-top:30px}
+  @media(max-width:920px){.tables{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.tables{grid-template-columns:1fr}}
+  .tbl-title{font-family:var(--mono);font-size:12px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink-dim);margin:0 0 10px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line)}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--ink-dim);font-weight:500}
+  td.n{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono)}
+  tr td .pill{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:7px;vertical-align:baseline}
+  .pill.night{background:var(--night)}.pill.shoulder{background:var(--shoulder)}.pill.regular{background:var(--regular)}
+
+  /* full log */
+  details.log{margin-top:30px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+  details.log summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none;
+    display:flex;justify-content:space-between;align-items:center}
+  details.log summary::-webkit-details-marker{display:none}
+  details.log summary .chev{font-family:var(--mono);color:var(--ink-dim);font-size:13px}
+  .log-scroll{max-height:420px;overflow:auto;border-top:1px solid var(--line)}
+  .log-scroll table{font-size:13px}
+  .log-scroll td.cat{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+  .cat.night{color:var(--night)}.cat.shoulder{color:var(--shoulder)}.cat.regular{color:var(--ink-dim)}
+
+  .dl{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+
+  /* batch loader */
+  .bigdrop{
+    border:1.5px dashed var(--line);border-radius:9px;padding:22px 18px;
+    background:var(--panel-2);cursor:pointer;text-align:center;color:var(--ink-dim);
+    transition:border-color .15s,color .15s;
+  }
+  .bigdrop:hover{border-color:var(--ink-dim)}
+  .bigdrop.drag{border-color:var(--signal);color:var(--ink);background:#2f4654}
+  .bigdrop .big-line{font-size:15px;color:var(--ink);font-weight:600;margin-bottom:4px}
+  .bigdrop .small-line{font-size:13px}
+  .bigdrop code{font-family:var(--mono);font-size:12px;color:var(--focus);
+    background:var(--panel);padding:1px 6px;border-radius:4px}
+  .filelist{margin-top:14px;display:flex;flex-direction:column;gap:6px}
+  .filerow{display:flex;align-items:center;gap:10px;background:var(--panel-2);
+    border:1px solid var(--line);border-radius:7px;padding:7px 10px;font-size:13px}
+  .filerow .fdate{font-family:var(--mono);color:var(--ink)}
+  .filerow .fdir{font-family:var(--mono);font-size:11px;text-transform:uppercase;
+    letter-spacing:.06em;padding:1px 7px;border-radius:4px;border:1px solid var(--line)}
+  .filerow .fdir.arr{color:var(--regular-ink)}
+  .filerow .fdir.dep{color:var(--shoulder)}
+  .filerow .fdir.csv{color:var(--signal);border-color:var(--signal)}
+  .filerow .fcount{color:var(--ink-dim);margin-left:auto;font-family:var(--mono);font-size:12px}
+  .filerow .fx{cursor:pointer;color:var(--ink-dim);border:none;background:none;
+    font-size:16px;padding:0 2px;line-height:1}
+  .filerow .fx:hover{color:var(--night)}
+  .filerow.bad{border-color:#6b3a31}
+  .filerow.bad .fdate{color:var(--night)}
+  .batch-actions{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;align-items:center}
+  .batch-tally{font-family:var(--mono);font-size:12px;color:var(--ink-dim);margin-left:auto}
+
+  .or-divider{display:flex;align-items:center;gap:14px;margin:22px 0;
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-dim)}
+  .or-divider::before,.or-divider::after{content:"";height:1px;background:var(--line);flex:1}
+
+  /* daily table */
+  .daily-wrap{margin-top:30px}
+  .daily-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:6px}
+  .daily-hint{font-size:12px;color:var(--ink-dim);margin:0 0 12px;font-style:italic}
+  .toggle-all{font-family:var(--mono);font-size:12px;padding:6px 12px;
+    background:var(--panel-2);border:1px solid var(--line);color:var(--ink-dim);border-radius:6px;cursor:pointer}
+  .toggle-all:hover{color:var(--ink);border-color:var(--ink-dim)}
+  .daily-scroll{max-height:460px;overflow:auto;border:1px solid var(--line);border-radius:10px}
+  .daily-scroll table{font-size:14px}
+  .daily-scroll thead th{position:sticky;top:0;background:var(--panel);z-index:1}
+  .daily-scroll td.day{font-family:var(--mono)}
+  .daily-scroll tr.dayrow.collapsed{display:none}
+  .daily-scroll tr.monthhead{cursor:pointer;user-select:none}
+  .daily-scroll tr.monthhead td{font-weight:700;background:var(--panel-2);
+    border-top:1px solid var(--line)}
+  .daily-scroll tr.monthhead:hover td{background:#2f4654}
+  .daily-scroll tr.monthhead td.day{color:var(--signal);font-weight:600}
+  .daily-scroll .caret{display:inline-block;width:1em;color:var(--ink-dim);
+    transition:transform .15s}
+  .daily-scroll tr.monthhead.open .caret{transform:rotate(90deg)}
+  .daily-scroll tr.totrow td{font-weight:800;border-top:2px solid var(--signal);background:var(--panel)}
+  .daily-scroll td.nn{color:var(--night)}.daily-scroll td.ss{color:var(--shoulder)}
+
+  footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);
+    color:var(--ink-dim);font-size:13px;line-height:1.7}
+  footer code{font-family:var(--mono);color:var(--ink);background:var(--panel-2);
+    padding:1px 6px;border-radius:4px;font-size:12px}
+
+  @media(prefers-reduced-motion:reduce){.tick{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Flight scrutiny · night &amp; shoulder hours</p>
+    <h1>The Night <span class="glow">Ledger</span></h1>
+    <p class="sub">Paste a day's arrivals or departures copied from Flightradar24, choose the airport,
+      and get the night-hours and shoulder-hours counts that actually matter for holding an airport to its limits.
+      Nothing is uploaded anywhere — it all runs in your browser.</p>
+  </header>
+
+  <!-- STEP 1 -->
+  <section class="step">
+    <div class="step-head"><span class="step-num">01</span><h2 class="step-title">Pick the airport</h2></div>
+    <p class="step-note" id="rule-preview">Each airport has its own night and shoulder periods. Picking it loads the correct rules.</p>
+    <div class="panel" style="margin-top:12px">
+      <label class="field" for="airport">Airport</label>
+      <select id="airport"></select>
+    </div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section class="step">
+    <div class="step-head"><span class="step-num">02</span><h2 class="step-title">Add the day's flights</h2></div>
+    <p class="step-note">Load a whole month at once by selecting many saved <code>.txt</code> files — or do a single day by pasting below.
+      Files should be named like <code>BRS_2026-06-25_landings.txt</code> so the date and direction are read automatically.</p>
+
+    <div class="panel" style="margin-top:12px">
+      <div class="grid2">
+        <div>
+          <label class="field" for="date">Date (single-day paste only)</label>
+          <input type="text" id="date" placeholder="e.g. 2026-06-25" />
+        </div>
+        <div>
+          <label class="field" for="fr24">Flightradar24 history link</label>
+          <input type="text" id="fr24" readonly placeholder="select an airport first" />
+        </div>
+      </div>
+
+      <!-- batch loader -->
+      <div class="feed-block">
+        <label class="field">Load many files at once</label>
+        <label class="bigdrop" id="batch-drop" tabindex="0">
+          <div class="big-line">Drop your month's .txt files here, or click to choose</div>
+          <div class="small-line">Select as many days as you like — arrivals and departures together. Named <code>BRS_2026-06-25_landings.txt</code>. You can also drop a previously downloaded <code>full log .csv</code> to reload past data.</div>
+          <input type="file" accept=".txt,.csv" multiple hidden id="batch-file">
+        </label>
+        <div class="filelist" id="filelist"></div>
+        <div class="batch-actions" id="batch-actions" style="display:none">
+          <button class="primary" id="run-batch">Build month summary</button>
+          <button class="ghost" id="clear-batch">Remove all files</button>
+          <span class="batch-tally" id="batch-tally"></span>
+        </div>
+      </div>
+
+      <div class="or-divider">or paste a single day</div>
+
+      <div class="feed-block">
+        <div class="feed-head">
+          <label class="field" for="landings" style="margin:0">Arrivals (landings)</label>
+          <span class="cnt" id="land-cnt"></span>
+        </div>
+        <textarea id="landings" placeholder="11:59 PM&#10;Larnaca&#10;LCA&#10;U22904&#10;A21N&#10;..."></textarea>
+        <label class="drop" id="land-drop" tabindex="0">📄 <span>drop an <b>arrivals .txt</b> here, or click to choose</span>
+          <input type="file" accept=".txt" hidden id="land-file"></label>
+      </div>
+
+      <div class="feed-block">
+        <div class="feed-head">
+          <label class="field" for="takeoffs" style="margin:0">Departures (takeoffs)</label>
+          <span class="cnt" id="take-cnt"></span>
+        </div>
+        <textarea id="takeoffs" placeholder="paste departures here (optional)"></textarea>
+        <label class="drop" id="take-drop" tabindex="0">📄 <span>drop a <b>departures .txt</b> here, or click to choose</span>
+          <input type="file" accept=".txt" hidden id="take-file"></label>
+      </div>
+
+      <div class="actions">
+        <button class="primary" id="run">Build single-day summary</button>
+        <button class="ghost" id="demo">Load the sample day</button>
+        <button class="ghost" id="clear">Clear paste boxes</button>
+      </div>
+      <div class="err" id="err"></div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results">
+    <div class="result-head">
+      <div class="result-airport" id="r-airport">—</div>
+      <div class="result-rules" id="r-rules"></div>
+    </div>
+
+    <div class="clockwrap">
+      <div class="clock-label"><span id="clk-left">When the flights happened — across 24 hours</span><span id="clk-right"></span></div>
+      <div class="clockband" id="clockband"></div>
+      <div class="hour-ax" id="houraxis"></div>
+    </div>
+
+    <div class="cards">
+      <div class="card night"><div class="cap">Night hours</div><div class="big" id="c-night">0</div><div class="split" id="c-night-split"></div></div>
+      <div class="card shoulder"><div class="cap">Shoulder hours</div><div class="big" id="c-shoulder">0</div><div class="split" id="c-shoulder-split"></div></div>
+      <div class="card total"><div class="cap">All movements</div><div class="big" id="c-total">0</div><div class="split" id="c-total-split"></div></div>
+    </div>
+
+    <div class="tables">
+      <div>
+        <p class="tbl-title">Night-hour movements by airline</p>
+        <table><thead><tr><th>Airline</th><th style="text-align:right">Night</th></tr></thead><tbody id="t-airline"></tbody></table>
+      </div>
+      <div>
+        <p class="tbl-title">Night-hour movements by aircraft</p>
+        <table><thead><tr><th>Type</th><th style="text-align:right">Night</th></tr></thead><tbody id="t-aircraft"></tbody></table>
+      </div>
+      <div>
+        <p class="tbl-title">Night-hour movements by route</p>
+        <table><thead><tr><th>Destination / origin</th><th style="text-align:right">Night</th></tr></thead><tbody id="t-route"></tbody></table>
+      </div>
+    </div>
+
+    <div class="daily-wrap" id="daily-wrap" style="display:none">
+      <div class="daily-head">
+        <p class="tbl-title" style="margin:0">Breakdown by month</p>
+        <button class="toggle-all" id="toggle-all" type="button">Expand all days</button>
+      </div>
+      <p class="daily-hint" id="daily-hint">Click a month to show or hide its days.</p>
+      <div class="daily-scroll">
+        <table>
+          <thead><tr><th>Date</th><th style="text-align:right">Night</th><th style="text-align:right">Shoulder</th><th style="text-align:right">Regular</th><th style="text-align:right">Total</th></tr></thead>
+          <tbody id="t-daily"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <details class="log">
+      <summary><span>Full flight log — every movement, classified</span><span class="chev" id="log-cnt"></span></summary>
+      <div class="log-scroll">
+        <table><thead><tr><th>Date</th><th>Time</th><th>Dir.</th><th>Place</th><th>Flight</th><th>Airline</th><th>Type</th><th>Period</th></tr></thead>
+        <tbody id="t-log"></tbody></table>
+      </div>
+    </details>
+
+    <div class="dl">
+      <button class="primary" id="dl-summary">Download summary (CSV)</button>
+      <button class="ghost" id="dl-log">Download full log (CSV)</button>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>How periods are decided.</b> Each flight's clock time is matched against the airport's published night and
+      shoulder windows. Wrap-around windows like 23:30–06:00 are handled correctly. A flight exactly on a boundary
+      counts in the period that's starting.</p>
+    <p><b>About the data.</b> Flightradar24 movement lists are a best-available public record, not the airport's official
+      log — a few movements can be missing or mislabelled. Treat the counts as well-evidenced indicators, not certified figures.
+      This tool deliberately leaves out aircraft-noise (QC) scoring, which needs verified per-variant values; use your full
+      notebook when you need that depth.</p>
+    <p>Runs entirely offline in your browser · one file, no account · share the link with any airport group.</p>
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   Airport rule table — ported from airport_config.csv
+   times are "HH:MM" 24h; empty string = no such window
+   ============================================================ */
+const AIRPORTS = {
+  BRS:{name:"Bristol Airport", night:["23:30","06:00"], sh_m:["06:00","07:00"], sh_e:["23:00","23:30"]},
+  LBA:{name:"Leeds Bradford Airport", night:["23:00","07:00"], sh_m:["",""], sh_e:["",""]},
+  LTN:{name:"London Luton Airport", night:["23:30","06:00"], sh_m:["06:00","07:00"], sh_e:["",""]},
+  LHR:{name:"Heathrow Airport", night:["23:30","06:00"], sh_m:["",""], sh_e:["",""]},
+  LGW:{name:"Gatwick Airport", night:["23:30","06:00"], sh_m:["",""], sh_e:["",""]},
+  BHX:{name:"Birmingham Airport", night:["23:30","06:00"], sh_m:["",""], sh_e:["",""]},
+  MAN:{name:"Manchester Airport", night:["23:00","07:00"], sh_m:["",""], sh_e:["",""]},
+  EMA:{name:"East Midlands Airport", night:["23:00","07:00"], sh_m:["",""], sh_e:["",""]}
+};
+
+/* airline prefixes — ported from airline_prefixes.csv, longest first */
+const AIRLINES = [
+  ["TOM","TUI Airways"],["RYR","Ryanair"],["EJU","easyJet Europe"],["EAI","Emerald Airlines"],
+  ["U2","easyJet"],["FR","Ryanair"],["KL","KLM"],["EI","Aer Lingus"],["LS","Jet2"],
+  ["BY","TUI Airways"],["PC","Pegasus Airlines"],["XQ","SunExpress"],["GR","Aurigny"],["LM","Loganair"]
+].sort((a,b)=>b[0].length-a[0].length);
+
+const PAGE_FURNITURE = new Set(["takeoffs","landings","view map","settings","weather","filters","widgets","playback"]);
+const TIME_RE = /^\d{1,2}:\d{2}\s?[AP]M$/i;
+
+/* ---------- helpers ---------- */
+function hmToMin(hm){ if(!hm) return null; const [h,m]=hm.split(":").map(Number); return h*60+m; }
+function clockToMin(t){
+  const m=String(t).trim().match(/^(\d{1,2}):(\d{2})\s?([AP]M)$/i);
+  if(!m) return null;
+  let h=+m[1]%12; if(m[3].toUpperCase()==="PM") h+=12;
+  return h*60+(+m[2]);
+}
+function inWindow(min,win){
+  const s=hmToMin(win[0]), e=hmToMin(win[1]);
+  if(s===null||e===null) return false;
+  if(s<e) return min>=s && min<e;        // normal
+  return min>=s || min<e;                 // wrap-around (23:30->06:00)
+}
+function classify(min,rule){
+  if(inWindow(min,rule.night)) return "night";
+  if(inWindow(min,rule.sh_m)) return "shoulder";
+  if(inWindow(min,rule.sh_e)) return "shoulder";
+  return "regular";
+}
+function inferAirline(flight){
+  const f=String(flight).toUpperCase().trim();
+  for(const [pre,name] of AIRLINES) if(f.startsWith(pre)) return name;
+  return "";
+}
+
+/* ---------- the parser (mirrors the notebook) ---------- */
+function parseFeed(text, direction, code, rule, date){
+  const lines=[];
+  for(const raw of text.split(/\r?\n/)){
+    const s=raw.trim();
+    if(!s) continue;
+    if(PAGE_FURNITURE.has(s.toLowerCase())) continue;
+    lines.push(s);
+  }
+  // group into blocks that each start at a time line
+  const blocks=[]; let cur=[];
+  for(const ln of lines){
+    if(TIME_RE.test(ln)){ if(cur.length) blocks.push(cur); cur=[]; }
+    cur.push(ln);
+  }
+  if(cur.length) blocks.push(cur);
+
+  const rows=[];
+  for(let b of blocks){
+    if(!TIME_RE.test(b[0])) continue;            // skip stray leading junk
+    const pad=b.concat(["Unknown","Unknown","Unknown","Unknown"]).slice(0,5);
+    const [time,city,placeCode,flight,ac]=pad;
+    const min=clockToMin(time);
+    if(min===null) continue;
+    rows.push({
+      time, direction, city, placeCode,
+      flight, aircraft:ac,
+      airline: inferAirline(flight) || "—",
+      min, period: classify(min,rule),
+      date: date||""
+    });
+  }
+  return rows;
+}
+
+/* ============================================================ */
+const $=id=>document.getElementById(id);
+let LAST=null;
+
+/* populate dropdown */
+(function(){
+  const sel=$("airport");
+  for(const [code,a] of Object.entries(AIRPORTS)){
+    const o=document.createElement("option");
+    o.value=code; o.textContent=`${a.name}  (${code})`;
+    sel.appendChild(o);
+  }
+  sel.value="BRS";
+  sel.addEventListener("change",()=>{ updateRulePreview(); revalidateBatch(); });
+  updateRulePreview();
+})();
+
+function fmtWin(w){ return (w[0]&&w[1]) ? `${w[0]}–${w[1]}` : "—"; }
+function updateRulePreview(){
+  const code=$("airport").value, a=AIRPORTS[code];
+  const sh=[a.sh_m,a.sh_e].filter(w=>w[0]&&w[1]).map(fmtWin).join(" & ")||"none defined";
+  $("rule-preview").innerHTML=`<b style="color:var(--night)">Night</b> ${fmtWin(a.night)} · `+
+    `<b style="color:var(--shoulder)">Shoulder</b> ${sh}`;
+  const today="yesterday";
+  $("fr24").value=`flightradar24.com/airport/${code.toLowerCase()}/history`;
+}
+
+/* counts under each textarea */
+function liveCount(){
+  const lc=($("landings").value.match(/[AP]M$/gim)||[]).length;
+  const tc=($("takeoffs").value.match(/[AP]M$/gim)||[]).length;
+  $("land-cnt").textContent=lc?`${lc} times detected`:"";
+  $("take-cnt").textContent=tc?`${tc} times detected`:"";
+}
+$("landings").addEventListener("input",liveCount);
+$("takeoffs").addEventListener("input",liveCount);
+
+/* file drop wiring */
+function wireDrop(dropId,fileId,areaId){
+  const drop=$(dropId),file=$(fileId),area=$(areaId);
+  drop.addEventListener("click",()=>file.click());
+  drop.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();file.click();}});
+  file.addEventListener("change",()=>{ if(file.files[0]) readInto(file.files[0],area); });
+  ["dragover","dragenter"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add("drag");}));
+  ["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove("drag");}));
+  drop.addEventListener("drop",e=>{ const f=e.dataTransfer.files[0]; if(f) readInto(f,area); });
+}
+function readInto(f,area){
+  const r=new FileReader();
+  r.onload=()=>{ area.value=r.result; liveCount(); tryDateFromName(f.name); };
+  r.readAsText(f);
+}
+function tryDateFromName(n){
+  const m=n.match(/(\d{4}-\d{2}-\d{2})/);
+  if(m && !$("date").value) $("date").value=m[1];
+  const a=n.match(/^([A-Z]{3})_/i);
+  if(a && AIRPORTS[a[1].toUpperCase()]) { $("airport").value=a[1].toUpperCase(); updateRulePreview(); }
+}
+wireDrop("land-drop","land-file","landings");
+wireDrop("take-drop","take-file","takeoffs");
+
+/* ============================================================
+   Batch loader — many files at once, aggregated by date
+   ============================================================ */
+let BATCH=[];   // {id,name,date,direction,code,rows,ok,reason}
+let bid=0;
+
+const FNAME_RE=/^([A-Z]{3})_(\d{4}-\d{2}-\d{2})_(landings|takeoffs)\.txt$/i;
+const FNAME_LEGACY_RE=/^(\d{4}-\d{2}-\d{2})_(landings|takeoffs)\.txt$/i;  // old Bristol style -> BRS
+
+function readFromName(name){
+  let m=name.match(FNAME_RE);
+  if(m) return {code:m[1].toUpperCase(), date:m[2], direction:m[3].toLowerCase()};
+  m=name.match(FNAME_LEGACY_RE);
+  if(m) return {code:"BRS", date:m[1], direction:m[2].toLowerCase()};
+  return null;
+}
+
+/* ---- CSV reading (for reloading a previously downloaded full-log CSV) ---- */
+function splitCsvLine(line){
+  const out=[]; let cur=""; let q=false;
+  for(let i=0;i<line.length;i++){
+    const c=line[i];
+    if(q){
+      if(c==='"'){ if(line[i+1]==='"'){cur+='"';i++;} else q=false; }
+      else cur+=c;
+    } else {
+      if(c==='"') q=true;
+      else if(c===','){ out.push(cur); cur=""; }
+      else cur+=c;
+    }
+  }
+  out.push(cur);
+  return out;
+}
+// reconstruct flight rows from a full-log CSV. Returns {rows, days:Set, error}
+function parseLogCsv(text, rule){
+  const raw=text.split(/\r?\n/).filter(l=>l.trim().length);
+  if(!raw.length) return {rows:[],days:new Set(),error:"file is empty"};
+  const header=splitCsvLine(raw[0]).map(h=>h.trim().toLowerCase());
+  const col=name=>header.indexOf(name);
+  const ci={date:col("date"),time:col("time"),dir:col("direction"),
+            place:col("place"),pcode:col("placecode"),flight:col("flight"),
+            airline:col("airline"),aircraft:col("aircraft"),period:col("period")};
+  if(ci.date<0||ci.time<0){
+    return {rows:[],days:new Set(),error:"not a full-log CSV (needs Date and Time columns)"};
+  }
+  const rows=[]; const days=new Set();
+  for(let i=1;i<raw.length;i++){
+    const c=splitCsvLine(raw[i]);
+    const date=(c[ci.date]||"").trim();
+    const time=(c[ci.time]||"").trim();
+    if(!time) continue;
+    const min=clockToMin(time);
+    if(min===null) continue;
+    const dirRaw=(ci.dir>=0?c[ci.dir]:"").trim().toLowerCase();
+    const direction=dirRaw.startsWith("arr")?"arr":dirRaw.startsWith("dep")?"dep":"arr";
+    // re-derive period from the rule so reloaded data stays consistent with current windows
+    const period=classify(min,rule);
+    rows.push({
+      time, direction,
+      city:(ci.place>=0?c[ci.place]:"")||"",
+      placeCode:(ci.pcode>=0?c[ci.pcode]:"")||"",
+      flight:(ci.flight>=0?c[ci.flight]:"")||"",
+      aircraft:(ci.aircraft>=0?c[ci.aircraft]:"")||"",
+      airline:(ci.airline>=0?c[ci.airline]:"")|| inferAirline(ci.flight>=0?c[ci.flight]:"") || "—",
+      min, period, date
+    });
+    if(date) days.add(date);
+  }
+  return {rows,days,error: rows.length?"":"no flight rows found in CSV"};
+}
+
+function csvCodeFromName(name){
+  const m=name.match(/^([A-Z]{3})_/i);
+  return m && AIRPORTS[m[1].toUpperCase()] ? m[1].toUpperCase() : null;
+}
+
+function applyAirportToEntry(entry){
+  // decide ok/reason for the currently selected airport, using stored raw + meta
+  const code=$("airport").value;
+  entry.ok=false;
+  if(entry.isCsv){
+    if(entry.fileCode && entry.fileCode!==code){
+      entry.reason=`CSV is ${entry.fileCode}, but you've selected ${code} — skipped`; entry.rows=[]; entry.days=new Set(); return;
+    }
+    const res=parseLogCsv(entry.raw,AIRPORTS[code]);
+    if(res.error){ entry.reason=res.error; entry.rows=[]; entry.days=new Set(); return; }
+    entry.rows=res.rows; entry.days=res.days; entry.code=code;
+    entry.ok=true; entry.reason=""; return;
+  }
+  if(entry.badName){ entry.reason="name not recognised — expected BRS_2026-06-25_landings.txt"; entry.rows=[]; return; }
+  if(entry.fileCode!==code){
+    entry.reason=`is ${entry.fileCode}, but you've selected ${code} — skipped`; entry.rows=[]; return;
+  }
+  const dir=entry.direction==="landings"?"arr":"dep";
+  entry.rows=parseFeed(entry.raw,dir,code,AIRPORTS[code],entry.date);
+  entry.code=code;
+  if(!entry.rows.length){ entry.reason="no flights could be read from this file"; return; }
+  entry.ok=true; entry.reason="";
+}
+
+function revalidateBatch(){
+  BATCH.forEach(e=>applyAirportToEntry(e));
+
+  // Collect day+direction coverage from CSV entries first (CSVs are the archive).
+  // Any .txt covering a day already in a CSV is skipped, so counts never double.
+  const csvDays=new Set();
+  BATCH.filter(e=>e.ok && e.isCsv).forEach(e=>e.days.forEach(d=>csvDays.add(d)));
+
+  const seenName=new Set();
+  BATCH.forEach(e=>{
+    if(!e.ok) return;
+    if(seenName.has(e.name)){ e.ok=false; e.reason="already loaded — duplicate skipped"; return; }
+    seenName.add(e.name);
+    if(!e.isCsv && csvDays.has(e.date)){
+      e.ok=false; e.reason=`${e.date} already in a loaded CSV — skipped`;
+    }
+  });
+  renderFileList();
+}
+
+function handleBatchFiles(fileList){
+  const files=[...fileList];
+  let pending=files.length;
+  if(!pending) return;
+  files.forEach(f=>{
+    const isCsv=/\.csv$/i.test(f.name);
+    let entry;
+    if(isCsv){
+      entry={id:++bid,name:f.name,isCsv:true,fileCode:csvCodeFromName(f.name),
+             date:"",direction:"",raw:"",rows:[],days:new Set(),ok:false,reason:""};
+    } else {
+      const meta=readFromName(f.name);
+      entry={id:++bid,name:f.name,isCsv:false,date:meta?meta.date:"",direction:meta?meta.direction:"",
+             fileCode:meta?meta.code:"",badName:!meta,raw:"",rows:[],ok:false,reason:""};
+    }
+    const r=new FileReader();
+    r.onload=()=>{ entry.raw=r.result; BATCH.push(entry); if(--pending===0) revalidateBatch(); };
+    r.onerror=()=>{ entry.badName=true; entry.reason="could not read file"; BATCH.push(entry); if(--pending===0) revalidateBatch(); };
+    r.readAsText(f);
+  });
+}
+
+function renderFileList(){
+  const list=$("filelist"); list.innerHTML="";
+  // sort: CSV archives first, then by date
+  BATCH.sort((a,b)=>{
+    if(a.isCsv!==b.isCsv) return a.isCsv?-1:1;
+    return (a.date||a.name||"").localeCompare(b.date||b.name||"") || (a.direction||"").localeCompare(b.direction||"");
+  });
+  BATCH.forEach(e=>{
+    const row=document.createElement("div");
+    row.className="filerow"+(e.ok?"":" bad");
+    if(e.isCsv){
+      const dlist=e.days?[...e.days].sort():[];
+      const span = dlist.length ? (dlist.length>1?`${dlist[0]} → ${dlist[dlist.length-1]}`:dlist[0]) : e.name;
+      row.innerHTML=
+        `<span class="fdate">${escapeHtml(e.ok?span:e.name)}</span>`+
+        `<span class="fdir csv">csv</span>`+
+        `<span class="fcount">${e.ok?`${e.rows.length} flights · ${e.days.size} days`:escapeHtml(e.reason)}</span>`+
+        `<button class="fx" title="remove" data-id="${e.id}">✕</button>`;
+    } else {
+      const dirShort=e.direction==="landings"?"arr":e.direction==="takeoffs"?"dep":"?";
+      row.innerHTML=
+        `<span class="fdate">${escapeHtml(e.date||e.name)}</span>`+
+        (e.direction?`<span class="fdir ${dirShort}">${dirShort}</span>`:"")+
+        `<span class="fcount">${e.ok?e.rows.length+" flights":escapeHtml(e.reason)}</span>`+
+        `<button class="fx" title="remove" data-id="${e.id}">✕</button>`;
+    }
+    list.appendChild(row);
+  });
+  list.querySelectorAll(".fx").forEach(b=>b.addEventListener("click",()=>{
+    BATCH=BATCH.filter(e=>e.id!==+b.dataset.id); revalidateBatch();
+  }));
+
+  const ok=BATCH.filter(e=>e.ok);
+  const days=new Set();
+  ok.forEach(e=>{ if(e.isCsv) e.days.forEach(d=>days.add(d)); else if(e.date) days.add(e.date); });
+  const total=ok.reduce((s,e)=>s+e.rows.length,0);
+  $("batch-actions").style.display = BATCH.length?"flex":"none";
+  $("batch-tally").textContent = ok.length
+    ? `${days.size} day${days.size!==1?"s":""} · ${total} movements ready`
+    : "no usable files yet";
+  $("run-batch").disabled = ok.length===0;
+}
+
+/* batch drop wiring */
+(function(){
+  const drop=$("batch-drop"), file=$("batch-file");
+  drop.addEventListener("click",()=>file.click());
+  drop.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();file.click();}});
+  file.addEventListener("change",()=>{ handleBatchFiles(file.files); file.value=""; });
+  ["dragover","dragenter"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add("drag");}));
+  ["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove("drag");}));
+  drop.addEventListener("drop",e=>{ handleBatchFiles(e.dataTransfer.files); });
+})();
+
+$("clear-batch").addEventListener("click",()=>{ BATCH=[]; renderFileList(); });
+
+$("run-batch").addEventListener("click",()=>{
+  $("err").textContent="";
+  const code=$("airport").value, rule=AIRPORTS[code];
+  const ok=BATCH.filter(e=>e.ok && e.code===code);
+  if(!ok.length){ $("err").textContent="No usable files for this airport. Check the filenames and the airport selection."; return; }
+  let rows=[];
+  ok.forEach(e=>rows=rows.concat(e.rows));
+  rows.sort((a,b)=> (a.date||"").localeCompare(b.date||"") || a.min-b.min);
+  const days=[...new Set(rows.map(r=>r.date))].sort();
+  const span = days.length>1 ? `${days[0]} → ${days[days.length-1]}` : (days[0]||"period");
+  LAST={code,rule,rows,date:span,multi:true,periodLabel:span};
+  render(LAST);
+  $("results").style.display="block";
+  $("results").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth", block:"start"});
+});
+
+/* ---------- run ---------- */
+$("run").addEventListener("click",run);
+function run(){
+  $("err").textContent="";
+  const code=$("airport").value, rule=AIRPORTS[code];
+  const lt=$("landings").value.trim(), tt=$("takeoffs").value.trim();
+  if(!lt && !tt){ $("err").textContent="Paste some flights first, or load the sample day."; return; }
+
+  let rows=[];
+  const d=$("date").value.trim();
+  if(lt) rows=rows.concat(parseFeed(lt,"arr",code,rule,d));
+  if(tt) rows=rows.concat(parseFeed(tt,"dep",code,rule,d));
+  if(!rows.length){ $("err").textContent="No flights could be read. Check that each flight has its time on its own line."; return; }
+
+  rows.sort((a,b)=>a.min-b.min);
+  LAST={code,rule,rows,date:d,multi:false,periodLabel:d||"single day"};
+  render(LAST);
+  $("results").style.display="block";
+  $("results").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth", block:"start"});
+}
+
+function render({code,rule,rows,date,multi,periodLabel}){
+  const a=AIRPORTS[code];
+  const counts={night:0,shoulder:0,regular:0};
+  rows.forEach(r=>counts[r.period]++);
+  const total=rows.length;
+  const days=[...new Set(rows.map(r=>r.date).filter(Boolean))].sort();
+  const nDays=days.length||1;
+
+  $("r-airport").innerHTML=`${a.name} <span>${code}${periodLabel?" · "+periodLabel:""}</span>`;
+  const sh=[a.sh_m,a.sh_e].filter(w=>w[0]&&w[1]).map(fmtWin).join(" &amp; ")||"—";
+  $("r-rules").innerHTML=`<span class="nb">Night</span> ${fmtWin(a.night)}<br><b>Shoulder</b> ${sh}`;
+
+  const pct=n=>total?Math.round(n/total*100):0;
+  $("c-night").textContent=counts.night;
+  $("c-night-split").textContent= multi
+    ? `${pct(counts.night)}% · avg ${(counts.night/nDays).toFixed(1)}/day`
+    : `${pct(counts.night)}% of movements`;
+  $("c-shoulder").textContent=counts.shoulder;
+  $("c-shoulder-split").textContent= multi
+    ? `${pct(counts.shoulder)}% · avg ${(counts.shoulder/nDays).toFixed(1)}/day`
+    : `${pct(counts.shoulder)}% of movements`;
+  $("c-total").textContent=total;
+  const arr=rows.filter(r=>r.direction==="arr").length, dep=total-arr;
+  $("c-total-split").textContent= multi
+    ? `${nDays} days · ${arr} arr · ${dep} dep`
+    : `${arr} arrivals · ${dep} departures`;
+
+  $("clk-left").textContent = multi
+    ? "When flights happen across 24 hours — whole period"
+    : "When the flights happened — across 24 hours";
+
+  drawClock(rows,rule);
+  drawBreakdown("t-airline",rows.filter(r=>r.period==="night"),"airline");
+  drawBreakdown("t-aircraft",rows.filter(r=>r.period==="night"),"aircraft");
+  drawBreakdown("t-route",rows.filter(r=>r.period==="night"),routeLabel,15);
+  drawDaily(rows,multi);
+  drawLog(rows);
+  $("log-cnt").textContent=`${total} movements ▾`;
+}
+
+/* day-by-day table (multi-day only) */
+function monthKey(d){ return /^\d{4}-\d{2}/.test(d) ? d.slice(0,7) : "(undated)"; }
+function monthLabel(mk){
+  if(mk==="(undated)") return "Undated";
+  const [y,m]=mk.split("-").map(Number);
+  const names=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  return `${names[m-1]} ${y}`;
+}
+
+function drawDaily(rows,multi){
+  const wrap=$("daily-wrap"), tb=$("t-daily"), hint=$("daily-hint"), toggleAll=$("toggle-all");
+  if(!multi){ wrap.style.display="none"; return; }
+  wrap.style.display="block"; tb.innerHTML="";
+
+  // group days, then nest under months
+  const byDay={};
+  rows.forEach(r=>{
+    const d=r.date||"(undated)";
+    const o=byDay[d]=byDay[d]||{night:0,shoulder:0,regular:0,total:0};
+    o[r.period]++; o.total++;
+  });
+  const days=Object.keys(byDay).sort();
+  const months=[...new Set(days.map(monthKey))].sort();
+  const multiMonth=months.length>1;
+
+  const blank={night:0,shoulder:0,regular:0,total:0};
+  const add=(a,b)=>({night:a.night+b.night,shoulder:a.shoulder+b.shoulder,regular:a.regular+b.regular,total:a.total+b.total});
+  const cells=o=>`<td class="n nn">${o.night}</td><td class="n ss">${o.shoulder}</td><td class="n">${o.regular}</td><td class="n">${o.total}</td>`;
+
+  // collapse by default when there are several months, so the page stays short
+  const startCollapsed = months.length>=3;
+
+  let grand={...blank};
+  months.forEach((mk,mi)=>{
+    let sub={...blank};
+    const monthDays=days.filter(d=>monthKey(d)===mk);
+    monthDays.forEach(d=>sub=add(sub,byDay[d]));
+    grand=add(grand,sub);
+
+    // clickable month header row — carries the month's totals
+    const hr=document.createElement("tr");
+    hr.className="monthhead"+(startCollapsed?"":" open");
+    hr.dataset.month=mk;
+    hr.innerHTML=`<td class="day"><span class="caret">▸</span>${escapeHtml(monthLabel(mk))} `+
+      `<span style="color:var(--ink-dim);font-weight:400">(${monthDays.length} day${monthDays.length!==1?"s":""})</span></td>`+cells(sub);
+    tb.appendChild(hr);
+
+    // day rows for this month
+    monthDays.forEach(d=>{
+      const o=byDay[d];
+      const tr=document.createElement("tr");
+      tr.className="dayrow"+(startCollapsed?" collapsed":"");
+      tr.dataset.month=mk;
+      tr.innerHTML=`<td class="day" style="padding-left:26px">${escapeHtml(d)}</td>`+cells(o);
+      tb.appendChild(tr);
+    });
+  });
+
+  // grand total only meaningful across multiple months
+  if(multiMonth){
+    const tr=document.createElement("tr"); tr.className="totrow";
+    tr.innerHTML=`<td class="day">All months</td>`+cells(grand);
+    tb.appendChild(tr);
+  }
+
+  // ---- collapse / expand behaviour ----
+  function setMonth(mk,open){
+    tb.querySelectorAll(`tr.monthhead[data-month="${mk}"]`).forEach(h=>h.classList.toggle("open",open));
+    tb.querySelectorAll(`tr.dayrow[data-month="${mk}"]`).forEach(r=>r.classList.toggle("collapsed",!open));
+  }
+  tb.querySelectorAll("tr.monthhead").forEach(h=>{
+    h.addEventListener("click",()=>{
+      const open=!h.classList.contains("open");
+      setMonth(h.dataset.month,open);
+      syncToggleLabel();
+    });
+  });
+  function allOpen(){ return [...tb.querySelectorAll("tr.monthhead")].every(h=>h.classList.contains("open")); }
+  function syncToggleLabel(){ toggleAll.textContent = allOpen()? "Collapse all days":"Expand all days"; }
+  toggleAll.onclick=()=>{
+    const open=!allOpen();
+    months.forEach(mk=>setMonth(mk,open));
+    syncToggleLabel();
+  };
+
+  hint.textContent = startCollapsed
+    ? "Showing month totals. Click a month — or “Expand all” — to see its days."
+    : "Click a month to fold its days away.";
+  syncToggleLabel();
+}
+
+/* signature clock band */
+function drawClock(rows,rule){
+  const band=$("clockband"); band.innerHTML="";
+  const W=band.clientWidth||900;
+  // shaded zones
+  function zone(win,cls){
+    if(!win[0]||!win[1]) return;
+    const s=hmToMin(win[0])/1440, e=hmToMin(win[1])/1440;
+    const add=(l,r)=>{const d=document.createElement("div");d.className="band-zone "+cls;
+      d.style.left=(l*100)+"%";d.style.width=((r-l)*100)+"%";band.appendChild(d);};
+    if(s<e) add(s,e); else { add(s,1); add(0,e); }
+  }
+  zone(rule.night,"night"); zone(rule.sh_m,"shoulder"); zone(rule.sh_e,"shoulder");
+  // per-hour stacked counts
+  const byHour={};
+  rows.forEach(r=>{const h=Math.floor(r.min/60); (byHour[h]=byHour[h]||{night:0,shoulder:0,regular:0})[r.period]++;});
+  const max=Math.max(1,...Object.values(byHour).map(o=>o.night+o.shoulder+o.regular));
+  for(let h=0;h<24;h++){
+    const o=byHour[h]; if(!o) continue;
+    const tot=o.night+o.shoulder+o.regular;
+    const x=((h+0.5)/24)*100;
+    const dom=o.night?"night":o.shoulder?"shoulder":"regular";
+    const t=document.createElement("div");
+    t.className="tick "+dom;
+    t.style.left=x+"%";
+    t.style.height="0px";
+    band.appendChild(t);
+    requestAnimationFrame(()=>{ t.style.height=(8+(tot/max)*58)+"px"; });
+    t.title=`${h}:00–${h}:59 — ${tot} movement${tot>1?"s":""}`;
+  }
+  // axis
+  const ax=$("houraxis"); ax.innerHTML="";
+  for(let h=0;h<24;h++){const s=document.createElement("span");s.textContent=h;ax.appendChild(s);}
+  $("clk-right").textContent=`peak hour: ${peakHour(byHour)}`;
+}
+function peakHour(byHour){
+  let best=-1,bv=-1;
+  for(const [h,o] of Object.entries(byHour)){const t=o.night+o.shoulder+o.regular; if(t>bv){bv=t;best=+h;}}
+  return best<0?"—":`${String(best).padStart(2,"0")}:00 (${bv})`;
+}
+
+function routeLabel(r){
+  const city=(r.city||"").trim();
+  const code=(r.placeCode||"").trim();
+  const cityOk = city && city.toUpperCase()!=="N/A";
+  const codeOk = code && code.toUpperCase()!=="N/A";
+  if(cityOk && codeOk) return `${city} (${code})`;
+  if(cityOk) return city;
+  if(codeOk) return code;
+  return "—";
+}
+
+function drawBreakdown(tid,nightRows,key,limit){
+  const tb=$(tid); tb.innerHTML="";
+  if(!nightRows.length){ tb.innerHTML=`<tr><td colspan="2" style="color:var(--ink-dim)">No night-hour movements.</td></tr>`; return; }
+  const getKey = typeof key==="function" ? key : (r=>r[key]||"—");
+  const agg={};
+  nightRows.forEach(r=>{const k=getKey(r)||"—"; agg[k]=(agg[k]||0)+1;});
+  const sorted=Object.entries(agg).sort((a,b)=>b[1]-a[1]);
+  const shown = (limit && sorted.length>limit) ? sorted.slice(0,limit) : sorted;
+  shown.forEach(([k,v])=>{
+    const tr=document.createElement("tr");
+    tr.innerHTML=`<td><span class="pill night"></span>${escapeHtml(k)}</td><td class="n">${v}</td>`;
+    tb.appendChild(tr);
+  });
+  if(limit && sorted.length>limit){
+    const hidden=sorted.length-limit;
+    const moveHidden=sorted.slice(limit).reduce((s,[,v])=>s+v,0);
+    const tr=document.createElement("tr");
+    tr.innerHTML=`<td style="color:var(--ink-dim);font-style:italic">+${hidden} more</td>`+
+      `<td class="n" style="color:var(--ink-dim)">${moveHidden}</td>`;
+    tb.appendChild(tr);
+  }
+}
+
+function drawLog(rows){
+  const tb=$("t-log"); tb.innerHTML="";
+  rows.forEach(r=>{
+    const tr=document.createElement("tr");
+    tr.innerHTML=`<td style="font-family:var(--mono);color:var(--ink-dim)">${escapeHtml(r.date||"—")}</td>`+
+      `<td>${escapeHtml(r.time)}</td>`+
+      `<td>${r.direction==="arr"?"Arr":"Dep"}</td>`+
+      `<td>${escapeHtml(r.city)} <span style="color:var(--ink-dim)">${escapeHtml(r.placeCode)}</span></td>`+
+      `<td>${escapeHtml(r.flight)}</td>`+
+      `<td>${escapeHtml(r.airline)}</td>`+
+      `<td>${escapeHtml(r.aircraft)}</td>`+
+      `<td class="cat ${r.period}">${r.period}</td>`;
+    tb.appendChild(tr);
+  });
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+
+/* ---------- downloads ---------- */
+function csvCell(v){ v=String(v??""); return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v; }
+function download(name,text){
+  const blob=new Blob([text],{type:"text/csv;charset=utf-8"});
+  const url=URL.createObjectURL(blob); const a=document.createElement("a");
+  a.href=url; a.download=name; a.click(); URL.revokeObjectURL(url);
+}
+$("dl-log").addEventListener("click",()=>{
+  if(!LAST) return;
+  const head=["Date","Time","Direction","Place","PlaceCode","Flight","Airline","Aircraft","Period"];
+  const lines=[head.join(",")];
+  LAST.rows.forEach(r=>lines.push([r.date,r.time,r.direction==="arr"?"Arrival":"Departure",r.city,r.placeCode,r.flight,r.airline,r.aircraft,r.period].map(csvCell).join(",")));
+  const tag=LAST.multi?"period":(LAST.date||"day");
+  download(`${LAST.code}_${tag}_flight_log.csv`,lines.join("\n"));
+});
+$("dl-summary").addEventListener("click",()=>{
+  if(!LAST) return;
+  const {code,rows,multi,periodLabel}=LAST;
+  const lines=[];
+  if(multi){
+    // per-day rows grouped by month, month subtotals, optional grand total
+    lines.push(["Airport","Month","Date","Night","Shoulder","Regular","Total"].join(","));
+    const byDay={};
+    rows.forEach(r=>{const d=r.date||"(undated)";const o=byDay[d]=byDay[d]||{night:0,shoulder:0,regular:0,total:0};o[r.period]++;o.total++;});
+    const days=Object.keys(byDay).sort();
+    const months=[...new Set(days.map(monthKey))].sort();
+    const blank={night:0,shoulder:0,regular:0,total:0};
+    const add=(a,b)=>({night:a.night+b.night,shoulder:a.shoulder+b.shoulder,regular:a.regular+b.regular,total:a.total+b.total});
+    let grand={...blank};
+    months.forEach(mk=>{
+      const lbl=monthLabel(mk);
+      let sub={...blank};
+      days.filter(d=>monthKey(d)===mk).forEach(d=>{const o=byDay[d];sub=add(sub,o);
+        lines.push([code,lbl,d,o.night,o.shoulder,o.regular,o.total].map(csvCell).join(","));
+      });
+      grand=add(grand,sub);
+      lines.push([code,lbl,"Month total",sub.night,sub.shoulder,sub.regular,sub.total].map(csvCell).join(","));
+    });
+    if(months.length>1)
+      lines.push([code,"ALL","All months",grand.night,grand.shoulder,grand.regular,grand.total].map(csvCell).join(","));
+    download(`${code}_summary.csv`,lines.join("\n"));
+  } else {
+    const c={night:0,shoulder:0,regular:0}; rows.forEach(r=>c[r.period]++);
+    const d=LAST.date||"";
+    lines.push(["Airport","Date","Period","Movements"].join(","));
+    lines.push([code,d,csvCell("Night hours"),c.night].join(","));
+    lines.push([code,d,csvCell("Shoulder hours"),c.shoulder].join(","));
+    lines.push([code,d,csvCell("Regular hours"),c.regular].join(","));
+    lines.push([code,d,csvCell("Total"),rows.length].join(","));
+    download(`${code}_${d||"day"}_summary.csv`,lines.join("\n"));
+  }
+});
+
+/* ---------- sample + clear ---------- */
+$("clear").addEventListener("click",()=>{
+  $("landings").value=""; $("takeoffs").value=""; $("date").value="";
+  $("results").style.display="none"; liveCount(); $("err").textContent="";
+});
+$("demo").addEventListener("click",()=>{
+  $("airport").value="BRS"; updateRulePreview();
+  $("date").value="2026-06-25";
+  $("landings").value=SAMPLE_LAND; $("takeoffs").value=SAMPLE_TAKE;
+  liveCount(); run();
+});
+
+/* small embedded sample so the tool is never empty (first ~20 of each) */
+const SAMPLE_LAND=`11:59 PM
+Larnaca
+LCA
+U22904
+A21N
+11:42 PM
+Rhodes
+RHO
+U22802
+A20N
+11:30 PM
+Palma de Mallorca
+PMI
+LS1900
+B738
+11:14 PM
+Lanzarote
+ACE
+LS1802
+B738
+1:47 AM
+Dalaman
+DLM
+U22852
+A20N
+1:30 AM
+Gran Canaria
+LPA
+U22736
+A20N
+5:21 AM
+London
+LGW
+TOM970P
+B738
+6:35 PM
+Geneva
+GVA
+U22886
+A20N
+2:37 PM
+Corfu
+CFU
+BY6409
+B38M
+8:53 AM
+Amsterdam
+AMS
+KL1075
+E75L`;
+const SAMPLE_TAKE=`2:15 AM
+Palma de Mallorca
+PMI
+U27268
+A319
+6:00 AM
+Malaga
+AGP
+FR4121
+B38M
+6:09 AM
+Malta
+MLA
+BY6406
+B38M
+10:54 PM
+Palma de Mallorca
+PMI
+U27326
+A320
+9:21 PM
+Palma de Mallorca
+PMI
+FR8244
+B38M
+7:54 AM
+Glasgow
+GLA
+U2201
+A20N
+1:13 PM
+Malaga
+AGP
+FR8123
+B38M`;
+
+liveCount();
+</script>
+</body>
+</html>
